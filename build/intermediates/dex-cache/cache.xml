@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="F:\Workspace\ProjectSourceCode\NSDC\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.0.1\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="4356e230a981d1bbf047d848b91bc0d9b7c5bacc">
+        <dex dex="F:\Workspace\ProjectSourceCode\NSDC\app\build\intermediates\pre-dexed\debug\com.android.support-recyclerview-v7-23.0.1_c07dbad23574025027481fb15dfa78bf35179980.jar" />
+    </item>
+    <item
+        jar="F:\Workspace\ProjectSourceCode\NSDC\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="c31e21b53ff2f74664e498248d01453a32e32d48">
+        <dex dex="F:\Workspace\ProjectSourceCode\NSDC\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-23.0.1_13e40a942075d10b078e85f45f0fe4eb541dd24a.jar" />
+    </item>
+    <item
+        jar="F:\Workspace\ProjectSourceCode\NSDC\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.0.1\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
+        <dex dex="F:\Workspace\ProjectSourceCode\NSDC\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-23.0.1_9e9bffb4ac573b8b5ac58f62368021534a297fe2.jar" />
+    </item>
+    <item
+        jar="F:\Workspace\ProjectSourceCode\NSDC\app\build\intermediates\exploded-aar\com.android.support\cardview-v7\23.0.1\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="39ae02ce40c3ac828abbf780ce0ff5d7a28b7d6a">
+        <dex dex="F:\Workspace\ProjectSourceCode\NSDC\app\build\intermediates\pre-dexed\debug\com.android.support-cardview-v7-23.0.1_779e9b2d31215fe63d7adf415ffffd9763f6a8d8.jar" />
+    </item>
+    <item
+        jar="F:\Workspace\ProjectSourceCode\NSDC\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="aedc11e5c3c264b355e32a516915d61746212073">
+        <dex dex="F:\Workspace\ProjectSourceCode\NSDC\app\build\intermediates\pre-dexed\debug\instant-run-bootstrap_81f562c50b0b006d0d472f342902d0b03edba1b5.jar" />
+    </item>
+    <item
+        jar="F:\Workspace\ProjectSourceCode\NSDC\app\build\intermediates\exploded-aar\com.android.support\design\23.0.1\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="e5c61a3169221a89654ffcaaed47bba51cf071ad">
+        <dex dex="F:\Workspace\ProjectSourceCode\NSDC\app\build\intermediates\pre-dexed\debug\com.android.support-design-23.0.1_8bf8d4372dfb56b061bbbc3e845b27526a6c35b0.jar" />
+    </item>
+    <item
+        jar="F:\Workspace\ProjectSourceCode\NSDC\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="522db0371d70683e6d708a0ab500f633071d0dc0">
+        <dex dex="F:\Workspace\ProjectSourceCode\NSDC\app\build\intermediates\pre-dexed\debug\instant-run_f490f72ef7efabbd673841452035021a7aea1f6a.jar" />
+    </item>
+    <item
+        jar="C:\Users\Mayank\.gradle\caches\modules-2\files-2.1\com.squareup.picasso\picasso\2.4.0\f36d2d4e3a36b3259aaf9d004d29b4cdc6c1bfb2\picasso-2.4.0.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="f36d2d4e3a36b3259aaf9d004d29b4cdc6c1bfb2">
+        <dex dex="F:\Workspace\ProjectSourceCode\NSDC\app\build\intermediates\pre-dexed\debug\picasso-2.4.0_9bc3b7804d726df8724fa967d9c3cd1e7fbfdf08.jar" />
+    </item>
+    <item
+        jar="F:\mayank_transfer\android-sdk\extras\android\m2repository\com\android\support\support-annotations\23.0.1\support-annotations-23.0.1.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="1fce89a6428c51467090d7f424e4c9c3dbd55f7e">
+        <dex dex="F:\Workspace\ProjectSourceCode\NSDC\app\build\intermediates\pre-dexed\debug\support-annotations-23.0.1_4924b8d87a3e91362e4a8e9621ac2d25069ef002.jar" />
+    </item>
+    <item
+        jar="C:\Users\Mayank\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.3\5fc52c41ef0239d1093a1eb7c3697036183677ce\gson-2.3.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="5fc52c41ef0239d1093a1eb7c3697036183677ce">
+        <dex dex="F:\Workspace\ProjectSourceCode\NSDC\app\build\intermediates\pre-dexed\debug\gson-2.3_12cbc5e8072f30075cdaa51163814519c321a98d.jar" />
+    </item>
+    <item
+        jar="F:\Workspace\ProjectSourceCode\NSDC\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\jars\libs\internal_impl-23.0.1.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="aa92916125166649d8ad4ba3940c3dd7515596d3">
+        <dex dex="F:\Workspace\ProjectSourceCode\NSDC\app\build\intermediates\pre-dexed\debug\internal_impl-23.0.1_831ddec784f44417104c0804d681ef234b7bab46.jar" />
+    </item>
+    <item
+        jar="F:\Workspace\ProjectSourceCode\NSDC\app\build\intermediates\exploded-aar\com.android.support\multidex\1.0.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="6666dd525c3da197e7d07f4f23ef5fc7881a697b">
+        <dex dex="F:\Workspace\ProjectSourceCode\NSDC\app\build\intermediates\pre-dexed\debug\com.android.support-multidex-1.0.0_d5f8589ef09378e0d5a8c81214ba0cd682dc3eb7.jar" />
+    </item>
+
+</items>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.ss.nsdc"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="18"
+        android:targetSdkVersion="24" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.ss.nsdc.main.Login"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!-- created by AORM plugin at 2016-08-15 22:40:54 -->
+        <activity android:name="com.ss.nsdc.main.Institute" />
+        <activity
+            android:name="com.ss.nsdc.main.InstituteActivity"
+            android:label="@string/title_activity_institute"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ss.nsdc.main.CategoryActivity"
+            android:label="@string/title_activity_category"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ss.nsdc.main.SubCategoryActivity"
+            android:label="@string/title_activity_sub_category"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ss.nsdc.main.NavigationDrawerActivity"
+            android:label="@string/title_activity_sub_category"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ss.nsdc.main.FormActivity"
+            android:label="@string/title_activity_form"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.ss.nsdc.main.SubCategoryClassActivity"
+            android:label="@string/title_activity_sub_category"
+            android:screenOrientation="portrait" />
+        <!-- created by AORM plugin at 2016-08-24 23:26:26 -->
+        <activity android:name="com.ss.nsdc.fragment.ClassroomFragment" />
+        <!-- created by AORM plugin at 2016-08-24 23:41:50 -->
+        <activity android:name="com.ss.nsdc.fragment.LabFragment" />
+    </application>
+
+</manifest>
