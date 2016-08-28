@@ -1,20 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <array name="arrayProposedTrainerRatio">
+        <item>1:20</item>
+        <item>1:30</item>
+        <item>1:40</item>
+    </array>
+    <array name="arraySkillSector">
+        <item>Electronics &amp; Hardware</item>
+        <item>Food Processing</item>
+        <item>Furniture &amp; Fittings</item>
+        <item>Gems And Jewellery</item>
+        <item>Green Jobs</item>
+        <item>Iron And Steel</item>
+        <item>It/Ites</item>
+        <item>Leather</item>
+        <item>Apparel, Madeups &amp; Home Furnishing</item>
+        <item>Logistics</item>
+        <item>Mining</item>
+        <item>People With Disability</item>
+        <item>Retail</item>
+        <item>Automotive</item>
+        <item>Security</item>
+        <item>Sports</item>
+        <item>Telecom</item>
+        <item>Tourism And Hospitality</item>
+        <item>Beauty And Wellness</item>
+        <item>Bfsi</item>
+        <item>Construction</item>
+        <item>Domestic Workers</item>
+    </array>
+    <array name="arrayType">
+        <item>Manufacturing</item>
+        <item>Service</item>
+    </array>
     <array name="internetAvailability">
-	    <item>Select</item>
-	    <item>With Speed of 512KBPS And Above</item>
-	    <item>With Speed Below 512KBPS And Above 256KBPS</item>
-	    <item>With Speed of Below 256KBPS</item>
-	    <item>None</item>
-	</array>
+        <item>Select</item>
+        <item>With Speed of 512KBPS And Above</item>
+        <item>With Speed Below 512KBPS And Above 256KBPS</item>
+        <item>With Speed of Below 256KBPS</item>
+        <item>None</item>
+    </array>
     <array name="labType">
-	    <item>Other</item>
-	    <item>IT/Computer Lab</item>
-	</array>
+        <item>Other</item>
+        <item>IT/Computer Lab</item>
+    </array>
     <array name="yesNo">
-	    <item>Yes</item>
-	    <item>No</item>
-	</array>
+        <item>Yes</item>
+        <item>No</item>
+    </array>
     <attr format="reference" name="drawerArrowStyle"/>
     <attr format="dimension" name="height"/>
     <attr format="boolean" name="isLightTheme"/>
@@ -93,6 +126,7 @@
     <color name="primary_text_default_material_light">#de000000</color>
     <color name="primary_text_disabled_material_dark">#4Dffffff</color>
     <color name="primary_text_disabled_material_light">#39000000</color>
+    <color name="red">#FF0000</color>
     <color name="ripple_material_dark">#42ffffff</color>
     <color name="ripple_material_light">#1f000000</color>
     <color name="secondary_text_default_material_dark">#b3ffffff</color>
@@ -104,6 +138,8 @@
     <color name="switch_thumb_normal_material_dark">#ffbdbdbd</color>
     <color name="switch_thumb_normal_material_light">#fff1f1f1</color>
     <color name="textColorPrimary">#ff5722</color>
+    <color name="textHeadColor">#414141</color>
+    <color name="white">#ffffff</color>
     <color name="windowBackground">#FFFFFF</color>
     <declare-styleable name="ActionBar"><attr name="navigationMode"><enum name="normal" value="0"/><enum name="listMode" value="1"/><enum name="tabMode" value="2"/></attr><attr name="displayOptions"><flag name="none" value="0"/><flag name="useLogo" value="0x1"/><flag name="showHome" value="0x2"/><flag name="homeAsUp" value="0x4"/><flag name="showTitle" value="0x8"/><flag name="showCustom" value="0x10"/><flag name="disableHome" value="0x20"/></attr><attr name="title"/><attr format="string" name="subtitle"/><attr format="reference" name="titleTextStyle"/><attr format="reference" name="subtitleTextStyle"/><attr format="reference" name="icon"/><attr format="reference" name="logo"/><attr format="reference" name="divider"/><attr format="reference" name="background"/><attr format="reference|color" name="backgroundStacked"/><attr format="reference|color" name="backgroundSplit"/><attr format="reference" name="customNavigationLayout"/><attr name="height"/><attr format="reference" name="homeLayout"/><attr format="reference" name="progressBarStyle"/><attr format="reference" name="indeterminateProgressStyle"/><attr format="dimension" name="progressBarPadding"/><attr name="homeAsUpIndicator"/><attr format="dimension" name="itemPadding"/><attr format="boolean" name="hideOnContentScroll"/><attr format="dimension" name="contentInsetStart"/><attr format="dimension" name="contentInsetEnd"/><attr format="dimension" name="contentInsetLeft"/><attr format="dimension" name="contentInsetRight"/><attr format="dimension" name="elevation"/><attr format="reference" name="popupTheme"/></declare-styleable>
     <declare-styleable name="ActionBarLayout"><attr name="android:layout_gravity"/></declare-styleable>
@@ -250,6 +286,13 @@
     <item format="float" name="disabled_alpha_material_dark" type="dimen">0.30</item>
     <item format="float" name="disabled_alpha_material_light" type="dimen">0.26</item>
     <dimen name="fab_margin">16dp</dimen>
+    <dimen name="font_Xsmall">12sp</dimen>
+    <dimen name="font_large">18sp</dimen>
+    <dimen name="font_medium">16sp</dimen>
+    <dimen name="font_small">14sp</dimen>
+    <dimen name="font_xlarge">22sp</dimen>
+    <dimen name="font_xxXlarge">35sp</dimen>
+    <dimen name="font_xxlarge">26sp</dimen>
     <item format="float" name="highlight_alpha_material_colored" type="dimen">0.26</item>
     <item format="float" name="highlight_alpha_material_dark" type="dimen">0.20</item>
     <item format="float" name="highlight_alpha_material_light" type="dimen">0.12</item>
@@ -258,9 +301,15 @@
     <dimen name="list_icon_width">30dp</dimen>
     <dimen name="logo_height">100dp</dimen>
     <dimen name="logo_width">100dp</dimen>
+    <dimen name="margin_large">20sp</dimen>
+    <dimen name="margin_medium">10sp</dimen>
+    <dimen name="margin_small">5sp</dimen>
     <dimen name="margin_user_email">20dp</dimen>
     <dimen name="margin_user_layout">25dp</dimen>
     <dimen name="margin_user_name">3dp</dimen>
+    <dimen name="margin_xXXlarge">70sp</dimen>
+    <dimen name="margin_xXlarge">41sp</dimen>
+    <dimen name="margin_xlarge">30sp</dimen>
     <dimen name="navdrawer_image_height">192dp</dimen>
     <dimen name="navdrawer_user_picture_size">40dp</dimen>
     <dimen name="notification_large_icon_height">64dp</dimen>
@@ -335,6 +384,16 @@
     <string name="lab_ques8">Q8. Proposed Number of Batches in this Lab Per Day</string>
     <string name="lab_ques9">Q9. Availability of Power Backup in Lab in the Form of UPS/ GenSet/ Inveter</string>
     <string name="lab_section"> Laboratory Detail</string>
+    <string name="labelStar">*</string>
+    <string name="label_job_role">JobRole</string>
+    <string name="label_model_content">Is the Model Content (Student Participant Handbook) Approved by NSDC Available for This Job Role?</string>
+    <string name="label_no">No</string>
+    <string name="label_parallel_batches">Total Number of Parallel Batches Running for the Job Role</string>
+    <string name="label_prposed_trainer_student">Proposed Trainer Student Ratio?</string>
+    <string name="label_remarks">Remarks</string>
+    <string name="label_skill_sector">Skill Sector</string>
+    <string name="label_type">Type</string>
+    <string name="label_yes">Yes</string>
     <string name="logo">Logo</string>
     <string name="radioNo">No</string>
     <string name="radioYes">Yes</string>

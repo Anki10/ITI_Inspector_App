@@ -1,2 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merger version="3"><dataSet config="main"><source path="F:\Workspace\ProjectSourceCode\NSDC\app\src\main\shaders"/></dataSet><dataSet config="debug"><source path="F:\Workspace\ProjectSourceCode\NSDC\app\src\debug\shaders"/></dataSet></merger>
+<merger version="3"><dataSet config="main"><source path="F:\Workspace\ProjectSourceCode\NSDCFINAL\app\src\main\shaders"/></dataSet><dataSet config="debug"><source path="F:\Workspace\ProjectSourceCode\NSDCFINAL\app\src\debug\shaders"/></dataSet></merger>

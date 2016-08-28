@@ -1,14 +1,13 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    xmlns:card_view="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.ss.nsdc.FormActivity$PlaceholderFragment" >
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/activity_vertical_margin">
 
     <!-- A CardView that contains a TextView -->
 
@@ -19,12 +18,12 @@
         android:layout_gravity="start"
         card_view:cardCornerRadius="8dp"
         card_view:cardElevation="5dp"
-        card_view:cardUseCompatPadding="true" >
+        card_view:cardUseCompatPadding="true">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical" >
+            android:orientation="vertical">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -34,21 +33,21 @@
                 android:paddingTop="40dp"
                 android:text="@string/lab_ques1"
                 android:textColor="#000000"
-                android:textSize="18sp" />
+                android:textSize="18sp"/>
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal"
                 android:paddingEnd="10dp"
-                android:paddingStart="45dp" >
+                android:paddingStart="45dp">
 
                 <Spinner
                     android:id="@+id/lab_spin1"
                     android:layout_width="230dp"
                     android:layout_height="match_parent"
                     android:layout_marginTop="10dp"
-                    android:singleLine="true" />
+                    android:singleLine="true"/>
 
                 <ImageView
                     android:id="@+id/lab_img11"
@@ -56,14 +55,14 @@
                     android:layout_height="40dp"
                     android:layout_marginEnd="10dp"
                     android:layout_toStartOf="@+id/lab_img12"
-                    android:src="@drawable/edit" />
+                    android:src="@drawable/edit"/>
 
                 <ImageView
                     android:id="@+id/lab_img12"
                     android:layout_width="20dp"
                     android:layout_height="40dp"
                     android:layout_alignParentEnd="true"
-                    android:src="@drawable/ok_grey" />
+                    android:src="@drawable/ok_grey"/>
             </RelativeLayout>
 
             <TextView
@@ -74,21 +73,21 @@
                 android:paddingTop="10dp"
                 android:text="@string/lab_ques2"
                 android:textColor="#000000"
-                android:textSize="18sp" />
+                android:textSize="18sp"/>
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal"
                 android:paddingEnd="10dp"
-                android:paddingStart="45dp" >
+                android:paddingStart="45dp">
 
                 <Spinner
                     android:id="@+id/lab_spin2"
                     android:layout_width="230dp"
                     android:layout_height="match_parent"
                     android:layout_marginTop="10dp"
-                    android:singleLine="true" />
+                    android:singleLine="true"/>
 
                 <ImageView
                     android:id="@+id/lab_img21"
@@ -96,14 +95,14 @@
                     android:layout_height="40dp"
                     android:layout_marginEnd="10dp"
                     android:layout_toStartOf="@+id/lab_img22"
-                    android:src="@drawable/edit" />
+                    android:src="@drawable/edit"/>
 
                 <ImageView
                     android:id="@+id/lab_img22"
                     android:layout_width="20dp"
                     android:layout_height="40dp"
                     android:layout_alignParentEnd="true"
-                    android:src="@drawable/ok_grey" />
+                    android:src="@drawable/ok_grey"/>
             </RelativeLayout>
 
             <TextView
@@ -114,14 +113,14 @@
                 android:paddingTop="10dp"
                 android:text="@string/lab_ques3"
                 android:textColor="#000000"
-                android:textSize="18sp" />
+                android:textSize="18sp"/>
 
             <EditText
                 android:id="@+id/lab_edit3"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:paddingStart="25dp"
-                android:singleLine="true" />
+                android:singleLine="true"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -131,21 +130,21 @@
                 android:paddingTop="10dp"
                 android:text="@string/lab_ques4"
                 android:textColor="#000000"
-                android:textSize="18sp" />
+                android:textSize="18sp"/>
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal"
                 android:paddingEnd="10dp"
-                android:paddingStart="45dp" >
+                android:paddingStart="45dp">
 
                 <Spinner
                     android:id="@+id/lab_spin4"
                     android:layout_width="230dp"
                     android:layout_height="match_parent"
                     android:layout_marginTop="10dp"
-                    android:singleLine="true" />
+                    android:singleLine="true"/>
 
                 <ImageView
                     android:id="@+id/lab_img41"
@@ -153,14 +152,14 @@
                     android:layout_height="40dp"
                     android:layout_marginEnd="10dp"
                     android:layout_toStartOf="@+id/lab_img42"
-                    android:src="@drawable/edit" />
+                    android:src="@drawable/edit"/>
 
                 <ImageView
                     android:id="@+id/lab_img42"
                     android:layout_width="20dp"
                     android:layout_height="40dp"
                     android:layout_alignParentEnd="true"
-                    android:src="@drawable/ok_grey" />
+                    android:src="@drawable/ok_grey"/>
             </RelativeLayout>
 
             <TextView
@@ -171,19 +170,19 @@
                 android:paddingTop="10dp"
                 android:text="@string/lab_ques5"
                 android:textColor="#000000"
-                android:textSize="18sp" />
+                android:textSize="18sp"/>
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal"
                 android:paddingEnd="10dp"
-                android:paddingStart="45dp" >
+                android:paddingStart="45dp">
 
                 <RadioGroup
                     android:id="@+id/lab_radioGroup5"
                     android:layout_width="fill_parent"
-                    android:layout_height="wrap_content" >
+                    android:layout_height="wrap_content">
 
                     <RadioButton
                         android:id="@+id/lab_radioButton51"
@@ -191,7 +190,7 @@
                         android:layout_height="wrap_content"
                         android:checked="false"
                         android:text="@string/radioYes"
-                        android:textSize="16sp" />
+                        android:textSize="16sp"/>
 
                     <RadioButton
                         android:id="@+id/lab_radioButton52"
@@ -199,7 +198,7 @@
                         android:layout_height="wrap_content"
                         android:checked="false"
                         android:text="@string/radioNo"
-                        android:textSize="16sp" />
+                        android:textSize="16sp"/>
                 </RadioGroup>
 
                 <ImageView
@@ -208,14 +207,14 @@
                     android:layout_height="40dp"
                     android:layout_marginEnd="10dp"
                     android:layout_toStartOf="@+id/lab_img52"
-                    android:src="@drawable/edit" />
+                    android:src="@drawable/edit"/>
 
                 <ImageView
                     android:id="@+id/lab_img52"
                     android:layout_width="20dp"
                     android:layout_height="40dp"
                     android:layout_alignParentEnd="true"
-                    android:src="@drawable/ok_grey" />
+                    android:src="@drawable/ok_grey"/>
             </RelativeLayout>
 
             <TextView
@@ -226,14 +225,14 @@
                 android:paddingTop="10dp"
                 android:text="@string/lab_ques6"
                 android:textColor="#000000"
-                android:textSize="18sp" />
+                android:textSize="18sp"/>
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal"
                 android:paddingEnd="10dp"
-                android:paddingStart="45dp" >
+                android:paddingStart="45dp">
 
                 <EditText
                     android:id="@+id/lab_edit6"
@@ -241,7 +240,7 @@
                     android:layout_height="match_parent"
                     android:gravity="top"
                     android:inputType="number"
-                    android:paddingStart="40dp" />
+                    android:paddingStart="40dp"/>
 
                 <ImageView
                     android:id="@+id/lab_img61"
@@ -249,14 +248,14 @@
                     android:layout_height="40dp"
                     android:layout_marginEnd="10dp"
                     android:layout_toStartOf="@+id/lab_img62"
-                    android:src="@drawable/edit" />
+                    android:src="@drawable/edit"/>
 
                 <ImageView
                     android:id="@+id/lab_img62"
                     android:layout_width="20dp"
                     android:layout_height="40dp"
                     android:layout_alignParentEnd="true"
-                    android:src="@drawable/ok_grey" />
+                    android:src="@drawable/ok_grey"/>
             </RelativeLayout>
 
             <TextView
@@ -267,14 +266,14 @@
                 android:paddingTop="10dp"
                 android:text="@string/lab_ques7"
                 android:textColor="#000000"
-                android:textSize="18sp" />
+                android:textSize="18sp"/>
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal"
                 android:paddingEnd="10dp"
-                android:paddingStart="45dp" >
+                android:paddingStart="45dp">
 
                 <EditText
                     android:id="@+id/lab_edit7"
@@ -282,7 +281,7 @@
                     android:layout_height="match_parent"
                     android:gravity="top"
                     android:inputType="number"
-                    android:paddingStart="40dp" />
+                    android:paddingStart="40dp"/>
 
                 <ImageView
                     android:id="@+id/lab_img71"
@@ -290,14 +289,14 @@
                     android:layout_height="40dp"
                     android:layout_marginEnd="10dp"
                     android:layout_toStartOf="@+id/lab_img72"
-                    android:src="@drawable/edit" />
+                    android:src="@drawable/edit"/>
 
                 <ImageView
                     android:id="@+id/lab_img72"
                     android:layout_width="20dp"
                     android:layout_height="40dp"
                     android:layout_alignParentEnd="true"
-                    android:src="@drawable/ok_grey" />
+                    android:src="@drawable/ok_grey"/>
             </RelativeLayout>
 
             <TextView
@@ -308,14 +307,14 @@
                 android:paddingTop="10dp"
                 android:text="@string/lab_ques8"
                 android:textColor="#000000"
-                android:textSize="18sp" />
+                android:textSize="18sp"/>
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal"
                 android:paddingEnd="10dp"
-                android:paddingStart="45dp" >
+                android:paddingStart="45dp">
 
                 <EditText
                     android:id="@+id/lab_edit8"
@@ -323,7 +322,7 @@
                     android:layout_height="match_parent"
                     android:gravity="top"
                     android:inputType="number"
-                    android:paddingStart="40dp" />
+                    android:paddingStart="40dp"/>
 
                 <ImageView
                     android:id="@+id/lab_img81"
@@ -331,14 +330,14 @@
                     android:layout_height="40dp"
                     android:layout_marginEnd="10dp"
                     android:layout_toStartOf="@+id/lab_img82"
-                    android:src="@drawable/edit" />
+                    android:src="@drawable/edit"/>
 
                 <ImageView
                     android:id="@+id/lab_img82"
                     android:layout_width="20dp"
                     android:layout_height="40dp"
                     android:layout_alignParentEnd="true"
-                    android:src="@drawable/ok_grey" />
+                    android:src="@drawable/ok_grey"/>
             </RelativeLayout>
 
             <TextView
@@ -349,19 +348,19 @@
                 android:paddingTop="10dp"
                 android:text="@string/lab_ques9"
                 android:textColor="#000000"
-                android:textSize="18sp" />
+                android:textSize="18sp"/>
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal"
                 android:paddingEnd="10dp"
-                android:paddingStart="45dp" >
+                android:paddingStart="45dp">
 
                 <RadioGroup
                     android:id="@+id/lab_radioGroup9"
                     android:layout_width="fill_parent"
-                    android:layout_height="wrap_content" >
+                    android:layout_height="wrap_content">
 
                     <RadioButton
                         android:id="@+id/lab_radioButton91"
@@ -369,7 +368,7 @@
                         android:layout_height="wrap_content"
                         android:checked="false"
                         android:text="@string/radioYes"
-                        android:textSize="16sp" />
+                        android:textSize="16sp"/>
 
                     <RadioButton
                         android:id="@+id/lab_radioButton92"
@@ -377,7 +376,7 @@
                         android:layout_height="wrap_content"
                         android:checked="false"
                         android:text="@string/radioNo"
-                        android:textSize="16sp" />
+                        android:textSize="16sp"/>
                 </RadioGroup>
 
                 <ImageView
@@ -386,14 +385,14 @@
                     android:layout_height="40dp"
                     android:layout_marginEnd="10dp"
                     android:layout_toStartOf="@+id/lab_img92"
-                    android:src="@drawable/edit" />
+                    android:src="@drawable/edit"/>
 
                 <ImageView
                     android:id="@+id/lab_img92"
                     android:layout_width="20dp"
                     android:layout_height="40dp"
                     android:layout_alignParentEnd="true"
-                    android:src="@drawable/ok_grey" />
+                    android:src="@drawable/ok_grey"/>
             </RelativeLayout>
 
             <TextView
@@ -404,14 +403,14 @@
                 android:paddingTop="10dp"
                 android:text="@string/lab_ques10"
                 android:textColor="#000000"
-                android:textSize="18sp" />
+                android:textSize="18sp"/>
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal"
                 android:paddingEnd="10dp"
-                android:paddingStart="45dp" >
+                android:paddingStart="45dp">
 
                 <CheckBox
                     android:id="@+id/lab_check11"
@@ -420,7 +419,7 @@
                     android:checked="false"
                     android:gravity="top"
                     android:paddingStart="40dp"
-                    android:text="Domestic Data Entry Operator" />
+                    android:text="Domestic Data Entry Operator"/>
 
                 <CheckBox
                     android:id="@+id/lab_check12"
@@ -430,7 +429,7 @@
                     android:checked="false"
                     android:gravity="top"
                     android:paddingStart="40dp"
-                    android:text="Automotive Service Technician (Two And Three Wheelers)" />
+                    android:text="Automotive Service Technician (Two And Three Wheelers)"/>
 
                 <CheckBox
                     android:id="@+id/lab_check13"
@@ -440,7 +439,7 @@
                     android:checked="false"
                     android:gravity="top"
                     android:paddingStart="40dp"
-                    android:text="Dth Set Top Box Installation &amp; Service Technician" />
+                    android:text="Dth Set Top Box Installation &amp; Service Technician"/>
 
                 <CheckBox
                     android:id="@+id/lab_check14"
@@ -450,7 +449,7 @@
                     android:checked="false"
                     android:gravity="top"
                     android:paddingStart="40dp"
-                    android:text="Cctv Installation Technician" />
+                    android:text="Cctv Installation Technician"/>
 
                 <ImageView
                     android:id="@+id/lab_img101"
@@ -458,14 +457,14 @@
                     android:layout_height="40dp"
                     android:layout_marginEnd="10dp"
                     android:layout_toStartOf="@+id/lab_img102"
-                    android:src="@drawable/edit" />
+                    android:src="@drawable/edit"/>
 
                 <ImageView
                     android:id="@+id/lab_img102"
                     android:layout_width="20dp"
                     android:layout_height="40dp"
                     android:layout_alignParentEnd="true"
-                    android:src="@drawable/ok_grey" />
+                    android:src="@drawable/ok_grey"/>
             </RelativeLayout>
 
             <TextView
@@ -476,19 +475,19 @@
                 android:paddingTop="10dp"
                 android:text="@string/lab_ques11"
                 android:textColor="#000000"
-                android:textSize="18sp" />
+                android:textSize="18sp"/>
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal"
                 android:paddingEnd="10dp"
-                android:paddingStart="45dp" >
+                android:paddingStart="45dp">
 
                 <RadioGroup
                     android:id="@+id/lab_radioGroup11"
                     android:layout_width="fill_parent"
-                    android:layout_height="wrap_content" >
+                    android:layout_height="wrap_content">
 
                     <RadioButton
                         android:id="@+id/lab_radioButton111"
@@ -496,7 +495,7 @@
                         android:layout_height="wrap_content"
                         android:checked="false"
                         android:text="@string/radioYes"
-                        android:textSize="16sp" />
+                        android:textSize="16sp"/>
 
                     <RadioButton
                         android:id="@+id/lab_radioButton112"
@@ -504,7 +503,7 @@
                         android:layout_height="wrap_content"
                         android:checked="false"
                         android:text="@string/radioNo"
-                        android:textSize="16sp" />
+                        android:textSize="16sp"/>
                 </RadioGroup>
 
                 <ImageView
@@ -513,14 +512,14 @@
                     android:layout_height="40dp"
                     android:layout_marginEnd="10dp"
                     android:layout_toStartOf="@+id/lab_img112"
-                    android:src="@drawable/edit" />
+                    android:src="@drawable/edit"/>
 
                 <ImageView
                     android:id="@+id/lab_img112"
                     android:layout_width="20dp"
                     android:layout_height="40dp"
                     android:layout_alignParentEnd="true"
-                    android:src="@drawable/ok_grey" />
+                    android:src="@drawable/ok_grey"/>
             </RelativeLayout>
 
             <TextView
@@ -531,14 +530,14 @@
                 android:paddingTop="10dp"
                 android:text="@string/lab_ques12"
                 android:textColor="#000000"
-                android:textSize="18sp" />
+                android:textSize="18sp"/>
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal"
                 android:paddingEnd="10dp"
-                android:paddingStart="45dp" >
+                android:paddingStart="45dp">
 
                 <EditText
                     android:id="@+id/lab_edit12"
@@ -547,7 +546,7 @@
                     android:gravity="top"
                     android:lines="5"
                     android:paddingStart="40dp"
-                    android:singleLine="false" />
+                    android:singleLine="false"/>
 
                 <ImageView
                     android:id="@+id/lab_img121"
@@ -555,41 +554,41 @@
                     android:layout_height="40dp"
                     android:layout_marginEnd="10dp"
                     android:layout_toStartOf="@+id/lab_img122"
-                    android:src="@drawable/edit" />
+                    android:src="@drawable/edit"/>
 
                 <ImageView
                     android:id="@+id/lab_img122"
                     android:layout_width="20dp"
                     android:layout_height="40dp"
                     android:layout_alignParentEnd="true"
-                    android:src="@drawable/ok_grey" />
+                    android:src="@drawable/ok_grey"/>
             </RelativeLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="horizontal" >
+                android:orientation="horizontal">
 
-                 <Button
+                <Button
                     android:id="@+id/lab_draft"
                     style="@style/HeadingFontStyle"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1" 
-        			android:background="#FF5722"
-                    android:text="Draft" />
-                 
+                    android:layout_weight="1"
+                    android:background="#FF5722"
+                    android:text="Draft"/>
+
                 <Button
                     android:id="@+id/lab_submit"
                     style="@style/HeadingFontStyle"
-                    android:layout_marginStart="10px"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1" 
-        			android:background="#FF5722"
-                    android:text="Submit" />
+                    android:layout_marginStart="10px"
+                    android:layout_weight="1"
+                    android:background="#FF5722"
+                    android:text="Submit"/>
             </LinearLayout>
-            
+
         </LinearLayout>
     </android.support.v7.widget.CardView>
 
