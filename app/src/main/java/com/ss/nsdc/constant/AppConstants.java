@@ -5,6 +5,13 @@ package com.ss.nsdc.constant;
  */
 public class AppConstants {
 
+    public static final String TEXT_SUPPORT_STAFF = "SupportStaff";
+    public static final String TEXT_SUPPORT_SPACE_STAFF = "Support Staff";
+
+    public static final String API_URL = "http://nsdc.qci.org.in/api/CAAF/";
+
+    public static final String KEY_API_RESPONSE_CODE = "responsecode";
+    public static final String KEY_API_ROW_COUNT = "rowcount";
 
     // JOb Roles
     public static final String KEY_ID = "ID";

@@ -68,7 +68,17 @@ public class NSDCDBController extends SQLiteOpenHelper {
         subOfficeTableQuery = "CREATE TABLE Office ( Id INTEGER PRIMARY KEY AUTOINCREMENT,YearWiseCollegeId TEXT NOT NULL,ApplicationNo TEXT,OfficeId TEXT,Internet TEXT,AreaType TEXT,CarpetArea TEXT,Ac TEXT,BackUp TEXT,CCTV TEXT,remarks TEXT,InsCarpetArea TEXT,InsInternet TEXT,InsAC TEXT,InsBackUp TEXT,InsCCTV TEXT,Insremarks TEXT,proc_tracker INTEGER)";
         subEquipmentTableQuery = "CREATE TABLE Equipment ( Id INTEGER PRIMARY KEY AUTOINCREMENT,YearWiseCollegeId TEXT NOT NULL,ApplicationNo TEXT,Job_Id TEXT,Internet TEXT,Job_Name TEXT,Equipment_Name TEXT,TotalNo TEXT,Remarks TEXT,InsTotalNo TEXT,InsRemarks TEXT,proc_tracker INTEGER)";
         subJobRolesTableQuery = "CREATE TABLE Jobroles ( Id INTEGER PRIMARY KEY AUTOINCREMENT,JobID TEXT ,ApplicationNo TEXT, YearWiseCollegeId  TEXT  NOT NULL, JobName TEXT,HandbookAvailable TEXT,Trainees TEXT,Batch INTEGER,Remark TEXT,InsHandbookAvailable TEXT,InsTrainees TEXT,Insbatch TEXT,Insremark TEXT,proc_tracker INTEGER )";
-
+        String subStaffTableQuery = "CREATE TABLE SupportStaff (Id INTEGER PRIMARY KEY AUTOINCREMENT, " +
+                "ApplicationNo TEXT, " +
+                "YearWiseCollegeId  TEXT NOT NULL, " +
+                "StaffId TEXT, " +
+                "StaffName TEXT, " +
+                "StaffType TEXT, " +
+                "Work TEXT, " +
+                "Remarks TEXT, " +
+                "InsWork TEXT, " +
+                "InsRemarks TEXT, " +
+                "proc_tracker INTEGER)";
 
 		/*
          * questionTableQuery="Create table question()";
@@ -123,6 +133,13 @@ public class NSDCDBController extends SQLiteOpenHelper {
                 db.execSQL(subJobRolesTableQuery);
             } catch (Exception e) {
                 Log.e(TAG + "" + "subJobRolesTableQuery", e.getMessage());
+            }
+
+            try {
+                dropTable(db, "SupportStaff");
+                db.execSQL(subStaffTableQuery);
+            } catch (Exception e) {
+                Log.e("SupportStaff", e.getMessage());
             }
 
         } catch (SQLException e) {

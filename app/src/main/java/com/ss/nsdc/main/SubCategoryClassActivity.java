@@ -22,10 +22,13 @@ import android.view.ContextThemeWrapper;
 
 import com.ss.nsdc.R;
 import com.ss.nsdc.adapter.SubCategoryClassAdapter;
+import com.ss.nsdc.constant.AppConstants;
 import com.ss.nsdc.dao.JobRolesModel;
 import com.ss.nsdc.dao.NSDCDBController;
 import com.ss.nsdc.dao.SubCategoryClass;
 import com.ss.nsdc.dao.SubCategoryLab;
+import com.ss.nsdc.dao.SubCategorySupportStaffDAO;
+import com.ss.nsdc.entity.SubCategorySupportStaff;
 import com.ss.nsdc.entity.SubListEquipment;
 import com.ss.nsdc.entity.SubListOffice;
 
@@ -41,6 +44,7 @@ public class SubCategoryClassActivity extends AppCompatActivity {
 	List<SubListOffice> getOfficeList=new ArrayList<SubListOffice>();
 	List<SubListEquipment> getEquipmentList = new ArrayList<SubListEquipment>();
 	List<JobRolesModel> getJobRolesList = new ArrayList<JobRolesModel>();
+	List<SubCategorySupportStaff> getStaffList = new ArrayList<SubCategorySupportStaff>();
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -48,15 +52,12 @@ public class SubCategoryClassActivity extends AppCompatActivity {
 		setContentView(R.layout.activity_sub_category);
 		
 		Bundle bundle = getIntent().getExtras();
-		
 		 if (bundle != null) {
 		      category = bundle.getString("Category");
-		      
 		      yearWiseCollegeId=bundle.getString("YearWiseCollegeId");
 		      applicationId=bundle.getString("applicationId");
 		      classId=bundle.getString("ClassId");
-		     
-		 }else{
+		 } else {
 			  category = "none";
 		 }
 		 
@@ -66,23 +67,30 @@ public class SubCategoryClassActivity extends AppCompatActivity {
 
 		ActionBar actionBar = getSupportActionBar();
 		actionBar.setTitle("Sub Category Listing");
-		NSDCDBController dbcontroller=new NSDCDBController(this);
+
+		NSDCDBController dbcontroller = new NSDCDBController(this);
+
 		if(category.equalsIgnoreCase("class")){
-		getListClass=dbcontroller.getClassListbyYearWiseCollageId(yearWiseCollegeId);
-		}else if(category.equalsIgnoreCase("lab"))
-		{
+			getListClass=dbcontroller.getClassListbyYearWiseCollageId(yearWiseCollegeId);
+
+		} else if(category.equalsIgnoreCase("lab")) {
 			getListLab=dbcontroller.getLabListbyYearWiseCollageId(yearWiseCollegeId);
-		}else if(category.equalsIgnoreCase("office"))
-		{
+
+		}else if(category.equalsIgnoreCase("office")) {
 			getOfficeList=dbcontroller.getOfficeListbyYearWiseCollageId(yearWiseCollegeId);
-		}else if(category.equalsIgnoreCase("eqipment"))
-		{
+
+		}else if(category.equalsIgnoreCase("eqipment")) {
 			getEquipmentList=dbcontroller.getEquipmentListbyYearWiseCollageId(yearWiseCollegeId);
-		}
-		else if(category.equalsIgnoreCase("jobRoles"))
-		{
+
+		} else if(category.equalsIgnoreCase("jobRoles")) {
 			getJobRolesList=dbcontroller.getJobRolesList(yearWiseCollegeId);
+
+		} else if(category.equalsIgnoreCase(AppConstants.TEXT_SUPPORT_STAFF)) {
+			SubCategorySupportStaffDAO staffDAO = new SubCategorySupportStaffDAO(context);
+			getStaffList = staffDAO.getStaffListByYearWiseCollegeId(yearWiseCollegeId);
+			staffDAO.close();
 		}
+
 		dbcontroller.close();
 		if(getListClass.size()>0){
 			
@@ -116,6 +124,9 @@ public class SubCategoryClassActivity extends AppCompatActivity {
 		}
 		else if(category.equalsIgnoreCase("jobRoles")) {
 			mAdapter = new SubCategoryClassAdapter(getJobRolesList, category,context);
+
+		} else if(category.equalsIgnoreCase(AppConstants.TEXT_SUPPORT_STAFF)) {
+			mAdapter = new SubCategoryClassAdapter(getStaffList, category, context);
 		}
 
 		mRecyclerView.setAdapter(mAdapter);

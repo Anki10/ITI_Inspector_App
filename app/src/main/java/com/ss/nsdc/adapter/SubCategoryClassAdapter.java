@@ -14,10 +14,12 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.ss.nsdc.R;
+import com.ss.nsdc.constant.AppConstants;
 import com.ss.nsdc.dao.JobRolesModel;
 import com.ss.nsdc.dao.NSDCDBController;
 import com.ss.nsdc.dao.SubCategoryClass;
 import com.ss.nsdc.dao.SubCategoryLab;
+import com.ss.nsdc.entity.SubCategorySupportStaff;
 import com.ss.nsdc.entity.SubListEquipment;
 import com.ss.nsdc.entity.SubListOffice;
 import com.ss.nsdc.main.FormActivity;
@@ -30,6 +32,7 @@ public class SubCategoryClassAdapter extends
     private List<SubListOffice> subListOffice;
     private List<SubListEquipment> subListEquipment;
     private List<JobRolesModel> jobRolesModelList;
+    private List<SubCategorySupportStaff> staffList;
     private Context context;
     private String category;
 
@@ -61,7 +64,11 @@ public class SubCategoryClassAdapter extends
             this.subListEquipment = getList;
         } else if (category.equalsIgnoreCase("jobRoles")) {
             this.jobRolesModelList = getList;
+
+        } else if (category.equalsIgnoreCase(AppConstants.TEXT_SUPPORT_STAFF)) {
+            this.staffList = getList;
         }
+
         this.context = context;
         this.category = category;
     }
@@ -128,6 +135,16 @@ public class SubCategoryClassAdapter extends
             } else if (jobRolesModelList.get(position).getProc_tracker() == 2) { // not synced
                 holder.imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.progress));
             } else if (jobRolesModelList.get(position).getProc_tracker() == 3) { // synced Data
+                holder.imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.complete));
+            }
+        } else if (category.equalsIgnoreCase(AppConstants.TEXT_SUPPORT_STAFF)) {
+            holder.txtSubCat.setText(staffList.get(position).getStaffName());
+
+            if (staffList.get(position).getProc_tracker() == 1) { // New Data
+                holder.imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.start));
+            } else if (staffList.get(position).getProc_tracker() == 2) { // not synced
+                holder.imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.progress));
+            } else if (staffList.get(position).getProc_tracker() == 3) { // synced Data
                 holder.imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.complete));
             }
         }
@@ -197,6 +214,20 @@ public class SubCategoryClassAdapter extends
                     } else if (subListEquipment.get(position).getProc_tracker() == 3) { //
                         Toast.makeText(context, "This Data is synced and cannot be edited", Toast.LENGTH_SHORT).show();
                     }
+
+                } else if (category.equalsIgnoreCase(AppConstants.TEXT_SUPPORT_STAFF)) {
+                    if (staffList.get(position).getProc_tracker() == 1) { // New Data
+                        Intent intent = new Intent(context, FormActivity.class);
+                        intent.putExtra("category", category);
+                        intent.putExtra("subcategoryId", staffList.get(position).getStaffId());
+                        intent.putExtra("yearWiseCollageId", staffList.get(position).getYearWiseCollegeId());
+
+                        context.startActivity(intent);
+                    } else if (staffList.get(position).getProc_tracker() == 2) {
+                        Toast.makeText(context, "This data is waiting to be synced and cannot be edited", Toast.LENGTH_SHORT).show();
+                    } else if (staffList.get(position).getProc_tracker() == 3) { //
+                        Toast.makeText(context, "This data is synced and cannot be edited", Toast.LENGTH_SHORT).show();
+                    }
                 }
                 //controller.close();
             }
@@ -217,6 +248,9 @@ public class SubCategoryClassAdapter extends
             return subListEquipment.size();
         } else if (category.equalsIgnoreCase("jobRoles")) {
             return jobRolesModelList.size();
+
+        } else if (category.equalsIgnoreCase(AppConstants.TEXT_SUPPORT_STAFF)) {
+            return staffList.size();
         }
         return 0;
     }

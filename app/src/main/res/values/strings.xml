@@ -34,7 +34,13 @@
     <!-- Radio Options -->
     <string name="radioYes">Yes</string>
     <string name="radioNo">No</string>
-    
+
+	<!-- Support Staff Questions -->
+	<string name="ss_ques_staff_type">Type of Support Staff</string>
+	<string name="ss_ques_staff_name">Name</string>
+	<string name="ss_ques_staff_work">Work</string>
+	<string name="ss_ques_remarks">Remarks</string>
+
     <!-- ClassRoom Questions -->
 	<string name="cls_section">Classroom Details</string>
 	<string name="cls_ques1">Q1. Classroom name/ serial number</string>
@@ -91,6 +97,13 @@
 	<string name="label_prposed_trainer_student">Proposed Trainer Student Ratio?</string>
 	<string name="label_parallel_batches">Total Number of Parallel Batches Running for the Job Role</string>
 	<string name="label_model_content">Is the Model Content (Student Participant Handbook) Approved by NSDC Available for This Job Role?</string>
+
+	<array name="arrayStaffType">
+		<item>Reception</item>
+		<item>Placement Coordinator</item>
+		<item>Counsellors</item>
+		<item>Other</item>
+	</array>
 
 	<array name="arraySkillSector">
 		<item>Electronics &amp; Hardware</item>
