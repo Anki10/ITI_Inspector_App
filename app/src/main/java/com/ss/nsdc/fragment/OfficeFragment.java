@@ -16,9 +16,11 @@ import org.json.JSONObject;
 import android.app.Fragment;
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.support.v7.app.AlertDialog;
 import android.view.ContextThemeWrapper;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -75,6 +77,10 @@ public class OfficeFragment extends Fragment {
     private ImageView imageView62;
     private ImageView imageView71;
     private ImageView imageView72;
+
+    //0 - not attempted, 1- edited 2- submitted
+    private int ans1edit, ans2edit, ans3edit, ans4edit, ans5edit, ans6edit, ans7edit;
+
     Context context;
     UtilityService utility = UtilityService.getInstance();
     private SubListOffice getSelectedOfficeData;
@@ -156,14 +162,16 @@ public class OfficeFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 ControlsUtility.editImageViewAction(imageView22, ans2, view);
+                ans2edit = 1;
             }
         });
 
         imageView22.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ControlsUtility.okImageViewAction(imageView22, ans2, view);
+                ControlsUtility.okImageViewAction(imageView22, ans2, view, ans2edit);
                 getSelectedOfficeData.setInsCarpetArea(ans2.getText().toString());
+                ans2edit = 2;
             }
         });
 
@@ -171,6 +179,7 @@ public class OfficeFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 ControlsUtility.editImageViewAction(imageView32, ans3, view);
+                ans3edit = 1;
             }
         });
 
@@ -178,8 +187,9 @@ public class OfficeFragment extends Fragment {
 
             @Override
             public void onClick(View v) {
-                ControlsUtility.okImageViewAction(imageView32, ans3, view);
+                ControlsUtility.okImageViewAction(imageView32, ans3, view, ans3edit);
                 getSelectedOfficeData.setInsInternet(ans3.getSelectedItem().toString());
+                ans3edit = 2;
             }
         });
 
@@ -189,6 +199,7 @@ public class OfficeFragment extends Fragment {
             public void onClick(View v) {
                 ControlsUtility.editImageViewAction(imageView42, ans41, ans42,
                         R.id.off_radioButton41, R.id.off_radioButton42, view);
+                ans4edit = 1;
             }
         });
 
@@ -197,8 +208,9 @@ public class OfficeFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 ControlsUtility.okImageViewAction(imageView42, ans41, ans42,
-                        R.id.off_radioButton41, R.id.off_radioButton42, view);
+                        R.id.off_radioButton41, R.id.off_radioButton42, view, ans4edit);
                 getSelectedOfficeData.setInsAC(ControlsUtility.getSelectedRadioText(ans4));
+                ans4edit = 2;
             }
         });
 
@@ -208,6 +220,7 @@ public class OfficeFragment extends Fragment {
             public void onClick(View v) {
                 ControlsUtility.editImageViewAction(imageView52, ans51, ans52,
                         R.id.off_radioButton51, R.id.off_radioButton52, view);
+                ans5edit = 1;
             }
         });
 
@@ -216,8 +229,9 @@ public class OfficeFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 ControlsUtility.okImageViewAction(imageView52, ans51, ans52,
-                        R.id.off_radioButton51, R.id.off_radioButton52, view);
+                        R.id.off_radioButton51, R.id.off_radioButton52, view, ans5edit);
                 getSelectedOfficeData.setInsBackUp(ControlsUtility.getSelectedRadioText(ans5));
+                ans5edit = 2;
             }
         });
         imageView61.setOnClickListener(new View.OnClickListener() {
@@ -226,6 +240,7 @@ public class OfficeFragment extends Fragment {
             public void onClick(View v) {
                 ControlsUtility.editImageViewAction(imageView62, ans61, ans62,
                         R.id.off_radioButton61, R.id.off_radioButton62, view);
+                ans6edit = 1;
             }
         });
 
@@ -234,8 +249,9 @@ public class OfficeFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 ControlsUtility.okImageViewAction(imageView62, ans61, ans62,
-                        R.id.off_radioButton61, R.id.off_radioButton62, view);
+                        R.id.off_radioButton61, R.id.off_radioButton62, view, ans6edit);
                 getSelectedOfficeData.setInsCCTV(ControlsUtility.getSelectedRadioText(ans6));
+                ans6edit = 2;
             }
         });
 
@@ -243,36 +259,51 @@ public class OfficeFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 ControlsUtility.editImageViewAction(imageView72, ans7, view);
+                ans7edit = 1;
             }
         });
 
         imageView72.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ControlsUtility.okImageViewAction(imageView72, ans7, view);
+                ControlsUtility.okImageViewAction(imageView72, ans7, view, ans7edit);
                 getSelectedOfficeData.setInsremarks(ans2.getText().toString());
+                ans7edit = 2;
             }
         });
 
         subButton.setOnClickListener(new OnClickListener() {
-
             @Override
             public void onClick(View v) {
-                //JSONObject datatoSycClass= new JSONObject();
-                if (utility.getConnectivityStatus(context)) {
-                    JSONObject datatoSycClass = utility.getOfficeSycData(getSelectedOfficeData);
-                    new ExecuteSyncOperation().execute(new String[]{"http://nsdc.qci.org.in/api/CAAF/Offiec_Area.php", datatoSycClass.toString(), "bnNkYzd0ZWNoaWVzYXBp"});
-                } else {
-                    NSDCDBController controller = new NSDCDBController(context);
-                    boolean updation_status = controller.saveOfficeData(getSelectedOfficeData, "draft");
-                    controller.close();
-                    if (updation_status) {
-                        Toast.makeText(context, "Data Saved.", Toast.LENGTH_LONG).show();
-                        //navigate();
-                    } else {
-                        Toast.makeText(context, "Error in saving..", Toast.LENGTH_LONG).show();
-                    }
-                }
+                new AlertDialog.Builder(context)
+                        .setTitle("Confirmation")
+                        .setMessage("This record will not be editable after submit")
+                        .setIcon(android.R.drawable.ic_dialog_alert)
+                        .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int whichButton) {
+                                if (checkAllAtempted()) {
+                                    if (utility.getConnectivityStatus(context)) {
+                                        JSONObject datatoSycClass = utility.getOfficeSycData(getSelectedOfficeData);
+                                        new ExecuteSyncOperation().
+                                                execute(new String[]{"http://nsdc.qci.org.in/api/CAAF/Offiec_Area.php",
+                                                        datatoSycClass.toString(), "bnNkYzd0ZWNoaWVzYXBp"});
+                                    } else {
+                                        NSDCDBController controller = new NSDCDBController(context);
+                                        boolean updation_status = controller.saveOfficeData(getSelectedOfficeData, "draft");
+                                        controller.close();
+                                        if (updation_status) {
+                                            Toast.makeText(context, "Data Saved.", Toast.LENGTH_LONG).show();
+                                            //navigate();
+                                        } else {
+                                            Toast.makeText(context, "Error in saving..", Toast.LENGTH_LONG).show();
+                                        }
+                                    }
+                                } else {
+                                    Toast.makeText(context, "Attempt all questions", Toast.LENGTH_LONG).show();
+                                }
+                            }
+                        })
+                        .setNegativeButton(android.R.string.cancel, null).show();
             }
         });
         return view;
@@ -367,7 +398,7 @@ public class OfficeFragment extends Fragment {
                 try {
                     if (Integer.valueOf(result.get("responsecode").toString()) == 2) {
                         ringProgressDialog.cancel();
-                        Toast.makeText(context, "Data Syc Successfull", Toast.LENGTH_LONG).show();
+                        Toast.makeText(context, "Data Sync Successful", Toast.LENGTH_LONG).show();
                         NSDCDBController controller = new NSDCDBController(context);
                         controller.saveOfficeData(getSelectedOfficeData, "complete");
                         controller.close();
@@ -393,5 +424,13 @@ public class OfficeFragment extends Fragment {
         intent.putExtra("instituteName", getActivity().getIntent().getExtras().getString("ApplicationId"));
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         context.startActivity(intent);
+    }
+
+    public boolean checkAllAtempted() {
+        if (ans2edit == 2 && ans3edit == 2 && ans4edit == 2 && ans5edit == 2 && ans6edit == 2 && ans7edit == 2) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }

@@ -84,8 +84,8 @@
 
                 <ImageView
                     android:id="@+id/cls_img22"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
                     android:layout_alignParentEnd="true"
                     android:scaleType="fitXY"
                     android:src="@drawable/ok_grey"/>
@@ -148,9 +148,9 @@
 
                 <ImageView
                     android:id="@+id/cls_img32"
-                    android:layout_width="30dp"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
                     android:layout_centerVertical="true"
-                    android:layout_height="30dp"
                     android:layout_alignParentEnd="true"
                     android:scaleType="fitXY"
                     android:src="@drawable/ok_grey"/>
@@ -212,8 +212,8 @@
 
                 <ImageView
                     android:id="@+id/cls_img42"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
                     android:layout_centerVertical="true"
                     android:layout_alignParentEnd="true"
                     android:scaleType="fitXY"
@@ -276,8 +276,8 @@
 
                 <ImageView
                     android:id="@+id/cls_img52"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
                     android:layout_alignParentEnd="true"
                     android:layout_centerVertical="true"
                     android:scaleType="fitXY"
@@ -340,8 +340,8 @@
 
                 <ImageView
                     android:id="@+id/cls_img62"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
                     android:layout_alignParentEnd="true"
                     android:layout_centerVertical="true"
                     android:scaleType="fitXY"
@@ -393,9 +393,9 @@
                 <ImageView
                     android:id="@+id/cls_img72"
                     android:layout_gravity="center_vertical"
-                    android:layout_width="30dp"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
                     android:layout_centerVertical="true"
-                    android:layout_height="30dp"
                     android:layout_alignParentEnd="true"
                     android:scaleType="fitXY"
                     android:src="@drawable/ok_grey"/>
@@ -442,8 +442,8 @@
 
                 <ImageView
                     android:id="@+id/cls_img82"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
                     android:layout_alignParentEnd="true"
                     android:scaleType="fitXY"
                     android:src="@drawable/ok_grey"/>
@@ -490,8 +490,8 @@
 
                 <ImageView
                     android:id="@+id/cls_img92"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
                     android:layout_centerVertical="true"
                     android:layout_alignParentEnd="true"
                     android:scaleType="fitXY"
@@ -541,8 +541,8 @@
 
                 <ImageView
                     android:id="@+id/cls_img102"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
                     android:layout_centerVertical="true"
                     android:layout_alignParentEnd="true"
                     android:scaleType="fitXY"

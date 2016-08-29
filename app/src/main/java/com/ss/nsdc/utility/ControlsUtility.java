@@ -84,12 +84,13 @@ public class ControlsUtility {
 		}
 	}
 
-	public static void okImageViewAction(ImageView imageView,
-			final EditText editText, View view) {
+	public static void okImageViewAction(ImageView imageView,final EditText editText, View view,int quesStage) {
 
 		editText.setEnabled(false);
-		imageView.setImageDrawable(view.getResources().getDrawable(
-				R.drawable.ok_green));
+		if(quesStage == 0)
+			imageView.setImageDrawable(view.getResources().getDrawable(R.drawable.ok_green));
+		else if(quesStage == 1)
+			imageView.setImageDrawable(view.getResources().getDrawable(R.drawable.flag));
 	}
 
 	public static void editImageViewAction(ImageView imageView,
@@ -102,12 +103,14 @@ public class ControlsUtility {
 
 	public static void okImageViewAction(ImageView imageView,
 			RadioButton radioButton1, RadioButton radioButton2, int btn1,
-			int btn2, View view) {
+			int btn2, View view,int quesStage) {
 
 		radioButton1.setEnabled(false);
 		radioButton2.setEnabled(false);
-		imageView.setImageDrawable(view.getResources().getDrawable(
-				R.drawable.ok_green));
+        if(quesStage == 0)
+            imageView.setImageDrawable(view.getResources().getDrawable(R.drawable.ok_green));
+        else if(quesStage == 1)
+            imageView.setImageDrawable(view.getResources().getDrawable(R.drawable.flag));
 	}
 
 	public static void editImageViewAction(ImageView imageView,
@@ -121,11 +124,13 @@ public class ControlsUtility {
 	}
 
 	public static void okImageViewAction(ImageView imageView,
-			final Spinner spinner, View view) {
+			final Spinner spinner, View view,int quesStage) {
 
 		spinner.setEnabled(false);
-		imageView.setImageDrawable(view.getResources().getDrawable(
-				R.drawable.ok_green));
+        if(quesStage == 0)
+            imageView.setImageDrawable(view.getResources().getDrawable(R.drawable.ok_green));
+        else if(quesStage == 1)
+            imageView.setImageDrawable(view.getResources().getDrawable(R.drawable.flag));
 	}
 
 	public static void editImageViewAction(ImageView imageView,
@@ -157,12 +162,14 @@ public class ControlsUtility {
 	}
 
 	public static void okImageViewAction(ImageView imageView, CheckBox[] boxs,
-			View view) {
+			View view,int quesStage) {
 
 		for (int i = 0; i < boxs.length; i++) {
 			boxs[i].setEnabled(false);
 		}
-		imageView.setImageDrawable(view.getResources().getDrawable(
-				R.drawable.ok_green));
+        if(quesStage == 0)
+            imageView.setImageDrawable(view.getResources().getDrawable(R.drawable.ok_green));
+        else if(quesStage == 1)
+            imageView.setImageDrawable(view.getResources().getDrawable(R.drawable.flag));
 	}
 }

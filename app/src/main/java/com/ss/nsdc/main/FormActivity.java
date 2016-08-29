@@ -3,8 +3,10 @@ package com.ss.nsdc.main;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
@@ -125,5 +127,19 @@ public class FormActivity extends AppCompatActivity {
         } else {
             return null;
         }
+    }
+
+    @Override
+    public void onBackPressed() {
+        new AlertDialog.Builder(context)
+                .setTitle("Confirmation")
+                .setMessage("You will lose all the pending changes")
+                .setIcon(android.R.drawable.ic_dialog_alert)
+                .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int whichButton) {
+                        FormActivity.this.finish();
+                    }
+                })
+                .setNegativeButton(android.R.string.cancel, null).show();
     }
 }

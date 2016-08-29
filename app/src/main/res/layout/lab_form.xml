@@ -35,7 +35,7 @@
                 android:paddingTop="40dp"
                 android:text="@string/lab_ques1"
                 android:textColor="#000000"
-                android:textSize="18sp"/>
+                android:textSize="16sp"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -64,8 +64,8 @@
 
                 <ImageView
                     android:id="@+id/lab_img12"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
                     android:layout_gravity="center"
                     android:scaleType="fitXY"
                     android:src="@drawable/ok_grey"/>
@@ -85,7 +85,7 @@
                 android:paddingTop="10dp"
                 android:text="@string/lab_ques2"
                 android:textColor="#000000"
-                android:textSize="18sp"/>
+                android:textSize="16sp"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -114,8 +114,8 @@
 
                 <ImageView
                     android:id="@+id/lab_img22"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
                     android:layout_alignParentEnd="true"
                     android:layout_gravity="center"
                     android:scaleType="fitXY"
@@ -136,7 +136,7 @@
                 android:paddingTop="10dp"
                 android:text="@string/lab_ques3"
                 android:textColor="#000000"
-                android:textSize="18sp"/>
+                android:textSize="16sp"/>
 
             <EditText
                 android:id="@+id/lab_edit3"
@@ -153,7 +153,7 @@
                 android:paddingTop="10dp"
                 android:text="@string/lab_ques4"
                 android:textColor="#000000"
-                android:textSize="18sp"/>
+                android:textSize="16sp"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -183,8 +183,8 @@
 
                 <ImageView
                     android:id="@+id/lab_img42"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
                     android:layout_alignParentEnd="true"
                     android:layout_gravity="center"
                     android:scaleType="fitXY"
@@ -205,7 +205,7 @@
                 android:paddingTop="10dp"
                 android:text="@string/lab_ques5"
                 android:textColor="#000000"
-                android:textSize="18sp"/>
+                android:textSize="16sp"/>
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -249,9 +249,8 @@
 
                 <ImageView
                     android:id="@+id/lab_img52"
-                    android:layout_width="30dp"
-
-                    android:layout_height="30dp"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
                     android:layout_alignParentEnd="true"
                     android:layout_gravity="center"
                     android:scaleType="fitXY"
@@ -272,7 +271,7 @@
                 android:paddingTop="10dp"
                 android:text="@string/lab_ques6"
                 android:textColor="#000000"
-                android:textSize="18sp"/>
+                android:textSize="16sp"/>
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -300,8 +299,8 @@
 
                 <ImageView
                     android:id="@+id/lab_img62"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
                     android:layout_alignParentEnd="true"
                     android:scaleType="fitXY"
                     android:src="@drawable/ok_grey"/>
@@ -320,7 +319,7 @@
                 android:paddingTop="10dp"
                 android:text="@string/lab_ques7"
                 android:textColor="#000000"
-                android:textSize="18sp"/>
+                android:textSize="16sp"/>
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -348,8 +347,8 @@
 
                 <ImageView
                     android:id="@+id/lab_img72"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
                     android:layout_alignParentEnd="true"
                     android:scaleType="fitXY"
                     android:src="@drawable/ok_grey"/>
@@ -368,7 +367,7 @@
                 android:paddingTop="10dp"
                 android:text="@string/lab_ques8"
                 android:textColor="#000000"
-                android:textSize="18sp"/>
+                android:textSize="16sp"/>
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -396,8 +395,8 @@
 
                 <ImageView
                     android:id="@+id/lab_img82"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
                     android:layout_alignParentEnd="true"
                     android:scaleType="fitXY"
                     android:src="@drawable/ok_grey"/>
@@ -417,7 +416,7 @@
                 android:paddingTop="10dp"
                 android:text="@string/lab_ques9"
                 android:textColor="#000000"
-                android:textSize="18sp"/>
+                android:textSize="16sp"/>
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -459,8 +458,8 @@
 
                 <ImageView
                     android:id="@+id/lab_img92"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
                     android:layout_alignParentEnd="true"
                     android:scaleType="fitXY"
                     android:src="@drawable/ok_grey"/>
@@ -480,7 +479,7 @@
                 android:paddingTop="10dp"
                 android:text="@string/lab_ques10"
                 android:textColor="#000000"
-                android:textSize="18sp"/>
+                android:textSize="16sp"/>
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -539,8 +538,8 @@
 
                 <ImageView
                     android:id="@+id/lab_img102"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
                     android:layout_alignParentEnd="true"
                     android:scaleType="fitXY"
                     android:src="@drawable/ok_grey"/>
@@ -560,7 +559,7 @@
                 android:paddingTop="10dp"
                 android:text="@string/lab_ques11"
                 android:textColor="#000000"
-                android:textSize="18sp"/>
+                android:textSize="16sp"/>
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -602,8 +601,8 @@
 
                 <ImageView
                     android:id="@+id/lab_img112"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
                     android:layout_alignParentEnd="true"
                     android:scaleType="fitXY"
                     android:src="@drawable/ok_grey"/>
@@ -623,7 +622,7 @@
                 android:paddingTop="10dp"
                 android:text="@string/lab_ques12"
                 android:textColor="#000000"
-                android:textSize="18sp"/>
+                android:textSize="16sp"/>
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -652,8 +651,8 @@
 
                 <ImageView
                     android:id="@+id/lab_img122"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
                     android:layout_alignParentEnd="true"
                     android:scaleType="fitXY"
                     android:src="@drawable/ok_grey"/>

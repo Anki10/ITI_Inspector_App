@@ -41,7 +41,7 @@
                 android:paddingStart="20dp"
                 android:paddingTop="40dp"
                 android:text="@string/cls_ques1"
-                android:textSize="20sp" 
+                android:textSize="16sp"
                 android:textColor="#000000"/>
 
             <EditText
@@ -58,7 +58,7 @@
                 android:paddingStart="20dp"
                 android:paddingTop="10dp"
                 android:text="@string/cls_ques2"
-                android:textSize="20sp" 
+                android:textSize="16sp"
                 android:textColor="#000000"/>
 
             <RelativeLayout
@@ -99,7 +99,7 @@
                 android:paddingStart="20dp"
                 android:paddingTop="10dp"
                 android:text="@string/cls_ques3"
-                android:textSize="20sp" 
+                android:textSize="16sp"
                 android:textColor="#000000"/>
 
             <RelativeLayout
@@ -154,7 +154,7 @@
                 android:paddingStart="20dp"
                 android:paddingTop="10dp"
                 android:text="@string/cls_ques4"
-                android:textSize="20sp" 
+                android:textSize="16sp"
                 android:textColor="#000000"/>
 
             <RelativeLayout
@@ -209,7 +209,7 @@
                 android:paddingStart="20dp"
                 android:paddingTop="10dp"
                 android:text="@string/cls_ques5"
-                android:textSize="20sp" 
+                android:textSize="16sp"
                 android:textColor="#000000"/>
 
             <RelativeLayout
@@ -264,7 +264,7 @@
                 android:paddingStart="20dp"
                 android:paddingTop="10dp"
                 android:text="@string/cls_ques6"
-                android:textSize="20sp" 
+                android:textSize="16sp"
                 android:textColor="#000000"/>
 
             <RelativeLayout
@@ -319,7 +319,7 @@
                 android:paddingStart="20dp"
                 android:paddingTop="10dp"
                 android:text="@string/cls_ques7"
-                android:textSize="20sp" 
+                android:textSize="16sp"
                 android:textColor="#000000"/>
 
             <RelativeLayout
@@ -359,7 +359,7 @@
                 android:paddingStart="20dp"
                 android:paddingTop="10dp"
                 android:text="@string/cls_ques8"
-                android:textSize="20sp" 
+                android:textSize="16sp"
                 android:textColor="#000000"/>
 
             <RelativeLayout
@@ -399,7 +399,7 @@
                 android:paddingStart="20dp"
                 android:paddingTop="10dp"
                 android:text="@string/cls_ques9"
-                android:textSize="20sp" 
+                android:textSize="16sp"
                 android:textColor="#000000"/>
 
             <RelativeLayout
@@ -439,7 +439,7 @@
                 android:paddingStart="20dp"
                 android:paddingTop="10dp"
                 android:text="@string/cls_ques10"
-                android:textSize="20sp" 
+                android:textSize="16sp"
                 android:textColor="#000000"/>
 
             <RelativeLayout

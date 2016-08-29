@@ -51,7 +51,7 @@ public class InstituteActivity extends AppCompatActivity {
 		getSupportActionBar().setDisplayShowHomeEnabled(true);
 
 		ActionBar actionBar = getSupportActionBar();
-		actionBar.setTitle("Institute/College");
+		actionBar.setTitle("Allocated Institutes");
 
 		setupToolbar();
 		//initNavigationDrawer();
@@ -82,7 +82,7 @@ public class InstituteActivity extends AppCompatActivity {
 		getSupportActionBar().setDisplayShowHomeEnabled(true);
 
 		ActionBar actionBar = getSupportActionBar();
-		actionBar.setTitle("Institute/College");
+		actionBar.setTitle("Allocated Institutes");
 
 	}
 

@@ -71,8 +71,9 @@ public class InstituteAdapter extends
 		// - get element from your dataset at this position
 		// - replace the contents of the view with that element
 
-		holder.txtInstitute.setText(instituteList.get(position)
-				.getName_Training_Center());
+		//holder.txtInstitute.setText(instituteList.get(position).getName_Training_Center());
+		holder.txtInstitute.setText(instituteList.get(position).getName_ParentOrg());
+        holder.txtCity.setText(instituteList.get(position).getName_Training_Center());
 		NSDCDBController controller = new NSDCDBController(context);
 
 		holder.imageView.setOnClickListener(new OnClickListener() {
