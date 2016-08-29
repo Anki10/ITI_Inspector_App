@@ -9,6 +9,10 @@
             android:id="@+id/nav_Logout"
             android:icon="@drawable/logout"
             android:title="@string/draw_logout" />
+        <item
+            android:id="@+id/nav_bckp"
+            android:icon="@drawable/logout"
+            android:title="Backup" />
 
        <!--  <item
             android:id="@+id/navigation_subheader"

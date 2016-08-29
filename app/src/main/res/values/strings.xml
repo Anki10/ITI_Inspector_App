@@ -3,8 +3,8 @@
 
     <string name="app_name">NSDC</string>
     <string name="action_settings">Settings</string>
-    <string name="logo">Logo</string>
-
+	<string name="logo">Logo</string>
+    
     <!-- Login Activity -->
     <string name="edit_username">Username</string>
     <string name="edit_password">Password</string>
@@ -27,111 +27,111 @@
     <string name="drawer_header">Drawer Header</string>
     <string name="draw_home">Home</string>
     <string name="draw_logout">Logout</string>
-
+      
     <!-- Submti Button -->
     <string name="submit">Submit</string>
-
+    
     <!-- Radio Options -->
     <string name="radioYes">Yes</string>
     <string name="radioNo">No</string>
-
+    
     <!-- ClassRoom Questions -->
-    <string name="cls_section">Classroom Details</string>
-    <string name="cls_ques1">Q1. Classroom name/ serial number</string>
-    <string name="cls_ques2">Q2. Carpet Area(In Sq Fts)</string>
-    <string name="cls_ques3">Q3. Adequate Power Backup (UPS/ GenSet/Inverter)</string>
-    <string name="cls_ques4">Q4. Overhead Projector/LCD/TV</string>
-    <string name="cls_ques5">Q5. Availability Of Air Conditioner</string>
-    <string name="cls_ques6">Q6. CCTV With Recording Facility</string>
-    <string name="cls_ques7">Q7. Internet Facility In this Room?</string>
-    <string name="cls_ques8">Q8. Proposed Batch Size (for this Class Room)</string>
-    <string name="cls_ques9">Q9. Proposed Number of Batches in Classroom in Day</string>
-    <string name="cls_ques10">Q10.Remark (if any)</string>
+	<string name="cls_section">Classroom Details</string>
+	<string name="cls_ques1">Q1. Classroom name/ serial number</string>
+	<string name="cls_ques2">Q2. Carpet Area(In Sq Fts)</string>
+	<string name="cls_ques3">Q3. Adequate Power Backup (UPS/ GenSet/Inverter)</string>
+	<string name="cls_ques4">Q4. Overhead Projector/LCD/TV</string>
+	<string name="cls_ques5">Q5. Availability Of Air Conditioner</string>
+	<string name="cls_ques6">Q6. CCTV With Recording Facility</string>
+	<string name="cls_ques7">Q7. Internet Facility In this Room?</string>
+	<string name="cls_ques8">Q8. Proposed Batch Size (for this Class Room)</string>
+	<string name="cls_ques9">Q9. Proposed Number of Batches in Classroom in Day</string>
+	<string name="cls_ques10">Q10.Remark (if any)</string>
+	
+	
+	 <!-- Lab Questions -->
+	<string name="lab_section"> Laboratory Detail</string>
+	<string name="lab_ques1">Q1. Lab Type</string>
+	<string name="lab_ques2">Q2. Is the Lab Same as the Classroom?</string>
+	<string name="lab_ques3">Q3. Lab Name/ Serial Number</string>
+	<string name="lab_ques4">Q4. Availability of Internet</string>
+	<string name="lab_ques5">Q5. Availability Of Air Conditioner</string>
+	<string name="lab_ques6">Q6. Carpet Area of Lab (in Square Feet)</string>
+	<string name="lab_ques7">Q7. Batch Size</string>
+	<string name="lab_ques8">Q8. Proposed Number of Batches in this Lab Per Day</string>
+	<string name="lab_ques9">Q9. Availability of Power Backup in Lab in the Form of UPS/ GenSet/ Inveter</string>
+	<string name="lab_ques10">Q10.Job Roles Taught in Lab</string>
+	<string name="lab_ques11">Q11. Availability of CCTV Camera with Recording Facility</string>
+	<string name="lab_ques12">Q12.Remark (if any)</string>
+	
+	<array name="labType">
+	    <item>Other</item>
+	    <item>IT/Computer Lab</item>
+	</array>
+	
+	<array name="yesNo">
+	    <item>Yes</item>
+	    <item>No</item>
+	</array>
+	
+	<!-- Internet Array -->
+	<array name="internetAvailability">
+	    <item>Select</item>
+	    <item>With Speed of 512KBPS And Above</item>
+	    <item>With Speed Below 512KBPS And Above 256KBPS</item>
+	    <item>With Speed of Below 256KBPS</item>
+	    <item>None</item>
+	</array>
+
+	<string name="labelStar">*</string>
+
+	<string name="label_skill_sector">Skill Sector</string>
+	<string name="label_type">Type</string>
+	<string name="label_job_role">JobRole</string>
+	<string name="label_prposed_trainer_student">Proposed Trainer Student Ratio?</string>
+	<string name="label_parallel_batches">Total Number of Parallel Batches Running for the Job Role</string>
+	<string name="label_model_content">Is the Model Content (Student Participant Handbook) Approved by NSDC Available for This Job Role?</string>
+
+	<array name="arraySkillSector">
+		<item>Electronics &amp; Hardware</item>
+		<item>Food Processing</item>
+		<item>Furniture &amp; Fittings</item>
+		<item>Gems And Jewellery</item>
+		<item>Green Jobs</item>
+		<item>Iron And Steel</item>
+		<item>It/Ites</item>
+		<item>Leather</item>
+		<item>Apparel, Madeups &amp; Home Furnishing</item>
+		<item>Logistics</item>
+		<item>Mining</item>
+		<item>People With Disability</item>
+		<item>Retail</item>
+		<item>Automotive</item>
+		<item>Security</item>
+		<item>Sports</item>
+		<item>Telecom</item>
+		<item>Tourism And Hospitality</item>
+		<item>Beauty And Wellness</item>
+		<item>Bfsi</item>
+		<item>Construction</item>
+		<item>Domestic Workers</item>
+	</array>
+
+	<array name="arrayType">
+		<item>Manufacturing</item>
+		<item>Service</item>
+	</array>
+
+	<array name="arrayProposedTrainerRatio">
+		<item>1:20</item>
+		<item>1:30</item>
+		<item>1:40</item>
+	</array>
 
 
-    <!-- Lab Questions -->
-    <string name="lab_section"> Laboratory Detail</string>
-    <string name="lab_ques1">Q1. Lab Type</string>
-    <string name="lab_ques2">Q2. Is the Lab Same as the Classroom?</string>
-    <string name="lab_ques3">Q3. Lab Name/ Serial Number</string>
-    <string name="lab_ques4">Q4. Availability of Internet</string>
-    <string name="lab_ques5">Q5. Availability Of Air Conditioner</string>
-    <string name="lab_ques6">Q6. Carpet Area of Lab (in Square Feet)</string>
-    <string name="lab_ques7">Q7. Batch Size</string>
-    <string name="lab_ques8">Q8. Proposed Number of Batches in this Lab Per Day</string>
-    <string name="lab_ques9">Q9. Availability of Power Backup in Lab in the Form of UPS/ GenSet/ Inveter</string>
-    <string name="lab_ques10">Q10.Job Roles Taught in Lab</string>
-    <string name="lab_ques11">Q11. Availability of CCTV Camera with Recording Facility</string>
-    <string name="lab_ques12">Q12.Remark (if any)</string>
+	<string name="label_yes">Yes</string>
+	<string name="label_no">No</string>
 
-    <array name="labType">
-        <item>Other</item>
-        <item>IT/Computer Lab</item>
-    </array>
-
-    <array name="yesNo">
-        <item>Yes</item>
-        <item>No</item>
-    </array>
-
-    <!-- Internet Array -->
-    <array name="internetAvailability">
-        <item>Select</item>
-        <item>With Speed of 512KBPS And Above</item>
-        <item>With Speed Below 512KBPS And Above 256KBPS</item>
-        <item>With Speed of Below 256KBPS</item>
-        <item>None</item>
-    </array>
-
-    <string name="labelStar">*</string>
-
-    <string name="label_skill_sector">Skill Sector</string>
-    <string name="label_type">Type</string>
-    <string name="label_job_role">JobRole</string>
-    <string name="label_prposed_trainer_student">Proposed Trainer Student Ratio?</string>
-    <string name="label_parallel_batches">Total Number of Parallel Batches Running for the Job Role</string>
-    <string name="label_model_content">Is the Model Content (Student Participant Handbook) Approved by NSDC Available for This Job Role?</string>
-
-    <array name="arraySkillSector">
-        <item>Electronics &amp; Hardware</item>
-        <item>Food Processing</item>
-        <item>Furniture &amp; Fittings</item>
-        <item>Gems And Jewellery</item>
-        <item>Green Jobs</item>
-        <item>Iron And Steel</item>
-        <item>It/Ites</item>
-        <item>Leather</item>
-        <item>Apparel, Madeups &amp; Home Furnishing</item>
-        <item>Logistics</item>
-        <item>Mining</item>
-        <item>People With Disability</item>
-        <item>Retail</item>
-        <item>Automotive</item>
-        <item>Security</item>
-        <item>Sports</item>
-        <item>Telecom</item>
-        <item>Tourism And Hospitality</item>
-        <item>Beauty And Wellness</item>
-        <item>Bfsi</item>
-        <item>Construction</item>
-        <item>Domestic Workers</item>
-    </array>
-
-    <array name="arrayType">
-        <item>Manufacturing</item>
-        <item>Service</item>
-    </array>
-
-    <array name="arrayProposedTrainerRatio">
-        <item>1:20</item>
-        <item>1:30</item>
-        <item>1:40</item>
-    </array>
-
-
-    <string name="label_yes">Yes</string>
-    <string name="label_no">No</string>
-
-    <string name="label_remarks">Remarks</string>
-
+	<string name="label_remarks">Remarks</string>
+	
 </resources>

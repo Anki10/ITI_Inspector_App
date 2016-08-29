@@ -1,10 +1,10 @@
 [
     {
-        "merged": "F:\\Workspace\\ProjectSourceCode\\NSDCFINAL\\app\\build\\intermediates\\res\\merged\\debug\\layout-large-v4\\classroom_form.xml",
-        "source": "F:\\Workspace\\ProjectSourceCode\\NSDCFINAL\\app\\src\\main\\res\\layout-large\\classroom_form.xml"
+        "merged": "F:\\Workspace\\ProjectSourceCode\\NSDC Latest\\app\\build\\intermediates\\res\\merged\\debug\\layout-large-v4\\activity_login.xml",
+        "source": "F:\\Workspace\\ProjectSourceCode\\NSDC Latest\\app\\src\\main\\res\\layout-large\\activity_login.xml"
     },
     {
-        "merged": "F:\\Workspace\\ProjectSourceCode\\NSDCFINAL\\app\\build\\intermediates\\res\\merged\\debug\\layout-large-v4\\activity_login.xml",
-        "source": "F:\\Workspace\\ProjectSourceCode\\NSDCFINAL\\app\\src\\main\\res\\layout-large\\activity_login.xml"
+        "merged": "F:\\Workspace\\ProjectSourceCode\\NSDC Latest\\app\\build\\intermediates\\res\\merged\\debug\\layout-large-v4\\classroom_form.xml",
+        "source": "F:\\Workspace\\ProjectSourceCode\\NSDC Latest\\app\\src\\main\\res\\layout-large\\classroom_form.xml"
     }
 ]

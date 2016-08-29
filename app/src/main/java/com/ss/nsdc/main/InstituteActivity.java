@@ -21,11 +21,13 @@ import android.view.View;
 import android.widget.BaseAdapter;
 import android.widget.HeaderViewListAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.ss.nsdc.R;
 import com.ss.nsdc.adapter.InstituteAdapter;
 import com.ss.nsdc.dao.Institute;
 import com.ss.nsdc.dao.NSDCDBController;
+import com.ss.nsdc.utility.UtilityService;
 
 public class InstituteActivity extends AppCompatActivity {
 
@@ -84,6 +86,10 @@ public class InstituteActivity extends AppCompatActivity {
 
 	}
 
+	@Override
+	public void onBackPressed() {
+		super.onBackPressed();		
+	}
 /*	private void initNavigationDrawer() {
 
 		mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -108,9 +114,9 @@ public class InstituteActivity extends AppCompatActivity {
         if (mDrawerLayout != null) {
             mDrawerLayout.closeDrawer(GravityCompat.START);
         }
-    }
+    }*/
 
-    @Override
+    /*@Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.drawer_view, menu);
         return true;
@@ -127,7 +133,9 @@ public class InstituteActivity extends AppCompatActivity {
                 mDrawerLayout.openDrawer(GravityCompat.START);
                 return true;
 
-            case R.id.action_settings:
+            case R.id.nav_bckp:
+            	UtilityService.exportDatabse(null);
+            	Toast.makeText(getApplicationContext(), "Backing db", Toast.LENGTH_SHORT).show();
                 return true;
         }
 

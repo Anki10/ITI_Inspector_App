@@ -10,6 +10,7 @@ public class JobRolesModel implements Parcelable {
 
 
     int id;
+    String JobID;
     String jobName;
     String handbookAvailable;
     String trainees;
@@ -24,7 +25,7 @@ public class JobRolesModel implements Parcelable {
 
     private Integer proc_tracker;
 
-    public  JobRolesModel()
+    public JobRolesModel()
     {
 
     }
@@ -170,5 +171,14 @@ public class JobRolesModel implements Parcelable {
 
     public void setYearWiseCollegeId(String yearWiseCollegeId) {
         this.yearWiseCollegeId = yearWiseCollegeId;
+    }
+
+
+    public String  getJobID() {
+        return JobID;
+    }
+
+    public void setJobID(String  jobID) {
+        JobID = jobID;
     }
 }

@@ -11,12 +11,15 @@ import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.ss.nsdc.R;
 import com.ss.nsdc.dao.JobRolesModel;
 import com.ss.nsdc.dao.NSDCDBController;
 import com.ss.nsdc.dao.SubCategoryClass;
 import com.ss.nsdc.dao.SubCategoryLab;
+import com.ss.nsdc.entity.SubListEquipment;
+import com.ss.nsdc.entity.SubListOffice;
 import com.ss.nsdc.main.FormActivity;
 
 public class SubCategoryClassAdapter extends
@@ -24,8 +27,9 @@ public class SubCategoryClassAdapter extends
 
     private List<SubCategoryClass> subCategoryClassList;
     private List<SubCategoryLab> subCategoryLabList;
+    private List<SubListOffice> subListOffice;
+    private List<SubListEquipment> subListEquipment;
     private List<JobRolesModel> jobRolesModelList;
-
     private Context context;
     private String category;
 
@@ -51,6 +55,10 @@ public class SubCategoryClassAdapter extends
             this.subCategoryClassList = getList;
         } else if (category.equalsIgnoreCase("lab")) {
             this.subCategoryLabList = getList;
+        } else if (category.equalsIgnoreCase("office")) {
+            this.subListOffice = getList;
+        } else if (category.equalsIgnoreCase("equipment")) {
+            this.subListEquipment = getList;
         } else if (category.equalsIgnoreCase("jobRoles")) {
             this.jobRolesModelList = getList;
         }
@@ -78,114 +86,137 @@ public class SubCategoryClassAdapter extends
         // - replace the contents of the view with that element
 
         if (category.equalsIgnoreCase("class")) {
-            holder.txtSubCat.setText(subCategoryClassList.get(position)
-                    .getClassroom_Name());
+            holder.txtSubCat.setText(subCategoryClassList.get(position).getClassroom_Name());
+            if (subCategoryClassList.get(position).getProc_tracker() == 1) { // New Data
+                holder.imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.start));
+            } else if (subCategoryClassList.get(position).getProc_tracker() == 2) { // not synced
+                holder.imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.progress));
+            } else if (subCategoryClassList.get(position).getProc_tracker() == 3) { // synced Data
+                holder.imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.complete));
+            }
         } else if (category.equalsIgnoreCase("lab")) {
-            holder.txtSubCat.setText(subCategoryLabList.get(position)
-                    .getLAB_Name());
+            holder.txtSubCat.setText(subCategoryLabList.get(position).getLAB_Name());
+            if (subCategoryLabList.get(position).getProc_tracker() == 1) { // New Data
+                holder.imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.start));
+            } else if (subCategoryLabList.get(position).getProc_tracker() == 2) { // not synced
+                holder.imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.progress));
+            } else if (subCategoryLabList.get(position).getProc_tracker() == 3) { // synced Data
+                holder.imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.complete));
+            }
+        } else if (category.equalsIgnoreCase("office")) {
+            holder.txtSubCat.setText(subListOffice.get(position).getAreaType());
+            if (subListOffice.get(position).getProc_tracker() == 1) { // New Data
+                holder.imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.start));
+            } else if (subListOffice.get(position).getProc_tracker() == 2) { // not synced
+                holder.imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.progress));
+            } else if (subListOffice.get(position).getProc_tracker() == 3) { // synced Data
+                holder.imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.complete));
+            }
+        } else if (category.equalsIgnoreCase("equipment")) {
+            holder.txtSubCat.setText(subListEquipment.get(position).getEquipment_Name());
+            if (subListEquipment.get(position).getProc_tracker() == 1) { // New Data
+                holder.imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.start));
+            } else if (subListEquipment.get(position).getProc_tracker() == 2) { // not synced
+                holder.imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.progress));
+            } else if (subListEquipment.get(position).getProc_tracker() == 3) { // synced Data
+                holder.imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.complete));
+            }
         } else if (category.equalsIgnoreCase("jobRoles")) {
-            holder.txtSubCat.setText(jobRolesModelList.get(position)
-                    .getJobName());
+            holder.txtSubCat.setText(jobRolesModelList.get(position).getJobName());
+            if (jobRolesModelList.get(position).getProc_tracker() == 1) { // New Data
+                holder.imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.start));
+            } else if (jobRolesModelList.get(position).getProc_tracker() == 2) { // not synced
+                holder.imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.progress));
+            } else if (jobRolesModelList.get(position).getProc_tracker() == 3) { // synced Data
+                holder.imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.complete));
+            }
         }
+
 
         holder.imageView.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(context, FormActivity.class);
-                intent.putExtra("category", category);
-                NSDCDBController controller = new NSDCDBController(context);
-
+                //NSDCDBController controller = new NSDCDBController(context);
                 if (category.equalsIgnoreCase("class")) {
-                    intent.putExtra("subcategoryId",
-                            subCategoryClassList.get(position).getClassId());
-                    intent.putExtra("yearWiseCollageId", subCategoryClassList
-                            .get(position).getYearWiseCollegeId());
-                    if (subCategoryClassList.get(position).getProc_tracker() == 1) {
-                        holder.imageView.setImageDrawable(context
-                                .getResources().getDrawable(R.drawable.start));
-                        subCategoryClassList.get(position).setProc_tracker(2);
-                        controller.updateClassProc_tracker(subCategoryClassList.get(position));
-                    } else if (subCategoryClassList.get(position)
-                            .getProc_tracker() == 2) {
-                        holder.imageView.setImageDrawable(context
-                                .getResources()
-                                .getDrawable(R.drawable.progress));
-                    } else if (subCategoryClassList.get(position)
-                            .getProc_tracker() == 3) {
-                        holder.imageView.setImageDrawable(context
-                                .getResources()
-                                .getDrawable(R.drawable.ok_green));
+                    if (subCategoryClassList.get(position).getProc_tracker() == 1) {// New Data
+                        Intent intent = new Intent(context, FormActivity.class);
+                        intent.putExtra("category", category);
+                        intent.putExtra("subcategoryId", subCategoryClassList.get(position).getClassId());
+                        intent.putExtra("yearWiseCollageId", subCategoryClassList.get(position).getYearWiseCollegeId());
+                        context.startActivity(intent);
+                    } else if (subCategoryClassList.get(position).getProc_tracker() == 2) {
+                        Toast.makeText(context, "This Data is waiting to be synced and cannot be edited", Toast.LENGTH_SHORT).show();
+                    } else if (subCategoryClassList.get(position).getProc_tracker() == 3) { //
+                        Toast.makeText(context, "This Data is synced and cannot be edited", Toast.LENGTH_SHORT).show();
                     }
-                    /*
-                     * intent.putExtra("ApplicationId",
-					 * subCategoryClassList.get(position).getApplicationNo());
-					 */
                 } else if (category.equalsIgnoreCase("Lab")) {
-                    intent.putExtra("subcategoryId",
-                            subCategoryLabList.get(position).getLabId());
-                    intent.putExtra("yearWiseCollageId", subCategoryLabList
-                            .get(position).getYearWiseCollegeId());
-                    if (subCategoryLabList.get(position).getProc_tracker() == 1) {
-                        holder.imageView.setImageDrawable(context
-                                .getResources().getDrawable(R.drawable.start));
-                        subCategoryLabList.get(position).setProc_tracker(2);
-                        controller.updateLabProc_tracker(subCategoryLabList.get(position));
-                    } else if (subCategoryLabList.get(position)
-                            .getProc_tracker() == 2) {
-                        holder.imageView.setImageDrawable(context
-                                .getResources()
-                                .getDrawable(R.drawable.progress));
-                    } else if (subCategoryLabList.get(position)
-                            .getProc_tracker() == 3) {
-                        holder.imageView.setImageDrawable(context
-                                .getResources()
-                                .getDrawable(R.drawable.ok_green));
+                    if (subCategoryLabList.get(position).getProc_tracker() == 1) { // New Data
+                        Intent intent = new Intent(context, FormActivity.class);
+                        intent.putExtra("category", category);
+                        intent.putExtra("subcategoryId", subCategoryLabList.get(position).getLabId());
+                        intent.putExtra("yearWiseCollageId", subCategoryLabList.get(position).getYearWiseCollegeId());
+                        context.startActivity(intent);
+                    } else if (subCategoryLabList.get(position).getProc_tracker() == 2) {
+                        Toast.makeText(context, "This Data is waiting to be synced and cannot be edited", Toast.LENGTH_SHORT).show();
+                    } else if (subCategoryLabList.get(position).getProc_tracker() == 3) { //
+                        Toast.makeText(context, "This Data is synced and cannot be edited", Toast.LENGTH_SHORT).show();
                     }
-                    /*
-                     * intent.putExtra("ApplicationId",
-					 * subCategoryLabList.get(position).getApplicationNo());
-					 */
+                } else if (category.equalsIgnoreCase("office")) {
+                    if (subListOffice.get(position).getProc_tracker() == 1) { // New Data
+                        Intent intent = new Intent(context, FormActivity.class);
+                        intent.putExtra("category", category);
+                        intent.putExtra("subcategoryId", subListOffice.get(position).getOfficeId());
+                        intent.putExtra("yearWiseCollageId", subListOffice.get(position).getYearWiseCollegeId());
+                        context.startActivity(intent);
+                    } else if (subListOffice.get(position).getProc_tracker() == 2) {
+                        Toast.makeText(context, "This Data is waiting to be synced and cannot be edited", Toast.LENGTH_SHORT).show();
+                    } else if (subListOffice.get(position).getProc_tracker() == 3) { //
+                        Toast.makeText(context, "This Data is synced and cannot be edited", Toast.LENGTH_SHORT).show();
+                    }
+                } else if (category.equalsIgnoreCase("equipment")) {
+                    if (subListEquipment.get(position).getProc_tracker() == 1) { // New Data
+                        Intent intent = new Intent(context, FormActivity.class);
+                        intent.putExtra("category", category);
+                        intent.putExtra("subcategoryId", subListEquipment.get(position).getJob_Id());
+                        intent.putExtra("yearWiseCollageId", subListEquipment.get(position).getYearWiseCollegeId());
+                        context.startActivity(intent);
+                    } else if (subListEquipment.get(position).getProc_tracker() == 2) {
+                        Toast.makeText(context, "This Data is waiting to be synced and cannot be edited", Toast.LENGTH_SHORT).show();
+                    } else if (subListEquipment.get(position).getProc_tracker() == 3) { //
+                        Toast.makeText(context, "This Data is synced and cannot be edited", Toast.LENGTH_SHORT).show();
+                    }
                 } else if (category.equalsIgnoreCase("jobRoles")) {
-                    intent.putExtra("subcategoryId",
-                            jobRolesModelList.get(position).getId());
-                    intent.putExtra("yearWiseCollageId", subCategoryLabList
-                            .get(position).getYearWiseCollegeId());
-                    if (subCategoryLabList.get(position).getProc_tracker() == 1) {
-                        holder.imageView.setImageDrawable(context
-                                .getResources().getDrawable(R.drawable.start));
-                        subCategoryLabList.get(position).setProc_tracker(2);
-                        controller.updateJobRolesProcTracker(jobRolesModelList.get(position));
-                    } else if (subCategoryLabList.get(position)
-                            .getProc_tracker() == 2) {
-                        holder.imageView.setImageDrawable(context
-                                .getResources()
-                                .getDrawable(R.drawable.progress));
-                    } else if (subCategoryLabList.get(position)
-                            .getProc_tracker() == 3) {
-                        holder.imageView.setImageDrawable(context
-                                .getResources()
-                                .getDrawable(R.drawable.ok_green));
+                    if (jobRolesModelList.get(position).getProc_tracker() == 1) { // New Data
+                        Intent intent = new Intent(context, FormActivity.class);
+                        intent.putExtra("category", category);
+                        intent.putExtra("subcategoryId", jobRolesModelList.get(position).getJobID());
+                        intent.putExtra("yearWiseCollageId", jobRolesModelList.get(position).getYearWiseCollegeId());
+                        context.startActivity(intent);
+                    } else if (subListEquipment.get(position).getProc_tracker() == 2) {
+                        Toast.makeText(context, "This Data is waiting to be synced and cannot be edited", Toast.LENGTH_SHORT).show();
+                    } else if (subListEquipment.get(position).getProc_tracker() == 3) { //
+                        Toast.makeText(context, "This Data is synced and cannot be edited", Toast.LENGTH_SHORT).show();
                     }
-					/*
-					 * intent.putExtra("ApplicationId",
-					 * subCategoryLabList.get(position).getApplicationNo());
-					 */
                 }
-
-                controller.close();
-                context.startActivity(intent);
+                //controller.close();
             }
         });
     }
+
 
     // Return the size of your dataset (invoked by the layout manager)
     @Override
     public int getItemCount() {
         if (category.equalsIgnoreCase("class")) {
-
             return subCategoryClassList.size();
         } else if (category.equalsIgnoreCase("Lab")) {
             return subCategoryLabList.size();
+        } else if (category.equalsIgnoreCase("office")) {
+            return subListOffice.size();
+        } else if (category.equalsIgnoreCase("equipment")) {
+            return subListEquipment.size();
+        } else if (category.equalsIgnoreCase("jobRoles")) {
+            return jobRolesModelList.size();
         }
         return 0;
     }

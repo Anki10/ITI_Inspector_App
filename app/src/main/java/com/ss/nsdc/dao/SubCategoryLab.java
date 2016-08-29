@@ -28,7 +28,7 @@ public class SubCategoryLab {
 	private String InsArea_under_CCTV_Coverage;
 	private String InsRemarks ;
 	private String insJobRole;
-	private Integer proc_tracker;
+	private int proc_tracker;
 	
 	public String getLab_type() {
 		return Lab_type;
@@ -196,10 +196,10 @@ public class SubCategoryLab {
 	public void setInsJobRole(String insJobRole) {
 		this.insJobRole = insJobRole;
 	}
-	public Integer getProc_tracker() {
+	public int getProc_tracker() {
 		return proc_tracker;
 	}
-	public void setProc_tracker(Integer proc_tracker) {
+	public void setProc_tracker(int proc_tracker) {
 		this.proc_tracker = proc_tracker;
 	}
 

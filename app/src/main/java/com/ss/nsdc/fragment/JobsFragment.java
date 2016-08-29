@@ -16,7 +16,6 @@ import android.widget.Spinner;
 
 import com.ss.nsdc.R;
 import com.ss.nsdc.dao.JobRolesModel;
-import com.ss.nsdc.dao.SubCategoryLab;
 
 /**
  * Created by Mayank on 29/08/2016.
@@ -73,7 +72,7 @@ public class JobsFragment extends Fragment implements AdapterView.OnItemSelected
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        view = inflater.inflate(R.layout.classroom_form, container, false);
+        view = inflater.inflate(R.layout.fragment_job_roles, container, false);
         return view;
     }
 

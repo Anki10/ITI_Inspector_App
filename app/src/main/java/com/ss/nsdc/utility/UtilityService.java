@@ -1,13 +1,14 @@
 package com.ss.nsdc.utility;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.nio.channels.FileChannel;
 import java.util.List;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-
-import com.ss.nsdc.dao.SubCategoryClass;
-import com.ss.nsdc.dao.SubCategoryLab;
 
 import android.app.AlertDialog;
 import android.content.Context;
@@ -15,9 +16,12 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+import android.os.Environment;
 import android.provider.Settings;
-import android.view.View;
-import android.widget.EditText;
+
+import com.ss.nsdc.dao.SubCategoryClass;
+import com.ss.nsdc.dao.SubCategoryLab;
+import com.ss.nsdc.entity.SubListOffice;
 
 public class UtilityService {
 
@@ -172,4 +176,54 @@ public class UtilityService {
 	
 	return resultfinal;
 	}
+	
+	public JSONObject getOfficeSycData(SubListOffice officedata)
+	{
+		JSONObject offdetails=new JSONObject();
+		try {
+			offdetails.put("id", officedata.getOfficeId());
+			offdetails.put("AreaType", officedata.getAreaType());
+			offdetails.put("CarpetArea",officedata.getCarpetArea());
+			offdetails.put("Internet",officedata.getInternet());
+			offdetails.put("AC",officedata.getAC());
+			offdetails.put("BackUp",officedata.getBackUp());
+			offdetails.put("CCTV",officedata.getCCTV());
+			offdetails.put("remarks",officedata.getRemarks());
+			offdetails.put("InsCarpetArea",officedata.getInsCarpetArea());
+			offdetails.put("InsInternet",officedata.getInsInternet());
+			offdetails.put("InsAC",officedata.getInsAC());
+			offdetails.put("InsBackUp","");
+			offdetails.put("InsCCTV",officedata.getInsCCTV());
+			offdetails.put("Insremarks",officedata.getInsremarks());
+			
+		} catch (JSONException e) {
+			e.printStackTrace();
+			return null;
+		}
+		return offdetails;
+	}
+	
+	public static void exportDatabse(String databaseName) {
+        try {
+            File sd = Environment.getExternalStorageDirectory();
+            File data = Environment.getDataDirectory();
+
+            if (Environment.MEDIA_MOUNTED.equals(Environment.getExternalStorageState())) {
+                String currentDBPath = "\\data\\user\\0\\com.ss.nsdc\\databases\\NSDC.db";
+                String backupDBPath = "backupname.db";
+                File currentDB = new File(data, currentDBPath);
+                File backupDB = new File(sd, backupDBPath);
+
+                if (currentDB.exists()) {
+                    FileChannel src = new FileInputStream(currentDB).getChannel();
+                    FileChannel dst = new FileOutputStream(backupDB).getChannel();
+                    dst.transferFrom(src, 0, src.size());
+                    src.close();
+                    dst.close();
+                }
+            }
+        } catch (Exception e) {
+
+        }
+    }
 }

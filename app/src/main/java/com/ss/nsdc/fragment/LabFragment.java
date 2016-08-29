@@ -74,7 +74,7 @@ public class LabFragment extends Fragment {
 	private CheckBox ans104;
 
 	private Button subButton;
-	private Button draftButton;
+	//private Button draftButton;
 
 	private ImageView imageView121;
 	private ImageView imageView122;
@@ -125,7 +125,7 @@ public class LabFragment extends Fragment {
 		if(getSelectedLabData.getProc_tracker()==3)
 		{
 			subButton.setEnabled(false);
-        	draftButton.setEnabled(false);
+        	//draftButton.setEnabled(false);
 		}
 		
 		ControlsUtility.setDefaultEditText(ans3, "Computer Lab");
@@ -485,26 +485,32 @@ public class LabFragment extends Fragment {
 			public void onClick(View v) {
 
 				JSONObject datatoSycLab = new JSONObject();
-				if (isAllAttempted) {
+				//if (isAllAttempted) {
 					if (utility.getConnectivityStatus(context)) {
 						List<SubCategoryLab> labResults=new ArrayList<SubCategoryLab>();
 						labResults.add(getSelectedLabData);
-						datatoSycLab = utility
-								.getLabSycData(labResults);
+						datatoSycLab = utility.getLabSycData(labResults);
 						new ExecuteSyncOperation()
-						.execute(new String[] {
-								"http://nsdc.qci.org.in/api/CAAF/LAB_Details.php",
+						.execute(new String[] {"http://nsdc.qci.org.in/api/CAAF/LAB_Details.php",
 								datatoSycLab.toString(),"bnNkYzd0ZWNoaWVzYXBp" });
+					}else{
+						NSDCDBController controller=new NSDCDBController(context);
+						boolean updation_status=controller.saveLabData(getSelectedLabData,"draft");
+						controller.close();
+						if(updation_status){
+							Toast.makeText(context, "Data Saved.", Toast.LENGTH_LONG).show();
+							navigate();
+						}else{
+							Toast.makeText(context, "Error in saving..", Toast.LENGTH_LONG).show();
+						}
 					}
-				} else {
-					Toast.makeText(context, "Attempt all questions",
-							Toast.LENGTH_LONG).show();
-				}
-
+				/*} else {
+					Toast.makeText(context, "Attempt all questions",Toast.LENGTH_LONG).show();
+				}*/
 			}
 		});
 
-		draftButton.setOnClickListener(new OnClickListener() {
+/*		draftButton.setOnClickListener(new OnClickListener() {
 
 			@Override
 			public void onClick(View v) {
@@ -524,7 +530,7 @@ public class LabFragment extends Fragment {
 					Log.e("LAB Fragment", e.getMessage());
 				}
 			}
-		});
+		});*/
 		return view;
 	}
 
@@ -555,7 +561,7 @@ public class LabFragment extends Fragment {
 		ans104 = (CheckBox) view.findViewById(R.id.lab_check14);
 
 		subButton = (Button) view.findViewById(R.id.lab_submit);
-		draftButton = (Button) view.findViewById(R.id.lab_draft);
+		//draftButton = (Button) view.findViewById(R.id.lab_draft);
 
 		imageView11 = (ImageView) view.findViewById(R.id.lab_img11);
 		imageView12 = (ImageView) view.findViewById(R.id.lab_img12);
@@ -650,7 +656,7 @@ public class LabFragment extends Fragment {
 						controller.close();
 						if (updation_status) {
 							subButton.setEnabled(false);
-		                	draftButton.setEnabled(false);
+		                	//draftButton.setEnabled(false);
 							navigate();
 						}
 						else{
@@ -676,6 +682,7 @@ public class LabFragment extends Fragment {
 		intent.putExtra("YearWiseCollegeId", getActivity().getIntent().getExtras().getString("yearWiseCollageId"));
 		intent.putExtra("applicationNo", getActivity().getIntent().getExtras().getString("yearWiseCollageId"));
 		intent.putExtra("instituteName", getActivity().getIntent().getExtras().getString("ApplicationId"));
+    	intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
 		context.startActivity(intent);
 	}	
 }

@@ -16,10 +16,11 @@ import org.json.JSONObject;
 import android.app.Fragment;
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.util.Log;
+import android.support.v7.app.AlertDialog;
 import android.view.ContextThemeWrapper;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -37,6 +38,7 @@ import com.ss.nsdc.R;
 import com.ss.nsdc.dao.NSDCDBController;
 import com.ss.nsdc.dao.SubCategoryClass;
 import com.ss.nsdc.main.CategoryActivity;
+import com.ss.nsdc.main.NavigationDrawerActivity.MainActivity;
 import com.ss.nsdc.utility.ControlsUtility;
 import com.ss.nsdc.utility.UtilityService;
 
@@ -66,7 +68,7 @@ public class ClassroomFragment extends Fragment {
     private EditText ans9;
     private EditText ans10;
     private Button subButton;
-    private Button draftButton;
+    //private Button draftButton;
     private ImageView imageView21;
     private ImageView imageView22;
     private ImageView imageView31;
@@ -91,8 +93,7 @@ public class ClassroomFragment extends Fragment {
     UtilityService utility = UtilityService.getInstance();
     private SubCategoryClass getSelectedClassData;
 
-    private NSDCDBController controller;
-
+    //private NSDCDBController controller ;
     public ClassroomFragment() {
         super();
     }
@@ -111,7 +112,7 @@ public class ClassroomFragment extends Fragment {
         initializeControls();
         if (getSelectedClassData.getProc_tracker() == 3) {
             subButton.setEnabled(false);
-            draftButton.setEnabled(false);
+            //draftButton.setEnabled(false);
         }
         ControlsUtility.setSpinnerData(ans7,
                 getResources().getStringArray(R.array.internetAvailability),
@@ -401,45 +402,64 @@ public class ClassroomFragment extends Fragment {
             @Override
             public void onClick(View v) {
 
-                JSONObject datatoSycClass = new JSONObject();
-                if (isAllAttempted) {
-                    if (utility.getConnectivityStatus(context)) {
-                        List<SubCategoryClass> classResults = new ArrayList<SubCategoryClass>();
-                        classResults.add(getSelectedClassData);
-                        datatoSycClass = utility.getClassDataSync(classResults);
-                        new ExecuteSyncOperation()
-                                .execute(new String[]{
-                                        "http://nsdc.qci.org.in/api/CAAF/Classroom_Details.php",
-                                        datatoSycClass.toString(),
-                                        "bnNkYzd0ZWNoaWVzYXBp"});
-                    }
-                } else {
-                    Toast.makeText(context, "Attempt all questions",
-                            Toast.LENGTH_LONG).show();
-                }
+                new AlertDialog.Builder(context)
+                        .setTitle("Confirmation")
+                        .setMessage("This record will not be editable after submit")
+                        .setIcon(android.R.drawable.ic_dialog_alert)
+                        .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int whichButton) {
 
+                                JSONObject datatoSycClass = new JSONObject();
+                                //if (isAllAttempted) {
+                                if (utility.getConnectivityStatus(context)) {
+                                    List<SubCategoryClass> classResults = new ArrayList<SubCategoryClass>();
+                                    classResults.add(getSelectedClassData);
+                                    datatoSycClass = utility.getClassDataSync(classResults);
+                                    new ExecuteSyncOperation().execute(new String[]
+                                            {"http://nsdc.qci.org.in/api/CAAF/Classroom_Details.php", datatoSycClass.toString(),
+                                                    "bnNkYzd0ZWNoaWVzYXBp"});
+                                } else {
+                                    NSDCDBController controller = new NSDCDBController(context);
+                                    boolean updation_status = controller.saveClassData(getSelectedClassData, "draft");
+                                    controller.close();
+                                    if (updation_status) {
+                                        Toast.makeText(context, "Data Saved.", Toast.LENGTH_LONG).show();
+                                        navigate();
+                                    } else {
+                                        Toast.makeText(context, "Error in saving..", Toast.LENGTH_LONG).show();
+                                    }
+                                }
+                        /*} else {
+							Toast.makeText(context, "Attempt all questions",
+									Toast.LENGTH_LONG).show();
+						}*/
+                            }
+                        })
+                        .setNegativeButton(android.R.string.cancel, null).show();
             }
         });
 
-        draftButton.setOnClickListener(new OnClickListener() {
+/*		draftButton.setOnClickListener(new OnClickListener() {
 
-            @Override
-            public void onClick(View v) {
-                boolean updation_status = false;
-                try {
-                    NSDCDBController controller = new NSDCDBController(context);
-                    updation_status = controller.saveClassData(getSelectedClassData, "draft");
-                    controller.close();
-                    if (updation_status) {
-                        navigate();
-                    } else {
-                        Toast.makeText(context, "Error in saving draft..", Toast.LENGTH_LONG).show();
-                    }
-                } catch (Exception e) {
-                    Log.e("Classroom Fragment", e.getMessage());
-                }
-            }
-        });
+			@Override
+			public void onClick(View v) {
+				boolean updation_status=false;
+				try {
+					NSDCDBController controller = new NSDCDBController(context);
+					updation_status=controller.saveClassData(getSelectedClassData, "draft");
+					controller.close();
+					if(updation_status){
+						navigate();
+					}
+					else
+					{
+						Toast.makeText(context, "Error in saving draft..", Toast.LENGTH_LONG).show();
+					}
+				} catch (Exception e) {
+					Log.e("Classroom Fragment", e.getMessage());
+				}
+			}
+		});*/
         return view;
     }
 
@@ -464,7 +484,7 @@ public class ClassroomFragment extends Fragment {
         ans9 = (EditText) view.findViewById(R.id.cls_edit9);
         ans10 = (EditText) view.findViewById(R.id.cls_edit10);
         subButton = (Button) view.findViewById(R.id.cls_submit);
-        draftButton = (Button) view.findViewById(R.id.cls_draft);
+        //draftButton = (Button) view.findViewById(R.id.cls_draft);
 
         imageView21 = (ImageView) view.findViewById(R.id.cls_img21);
         imageView22 = (ImageView) view.findViewById(R.id.cls_img22);
@@ -556,7 +576,7 @@ public class ClassroomFragment extends Fragment {
                         controller.close();
                         if (updation_status) {
                             subButton.setEnabled(false);
-                            draftButton.setEnabled(false);
+                            //draftButton.setEnabled(false);
                             navigate();
                         } else {
                             Toast.makeText(context, "Error in updation of data..", Toast.LENGTH_LONG).show();
@@ -573,12 +593,10 @@ public class ClassroomFragment extends Fragment {
                 }
             } else {
                 ringProgressDialog.dismiss();
-                Toast.makeText(context, "Data Syc failed...",
+                Toast.makeText(context, "Data Sync failed...",
                         Toast.LENGTH_LONG).show();
             }
-
         }
-
     }
 
     public void navigate() {
@@ -586,6 +604,7 @@ public class ClassroomFragment extends Fragment {
         intent.putExtra("YearWiseCollegeId", getActivity().getIntent().getExtras().getString("yearWiseCollageId"));
         intent.putExtra("applicationNo", getActivity().getIntent().getExtras().getString("yearWiseCollageId"));
         intent.putExtra("instituteName", getActivity().getIntent().getExtras().getString("ApplicationId"));
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         context.startActivity(intent);
     }
 }

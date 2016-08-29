@@ -41,4 +41,24 @@
         <item name="android:textSize">10sp</item>
         <item name="android:textColor">#FFFFFF</item>
     </style>
+    
+    <!-- Office Questions -->
+	<string name="off_section">Office Details</string>
+	<string name="off_ques1">Q1. Office Area Type</string>
+	<string name="off_ques2">Q2. Carpet Area (in Square Feet)</string>
+	<string name="off_ques3">Q3. Availability of Internet in the Room</string>
+	<string name="off_ques4">Q4. Air-Conditioning</string>
+	<string name="off_ques5">Q5. Power-Backup</string>
+	<string name="off_ques6">Q6. Area CCTV Coverage</string>
+	<string name="off_ques7">Q7. Remarks</string>
+	
+	<!-- Office Area Type -->
+	<array name="officeType">
+	    <item>Select</item>
+	    <item>Counselling Area</item>
+	    <item>Reception Area</item>
+	    <item>Library</item>
+	    <item>Office Space (For Trainers and Staff)</item>
+	    <item>Placement And Entrepreneurship Cell</item>
+	</array>
 </resources>

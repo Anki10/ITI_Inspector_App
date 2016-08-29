@@ -15,9 +15,11 @@ import com.ss.nsdc.dao.JobRolesModel;
 import com.ss.nsdc.dao.NSDCDBController;
 import com.ss.nsdc.dao.SubCategoryClass;
 import com.ss.nsdc.dao.SubCategoryLab;
+import com.ss.nsdc.entity.SubListOffice;
 import com.ss.nsdc.fragment.ClassroomFragment;
 import com.ss.nsdc.fragment.JobsFragment;
 import com.ss.nsdc.fragment.LabFragment;
+import com.ss.nsdc.fragment.OfficeFragment;
 
 public class FormActivity extends AppCompatActivity {
 
@@ -25,11 +27,11 @@ public class FormActivity extends AppCompatActivity {
     public static String toolbarTitle;
     private ClassroomFragment classroomFragment;
     private FragmentManager fragmentManager = getFragmentManager();
-    private FragmentTransaction fragmentTransaction = fragmentManager
-            .beginTransaction();
+    private FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
     Context context = this;
     SubCategoryClass getSelectedClassData;
     SubCategoryLab getSelectedLabData;
+    SubListOffice getSelectedOfficeData;
     JobRolesModel jobRolesModel;
 
     @Override
@@ -48,7 +50,7 @@ public class FormActivity extends AppCompatActivity {
             callFragment();
         }
         /*NSDCDBController controller=new NSDCDBController(context);
-		if(category.equalsIgnoreCase("class"))
+        if(category.equalsIgnoreCase("class"))
 		{
 			getSelectedClassData=controller.getClassDataByClassId(YearWiseCollegeId, classId);
 		}*/
@@ -67,10 +69,13 @@ public class FormActivity extends AppCompatActivity {
             getSelectedLabData = controller.getLabDataByLabId(YearWiseCollegeId, classId);
             LabFragment labFragment = new LabFragment(getSelectedLabData);
             fragmentTransaction.add(R.id.container, labFragment);
+        } else if (category.equalsIgnoreCase("office")) {
+            getSelectedOfficeData = controller.getOfficeDataByOfficeId(YearWiseCollegeId, classId);
+            OfficeFragment officeFragment = new OfficeFragment(getSelectedOfficeData);
+            fragmentTransaction.add(R.id.container, officeFragment);
         } else if (category.equalsIgnoreCase("jobRoles")) {
-            //	jobRolesModel=controller.getJobRolesList(YearWiseCollegeId, classId);
-            JobsFragment jobsFragment = new JobsFragment(jobRolesModel
-            );
+            jobRolesModel = controller.getJobDataByJobId(YearWiseCollegeId, classId);
+            JobsFragment jobsFragment = new JobsFragment(jobRolesModel);
             fragmentTransaction.add(R.id.container, jobsFragment);
         }
         fragmentTransaction.addToBackStack(null);
@@ -113,6 +118,10 @@ public class FormActivity extends AppCompatActivity {
             return toolbarTitle = "Classrom Details";
         } else if (category.equalsIgnoreCase("lab")) {
             return toolbarTitle = "Laboratories Details";
+        } else if (category.equalsIgnoreCase("office")) {
+            return toolbarTitle = "Office Area Details";
+        } else if (category.equalsIgnoreCase("equipment")) {
+            return toolbarTitle = "Equipment Details";
         } else {
             return null;
         }

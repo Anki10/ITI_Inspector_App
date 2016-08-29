@@ -1,53 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <array name="arrayProposedTrainerRatio">
-        <item>1:20</item>
-        <item>1:30</item>
-        <item>1:40</item>
-    </array>
+		<item>1:20</item>
+		<item>1:30</item>
+		<item>1:40</item>
+	</array>
     <array name="arraySkillSector">
-        <item>Electronics &amp; Hardware</item>
-        <item>Food Processing</item>
-        <item>Furniture &amp; Fittings</item>
-        <item>Gems And Jewellery</item>
-        <item>Green Jobs</item>
-        <item>Iron And Steel</item>
-        <item>It/Ites</item>
-        <item>Leather</item>
-        <item>Apparel, Madeups &amp; Home Furnishing</item>
-        <item>Logistics</item>
-        <item>Mining</item>
-        <item>People With Disability</item>
-        <item>Retail</item>
-        <item>Automotive</item>
-        <item>Security</item>
-        <item>Sports</item>
-        <item>Telecom</item>
-        <item>Tourism And Hospitality</item>
-        <item>Beauty And Wellness</item>
-        <item>Bfsi</item>
-        <item>Construction</item>
-        <item>Domestic Workers</item>
-    </array>
+		<item>Electronics &amp; Hardware</item>
+		<item>Food Processing</item>
+		<item>Furniture &amp; Fittings</item>
+		<item>Gems And Jewellery</item>
+		<item>Green Jobs</item>
+		<item>Iron And Steel</item>
+		<item>It/Ites</item>
+		<item>Leather</item>
+		<item>Apparel, Madeups &amp; Home Furnishing</item>
+		<item>Logistics</item>
+		<item>Mining</item>
+		<item>People With Disability</item>
+		<item>Retail</item>
+		<item>Automotive</item>
+		<item>Security</item>
+		<item>Sports</item>
+		<item>Telecom</item>
+		<item>Tourism And Hospitality</item>
+		<item>Beauty And Wellness</item>
+		<item>Bfsi</item>
+		<item>Construction</item>
+		<item>Domestic Workers</item>
+	</array>
     <array name="arrayType">
-        <item>Manufacturing</item>
-        <item>Service</item>
-    </array>
+		<item>Manufacturing</item>
+		<item>Service</item>
+	</array>
     <array name="internetAvailability">
-        <item>Select</item>
-        <item>With Speed of 512KBPS And Above</item>
-        <item>With Speed Below 512KBPS And Above 256KBPS</item>
-        <item>With Speed of Below 256KBPS</item>
-        <item>None</item>
-    </array>
+	    <item>Select</item>
+	    <item>With Speed of 512KBPS And Above</item>
+	    <item>With Speed Below 512KBPS And Above 256KBPS</item>
+	    <item>With Speed of Below 256KBPS</item>
+	    <item>None</item>
+	</array>
     <array name="labType">
-        <item>Other</item>
-        <item>IT/Computer Lab</item>
-    </array>
+	    <item>Other</item>
+	    <item>IT/Computer Lab</item>
+	</array>
+    <array name="officeType">
+	    <item>Select</item>
+	    <item>Counselling Area</item>
+	    <item>Reception Area</item>
+	    <item>Library</item>
+	    <item>Office Space (For Trainers and Staff)</item>
+	    <item>Placement And Entrepreneurship Cell</item>
+	</array>
     <array name="yesNo">
-        <item>Yes</item>
-        <item>No</item>
-    </array>
+	    <item>Yes</item>
+	    <item>No</item>
+	</array>
     <attr format="reference" name="drawerArrowStyle"/>
     <attr format="dimension" name="height"/>
     <attr format="boolean" name="isLightTheme"/>
@@ -395,6 +403,14 @@
     <string name="label_type">Type</string>
     <string name="label_yes">Yes</string>
     <string name="logo">Logo</string>
+    <string name="off_ques1">Q1. Office Area Type</string>
+    <string name="off_ques2">Q2. Carpet Area (in Square Feet)</string>
+    <string name="off_ques3">Q3. Availability of Internet in the Room</string>
+    <string name="off_ques4">Q4. Air-Conditioning</string>
+    <string name="off_ques5">Q5. Power-Backup</string>
+    <string name="off_ques6">Q6. Area CCTV Coverage</string>
+    <string name="off_ques7">Q7. Remarks</string>
+    <string name="off_section">Office Details</string>
     <string name="radioNo">No</string>
     <string name="radioYes">Yes</string>
     <string name="status_bar_notification_info_overflow">999+</string>

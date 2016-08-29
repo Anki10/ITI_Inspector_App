@@ -51,38 +51,42 @@
 
             </RelativeLayout>
 
-            <RelativeLayout
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/margin_medium"
                 android:orientation="horizontal">
 
+
                 <Spinner
                     android:id="@+id/spinnerSkillSector"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/margin_medium"
+                    android:layout_weight="1"
                     android:clickable="false"
                     android:drawSelectorOnTop="true"
                     android:entries="@array/arraySkillSector"
                     android:textColor="@color/textHeadColor"
                     android:textSize="@dimen/font_small"/>
 
-                <ImageView
-                    android:id="@+id/imageSkillSectorEdit"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:src="@drawable/icon_tick_complete"/>
-
 
                 <ImageView
                     android:id="@+id/imageSkillSectorSave"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="@dimen/margin_medium"
-                    android:layout_toLeftOf="@+id/imageSkillSectorEdit"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginRight="20dp"
+                    android:scaleType="fitXY"
                     android:src="@drawable/icon_edit_grey"/>
-            </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/imageSkillSectorEdit"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/icon_tick_complete"/>
+
+            </LinearLayout>
         </LinearLayout>
 
         <View
@@ -127,7 +131,7 @@
 
             </RelativeLayout>
 
-            <RelativeLayout
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/margin_medium"
@@ -135,8 +139,10 @@
 
                 <Spinner
                     android:id="@+id/spinnerType"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/margin_medium"
+                    android:layout_weight="1"
                     android:clickable="false"
                     android:drawSelectorOnTop="true"
                     android:entries="@array/arrayType"
@@ -144,21 +150,23 @@
                     android:textSize="@dimen/font_small"/>
 
                 <ImageView
+                    android:id="@+id/imageTypeSave"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginRight="20dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/icon_edit_grey"/>
+
+                <ImageView
                     android:id="@+id/imageTypeEdit"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+
+                    android:scaleType="fitXY"
                     android:src="@drawable/icon_tick_complete"/>
 
 
-                <ImageView
-                    android:id="@+id/imageTypeSave"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="@dimen/margin_medium"
-                    android:layout_toLeftOf="@+id/imageTypeEdit"
-                    android:src="@drawable/icon_edit_grey"/>
-            </RelativeLayout>
+            </LinearLayout>
         </LinearLayout>
 
         <View
@@ -203,7 +211,7 @@
 
             </RelativeLayout>
 
-            <RelativeLayout
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/margin_medium"
@@ -211,30 +219,34 @@
 
                 <Spinner
                     android:id="@+id/spinnerJobRole"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/margin_medium"
+                    android:layout_weight="1"
                     android:clickable="false"
                     android:drawSelectorOnTop="true"
                     android:entries="@array/arraySkillSector"
                     android:textColor="@color/textHeadColor"
                     android:textSize="@dimen/font_small"/>
 
-                <ImageView
-                    android:id="@+id/imageJobRoleEdit"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:src="@drawable/icon_tick_complete"/>
-
 
                 <ImageView
                     android:id="@+id/imageJobRoleSave"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="@dimen/margin_medium"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginRight="20dp"
                     android:layout_toLeftOf="@+id/imageJobRoleEdit"
+                    android:scaleType="fitXY"
                     android:src="@drawable/icon_edit_grey"/>
-            </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/imageJobRoleEdit"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/icon_tick_complete"/>
+
+            </LinearLayout>
         </LinearLayout>
 
         <View
@@ -279,7 +291,7 @@
 
             </RelativeLayout>
 
-            <RelativeLayout
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/margin_medium"
@@ -287,30 +299,34 @@
 
                 <Spinner
                     android:id="@+id/spinnerProposedTrainer"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/margin_medium"
+                    android:layout_weight="1"
                     android:clickable="false"
                     android:drawSelectorOnTop="true"
                     android:entries="@array/arrayProposedTrainerRatio"
                     android:textColor="@color/textHeadColor"
                     android:textSize="@dimen/font_small"/>
 
-                <ImageView
-                    android:id="@+id/imageProposedTrainerEdit"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:src="@drawable/icon_tick_complete"/>
-
 
                 <ImageView
                     android:id="@+id/imageProposedTrainerSave"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="@dimen/margin_medium"
-                    android:layout_toLeftOf="@+id/imageProposedTrainerEdit"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginRight="20dp"
+                    android:scaleType="fitXY"
                     android:src="@drawable/icon_edit_grey"/>
-            </RelativeLayout>
+
+
+                <ImageView
+                    android:id="@+id/imageProposedTrainerEdit"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+
+                    android:scaleType="fitXY"
+                    android:src="@drawable/icon_tick_complete"/>
+            </LinearLayout>
         </LinearLayout>
 
         <View
@@ -355,7 +371,7 @@
 
             </RelativeLayout>
 
-            <RelativeLayout
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/margin_medium"
@@ -363,30 +379,35 @@
 
                 <EditText
                     android:id="@+id/editParallelBatches"
-                    android:layout_width="240dp"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/margin_medium"
+                    android:layout_weight="1"
                     android:clickable="false"
                     android:drawSelectorOnTop="true"
                     android:entries="@array/arrayProposedTrainerRatio"
                     android:textColor="@color/textHeadColor"
                     android:textSize="@dimen/font_small"/>
 
-                <ImageView
-                    android:id="@+id/imageParallelBatchesEdit"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:src="@drawable/icon_tick_complete"/>
-
 
                 <ImageView
                     android:id="@+id/imageParallelBatchesSave"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="@dimen/margin_medium"
-                    android:layout_toLeftOf="@+id/imageParallelBatchesEdit"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginRight="20dp"
+                    android:scaleType="fitXY"
                     android:src="@drawable/icon_edit_grey"/>
-            </RelativeLayout>
+
+
+                <ImageView
+                    android:id="@+id/imageParallelBatchesEdit"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+
+                    android:scaleType="fitXY"
+                    android:src="@drawable/icon_tick_complete"/>
+
+            </LinearLayout>
         </LinearLayout>
 
         <View
@@ -460,18 +481,20 @@
 
                 <ImageView
                     android:id="@+id/imageModelContentEdit"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
                     android:layout_alignParentRight="true"
+                    android:scaleType="fitXY"
                     android:src="@drawable/icon_tick_complete"/>
 
 
                 <ImageView
                     android:id="@+id/imageModelContentSave"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="@dimen/margin_medium"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginEnd="20dp"
                     android:layout_toLeftOf="@+id/imageModelContentEdit"
+                    android:scaleType="fitXY"
                     android:src="@drawable/icon_edit_grey"/>
             </RelativeLayout>
         </LinearLayout>
@@ -499,7 +522,7 @@
                 android:textSize="@dimen/font_medium"
                 android:textStyle="bold"/>
 
-            <RelativeLayout
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/margin_medium"
@@ -507,29 +530,32 @@
 
                 <EditText
                     android:id="@+id/editRemarkIfAny"
-                    android:layout_width="200dp"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/margin_medium"
+                    android:layout_weight="1"
                     android:editable="false"
                     android:text="@string/label_remarks"
                     android:textColor="@color/textHeadColor"
                     android:textSize="@dimen/font_small"/>
 
-                <ImageView
-                    android:id="@+id/imageRemarkEdit"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:src="@drawable/icon_tick_complete"/>
-
 
                 <ImageView
                     android:id="@+id/imageRemarkSave"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="@dimen/margin_medium"
-                    android:layout_toLeftOf="@+id/imageRemarkEdit"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginRight="20dp"
+                    android:scaleType="fitXY"
                     android:src="@drawable/icon_edit_grey"/>
-            </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/imageRemarkEdit"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+
+                    android:scaleType="fitXY"
+                    android:src="@drawable/icon_tick_complete"/>
+            </LinearLayout>
         </LinearLayout>
 
         <LinearLayout

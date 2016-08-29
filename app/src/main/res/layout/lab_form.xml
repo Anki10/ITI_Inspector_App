@@ -3,11 +3,11 @@
             xmlns:tools="http://schemas.android.com/tools"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="@color/white"
             android:orientation="vertical"
-            android:paddingBottom="@dimen/activity_vertical_margin"
-            android:paddingLeft="@dimen/activity_horizontal_margin"
-            android:paddingRight="@dimen/activity_horizontal_margin"
-            android:paddingTop="@dimen/activity_vertical_margin">
+            android:overScrollMode="never"
+            android:scrollbars="none"
+    >
 
     <!-- A CardView that contains a TextView -->
 
@@ -16,6 +16,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="start"
+        android:background="@color/white"
         card_view:cardCornerRadius="8dp"
         card_view:cardElevation="5dp"
         card_view:cardUseCompatPadding="true">
@@ -23,6 +24,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="@color/white"
             android:orientation="vertical">
 
             <TextView
@@ -35,7 +37,7 @@
                 android:textColor="#000000"
                 android:textSize="18sp"/>
 
-            <RelativeLayout
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal"
@@ -44,26 +46,36 @@
 
                 <Spinner
                     android:id="@+id/lab_spin1"
-                    android:layout_width="230dp"
-                    android:layout_height="match_parent"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_marginRight="@dimen/margin_medium"
                     android:layout_marginTop="10dp"
+                    android:layout_weight="1"
                     android:singleLine="true"/>
 
                 <ImageView
                     android:id="@+id/lab_img11"
-                    android:layout_width="20dp"
-                    android:layout_height="40dp"
-                    android:layout_marginEnd="10dp"
-                    android:layout_toStartOf="@+id/lab_img12"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="@dimen/margin_large"
+                    android:scaleType="fitXY"
                     android:src="@drawable/edit"/>
 
                 <ImageView
                     android:id="@+id/lab_img12"
-                    android:layout_width="20dp"
-                    android:layout_height="40dp"
-                    android:layout_alignParentEnd="true"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:scaleType="fitXY"
                     android:src="@drawable/ok_grey"/>
-            </RelativeLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimaryTransparent"></View>
+
 
             <TextView
                 android:layout_width="wrap_content"
@@ -75,7 +87,7 @@
                 android:textColor="#000000"
                 android:textSize="18sp"/>
 
-            <RelativeLayout
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal"
@@ -84,26 +96,37 @@
 
                 <Spinner
                     android:id="@+id/lab_spin2"
-                    android:layout_width="230dp"
-                    android:layout_height="match_parent"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
                     android:layout_marginTop="10dp"
+                    android:layout_weight="1"
                     android:singleLine="true"/>
 
                 <ImageView
                     android:id="@+id/lab_img21"
-                    android:layout_width="20dp"
-                    android:layout_height="40dp"
-                    android:layout_marginEnd="10dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="20dp"
                     android:layout_toStartOf="@+id/lab_img22"
+                    android:scaleType="fitXY"
                     android:src="@drawable/edit"/>
 
                 <ImageView
                     android:id="@+id/lab_img22"
-                    android:layout_width="20dp"
-                    android:layout_height="40dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
                     android:layout_alignParentEnd="true"
+                    android:layout_gravity="center"
+                    android:scaleType="fitXY"
                     android:src="@drawable/ok_grey"/>
-            </RelativeLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimaryTransparent"></View>
+
 
             <TextView
                 android:layout_width="wrap_content"
@@ -132,7 +155,7 @@
                 android:textColor="#000000"
                 android:textSize="18sp"/>
 
-            <RelativeLayout
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal"
@@ -141,26 +164,38 @@
 
                 <Spinner
                     android:id="@+id/lab_spin4"
-                    android:layout_width="230dp"
-                    android:layout_height="match_parent"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_marginRight="@dimen/margin_medium"
                     android:layout_marginTop="10dp"
+                    android:layout_weight="1"
                     android:singleLine="true"/>
 
                 <ImageView
                     android:id="@+id/lab_img41"
-                    android:layout_width="20dp"
-                    android:layout_height="40dp"
-                    android:layout_marginEnd="10dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="20dp"
                     android:layout_toStartOf="@+id/lab_img42"
+                    android:scaleType="fitXY"
                     android:src="@drawable/edit"/>
 
                 <ImageView
                     android:id="@+id/lab_img42"
-                    android:layout_width="20dp"
-                    android:layout_height="40dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
                     android:layout_alignParentEnd="true"
+                    android:layout_gravity="center"
+                    android:scaleType="fitXY"
                     android:src="@drawable/ok_grey"/>
-            </RelativeLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimaryTransparent"></View>
+
 
             <TextView
                 android:layout_width="wrap_content"
@@ -203,19 +238,31 @@
 
                 <ImageView
                     android:id="@+id/lab_img51"
-                    android:layout_width="20dp"
-                    android:layout_height="40dp"
-                    android:layout_marginEnd="10dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="20dp"
+
                     android:layout_toStartOf="@+id/lab_img52"
+                    android:scaleType="fitXY"
                     android:src="@drawable/edit"/>
 
                 <ImageView
                     android:id="@+id/lab_img52"
-                    android:layout_width="20dp"
-                    android:layout_height="40dp"
+                    android:layout_width="30dp"
+
+                    android:layout_height="30dp"
                     android:layout_alignParentEnd="true"
+                    android:layout_gravity="center"
+                    android:scaleType="fitXY"
                     android:src="@drawable/ok_grey"/>
             </RelativeLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimaryTransparent"></View>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -244,19 +291,26 @@
 
                 <ImageView
                     android:id="@+id/lab_img61"
-                    android:layout_width="20dp"
-                    android:layout_height="40dp"
-                    android:layout_marginEnd="10dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginEnd="20dp"
                     android:layout_toStartOf="@+id/lab_img62"
+                    android:scaleType="fitXY"
                     android:src="@drawable/edit"/>
 
                 <ImageView
                     android:id="@+id/lab_img62"
-                    android:layout_width="20dp"
-                    android:layout_height="40dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
                     android:layout_alignParentEnd="true"
+                    android:scaleType="fitXY"
                     android:src="@drawable/ok_grey"/>
             </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimaryTransparent"></View>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -285,19 +339,26 @@
 
                 <ImageView
                     android:id="@+id/lab_img71"
-                    android:layout_width="20dp"
-                    android:layout_height="40dp"
-                    android:layout_marginEnd="10dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginEnd="20dp"
                     android:layout_toStartOf="@+id/lab_img72"
+                    android:scaleType="fitXY"
                     android:src="@drawable/edit"/>
 
                 <ImageView
                     android:id="@+id/lab_img72"
-                    android:layout_width="20dp"
-                    android:layout_height="40dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
                     android:layout_alignParentEnd="true"
+                    android:scaleType="fitXY"
                     android:src="@drawable/ok_grey"/>
             </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimaryTransparent"></View>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -326,19 +387,27 @@
 
                 <ImageView
                     android:id="@+id/lab_img81"
-                    android:layout_width="20dp"
-                    android:layout_height="40dp"
-                    android:layout_marginEnd="10dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginEnd="20dp"
                     android:layout_toStartOf="@+id/lab_img82"
+                    android:scaleType="fitXY"
                     android:src="@drawable/edit"/>
 
                 <ImageView
                     android:id="@+id/lab_img82"
-                    android:layout_width="20dp"
-                    android:layout_height="40dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
                     android:layout_alignParentEnd="true"
+                    android:scaleType="fitXY"
                     android:src="@drawable/ok_grey"/>
             </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimaryTransparent"></View>
+
 
             <TextView
                 android:layout_width="wrap_content"
@@ -381,19 +450,27 @@
 
                 <ImageView
                     android:id="@+id/lab_img91"
-                    android:layout_width="20dp"
-                    android:layout_height="40dp"
-                    android:layout_marginEnd="10dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginEnd="20dp"
                     android:layout_toStartOf="@+id/lab_img92"
+                    android:scaleType="fitXY"
                     android:src="@drawable/edit"/>
 
                 <ImageView
                     android:id="@+id/lab_img92"
-                    android:layout_width="20dp"
-                    android:layout_height="40dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
                     android:layout_alignParentEnd="true"
+                    android:scaleType="fitXY"
                     android:src="@drawable/ok_grey"/>
             </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimaryTransparent"></View>
+
 
             <TextView
                 android:layout_width="wrap_content"
@@ -453,19 +530,27 @@
 
                 <ImageView
                     android:id="@+id/lab_img101"
-                    android:layout_width="20dp"
-                    android:layout_height="40dp"
-                    android:layout_marginEnd="10dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginEnd="20dp"
                     android:layout_toStartOf="@+id/lab_img102"
+                    android:scaleType="fitXY"
                     android:src="@drawable/edit"/>
 
                 <ImageView
                     android:id="@+id/lab_img102"
-                    android:layout_width="20dp"
-                    android:layout_height="40dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
                     android:layout_alignParentEnd="true"
+                    android:scaleType="fitXY"
                     android:src="@drawable/ok_grey"/>
             </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimaryTransparent"></View>
+
 
             <TextView
                 android:layout_width="wrap_content"
@@ -508,19 +593,27 @@
 
                 <ImageView
                     android:id="@+id/lab_img111"
-                    android:layout_width="20dp"
-                    android:layout_height="40dp"
-                    android:layout_marginEnd="10dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginEnd="20dp"
                     android:layout_toStartOf="@+id/lab_img112"
+                    android:scaleType="fitXY"
                     android:src="@drawable/edit"/>
 
                 <ImageView
                     android:id="@+id/lab_img112"
-                    android:layout_width="20dp"
-                    android:layout_height="40dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
                     android:layout_alignParentEnd="true"
+                    android:scaleType="fitXY"
                     android:src="@drawable/ok_grey"/>
             </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimaryTransparent"></View>
+
 
             <TextView
                 android:layout_width="wrap_content"
@@ -550,40 +643,47 @@
 
                 <ImageView
                     android:id="@+id/lab_img121"
-                    android:layout_width="20dp"
-                    android:layout_height="40dp"
-                    android:layout_marginEnd="10dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginEnd="20dp"
                     android:layout_toStartOf="@+id/lab_img122"
+                    android:scaleType="fitXY"
                     android:src="@drawable/edit"/>
 
                 <ImageView
                     android:id="@+id/lab_img122"
-                    android:layout_width="20dp"
-                    android:layout_height="40dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
                     android:layout_alignParentEnd="true"
+                    android:scaleType="fitXY"
                     android:src="@drawable/ok_grey"/>
             </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimaryTransparent"></View>
+
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal">
 
-                <Button
+                <!--  <Button
                     android:id="@+id/lab_draft"
                     style="@style/HeadingFontStyle"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:background="#FF5722"
-                    android:text="Draft"/>
+                    android:layout_weight="1" 
+        			android:background="#FF5722"
+                    android:text="Draft" /> -->
 
                 <Button
                     android:id="@+id/lab_submit"
                     style="@style/HeadingFontStyle"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="10px"
                     android:layout_weight="1"
                     android:background="#FF5722"
                     android:text="Submit"/>
