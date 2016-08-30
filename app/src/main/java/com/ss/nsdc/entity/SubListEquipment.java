@@ -12,7 +12,8 @@ public class SubListEquipment {
 	private String YearWiseCollegeId;
 	private String ApplicationNo;
 	private int proc_tracker;
-	
+	private String equipment_Id;
+
 	public String getId() {
 		return id;
 	}
@@ -79,4 +80,6 @@ public class SubListEquipment {
 	public void setProc_tracker(int proc_tracker) {
 		this.proc_tracker = proc_tracker;
 	}
+	public String getEquipment_Id() {return equipment_Id;}
+	public void setEquipment_Id(String equipment_Id) {this.equipment_Id = equipment_Id;}
 }

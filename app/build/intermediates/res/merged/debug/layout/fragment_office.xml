@@ -26,13 +26,13 @@
             android:background="@color/white"
             android:orientation="vertical">
 
-            <TextView
+<!--            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="#FFCCBC"
                 android:text="@string/off_section"
                 android:textColor="#000000"
-                android:textSize="30sp"/>
+                android:textSize="30sp"/>-->
 
             <TextView
                 android:layout_width="wrap_content"
@@ -42,7 +42,7 @@
                 android:paddingTop="40dp"
                 android:text="@string/off_ques1"
                 android:textColor="#000000"
-                android:textSize="18sp"/>
+                android:textSize="16sp"/>
 
 
             <RelativeLayout
@@ -89,7 +89,7 @@
                 android:paddingTop="10dp"
                 android:text="@string/off_ques2"
                 android:textColor="#000000"
-                android:textSize="18sp"/>
+                android:textSize="16sp"/>
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -117,8 +117,8 @@
 
                 <ImageView
                     android:id="@+id/off_img22"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
                     android:layout_alignParentEnd="true"
                     android:adjustViewBounds="true"
                     android:scaleType="fitXY"
@@ -138,7 +138,7 @@
                 android:paddingTop="10dp"
                 android:text="@string/off_ques3"
                 android:textColor="#000000"
-                android:textSize="18sp"/>
+                android:textSize="16sp"/>
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -165,8 +165,8 @@
 
                 <ImageView
                     android:id="@+id/off_img32"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
                     android:layout_alignParentEnd="true"
                     android:scaleType="fitXY"
                     android:src="@drawable/ok_grey"/>
@@ -185,7 +185,7 @@
                 android:paddingTop="10dp"
                 android:text="@string/off_ques4"
                 android:textColor="#000000"
-                android:textSize="18sp"/>
+                android:textSize="16sp"/>
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -228,8 +228,8 @@
 
                 <ImageView
                     android:id="@+id/off_img42"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
                     android:layout_alignParentEnd="true"
                     android:scaleType="fitXY"
                     android:src="@drawable/ok_grey"/>
@@ -248,7 +248,7 @@
                 android:paddingTop="10dp"
                 android:text="@string/off_ques5"
                 android:textColor="#000000"
-                android:textSize="18sp"/>
+                android:textSize="16sp"/>
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -290,8 +290,8 @@
 
                 <ImageView
                     android:id="@+id/off_img52"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
                     android:layout_alignParentEnd="true"
                     android:scaleType="fitXY"
                     android:src="@drawable/ok_grey"/>
@@ -310,7 +310,7 @@
                 android:paddingTop="10dp"
                 android:text="@string/off_ques6"
                 android:textColor="#000000"
-                android:textSize="18sp"/>
+                android:textSize="16sp"/>
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -352,8 +352,8 @@
 
                 <ImageView
                     android:id="@+id/off_img62"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
                     android:layout_alignParentEnd="true"
                     android:scaleType="fitXY"
                     android:src="@drawable/ok_grey"/>
@@ -372,7 +372,7 @@
                 android:paddingTop="40dp"
                 android:text="@string/off_ques7"
                 android:textColor="#000000"
-                android:textSize="18sp"/>
+                android:textSize="16sp"/>
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -400,8 +400,8 @@
 
                 <ImageView
                     android:id="@+id/off_img72"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
                     android:layout_alignParentEnd="true"
                     android:scaleType="fitXY"
                     android:src="@drawable/ok_grey"/>

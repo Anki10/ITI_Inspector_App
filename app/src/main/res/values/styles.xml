@@ -61,4 +61,12 @@
 	    <item>Office Space (For Trainers and Staff)</item>
 	    <item>Placement And Entrepreneurship Cell</item>
 	</array>
+
+    <!-- Equipment Questions -->
+    <string name="equip_section">Equipment Details</string>
+    <string name="equip_ques1">Q1. Job Name</string>
+    <string name="equip_ques2">Q2. Equipment Name</string>
+    <string name="equip_ques3">Q3. Quantity</string>
+    <string name="equip_ques4">Q4. Unit Type</string>
+    <string name="equip_ques5">Q5. Remarks in case Mandatory equipment is not available</string>
 </resources>

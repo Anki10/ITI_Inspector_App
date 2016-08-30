@@ -36,7 +36,7 @@ public class SubCategoryClassActivity extends AppCompatActivity {
 	private RecyclerView mRecyclerView;
 	private RecyclerView.Adapter mAdapter;
 	private RecyclerView.LayoutManager mLayoutManager;
-	private String category,yearWiseCollegeId,applicationId,classId;
+	private String category,yearWiseCollegeId,applicationId,classId,filter;
 	ProgressDialog ringProgressDialog;
 	Context context=this;
 	List<SubCategoryClass> getListClass=new ArrayList<SubCategoryClass>();
@@ -57,6 +57,7 @@ public class SubCategoryClassActivity extends AppCompatActivity {
 		      yearWiseCollegeId=bundle.getString("YearWiseCollegeId");
 		      applicationId=bundle.getString("applicationId");
 		      classId=bundle.getString("ClassId");
+			  filter = bundle.containsKey("Filter") ? bundle.getString("Filter") : "";
 		 } else {
 			  category = "none";
 		 }
@@ -80,7 +81,7 @@ public class SubCategoryClassActivity extends AppCompatActivity {
 			getOfficeList=dbcontroller.getOfficeListbyYearWiseCollageId(yearWiseCollegeId);
 
 		}else if(category.equalsIgnoreCase("eqipment")) {
-			getEquipmentList=dbcontroller.getEquipmentListbyYearWiseCollageId(yearWiseCollegeId);
+			getEquipmentList=dbcontroller.getEquipmentListbyYearWiseCollageId(yearWiseCollegeId,filter);
 
 		} else if(category.equalsIgnoreCase("jobRoles")) {
 			getJobRolesList=dbcontroller.getJobRolesList(yearWiseCollegeId);
@@ -92,12 +93,6 @@ public class SubCategoryClassActivity extends AppCompatActivity {
 		}
 
 		dbcontroller.close();
-		if(getListClass.size()>0){
-			
-		}
-		else{
-		
-		}
 		
 		mRecyclerView = (RecyclerView) findViewById(R.id.sub_cat_recycler_view);
 

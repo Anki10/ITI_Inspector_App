@@ -66,7 +66,7 @@ public class NSDCDBController extends SQLiteOpenHelper {
         subClassroomTableQuery = "CREATE TABLE Classroom ( Id INTEGER PRIMARY KEY AUTOINCREMENT,YearWiseCollegeId TEXT NOT NULL,ClassId TEXT,ApplicationNo TEXT,Category TEXT,Classroom_Name TEXT,Carpet_Area TEXT,Seating_Capacity TEXT,Avg_Batches TEXT,Availability_Of_AC TEXT,Availability_Of_Power_BackUp TEXT,Area_under_CCTV_Coverage TEXT,Availability_of_Overhead_Projector TEXT,avail_Internet TEXT,Remarks TEXT,InsCarpet_Area TEXT,InsSeating_Capacity TEXT,InsAvg_Batches TEXT,InsAvailability_Of_AC TEXT,InsAvailability_Of_Power_BackUp TEXT,InsArea_under_CCTV_Coverage TEXT,InsAvailability_of_Overhead_Projector TEXT,Insavail_Internet TEXT,InsRemarks TEXT,proc_tracker INTEGER  )";
         subLabTableQuery = "CREATE TABLE Lab ( lId INTEGER PRIMARY KEY AUTOINCREMENT, YearWiseCollegeId  TEXT ,ApplicationNo TEXT, LabId TEXT, Lab_type TEXT,LAB_Name TEXT,labSameAsClass TEXT,Carpet_Area TEXT,Seating_Capacity TEXT,Ave_num_bat_run TEXT,Num_IT_Com_lab TEXT,JOB_role TEXT,Availability_Of_Internet_WIFI_connection TEXT,Availability_Of_AC TEXT,Availability_Of_Power_BackUp TEXT,Area_under_CCTV_Coverage TEXT,Remarks TEXT,InslabSameAsClass TEXT,InsCarpet_Area TEXT,InsSeating_Capacity TEXT,InsAve_num_bat_run TEXT,InsNum_IT_Com_lab TEXT,InsAvailability_Of_Internet_WIFI_connection TEXT,InsAvailability_Of_AC TEXT,InsAvailability_Of_Power_BackUp TEXT,InsArea_under_CCTV_Coverage TEXT,InsRemarks TEXT,proc_tracker INTEGER )";
         subOfficeTableQuery = "CREATE TABLE Office ( Id INTEGER PRIMARY KEY AUTOINCREMENT,YearWiseCollegeId TEXT NOT NULL,ApplicationNo TEXT,OfficeId TEXT,Internet TEXT,AreaType TEXT,CarpetArea TEXT,Ac TEXT,BackUp TEXT,CCTV TEXT,remarks TEXT,InsCarpetArea TEXT,InsInternet TEXT,InsAC TEXT,InsBackUp TEXT,InsCCTV TEXT,Insremarks TEXT,proc_tracker INTEGER)";
-        subEquipmentTableQuery = "CREATE TABLE Equipment ( Id INTEGER PRIMARY KEY AUTOINCREMENT,YearWiseCollegeId TEXT NOT NULL,ApplicationNo TEXT,Job_Id TEXT,Internet TEXT,Job_Name TEXT,Equipment_Name TEXT,TotalNo TEXT,Remarks TEXT,InsTotalNo TEXT,InsRemarks TEXT,proc_tracker INTEGER)";
+        subEquipmentTableQuery = "CREATE TABLE Equipment ( Id INTEGER PRIMARY KEY AUTOINCREMENT,Equipment_Id TEXT,YearWiseCollegeId TEXT NOT NULL,ApplicationNo TEXT,Job_Id TEXT,Internet TEXT,Job_Name TEXT,Equipment_Name TEXT,TotalNo TEXT,Remarks TEXT,InsTotalNo TEXT,InsRemarks TEXT,proc_tracker INTEGER)";
         subJobRolesTableQuery = "CREATE TABLE Jobroles ( Id INTEGER PRIMARY KEY AUTOINCREMENT,JobID TEXT ,ApplicationNo TEXT, YearWiseCollegeId  TEXT  NOT NULL, JobName TEXT,HandbookAvailable TEXT,Trainees TEXT,Batch INTEGER,Remark TEXT,InsHandbookAvailable TEXT,InsTrainees TEXT,Insbatch TEXT,Insremark TEXT,proc_tracker INTEGER )";
         String subStaffTableQuery = "CREATE TABLE SupportStaff (Id INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 "ApplicationNo TEXT, " +
@@ -1436,7 +1436,7 @@ public class NSDCDBController extends SQLiteOpenHelper {
                         + rowValue.getOfficeId(), null);
             }
         } catch (Exception e) {
-            Log.e(TAG + "saveLabData", e.getMessage());
+            Log.e(TAG, e.getMessage());
         } finally {
             database.close();
         }
@@ -1470,6 +1470,8 @@ public class NSDCDBController extends SQLiteOpenHelper {
                                         rowValue.getString("TotalNo"));
                                 values.put("Remarks",
                                         rowValue.getString("Remarks"));
+                                values.put("Equipment_Id",
+                                        rowValue.getString("Equipment_Id"));
                                 values.put(
                                         "InsTotalNo",
                                         (rowValue.getString("InsTotalNo") != "null") ? rowValue
@@ -1575,12 +1577,13 @@ public class NSDCDBController extends SQLiteOpenHelper {
     }
 
 
-    public List<SubListEquipment> getEquipmentListbyYearWiseCollageId(
-            String instituteId) {
+    public List<SubListEquipment> getEquipmentListbyYearWiseCollageId(String instituteId,String job_name) {
         SQLiteDatabase db = null;
         String selectQueryQues = "select YearWiseCollegeId,ApplicationNo,Job_Id,id,Job_Name,Equipment_Name,TotalNo,"
                 + "Remarks,InsTotalNo,InsRemarks,proc_tracker from Equipment where YearWiseCollegeId = "
                 + instituteId;
+        if(job_name!=null)
+            selectQueryQues+=" and Job_Name = "+job_name;
 
         List<SubListEquipment> objList = new ArrayList<SubListEquipment>();
         try {
@@ -1606,7 +1609,7 @@ public class NSDCDBController extends SQLiteOpenHelper {
                 } while (cursor.moveToNext());
             }
         } catch (Exception e) {
-            Log.e(TAG + "---" + "getEquipmentList", e.getMessage());
+            Log.e(TAG , e.getMessage());
             return null;
         }
         return objList;
@@ -1639,7 +1642,7 @@ public class NSDCDBController extends SQLiteOpenHelper {
                 } while (cursor.moveToNext());
             }
         } catch (Exception e) {
-            Log.e(TAG + "---" + "getEquipmentList", e.getMessage());
+            Log.e(TAG, e.getMessage());
             return null;
         }
         return obj;
@@ -1663,7 +1666,7 @@ public class NSDCDBController extends SQLiteOpenHelper {
             } else if (category.equalsIgnoreCase("equipment")) {
                 finalSql = equipmentQuery;
             } else if (category.equalsIgnoreCase("Jobroles")) {
-                finalSql = equipmentQuery;
+                finalSql = jobRolesQuery;
             }
             SQLiteDatabase db = this.getReadableDatabase();
             Cursor cursor = db.rawQuery(finalSql, null);
@@ -1679,9 +1682,81 @@ public class NSDCDBController extends SQLiteOpenHelper {
                 } while (cursor.moveToNext());
             }
         } catch (Exception e) {
-            Log.e(TAG + "---" + "getEquipmentList", e.getMessage());
+            Log.e(TAG , e.getMessage());
             return null;
         }
         return obj;
+    }
+
+    public List<String> getEquipmentJobRoles(){
+        SQLiteDatabase db = null;
+        String selectQueryQues = "select distinct(Job_Name) from Equipment";
+        List<String> jobList = new ArrayList<String>();
+        try {
+            db = this.getReadableDatabase();
+            Cursor cursor = db.rawQuery(selectQueryQues, null);
+            if (cursor.moveToFirst()) {
+
+                do {
+                    jobList.add(cursor.getString(0));
+                } while (cursor.moveToNext());
+            }
+        } catch (Exception e) {
+            Log.e(TAG, e.getMessage());
+            return null;
+        }
+        return jobList;
+    }
+
+    public Proc_Track getSyncStatusforEquipmentFilter(String job_name) {
+        String equipmentQuery = "Select proc_tracker,count(*) from Equipment group by proc_tracker where Job_Name = '"+job_name+"'";
+        String finalSql = "";
+        Proc_Track obj = new Proc_Track();
+        try {
+            SQLiteDatabase db = this.getReadableDatabase();
+            Cursor cursor = db.rawQuery(equipmentQuery, null);
+            if (cursor.moveToFirst()) {
+                do {
+                    if (cursor.getString(0).equalsIgnoreCase("1")) {
+                        obj.setProc_track1Count(cursor.getInt(1));
+                    } else if (cursor.getString(0).equalsIgnoreCase("2")) {
+                        obj.setProc_track2Count(cursor.getInt(1));
+                    } else if (cursor.getString(0).equalsIgnoreCase("3")) {
+                        obj.setProc_track3Count(cursor.getInt(1));
+                    }
+                } while (cursor.moveToNext());
+            }
+        } catch (Exception e) {
+            Log.e(TAG, e.getMessage());
+            return null;
+        }
+        return obj;
+    }
+
+    public boolean saveEquipmentData(SubListEquipment rowValue, String mode) {
+        SQLiteDatabase database = getWritableDatabase();
+        ContentValues values = new ContentValues();
+        try {
+            if (mode.equalsIgnoreCase("draft")) {
+                values.put("InsTotalNo", rowValue.getInsTotalNo());
+                values.put("InsRemarks", rowValue.getInsRemarks());
+                values.put("proc_tracker", 2);
+                database.update("Equipment", values, " YearWiseCollegeId= "
+                        + rowValue.getYearWiseCollegeId() + " and Equipment_Id="
+                        + rowValue.getEquipment_Id(), null);
+            } else {
+                values.put("InsTotalNo", rowValue.getInsTotalNo());
+                values.put("InsRemarks", rowValue.getInsRemarks());
+                values.put("proc_tracker", 3);
+                database.update("Equipment", values, " YearWiseCollegeId= "
+                        + rowValue.getYearWiseCollegeId() + " and OfficeId="
+                        + rowValue.getEquipment_Id(), null);
+            }
+        } catch (Exception e) {
+            Log.e(TAG, e.getMessage());
+        } finally {
+            database.close();
+        }
+        return true;
     }
 }

@@ -33,6 +33,7 @@ public class SubCategoryClassAdapter extends
     private List<SubListEquipment> subListEquipment;
     private List<JobRolesModel> jobRolesModelList;
     private List<SubCategorySupportStaff> staffList;
+    private List<String> subListEquipmentJobRoles;
     private Context context;
     private String category;
 
@@ -64,9 +65,10 @@ public class SubCategoryClassAdapter extends
             this.subListEquipment = getList;
         } else if (category.equalsIgnoreCase("jobRoles")) {
             this.jobRolesModelList = getList;
-
         } else if (category.equalsIgnoreCase(AppConstants.TEXT_SUPPORT_STAFF)) {
             this.staffList = getList;
+        }else if (category.equalsIgnoreCase("equipment_jobroles")) {
+            this.subListEquipmentJobRoles = getList;
         }
 
         this.context = context;

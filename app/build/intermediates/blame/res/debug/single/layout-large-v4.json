@@ -1,10 +1,10 @@
 [
     {
-        "merged": "F:\\Workspace\\ProjectSourceCode\\NSDC Latest\\app\\build\\intermediates\\res\\merged\\debug\\layout-large-v4\\activity_login.xml",
-        "source": "F:\\Workspace\\ProjectSourceCode\\NSDC Latest\\app\\src\\main\\res\\layout-large\\activity_login.xml"
+        "merged": "D:\\Development\\GITHUB\\Assessor-Android2\\app\\build\\intermediates\\res\\merged\\debug\\layout-large-v4\\activity_login.xml",
+        "source": "D:\\Development\\GITHUB\\Assessor-Android2\\app\\src\\main\\res\\layout-large\\activity_login.xml"
     },
     {
-        "merged": "F:\\Workspace\\ProjectSourceCode\\NSDC Latest\\app\\build\\intermediates\\res\\merged\\debug\\layout-large-v4\\classroom_form.xml",
-        "source": "F:\\Workspace\\ProjectSourceCode\\NSDC Latest\\app\\src\\main\\res\\layout-large\\classroom_form.xml"
+        "merged": "D:\\Development\\GITHUB\\Assessor-Android2\\app\\build\\intermediates\\res\\merged\\debug\\layout-large-v4\\classroom_form.xml",
+        "source": "D:\\Development\\GITHUB\\Assessor-Android2\\app\\src\\main\\res\\layout-large\\classroom_form.xml"
     }
 ]

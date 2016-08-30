@@ -29,6 +29,12 @@
 		<item>Construction</item>
 		<item>Domestic Workers</item>
 	</array>
+    <array name="arrayStaffType">
+		<item>Reception</item>
+		<item>Placement Coordinator</item>
+		<item>Counsellors</item>
+		<item>Other</item>
+	</array>
     <array name="arrayType">
 		<item>Manufacturing</item>
 		<item>Service</item>
@@ -378,6 +384,12 @@
     <string name="drawer_header">Drawer Header</string>
     <string name="edit_password">Password</string>
     <string name="edit_username">Username</string>
+    <string name="equip_ques1">Q1. Job Name</string>
+    <string name="equip_ques2">Q2. Equipment Name</string>
+    <string name="equip_ques3">Q3. Quantity</string>
+    <string name="equip_ques4">Q4. Unit Type</string>
+    <string name="equip_ques5">Q5. Remarks in case Mandatory equipment is not available</string>
+    <string name="equip_section">Equipment Details</string>
     <string name="hello_world">Hello world!</string>
     <string name="lab_ques1">Q1. Lab Type</string>
     <string name="lab_ques10">Q10.Job Roles Taught in Lab</string>
@@ -413,6 +425,10 @@
     <string name="off_section">Office Details</string>
     <string name="radioNo">No</string>
     <string name="radioYes">Yes</string>
+    <string name="ss_ques_remarks">Remarks</string>
+    <string name="ss_ques_staff_name">Name</string>
+    <string name="ss_ques_staff_type">Type of Support Staff</string>
+    <string name="ss_ques_staff_work">Work</string>
     <string name="status_bar_notification_info_overflow">999+</string>
     <string name="submit">Submit</string>
     <string name="title_activity_category">CategoryActivity</string>

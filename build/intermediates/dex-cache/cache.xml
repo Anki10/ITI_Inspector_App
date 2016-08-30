@@ -1,3 +1,89 @@
 <?xml version="1.0" encoding="utf-8"?>
-<items version="2" />
+<items version="2" >
 
+    <item
+        jar="C:\Users\Prashant\.gradle\caches\modules-2\files-2.1\com.squareup.picasso\picasso\2.4.0\f36d2d4e3a36b3259aaf9d004d29b4cdc6c1bfb2\picasso-2.4.0.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="f36d2d4e3a36b3259aaf9d004d29b4cdc6c1bfb2">
+        <dex dex="D:\Development\GITHUB\Assessor-Android2\app\build\intermediates\transforms\dex\debug\folders\1000\10\picasso-2.4.0_6406cebc5534dc34501041a273701454147c4c72\classes.dex" />
+    </item>
+    <item
+        jar="D:\Development\GITHUB\Assessor-Android2\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.0.1\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
+        <dex dex="D:\Development\GITHUB\Assessor-Android2\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-23.0.1_5b58b0bb23b53c7061535305422b05b2268ee19e\classes.dex" />
+    </item>
+    <item
+        jar="D:\Development\android-sdk-windows\extras\android\m2repository\com\android\support\support-annotations\23.0.1\support-annotations-23.0.1.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="1fce89a6428c51467090d7f424e4c9c3dbd55f7e">
+        <dex dex="D:\Development\GITHUB\Assessor-Android2\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-23.0.1_24fee934d4ae0c703aecf61f8c477dcf0810503f\classes.dex" />
+    </item>
+    <item
+        jar="D:\Development\GITHUB\Assessor-Android2\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="6af1d9a628fe863199a77469ab48fa96a0925aea">
+        <dex dex="D:\Development\GITHUB\Assessor-Android2\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_36b5b5d27cd2d30e1a40ed047c8160d20850368c\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Prashant\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.3\5fc52c41ef0239d1093a1eb7c3697036183677ce\gson-2.3.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="5fc52c41ef0239d1093a1eb7c3697036183677ce">
+        <dex dex="D:\Development\GITHUB\Assessor-Android2\app\build\intermediates\transforms\dex\debug\folders\1000\10\gson-2.3_03f0fe57950c1049d9e6ea603b7cff43a9f1dad6\classes.dex" />
+    </item>
+    <item
+        jar="D:\Development\GITHUB\Assessor-Android2\app\build\intermediates\exploded-aar\com.android.support\design\23.0.1\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="e5c61a3169221a89654ffcaaed47bba51cf071ad">
+        <dex dex="D:\Development\GITHUB\Assessor-Android2\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-design-23.0.1_4882e81ac736472c3d227fe8b1912e067be91f74\classes.dex" />
+    </item>
+    <item
+        jar="D:\Development\GITHUB\Assessor-Android2\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="c31e21b53ff2f74664e498248d01453a32e32d48">
+        <dex dex="D:\Development\GITHUB\Assessor-Android2\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-23.0.1_632989bbda588bf36cfdb9779c447f7461572f7d\classes.dex" />
+    </item>
+    <item
+        jar="D:\Development\GITHUB\Assessor-Android2\app\build\intermediates\exploded-aar\com.android.support\cardview-v7\23.0.1\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="39ae02ce40c3ac828abbf780ce0ff5d7a28b7d6a">
+        <dex dex="D:\Development\GITHUB\Assessor-Android2\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-cardview-v7-23.0.1_b180b8f8d70489ccfe2e897e20403d073ce724cd\classes.dex" />
+    </item>
+    <item
+        jar="D:\Development\GITHUB\Assessor-Android2\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.0.1\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="4356e230a981d1bbf047d848b91bc0d9b7c5bacc">
+        <dex dex="D:\Development\GITHUB\Assessor-Android2\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-recyclerview-v7-23.0.1_9e8f13d9a3eb31061294026a6564315072ca32f7\classes.dex" />
+    </item>
+    <item
+        jar="D:\Development\GITHUB\Assessor-Android2\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="570dc6c296cf17cb8962aa80a65922199574969c">
+        <dex dex="D:\Development\GITHUB\Assessor-Android2\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_146621c7097a4a28627784313968888e8999124c\classes.dex" />
+    </item>
+    <item
+        jar="D:\Development\GITHUB\Assessor-Android2\app\build\intermediates\exploded-aar\com.android.support\multidex\1.0.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="6666dd525c3da197e7d07f4f23ef5fc7881a697b">
+        <dex dex="D:\Development\GITHUB\Assessor-Android2\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-multidex-1.0.0_f5f5bb705c34766108b926551d1eb0d8ea554fdf\classes.dex" />
+    </item>
+    <item
+        jar="D:\Development\GITHUB\Assessor-Android2\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\jars\libs\internal_impl-23.0.1.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="aa92916125166649d8ad4ba3940c3dd7515596d3">
+        <dex dex="D:\Development\GITHUB\Assessor-Android2\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-23.0.1_4a62b2c677af90cbd0ee45d59e91e0690344da83\classes.dex" />
+    </item>
+
+</items>

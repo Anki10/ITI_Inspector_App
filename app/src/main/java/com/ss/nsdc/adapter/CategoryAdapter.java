@@ -35,6 +35,7 @@ import com.ss.nsdc.entity.SubCategorySupportStaff;
 import com.ss.nsdc.entity.SubListEquipment;
 import com.ss.nsdc.entity.SubListOffice;
 import com.ss.nsdc.main.SubCategoryClassActivity;
+import com.ss.nsdc.main.SubCategoryFilterActivity;
 
 public class CategoryAdapter extends
         RecyclerView.Adapter<CategoryAdapter.ViewHolder> {
@@ -164,7 +165,7 @@ public class CategoryAdapter extends
             staffDAO.close();
 
         } else if (position == 9) { // EQUIPMENT
-            List<SubListEquipment> listEquip = controller.getEquipmentListbyYearWiseCollageId(instituteId);
+            List<SubListEquipment> listEquip = controller.getEquipmentListbyYearWiseCollageId(instituteId,null);
             if (listEquip != null && listEquip.size() != 0) {
                 Proc_Track syncStatus = controller.getSyncStatus("equipment");
                 if (syncStatus.getProc_track1Count() == 0) { // New Data
@@ -280,15 +281,14 @@ public class CategoryAdapter extends
                 } else if (position == 9) {/** Equipments **/
                     NSDCDBController controller = new NSDCDBController(context);
                     List<SubListEquipment> list = controller
-                            .getEquipmentListbyYearWiseCollageId(instituteId);
+                            .getEquipmentListbyYearWiseCollageId(instituteId,null);
                     controller.close();
                     if (list != null && list.size() != 0) {
-                        Intent intent = new Intent(context, SubCategoryClassActivity.class);
+                        //Intent intent = new Intent(context, SubCategoryClassActivity.class);
+                        Intent intent = new Intent(context, SubCategoryFilterActivity.class);
                         intent.putExtra("Category", "equipment");
                         intent.putExtra("YearWiseCollegeId", instituteId);
                         intent.putExtra("applicationId", applicationId);
-                        // intent.putExtra("ClassId",
-                        // listLab.get(position).getLabId());
                         context.startActivity(intent);
                     } else {
                         new UpdateData().execute(new String[]{

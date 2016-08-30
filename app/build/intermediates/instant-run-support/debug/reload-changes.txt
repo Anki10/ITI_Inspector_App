@@ -1,3 +1,35 @@
-CHANGED,F:\Workspace\ProjectSourceCode\NSDC Latest\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\ss\nsdc\fragment\JobsFragment$override.class
-CHANGED,F:\Workspace\ProjectSourceCode\NSDC Latest\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\android\tools\fd\runtime\AppPatchesLoaderImpl.class
-CHANGED,F:\Workspace\ProjectSourceCode\NSDC Latest\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\ss\nsdc\R$id$override.class
+CHANGED,D:\Development\GITHUB\Assessor-Android2\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\ss\nsdc\R$string$override.class
+CHANGED,D:\Development\GITHUB\Assessor-Android2\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\ss\nsdc\fragment\LabFragment$16$override.class
+CHANGED,D:\Development\GITHUB\Assessor-Android2\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\ss\nsdc\adapter\SubCategoryLabAdaptor$ViewHolder$override.class
+CHANGED,D:\Development\GITHUB\Assessor-Android2\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\ss\nsdc\R$integer$override.class
+CHANGED,D:\Development\GITHUB\Assessor-Android2\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\android\tools\fd\runtime\AppPatchesLoaderImpl.class
+CHANGED,D:\Development\GITHUB\Assessor-Android2\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\ss\nsdc\R$override.class
+CHANGED,D:\Development\GITHUB\Assessor-Android2\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\ss\nsdc\fragment\LabFragment$15$override.class
+CHANGED,D:\Development\GITHUB\Assessor-Android2\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\ss\nsdc\fragment\OfficeFragment$override.class
+CHANGED,D:\Development\GITHUB\Assessor-Android2\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\ss\nsdc\fragment\SupportStaffFragment$override.class
+CHANGED,D:\Development\GITHUB\Assessor-Android2\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\ss\nsdc\fragment\OfficeFragment$6$override.class
+CHANGED,D:\Development\GITHUB\Assessor-Android2\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\ss\nsdc\utility\UtilityService$1$override.class
+CHANGED,D:\Development\GITHUB\Assessor-Android2\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\ss\nsdc\fragment\LabFragment$8$override.class
+CHANGED,D:\Development\GITHUB\Assessor-Android2\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\ss\nsdc\fragment\OfficeFragment$8$override.class
+CHANGED,D:\Development\GITHUB\Assessor-Android2\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\ss\nsdc\fragment\OfficeFragment$10$override.class
+CHANGED,D:\Development\GITHUB\Assessor-Android2\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\ss\nsdc\R$id$override.class
+CHANGED,D:\Development\GITHUB\Assessor-Android2\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\ss\nsdc\main\NavigationDrawerActivity$MainActivity$override.class
+CHANGED,D:\Development\GITHUB\Assessor-Android2\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\ss\nsdc\adapter\InstituteAdapter$ViewHolder$override.class
+CHANGED,D:\Development\GITHUB\Assessor-Android2\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\ss\nsdc\fragment\LabFragment$19$override.class
+CHANGED,D:\Development\GITHUB\Assessor-Android2\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\ss\nsdc\R$styleable$override.class
+CHANGED,D:\Development\GITHUB\Assessor-Android2\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\ss\nsdc\fragment\OfficeFragment$7$override.class
+CHANGED,D:\Development\GITHUB\Assessor-Android2\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\android\support\design\R$id$override.class
+CHANGED,D:\Development\GITHUB\Assessor-Android2\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\ss\nsdc\R$layout$override.class
+CHANGED,D:\Development\GITHUB\Assessor-Android2\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\android\support\v7\appcompat\R$id$override.class
+CHANGED,D:\Development\GITHUB\Assessor-Android2\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\ss\nsdc\fragment\OfficeFragment$9$override.class
+CHANGED,D:\Development\GITHUB\Assessor-Android2\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\ss\nsdc\utility\UtilityService$override.class
+CHANGED,D:\Development\GITHUB\Assessor-Android2\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\ss\nsdc\R$style$override.class
+CHANGED,D:\Development\GITHUB\Assessor-Android2\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\ss\nsdc\dao\NSDCDBController$override.class
+CHANGED,D:\Development\GITHUB\Assessor-Android2\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\ss\nsdc\fragment\JobsFragment$override.class
+CHANGED,D:\Development\GITHUB\Assessor-Android2\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\ss\nsdc\R$menu$override.class
+CHANGED,D:\Development\GITHUB\Assessor-Android2\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\ss\nsdc\fragment\LabFragment$20$override.class
+CHANGED,D:\Development\GITHUB\Assessor-Android2\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\ss\nsdc\adapter\SubCategoryClassAdapter$ViewHolder$override.class
+CHANGED,D:\Development\GITHUB\Assessor-Android2\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\ss\nsdc\fragment\LabFragment$7$override.class
+CHANGED,D:\Development\GITHUB\Assessor-Android2\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\ss\nsdc\entity\SubListEquipment$override.class
+CHANGED,D:\Development\GITHUB\Assessor-Android2\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\ss\nsdc\fragment\LabFragment$override.class
+CHANGED,D:\Development\GITHUB\Assessor-Android2\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\ss\nsdc\fragment\OfficeFragment$5$override.class

@@ -283,7 +283,9 @@ public class OfficeFragment extends Fragment {
                             public void onClick(DialogInterface dialog, int whichButton) {
                                 if (checkAllAtempted()) {
                                     if (utility.getConnectivityStatus(context)) {
-                                        JSONObject datatoSycClass = utility.getOfficeSycData(getSelectedOfficeData);
+                                        List<SubListOffice> results = new ArrayList<SubListOffice>();
+                                        results.add(getSelectedOfficeData);
+                                        JSONObject datatoSycClass = utility.getOfficeSycData(results);
                                         new ExecuteSyncOperation().
                                                 execute(new String[]{"http://nsdc.qci.org.in/api/CAAF/Offiec_Area.php",
                                                         datatoSycClass.toString(), "bnNkYzd0ZWNoaWVzYXBp"});
@@ -293,7 +295,7 @@ public class OfficeFragment extends Fragment {
                                         controller.close();
                                         if (updation_status) {
                                             Toast.makeText(context, "Data Saved.", Toast.LENGTH_LONG).show();
-                                            //navigate();
+                                            navigate();
                                         } else {
                                             Toast.makeText(context, "Error in saving..", Toast.LENGTH_LONG).show();
                                         }
@@ -404,7 +406,7 @@ public class OfficeFragment extends Fragment {
                         controller.close();
                     } else {
                         ringProgressDialog.cancel();
-                        Toast.makeText(context, "Data Syc failed..." + result.getString("responsecode"), Toast.LENGTH_LONG).show();
+                        Toast.makeText(context, "Data Sync failed..." + result.getString("responsecode"), Toast.LENGTH_LONG).show();
                     }
                 } catch (NumberFormatException e) {
                     // TODO Auto-generated catch block
