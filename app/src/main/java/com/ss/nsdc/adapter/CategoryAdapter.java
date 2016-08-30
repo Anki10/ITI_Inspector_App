@@ -29,7 +29,9 @@ import com.ss.nsdc.dao.JobRolesModel;
 import com.ss.nsdc.dao.NSDCDBController;
 import com.ss.nsdc.dao.SubCategoryClass;
 import com.ss.nsdc.dao.SubCategoryLab;
+import com.ss.nsdc.dao.SubCategorySupportStaffDAO;
 import com.ss.nsdc.entity.Proc_Track;
+import com.ss.nsdc.entity.SubCategorySupportStaff;
 import com.ss.nsdc.entity.SubListEquipment;
 import com.ss.nsdc.entity.SubListOffice;
 import com.ss.nsdc.main.SubCategoryClassActivity;
@@ -144,6 +146,23 @@ public class CategoryAdapter extends
                     holder.imageView_sync.setVisibility(View.VISIBLE);
                 }
             }
+        } else if (position == 8) { // Support Staff
+            SubCategorySupportStaffDAO staffDAO = new SubCategorySupportStaffDAO(context);
+            List<SubCategorySupportStaff> listStaff = staffDAO.getStaffListByYearWiseCollegeId(instituteId);
+
+            if (listStaff != null && listStaff.size() != 0) {
+                Proc_Track syncStatus = staffDAO.getSyncStatus();
+                if (syncStatus.getProc_track1Count() == 0) { // New Data
+                    holder.imageView1.setImageDrawable(context.getResources().getDrawable(R.drawable.complete));
+                } else {
+                    holder.imageView1.setImageDrawable(context.getResources().getDrawable(R.drawable.start));
+                }
+                if (syncStatus.getProc_track2Count() > 0) {
+                    holder.imageView_sync.setVisibility(View.VISIBLE);
+                }
+            }
+            staffDAO.close();
+
         } else if (position == 9) { // EQUIPMENT
             List<SubListEquipment> listEquip = controller.getEquipmentListbyYearWiseCollageId(instituteId);
             if (listEquip != null && listEquip.size() != 0) {
@@ -242,6 +261,22 @@ public class CategoryAdapter extends
                                 "http://nsdc.qci.org.in/api/CAAF/DisplayOfficeAreaDetails.php",
                                 "office", instituteId});
                     }
+                } else if (position == 8) {/** Support Staff **/
+                    SubCategorySupportStaffDAO staffDAO = new SubCategorySupportStaffDAO(context);
+                    List<SubCategorySupportStaff> list = staffDAO.getStaffListByYearWiseCollegeId(instituteId);
+                    staffDAO.close();
+
+                    if (list != null && list.size() != 0) {
+                        Intent intent = new Intent(context, SubCategoryClassActivity.class);
+                        intent.putExtra("Category", AppConstants.TEXT_SUPPORT_STAFF);
+                        intent.putExtra("YearWiseCollegeId", instituteId);
+                        intent.putExtra("applicationId", applicationId);
+                        context.startActivity(intent);
+                    } else {
+                        new UpdateData().execute(new String[]{AppConstants.API_URL + "DisplayNtDetails.php",
+                                AppConstants.TEXT_SUPPORT_STAFF, instituteId});
+                    }
+
                 } else if (position == 9) {/** Equipments **/
                     NSDCDBController controller = new NSDCDBController(context);
                     List<SubListEquipment> list = controller
@@ -332,12 +367,16 @@ public class CategoryAdapter extends
                 sqllite.addJobRolesData(result, yearWiseCollegeId,
                         applicationId);
                 sqllite.close();
+
+            } else if (type.equalsIgnoreCase(AppConstants.TEXT_SUPPORT_STAFF)) {
+
+                SubCategorySupportStaffDAO staffDAO = new SubCategorySupportStaffDAO(context);
+                staffDAO.addStaffData(result, yearWiseCollegeId, applicationId);
+                staffDAO.close();
             }
             ringProgressDialog.dismiss();
             notifyDataSetChanged();
-
         }
-
     }
 
     public JSONObject updateSubCategoryList(String[] urldetail) {

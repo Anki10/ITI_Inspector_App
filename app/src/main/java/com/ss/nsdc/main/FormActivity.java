@@ -13,15 +13,19 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.ss.nsdc.R;
+import com.ss.nsdc.constant.AppConstants;
 import com.ss.nsdc.dao.JobRolesModel;
 import com.ss.nsdc.dao.NSDCDBController;
 import com.ss.nsdc.dao.SubCategoryClass;
 import com.ss.nsdc.dao.SubCategoryLab;
+import com.ss.nsdc.dao.SubCategorySupportStaffDAO;
+import com.ss.nsdc.entity.SubCategorySupportStaff;
 import com.ss.nsdc.entity.SubListOffice;
 import com.ss.nsdc.fragment.ClassroomFragment;
 import com.ss.nsdc.fragment.JobsFragment;
 import com.ss.nsdc.fragment.LabFragment;
 import com.ss.nsdc.fragment.OfficeFragment;
+import com.ss.nsdc.fragment.SupportStaffFragment;
 
 public class FormActivity extends AppCompatActivity {
 
@@ -35,6 +39,7 @@ public class FormActivity extends AppCompatActivity {
     SubCategoryLab getSelectedLabData;
     SubListOffice getSelectedOfficeData;
     JobRolesModel jobRolesModel;
+    SubCategorySupportStaff getSelectedSupportStaff;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,19 +72,30 @@ public class FormActivity extends AppCompatActivity {
             getSelectedClassData = controller.getClassDataByClassId(YearWiseCollegeId, classId);
             ClassroomFragment classroomFragment = new ClassroomFragment(getSelectedClassData);
             fragmentTransaction.add(R.id.container, classroomFragment);
+
         } else if (category.equalsIgnoreCase("lab")) {
             getSelectedLabData = controller.getLabDataByLabId(YearWiseCollegeId, classId);
             LabFragment labFragment = new LabFragment(getSelectedLabData);
             fragmentTransaction.add(R.id.container, labFragment);
+
         } else if (category.equalsIgnoreCase("office")) {
             getSelectedOfficeData = controller.getOfficeDataByOfficeId(YearWiseCollegeId, classId);
             OfficeFragment officeFragment = new OfficeFragment(getSelectedOfficeData);
             fragmentTransaction.add(R.id.container, officeFragment);
+
         } else if (category.equalsIgnoreCase("jobRoles")) {
             jobRolesModel = controller.getJobDataByJobId(YearWiseCollegeId, classId);
             JobsFragment jobsFragment = new JobsFragment(jobRolesModel);
             fragmentTransaction.add(R.id.container, jobsFragment);
+
+        } else if (category.equalsIgnoreCase(AppConstants.TEXT_SUPPORT_STAFF)) {
+            SubCategorySupportStaffDAO staffDAO = new SubCategorySupportStaffDAO(context);
+            getSelectedSupportStaff = staffDAO.getStaffDataByStaffId(YearWiseCollegeId, classId);
+
+            SupportStaffFragment supportStaffFragment = new SupportStaffFragment(getSelectedSupportStaff);
+            fragmentTransaction.add(R.id.container, supportStaffFragment);
         }
+
         fragmentTransaction.addToBackStack(null);
 
         controller.close();
@@ -89,7 +105,7 @@ public class FormActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.form, menu);
+        //getMenuInflater().inflate(R.menu.form, menu);
         return true;
     }
 
@@ -99,9 +115,9 @@ public class FormActivity extends AppCompatActivity {
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
-        if (id == R.id.action_settings) {
+        /*if (id == R.id.action_settings) {
             return true;
-        }
+        }*/
         return super.onOptionsItemSelected(item);
     }
 
@@ -124,6 +140,9 @@ public class FormActivity extends AppCompatActivity {
             return toolbarTitle = "Office Area Details";
         } else if (category.equalsIgnoreCase("equipment")) {
             return toolbarTitle = "Equipment Details";
+
+        } else if (category.equalsIgnoreCase(AppConstants.TEXT_SUPPORT_STAFF)) {
+            return toolbarTitle = AppConstants.TEXT_SUPPORT_SPACE_STAFF;
         } else {
             return null;
         }
