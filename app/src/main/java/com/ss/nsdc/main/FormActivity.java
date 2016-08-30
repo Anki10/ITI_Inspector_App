@@ -16,13 +16,16 @@ import com.ss.nsdc.dao.JobRolesModel;
 import com.ss.nsdc.dao.NSDCDBController;
 import com.ss.nsdc.dao.SubCategoryClass;
 import com.ss.nsdc.dao.SubCategoryLab;
+import com.ss.nsdc.dao.SubCategoryResidentialFacDAO;
 import com.ss.nsdc.dao.SubCategorySupportStaffDAO;
+import com.ss.nsdc.entity.SubCategoryResidentialFac;
 import com.ss.nsdc.entity.SubCategorySupportStaff;
 import com.ss.nsdc.entity.SubListOffice;
 import com.ss.nsdc.fragment.ClassroomFragment;
 import com.ss.nsdc.fragment.JobsFragment;
 import com.ss.nsdc.fragment.LabFragment;
 import com.ss.nsdc.fragment.OfficeFragment;
+import com.ss.nsdc.fragment.ResidentialFacilityFragment;
 import com.ss.nsdc.fragment.SupportStaffFragment;
 
 public class FormActivity extends AppCompatActivity {
@@ -38,6 +41,7 @@ public class FormActivity extends AppCompatActivity {
     SubListOffice getSelectedOfficeData;
     JobRolesModel jobRolesModel;
     SubCategorySupportStaff getSelectedSupportStaff;
+    SubCategoryResidentialFac getSelectedResFacility;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -92,6 +96,15 @@ public class FormActivity extends AppCompatActivity {
 
             SupportStaffFragment supportStaffFragment = new SupportStaffFragment(getSelectedSupportStaff);
             fragmentTransaction.add(R.id.container, supportStaffFragment);
+            staffDAO.close();
+
+        } else if (category.equalsIgnoreCase(AppConstants.TEXT_RESIDENTIAL_FACILITY)) {
+            SubCategoryResidentialFacDAO resFacDAO = new SubCategoryResidentialFacDAO(context);
+            getSelectedResFacility = resFacDAO.getResFacDataByStaffId(YearWiseCollegeId, classId);
+
+            ResidentialFacilityFragment residentialFacilityFragment = new ResidentialFacilityFragment(getSelectedResFacility);
+            fragmentTransaction.add(R.id.container, residentialFacilityFragment);
+            resFacDAO.close();
         }
 
         fragmentTransaction.addToBackStack(null);
@@ -141,6 +154,9 @@ public class FormActivity extends AppCompatActivity {
 
         } else if (category.equalsIgnoreCase(AppConstants.TEXT_SUPPORT_STAFF)) {
             return toolbarTitle = AppConstants.TEXT_SUPPORT_SPACE_STAFF;
+
+        } else if (category.equalsIgnoreCase(AppConstants.TEXT_RESIDENTIAL_FACILITY)) {
+            return toolbarTitle = AppConstants.TEXT_RESIDENTIAL_SPACE_FACILITY;
         } else {
             return null;
         }

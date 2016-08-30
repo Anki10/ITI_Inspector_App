@@ -38,7 +38,7 @@ public class SubCategorySupportStaffDAO extends SQLiteOpenHelper {
         String subStaffTableQuery = "CREATE TABLE SupportStaff (Id INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 "ApplicationNo TEXT, " +
                 "YearWiseCollegeId  TEXT NOT NULL, " +
-                "StaffId TEXT, StaffType TEXT, " +
+                "StaffId TEXT, " +
                 "StaffName TEXT, " +
                 "StaffType TEXT, " +
                 "Work TEXT, " +
@@ -57,24 +57,6 @@ public class SubCategorySupportStaffDAO extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        String subStaffTableQuery = "CREATE TABLE SupportStaff (Id INTEGER PRIMARY KEY AUTOINCREMENT, " +
-                "ApplicationNo TEXT, " +
-                "YearWiseCollegeId  TEXT NOT NULL, " +
-                "StaffId TEXT, StaffType TEXT, " +
-                "StaffName TEXT, " +
-                "StaffType TEXT, " +
-                "Work TEXT, " +
-                "Remarks TEXT, " +
-                "InsWork TEXT, " +
-                "InsRemarks TEXT, " +
-                "proc_tracker INTEGER)";
-
-        try {
-            dropTable(db, "SupportStaff");
-            db.execSQL(subStaffTableQuery);
-        } catch (Exception e) {
-            Log.e("SupportStaff", e.getMessage());
-        }
     }
 
     private void dropTable(SQLiteDatabase db, String tableName) {

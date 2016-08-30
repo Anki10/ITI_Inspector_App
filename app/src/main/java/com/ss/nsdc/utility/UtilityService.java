@@ -21,6 +21,7 @@ import android.provider.Settings;
 
 import com.ss.nsdc.dao.SubCategoryClass;
 import com.ss.nsdc.dao.SubCategoryLab;
+import com.ss.nsdc.entity.SubCategorySupportStaff;
 import com.ss.nsdc.entity.SubListOffice;
 
 public class UtilityService {
@@ -201,6 +202,24 @@ public class UtilityService {
 			return null;
 		}
 		return offdetails;
+	}
+
+	public JSONObject getStaffSycData(SubCategorySupportStaff staffData) {
+		JSONObject staffDetails = new JSONObject();
+		try {
+			staffDetails.put("StaffId", staffData.getStaffId());
+			staffDetails.put("StaffType", staffData.getStaffType());
+			staffDetails.put("StaffName",staffData.getStaffName());
+			staffDetails.put("Remarks",staffData.getRemarks());
+			staffDetails.put("Work",staffData.getWork());
+			staffDetails.put("InsWork",staffData.getInsWork());
+			staffDetails.put("InsRemarks",staffData.getInsRemarks());
+
+		} catch (JSONException e) {
+			e.printStackTrace();
+			return null;
+		}
+		return staffDetails;
 	}
 	
 	public static void exportDatabse(String databaseName) {
