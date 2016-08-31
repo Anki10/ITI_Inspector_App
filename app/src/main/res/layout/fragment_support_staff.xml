@@ -68,7 +68,7 @@
                     android:textColor="@color/textHeadColor"
                     android:textSize="@dimen/font_small" />
 
-                <ImageView
+                <!--<ImageView
                     android:id="@+id/image_ss_type_save"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
@@ -81,7 +81,7 @@
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:scaleType="fitXY"
-                    android:src="@drawable/icon_tick_complete" />
+                    android:src="@drawable/ok_grey" />-->
 
         </LinearLayout>
     </LinearLayout>
@@ -144,7 +144,7 @@
                     android:textColor="@color/textHeadColor"
                     android:textSize="@dimen/font_small"/>
 
-                <ImageView
+                <!--<ImageView
                     android:id="@+id/image_ss_name_save"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
@@ -157,7 +157,7 @@
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:scaleType="fitXY"
-                    android:src="@drawable/icon_tick_complete" />
+                    android:src="@drawable/ok_grey" />-->
 
             </LinearLayout>
         </LinearLayout>
@@ -168,13 +168,15 @@
             android:background="@color/colorPrimaryTransparent"></View>
 
         <LinearLayout
+            android:id="@+id/linearLayoutStaffWork"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/margin_large"
             android:layout_marginLeft="@dimen/margin_large"
             android:layout_marginRight="@dimen/margin_large"
             android:layout_marginTop="@dimen/margin_large"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:visibility="gone">
 
 
             <RelativeLayout
@@ -220,7 +222,7 @@
                     android:textSize="@dimen/font_small" />
 
                 <ImageView
-                    android:id="@+id/image_ss_work_save"
+                    android:id="@+id/image_ss_work_edit"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:layout_marginRight="20dp"
@@ -228,11 +230,11 @@
                     android:src="@drawable/icon_edit_grey" />
 
                 <ImageView
-                    android:id="@+id/image_ss_work_edit"
+                    android:id="@+id/image_ss_work_save"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:scaleType="fitXY"
-                    android:src="@drawable/icon_tick_complete" />
+                    android:src="@drawable/ok_grey" />
 
 
             </LinearLayout>
@@ -292,11 +294,12 @@
                     android:layout_marginRight="@dimen/margin_medium"
                     android:layout_weight="1"
                     android:editable="false"
+                    android:singleLine="false"
                     android:textColor="@color/textHeadColor"
                     android:textSize="@dimen/font_small" />
 
                 <ImageView
-                    android:id="@+id/image_ss_remarks_save"
+                    android:id="@+id/image_ss_remarks_edit"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:layout_marginRight="20dp"
@@ -304,11 +307,11 @@
                     android:src="@drawable/icon_edit_grey" />
 
                 <ImageView
-                    android:id="@+id/image_ss_remarks_edit"
+                    android:id="@+id/image_ss_remarks_save"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:scaleType="fitXY"
-                    android:src="@drawable/icon_tick_complete"/>
+                    android:src="@drawable/ok_grey"/>
             </LinearLayout>
         </LinearLayout>
 

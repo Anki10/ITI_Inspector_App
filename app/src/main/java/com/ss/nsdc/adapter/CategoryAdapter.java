@@ -29,8 +29,10 @@ import com.ss.nsdc.dao.JobRolesModel;
 import com.ss.nsdc.dao.NSDCDBController;
 import com.ss.nsdc.dao.SubCategoryClass;
 import com.ss.nsdc.dao.SubCategoryLab;
+import com.ss.nsdc.dao.SubCategoryResidentialFacDAO;
 import com.ss.nsdc.dao.SubCategorySupportStaffDAO;
 import com.ss.nsdc.entity.Proc_Track;
+import com.ss.nsdc.entity.SubCategoryResidentialFac;
 import com.ss.nsdc.entity.SubCategorySupportStaff;
 import com.ss.nsdc.entity.SubListEquipment;
 import com.ss.nsdc.entity.SubListOffice;
@@ -262,6 +264,23 @@ public class CategoryAdapter extends
                                 "http://nsdc.qci.org.in/api/CAAF/DisplayOfficeAreaDetails.php",
                                 "office", instituteId});
                     }
+
+                } else if (position == 5) {/** Residential Facility **/
+                    SubCategoryResidentialFacDAO resFacDAO = new SubCategoryResidentialFacDAO(context);
+                    List<SubCategoryResidentialFac> list = resFacDAO.getResFacListByYearWiseCollegeId(instituteId);
+                    resFacDAO.close();
+
+                    if (list != null && list.size() != 0) {
+                        Intent intent = new Intent(context, SubCategoryClassActivity.class);
+                        intent.putExtra("Category", AppConstants.TEXT_RESIDENTIAL_FACILITY);
+                        intent.putExtra("YearWiseCollegeId", instituteId);
+                        intent.putExtra("applicationId", applicationId);
+                        context.startActivity(intent);
+                    } else {
+                        new UpdateData().execute(new String[]{AppConstants.API_URL + "DisplayResidentialAreaDetails.php",
+                                AppConstants.TEXT_RESIDENTIAL_FACILITY, instituteId});
+                    }
+
                 } else if (position == 8) {/** Support Staff **/
                     SubCategorySupportStaffDAO staffDAO = new SubCategorySupportStaffDAO(context);
                     List<SubCategorySupportStaff> list = staffDAO.getStaffListByYearWiseCollegeId(instituteId);
@@ -369,10 +388,14 @@ public class CategoryAdapter extends
                 sqllite.close();
 
             } else if (type.equalsIgnoreCase(AppConstants.TEXT_SUPPORT_STAFF)) {
-
                 SubCategorySupportStaffDAO staffDAO = new SubCategorySupportStaffDAO(context);
                 staffDAO.addStaffData(result, yearWiseCollegeId, applicationId);
                 staffDAO.close();
+
+            } else if (type.equalsIgnoreCase(AppConstants.TEXT_RESIDENTIAL_FACILITY)) {
+                SubCategoryResidentialFacDAO resFacDAO = new SubCategoryResidentialFacDAO(context);
+                resFacDAO.addResidentialFacilityData(result, yearWiseCollegeId, applicationId);
+                resFacDAO.close();
             }
             ringProgressDialog.dismiss();
             notifyDataSetChanged();

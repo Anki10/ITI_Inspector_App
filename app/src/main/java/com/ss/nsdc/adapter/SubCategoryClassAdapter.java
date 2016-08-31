@@ -19,6 +19,7 @@ import com.ss.nsdc.dao.JobRolesModel;
 import com.ss.nsdc.dao.NSDCDBController;
 import com.ss.nsdc.dao.SubCategoryClass;
 import com.ss.nsdc.dao.SubCategoryLab;
+import com.ss.nsdc.entity.SubCategoryResidentialFac;
 import com.ss.nsdc.entity.SubCategorySupportStaff;
 import com.ss.nsdc.entity.SubListEquipment;
 import com.ss.nsdc.entity.SubListOffice;
@@ -34,6 +35,7 @@ public class SubCategoryClassAdapter extends
     private List<JobRolesModel> jobRolesModelList;
     private List<SubCategorySupportStaff> staffList;
     private List<String> subListEquipmentJobRoles;
+    private List<SubCategoryResidentialFac> resFacList;
     private Context context;
     private String category;
 
@@ -69,6 +71,8 @@ public class SubCategoryClassAdapter extends
             this.staffList = getList;
         }else if (category.equalsIgnoreCase("equipment_jobroles")) {
             this.subListEquipmentJobRoles = getList;
+        } else if (category.equalsIgnoreCase(AppConstants.TEXT_RESIDENTIAL_FACILITY)) {
+            this.resFacList = getList;
         }
 
         this.context = context;
@@ -147,6 +151,17 @@ public class SubCategoryClassAdapter extends
             } else if (staffList.get(position).getProc_tracker() == 2) { // not synced
                 holder.imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.progress));
             } else if (staffList.get(position).getProc_tracker() == 3) { // synced Data
+                holder.imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.complete));
+            }
+
+        } else if (category.equalsIgnoreCase(AppConstants.TEXT_RESIDENTIAL_FACILITY)) {
+            holder.txtSubCat.setText(resFacList.get(position).getResFacType());
+
+            if (resFacList.get(position).getProc_tracker() == 1) { // New Data
+                holder.imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.start));
+            } else if (resFacList.get(position).getProc_tracker() == 2) { // not synced
+                holder.imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.progress));
+            } else if (resFacList.get(position).getProc_tracker() == 3) { // synced Data
                 holder.imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.complete));
             }
         }
@@ -230,6 +245,20 @@ public class SubCategoryClassAdapter extends
                     } else if (staffList.get(position).getProc_tracker() == 3) { //
                         Toast.makeText(context, "This data is synced and cannot be edited", Toast.LENGTH_SHORT).show();
                     }
+
+                } else if (category.equalsIgnoreCase(AppConstants.TEXT_RESIDENTIAL_FACILITY)) {
+                    if (resFacList.get(position).getProc_tracker() == 1) { // New Data
+                        Intent intent = new Intent(context, FormActivity.class);
+                        intent.putExtra("category", category);
+                        intent.putExtra("subcategoryId", staffList.get(position).getStaffId());
+                        intent.putExtra("yearWiseCollageId", staffList.get(position).getYearWiseCollegeId());
+
+                        context.startActivity(intent);
+                    } else if (resFacList.get(position).getProc_tracker() == 2) {
+                        Toast.makeText(context, "This data is waiting to be synced and cannot be edited", Toast.LENGTH_SHORT).show();
+                    } else if (resFacList.get(position).getProc_tracker() == 3) { //
+                        Toast.makeText(context, "This data is synced and cannot be edited", Toast.LENGTH_SHORT).show();
+                    }
                 }
                 //controller.close();
             }
@@ -253,7 +282,11 @@ public class SubCategoryClassAdapter extends
 
         } else if (category.equalsIgnoreCase(AppConstants.TEXT_SUPPORT_STAFF)) {
             return staffList.size();
+
+        } else if (category.equalsIgnoreCase(AppConstants.TEXT_RESIDENTIAL_FACILITY)) {
+            return resFacList.size();
         }
+
         return 0;
     }
 }

@@ -18,10 +18,10 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Environment;
 import android.provider.Settings;
-
 import com.ss.nsdc.dao.SubCategoryClass;
 import com.ss.nsdc.dao.SubCategoryLab;
 import com.ss.nsdc.entity.SubListEquipment;
+import com.ss.nsdc.entity.SubCategorySupportStaff;
 import com.ss.nsdc.entity.SubListOffice;
 
 public class UtilityService {
@@ -132,15 +132,6 @@ public class UtilityService {
                     classData.put("Id", categoryClass.get(i).getClassId());
                     classData.put("Classroom_Name",
                             categoryClass.get(i).getClassroom_Name());
-                /*classData.put("Carpet_Area", categoryClass.get(i).getCarpet_Area());
-                classData.put("Seating_Capacity", categoryClass.get(i).getSeating_Capacity());
-				classData.put("Avg_Batches", categoryClass.get(i).getAvg_Batches());
-				classData.put("Availability_Of_AC", categoryClass.get(i).getAvailability_Of_AC());
-				classData.put("Availability_Of_Power_BackUp", categoryClass.get(i).getAvailability_Of_Power_BackUp());
-				classData.put("Area_under_CCTV_Coverage", categoryClass.get(i).getArea_under_CCTV_Coverage());
-				classData.put("Availability_of_Overhead_Projector", categoryClass.get(i).getAvailability_of_Overhead_Projector());
-				classData.put("avail_Internet", categoryClass.get(i).getAvail_Internet());
-				classData.put("Remarks", categoryClass.get(i).getRemarks());*/
                     classData.put("InsCarpet_Area",
                             categoryClass.get(i).getInsCarpet_Area());
 
@@ -229,7 +220,51 @@ public class UtilityService {
         return resultfinal;
     }
 
-    public static void exportDatabse(String databaseName) {
+	public JSONObject getOfficeSycData(SubListOffice officedata)
+	{
+		JSONObject offdetails=new JSONObject();
+		try {
+			offdetails.put("id", officedata.getOfficeId());
+			offdetails.put("AreaType", officedata.getAreaType());
+			offdetails.put("CarpetArea",officedata.getCarpetArea());
+			offdetails.put("Internet",officedata.getInternet());
+			offdetails.put("AC",officedata.getAC());
+			offdetails.put("BackUp",officedata.getBackUp());
+			offdetails.put("CCTV",officedata.getCCTV());
+			offdetails.put("remarks",officedata.getRemarks());
+			offdetails.put("InsCarpetArea",officedata.getInsCarpetArea());
+			offdetails.put("InsInternet",officedata.getInsInternet());
+			offdetails.put("InsAC",officedata.getInsAC());
+			offdetails.put("InsBackUp","");
+			offdetails.put("InsCCTV",officedata.getInsCCTV());
+			offdetails.put("Insremarks",officedata.getInsremarks());
+			
+		} catch (JSONException e) {
+			e.printStackTrace();
+			return null;
+		}
+		return offdetails;
+	}
+
+	public JSONObject getStaffSycData(SubCategorySupportStaff staffData) {
+		JSONObject staffDetails = new JSONObject();
+		try {
+			staffDetails.put("StaffId", staffData.getStaffId());
+			staffDetails.put("StaffType", staffData.getStaffType());
+			staffDetails.put("StaffName",staffData.getStaffName());
+			staffDetails.put("Remarks",staffData.getRemarks());
+			staffDetails.put("Work",staffData.getWork());
+			staffDetails.put("InsWork",staffData.getInsWork());
+			staffDetails.put("InsRemarks",staffData.getInsRemarks());
+
+		} catch (JSONException e) {
+			e.printStackTrace();
+			return null;
+		}
+		return staffDetails;
+	}
+	
+	public static void exportDatabse(String databaseName) {
         try {
             File sd = Environment.getExternalStorageDirectory();
             File data = Environment.getDataDirectory();

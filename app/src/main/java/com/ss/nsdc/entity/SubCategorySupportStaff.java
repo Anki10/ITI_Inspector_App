@@ -12,6 +12,9 @@ public class SubCategorySupportStaff implements Serializable {
     private String staffType;
     private String staffName;
     private String remarks;
+    private String work;
+    private String insWork;
+    private String insRemarks;
     private int proc_tracker;
 
     public SubCategorySupportStaff() {
@@ -55,6 +58,30 @@ public class SubCategorySupportStaff implements Serializable {
 
     public void setRemarks(String remarks) {
         this.remarks = remarks;
+    }
+
+    public String getWork() {
+        return work;
+    }
+
+    public void setWork(String work) {
+        this.work = work;
+    }
+
+    public String getInsWork() {
+        return insWork;
+    }
+
+    public void setInsWork(String insWork) {
+        this.insWork = insWork;
+    }
+
+    public String getInsRemarks() {
+        return insRemarks;
+    }
+
+    public void setInsRemarks(String insRemarks) {
+        this.insRemarks = insRemarks;
     }
 
     public int getProc_tracker() {

@@ -27,7 +27,9 @@ import com.ss.nsdc.dao.JobRolesModel;
 import com.ss.nsdc.dao.NSDCDBController;
 import com.ss.nsdc.dao.SubCategoryClass;
 import com.ss.nsdc.dao.SubCategoryLab;
+import com.ss.nsdc.dao.SubCategoryResidentialFacDAO;
 import com.ss.nsdc.dao.SubCategorySupportStaffDAO;
+import com.ss.nsdc.entity.SubCategoryResidentialFac;
 import com.ss.nsdc.entity.SubCategorySupportStaff;
 import com.ss.nsdc.entity.SubListEquipment;
 import com.ss.nsdc.entity.SubListOffice;
@@ -45,6 +47,7 @@ public class SubCategoryClassActivity extends AppCompatActivity {
 	List<SubListEquipment> getEquipmentList = new ArrayList<SubListEquipment>();
 	List<JobRolesModel> getJobRolesList = new ArrayList<JobRolesModel>();
 	List<SubCategorySupportStaff> getStaffList = new ArrayList<SubCategorySupportStaff>();
+	List<SubCategoryResidentialFac> getResFacilityList = new ArrayList<SubCategoryResidentialFac>();
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -90,6 +93,11 @@ public class SubCategoryClassActivity extends AppCompatActivity {
 			SubCategorySupportStaffDAO staffDAO = new SubCategorySupportStaffDAO(context);
 			getStaffList = staffDAO.getStaffListByYearWiseCollegeId(yearWiseCollegeId);
 			staffDAO.close();
+
+		} else if(category.equalsIgnoreCase(AppConstants.TEXT_RESIDENTIAL_FACILITY)) {
+			SubCategoryResidentialFacDAO resFacDAO = new SubCategoryResidentialFacDAO(context);
+			getResFacilityList = resFacDAO.getResFacListByYearWiseCollegeId(yearWiseCollegeId);
+			resFacDAO.close();
 		}
 
 		dbcontroller.close();
@@ -122,6 +130,9 @@ public class SubCategoryClassActivity extends AppCompatActivity {
 
 		} else if(category.equalsIgnoreCase(AppConstants.TEXT_SUPPORT_STAFF)) {
 			mAdapter = new SubCategoryClassAdapter(getStaffList, category, context);
+
+		} else if(category.equalsIgnoreCase(AppConstants.TEXT_RESIDENTIAL_FACILITY)) {
+			mAdapter = new SubCategoryClassAdapter(getResFacilityList, category, context);
 		}
 
 		mRecyclerView.setAdapter(mAdapter);

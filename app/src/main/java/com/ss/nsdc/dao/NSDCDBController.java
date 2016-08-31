@@ -80,6 +80,19 @@ public class NSDCDBController extends SQLiteOpenHelper {
                 "InsRemarks TEXT, " +
                 "proc_tracker INTEGER)";
 
+        String subResidentialFacTableQuery = "CREATE TABLE ResidentialFacility (Id INTEGER PRIMARY KEY AUTOINCREMENT, " +
+                "ApplicationNo TEXT, " +
+                "YearWiseCollegeId  TEXT NOT NULL, " +
+                "ResFacId TEXT, " +
+                "Type TEXT, " +
+                "TotalArea TEXT, " +
+                "NoOfRooms INTEGER, " +
+                "ResCapacity INTEGER, " +
+                "IsPowerBackup TEXT, " +
+                "IsCCTVCamera TEXT, " +
+                "Remarks TEXT, " +
+                "proc_tracker INTEGER)";
+
 		/*
          * questionTableQuery="Create table question()";
 		 * optionTableQuery="Create table options()";
@@ -142,10 +155,16 @@ public class NSDCDBController extends SQLiteOpenHelper {
                 Log.e("SupportStaff", e.getMessage());
             }
 
+            try {
+                dropTable(db, "ResidentialFacility");
+                db.execSQL(subResidentialFacTableQuery);
+            } catch (Exception e) {
+                Log.e("ResidentialFacility", e.getMessage());
+            }
+
         } catch (SQLException e) {
             Log.e(TAG, e.getMessage());
         }
-
     }
 
     private void dropTable(SQLiteDatabase db, String tableName) {
