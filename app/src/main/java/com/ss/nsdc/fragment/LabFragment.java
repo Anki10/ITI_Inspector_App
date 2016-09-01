@@ -37,6 +37,7 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.ss.nsdc.R;
+import com.ss.nsdc.constant.AppConstants;
 import com.ss.nsdc.dao.NSDCDBController;
 import com.ss.nsdc.dao.SubCategoryClass;
 import com.ss.nsdc.dao.SubCategoryLab;
@@ -372,7 +373,7 @@ public class LabFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 ControlsUtility.editImageViewAction(imageView82, ans8, view);
-                ans7edit = 1;
+                ans8edit = 1;
             }
         });
 
@@ -492,8 +493,8 @@ public class LabFragment extends Fragment {
                                         labResults.add(getSelectedLabData);
                                         datatoSycLab = utility.getLabSycData(labResults);
                                         new ExecuteSyncOperation()
-                                                .execute(new String[]{"http://nsdc.qci.org.in/api/CAAF/LAB_Details.php",
-                                                        datatoSycLab.toString(), "bnNkYzd0ZWNoaWVzYXBp"});
+                                                .execute(new String[]{AppConstants.URL_LAB_SYNC,
+                                                        datatoSycLab.toString(), AppConstants.API_TOKEN_VALUE});
                                     } else {
                                         NSDCDBController controller = new NSDCDBController(context);
                                         boolean updation_status = controller.saveLabData(getSelectedLabData, "draft");

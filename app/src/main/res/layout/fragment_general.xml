@@ -1,0 +1,1726 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:overScrollMode="never"
+    android:scrollbars="none">
+
+    <!-- SECTION Training Centre Detail's -->
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/gen_card_view1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:background="@color/white"
+        card_view:cardCornerRadius="8dp"
+        card_view:cardElevation="5dp"
+        card_view:cardUseCompatPadding="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFCCBC"
+                android:text="@string/gen_section1"
+                android:textColor="#000000"
+                android:textSize="30sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:labelFor="@+id/gen_edit1"
+                android:paddingStart="20dp"
+                android:paddingTop="40dp"
+                android:text="@string/gen_ques1"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:paddingEnd="10dp"
+                android:paddingStart="45dp">
+
+                <EditText
+                    android:id="@+id/gen_edit1"
+                    android:layout_width="190dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="start"
+                    android:inputType="number"
+                    android:singleLine="true" />
+
+                <ImageView
+                    android:id="@+id/gen_img11"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_toStartOf="@+id/gen_img12"
+                    android:scaleType="fitXY"
+
+                    android:src="@drawable/edit" />
+
+                <ImageView
+                    android:id="@+id/gen_img12"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_alignParentEnd="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ok_grey" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimaryTransparent"></View>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:labelFor="@+id/gen_edit2"
+                android:paddingStart="20dp"
+                android:paddingTop="10dp"
+                android:text="@string/gen_ques2"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:paddingEnd="10dp"
+                android:paddingStart="45dp">
+
+                <EditText
+                    android:id="@+id/gen_edit2"
+                    android:layout_width="190dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="start"
+                    android:inputType="number"
+                    android:singleLine="true" />
+
+                <ImageView
+                    android:id="@+id/gen_img21"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_toStartOf="@+id/gen_img22"
+                    android:scaleType="fitXY"
+
+                    android:src="@drawable/edit" />
+
+                <ImageView
+                    android:id="@+id/gen_img22"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_alignParentEnd="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ok_grey" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimaryTransparent"></View>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:labelFor="@+id/gen_spin3"
+                android:paddingStart="20dp"
+                android:paddingTop="10dp"
+                android:text="@string/gen_ques3"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:paddingEnd="10dp"
+                android:paddingStart="45dp">
+
+                <Spinner
+                    android:id="@+id/gen_spin3"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="@dimen/margin_medium"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:singleLine="true" />
+
+                <ImageView
+                    android:id="@+id/gen_img31"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="20dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/edit" />
+
+                <ImageView
+                    android:id="@+id/gen_img32"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_gravity="center_vertical"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ok_grey" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimaryTransparent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:labelFor="@+id/gen_spin4"
+                android:paddingStart="20dp"
+                android:paddingTop="10dp"
+                android:text="@string/gen_ques4"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:paddingEnd="10dp"
+                android:paddingStart="45dp">
+
+                <Spinner
+                    android:id="@+id/gen_spin4"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="@dimen/margin_medium"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:singleLine="true" />
+
+                <ImageView
+                    android:id="@+id/gen_img41"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="20dp"
+                    android:layout_toStartOf="@+id/gen_img42"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/edit" />
+
+                <ImageView
+                    android:id="@+id/gen_img42"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ok_grey" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimaryTransparent"></View>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:labelFor="@+id/gen_spin5"
+                android:paddingStart="20dp"
+                android:paddingTop="10dp"
+                android:text="@string/gen_ques5"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:paddingEnd="10dp"
+                android:paddingStart="45dp">
+
+                <Spinner
+                    android:id="@+id/gen_spin5"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="@dimen/margin_medium"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:singleLine="true" />
+
+                <ImageView
+                    android:id="@+id/gen_img51"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="20dp"
+                    android:layout_toStartOf="@+id/gen_img52"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/edit" />
+
+                <ImageView
+                    android:id="@+id/gen_img52"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ok_grey" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimaryTransparent"></View>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:labelFor="@+id/gen_edit6"
+                android:paddingStart="20dp"
+                android:paddingTop="10dp"
+                android:text="@string/gen_ques6"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:paddingEnd="10dp"
+                android:paddingStart="45dp">
+
+                <EditText
+                    android:id="@+id/gen_edit6"
+                    android:layout_width="190dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="start"
+                    android:inputType="number"
+                    android:singleLine="true" />
+
+                <ImageView
+                    android:id="@+id/gen_img61"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="20dp"
+                    android:layout_toStartOf="@+id/gen_img62"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/edit" />
+
+                <ImageView
+                    android:id="@+id/gen_img62"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ok_grey" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimaryTransparent"></View>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:labelFor="@+id/gen_edit7"
+                android:paddingStart="20dp"
+                android:paddingTop="10dp"
+                android:text="@string/gen_ques7"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:paddingEnd="10dp"
+                android:paddingStart="45dp">
+
+                <EditText
+                    android:id="@+id/gen_edit7"
+                    android:layout_width="190dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="start"
+                    android:inputType="number"
+                    android:singleLine="true" />
+
+                <ImageView
+                    android:id="@+id/gen_img71"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="20dp"
+                    android:layout_toStartOf="@+id/gen_img72"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/edit" />
+
+                <ImageView
+                    android:id="@+id/gen_img72"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ok_grey" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimaryTransparent"></View>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:labelFor="@+id/gen_spin8"
+                android:paddingStart="20dp"
+                android:paddingTop="10dp"
+                android:text="@string/gen_ques8"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:paddingEnd="10dp"
+                android:paddingStart="45dp">
+
+                <Spinner
+                    android:id="@+id/gen_spin8"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="@dimen/margin_medium"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:singleLine="true" />
+
+                <ImageView
+                    android:id="@+id/gen_img81"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="20dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/edit" />
+
+                <ImageView
+                    android:id="@+id/gen_img82"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_gravity="center_vertical"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ok_grey" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimaryTransparent"></View>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:labelFor="@+id/gen_spin9"
+                android:paddingStart="20dp"
+                android:paddingTop="10dp"
+                android:text="@string/gen_ques9"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:paddingEnd="10dp"
+                android:paddingStart="45dp">
+
+                <Spinner
+                    android:id="@+id/gen_spin9"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="@dimen/margin_medium"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:singleLine="true" />
+
+                <ImageView
+                    android:id="@+id/gen_img91"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="20dp"
+                    android:layout_toStartOf="@+id/gen_img92"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/edit" />
+
+                <ImageView
+                    android:id="@+id/gen_img92"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_gravity="center_vertical"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ok_grey" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimaryTransparent"></View>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:labelFor="@+id/gen_spin10"
+                android:paddingStart="20dp"
+                android:paddingTop="10dp"
+                android:text="@string/gen_ques10"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:paddingEnd="10dp"
+                android:paddingStart="45dp">
+
+                <Spinner
+                    android:id="@+id/gen_spin10"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="@dimen/margin_medium"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:singleLine="true" />
+
+                <ImageView
+                    android:id="@+id/gen_img101"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="20dp"
+                    android:layout_toStartOf="@+id/gen_img102"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/edit" />
+
+                <ImageView
+                    android:id="@+id/gen_img102"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_gravity="center_vertical"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ok_grey" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimaryTransparent"></View>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:labelFor="@+id/gen_edit11"
+                android:paddingStart="20dp"
+                android:paddingTop="10dp"
+                android:text="@string/gen_ques11"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:paddingEnd="10dp"
+                android:paddingStart="45dp">
+
+                <EditText
+                    android:id="@+id/gen_edit11"
+                    android:layout_width="190dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="start"
+                    android:inputType="number"
+                    android:singleLine="true" />
+
+                <ImageView
+                    android:id="@+id/gen_img111"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="20dp"
+                    android:layout_toStartOf="@+id/gen_img112"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/edit" />
+
+                <ImageView
+                    android:id="@+id/gen_img112"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ok_grey" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimaryTransparent"></View>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:labelFor="@+id/gen_spin12"
+                android:paddingStart="20dp"
+                android:paddingTop="10dp"
+                android:text="@string/gen_ques12"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:paddingEnd="10dp"
+                android:paddingStart="45dp">
+
+                <Spinner
+                    android:id="@+id/gen_spin12"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="@dimen/margin_medium"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:singleLine="true" />
+
+                <ImageView
+                    android:id="@+id/gen_img121"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="20dp"
+                    android:layout_toStartOf="@+id/gen_img122"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/edit" />
+
+                <ImageView
+                    android:id="@+id/gen_img122"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_gravity="center_vertical"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ok_grey" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimaryTransparent"></View>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:labelFor="@+id/gen_check131"
+                android:paddingStart="20dp"
+                android:paddingTop="10dp"
+                android:text="@string/gen_ques13"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:paddingEnd="10dp"
+                android:paddingStart="45dp">
+
+                <CheckBox
+                    android:id="@+id/gen_check131"
+                    android:layout_width="190dp"
+                    android:layout_height="match_parent"
+                    android:checked="false"
+                    android:gravity="top"
+                    android:paddingStart="40dp"
+                    android:text="Degree" />
+
+                <CheckBox
+                    android:id="@+id/gen_check132"
+                    android:layout_width="190dp"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/gen_check131"
+                    android:checked="false"
+                    android:gravity="top"
+                    android:paddingStart="40dp"
+                    android:text="Diploma" />
+
+                <CheckBox
+                    android:id="@+id/gen_check133"
+                    android:layout_width="190dp"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/gen_check132"
+                    android:checked="false"
+                    android:gravity="top"
+                    android:paddingStart="40dp"
+                    android:text="Vocational" />
+
+                <CheckBox
+                    android:id="@+id/gen_check134"
+                    android:layout_width="190dp"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/gen_check133"
+                    android:checked="false"
+                    android:gravity="top"
+                    android:paddingStart="40dp"
+                    android:text="Private" />
+
+                <CheckBox
+                    android:id="@+id/gen_check135"
+                    android:layout_width="190dp"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/gen_check134"
+                    android:checked="false"
+                    android:gravity="top"
+                    android:paddingStart="40dp"
+                    android:text="Others" />
+
+                <CheckBox
+                    android:id="@+id/gen_check136"
+                    android:layout_width="190dp"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/gen_check134"
+                    android:checked="false"
+                    android:gravity="top"
+                    android:paddingStart="40dp"
+                    android:text="N/A" />
+
+                <ImageView
+                    android:id="@+id/gen_img131"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_toStartOf="@+id/gen_img132"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/edit" />
+
+                <ImageView
+                    android:id="@+id/gen_img132"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_alignParentEnd="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ok_grey" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimaryTransparent"></View>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:labelFor="@+id/gen_spin14"
+                android:paddingStart="20dp"
+                android:paddingTop="10dp"
+                android:text="@string/gen_ques14"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:paddingEnd="10dp"
+                android:paddingStart="45dp">
+
+                <Spinner
+                    android:id="@+id/gen_spin14"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="@dimen/margin_medium"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:singleLine="true" />
+
+                <ImageView
+                    android:id="@+id/gen_img141"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="20dp"
+                    android:layout_toStartOf="@+id/gen_img142"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/edit" />
+
+                <ImageView
+                    android:id="@+id/gen_img142"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_gravity="center_vertical"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ok_grey" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimaryTransparent"></View>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:labelFor="@+id/gen_radioGroup15"
+                android:paddingStart="20dp"
+                android:paddingTop="10dp"
+                android:text="@string/gen_ques15"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:paddingEnd="10dp"
+                android:paddingStart="45dp">
+
+                <RadioGroup
+                    android:id="@+id/gen_radioGroup15"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+
+                    <RadioButton
+                        android:id="@+id/gen_radioButton151"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="false"
+                        android:text="@string/radioYes"
+                        android:textSize="16sp" />
+
+                    <RadioButton
+                        android:id="@+id/gen_radioButton152"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="false"
+                        android:text="@string/radioNo"
+                        android:textSize="16sp" />
+                </RadioGroup>
+
+
+                <ImageView
+                    android:id="@+id/gen_img151"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="20dp"
+                    android:layout_toStartOf="@+id/gen_img152"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/edit" />
+
+                <ImageView
+                    android:id="@+id/gen_img152"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ok_grey" />
+            </RelativeLayout>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+    <!-- SECTION 2 SPOC-->
+    <android.support.v7.widget.CardView
+        android:id="@+id/gen_card_view2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:background="@color/white"
+        card_view:cardCornerRadius="8dp"
+        card_view:cardElevation="5dp"
+        card_view:cardUseCompatPadding="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFCCBC"
+                android:text="@string/gen_section2"
+                android:textColor="#000000"
+                android:textSize="30sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:labelFor="@+id/gen_edit16"
+                android:paddingStart="20dp"
+                android:paddingTop="40dp"
+                android:text="@string/gen_ques16"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:paddingEnd="10dp"
+                android:paddingStart="45dp">
+
+                <EditText
+                    android:id="@+id/gen_edit16"
+                    android:layout_width="190dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="start"
+                    android:inputType="number"
+                    android:singleLine="true" />
+
+                <ImageView
+                    android:id="@+id/gen_img161"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_toStartOf="@+id/gen_img162"
+                    android:scaleType="fitXY"
+
+                    android:src="@drawable/edit" />
+
+                <ImageView
+                    android:id="@+id/gen_img162"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_alignParentEnd="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ok_grey" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimaryTransparent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:labelFor="@+id/gen_edit17"
+                android:paddingStart="20dp"
+                android:paddingTop="10dp"
+                android:text="@string/gen_ques17"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:paddingEnd="10dp"
+                android:paddingStart="45dp">
+
+                <EditText
+                    android:id="@+id/gen_edit17"
+                    android:layout_width="190dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="start"
+                    android:inputType="number"
+                    android:singleLine="true" />
+
+                <ImageView
+                    android:id="@+id/gen_img171"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_toStartOf="@+id/gen_img172"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/edit" />
+
+                <ImageView
+                    android:id="@+id/gen_img172"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_alignParentEnd="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ok_grey" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimaryTransparent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:labelFor="@+id/gen_edit18"
+                android:paddingStart="20dp"
+                android:paddingTop="10dp"
+                android:text="@string/gen_ques18"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:paddingEnd="10dp"
+                android:paddingStart="45dp">
+
+                <EditText
+                    android:id="@+id/gen_edit18"
+                    android:layout_width="190dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="start"
+                    android:inputType="number"
+                    android:singleLine="true" />
+
+                <ImageView
+                    android:id="@+id/gen_img181"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_toStartOf="@+id/gen_img182"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/edit" />
+
+                <ImageView
+                    android:id="@+id/gen_img182"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_alignParentEnd="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ok_grey" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimaryTransparent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:labelFor="@+id/gen_edit19"
+                android:paddingStart="20dp"
+                android:paddingTop="10dp"
+                android:text="@string/gen_ques19"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:paddingEnd="10dp"
+                android:paddingStart="45dp">
+
+                <EditText
+                    android:id="@+id/gen_edit19"
+                    android:layout_width="190dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="start"
+                    android:inputType="number"
+                    android:singleLine="true" />
+
+                <ImageView
+                    android:id="@+id/gen_img191"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_toStartOf="@+id/gen_img192"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/edit" />
+
+                <ImageView
+                    android:id="@+id/gen_img192"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_alignParentEnd="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ok_grey" />
+            </RelativeLayout>
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+    <!-- SECTION 3 ADDRESS-->
+    <android.support.v7.widget.CardView
+        android:id="@+id/gen_card_view3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:background="@color/white"
+        card_view:cardCornerRadius="8dp"
+        card_view:cardElevation="5dp"
+        card_view:cardUseCompatPadding="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFCCBC"
+                android:text="@string/gen_section3"
+                android:textColor="#000000"
+                android:textSize="30sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:labelFor="@+id/gen_radioGroup20"
+                android:paddingStart="20dp"
+                android:paddingTop="10dp"
+                android:text="@string/gen_ques20"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:paddingEnd="10dp"
+                android:paddingStart="45dp">
+
+                <RadioGroup
+                    android:id="@+id/gen_radioGroup20"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+
+                    <RadioButton
+                        android:id="@+id/gen_radioButton201"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="false"
+                        android:text="@string/radioYes"
+                        android:textSize="16sp" />
+
+                    <RadioButton
+                        android:id="@+id/gen_radioButton202"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="false"
+                        android:text="@string/radioNo"
+                        android:textSize="16sp" />
+                </RadioGroup>
+
+
+                <ImageView
+                    android:id="@+id/gen_img201"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="20dp"
+                    android:layout_toStartOf="@+id/gen_img202"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/edit" />
+
+                <ImageView
+                    android:id="@+id/gen_img202"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ok_grey" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimaryTransparent"></View>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:labelFor="@+id/gen_edit21"
+                android:paddingStart="20dp"
+                android:paddingTop="40dp"
+                android:text="@string/gen_ques21"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:paddingEnd="10dp"
+                android:paddingStart="45dp">
+
+                <EditText
+                    android:id="@+id/gen_edit21"
+                    android:layout_width="190dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="start"
+                    android:inputType="number"
+                    android:singleLine="true" />
+
+                <ImageView
+                    android:id="@+id/gen_img211"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_toStartOf="@+id/gen_img212"
+                    android:scaleType="fitXY"
+
+                    android:src="@drawable/edit" />
+
+                <ImageView
+                    android:id="@+id/gen_img212"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_alignParentEnd="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ok_grey" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimaryTransparent"></View>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:labelFor="@+id/gen_edit22"
+                android:paddingStart="20dp"
+                android:paddingTop="10dp"
+                android:text="@string/gen_ques22"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:paddingEnd="10dp"
+                android:paddingStart="45dp">
+
+                <EditText
+                    android:id="@+id/gen_edit22"
+                    android:layout_width="190dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="start"
+                    android:inputType="number"
+                    android:singleLine="true" />
+
+                <ImageView
+                    android:id="@+id/gen_img221"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_toStartOf="@+id/gen_img222"
+                    android:scaleType="fitXY"
+
+                    android:src="@drawable/edit" />
+
+                <ImageView
+                    android:id="@+id/gen_img222"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_alignParentEnd="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ok_grey" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimaryTransparent"></View>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:labelFor="@+id/gen_edit23"
+                android:paddingStart="20dp"
+                android:paddingTop="10dp"
+                android:text="@string/gen_ques23"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:paddingEnd="10dp"
+                android:paddingStart="45dp">
+
+                <EditText
+                    android:id="@+id/gen_edit23"
+                    android:layout_width="190dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="start"
+                    android:inputType="number"
+                    android:singleLine="true" />
+
+                <ImageView
+                    android:id="@+id/gen_img231"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_toStartOf="@+id/gen_img232"
+                    android:scaleType="fitXY"
+
+                    android:src="@drawable/edit" />
+
+                <ImageView
+                    android:id="@+id/gen_img232"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_alignParentEnd="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ok_grey" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimaryTransparent"></View>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:labelFor="@+id/gen_edit24"
+                android:paddingStart="20dp"
+                android:paddingTop="10dp"
+                android:text="@string/gen_ques24"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:paddingEnd="10dp"
+                android:paddingStart="45dp">
+
+                <EditText
+                    android:id="@+id/gen_edit24"
+                    android:layout_width="190dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="start"
+                    android:inputType="number"
+                    android:singleLine="true" />
+
+                <ImageView
+                    android:id="@+id/gen_img241"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_toStartOf="@+id/gen_img242"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/edit" />
+
+                <ImageView
+                    android:id="@+id/gen_img242"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_alignParentEnd="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ok_grey" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimaryTransparent"></View>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:labelFor="@+id/gen_spin25"
+                android:paddingStart="20dp"
+                android:paddingTop="10dp"
+                android:text="@string/gen_ques25"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:paddingEnd="10dp"
+                android:paddingStart="45dp">
+
+                <Spinner
+                    android:id="@+id/gen_spin25"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="@dimen/margin_medium"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:singleLine="true" />
+
+                <ImageView
+                    android:id="@+id/gen_img251"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="20dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/edit" />
+
+                <ImageView
+                    android:id="@+id/gen_img252"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_gravity="center_vertical"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ok_grey" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimaryTransparent"></View>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:labelFor="@+id/gen_spin26"
+                android:paddingStart="20dp"
+                android:paddingTop="10dp"
+                android:text="@string/gen_ques26"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:paddingEnd="10dp"
+                android:paddingStart="45dp">
+
+                <Spinner
+                    android:id="@+id/gen_spin26"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="@dimen/margin_medium"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:singleLine="true" />
+
+                <ImageView
+                    android:id="@+id/gen_img261"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="20dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/edit" />
+
+                <ImageView
+                    android:id="@+id/gen_img262"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_gravity="center_vertical"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ok_grey" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimaryTransparent"></View>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:labelFor="@+id/gen_spin27"
+                android:paddingStart="20dp"
+                android:paddingTop="10dp"
+                android:text="@string/gen_ques27"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:paddingEnd="10dp"
+                android:paddingStart="45dp">
+
+                <Spinner
+                    android:id="@+id/gen_spin27"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="@dimen/margin_medium"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:singleLine="true" />
+
+                <ImageView
+                    android:id="@+id/gen_img271"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="20dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/edit" />
+
+                <ImageView
+                    android:id="@+id/gen_img272"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_gravity="center_vertical"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ok_grey" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimaryTransparent"></View>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:labelFor="@+id/gen_edit28"
+                android:paddingStart="20dp"
+                android:paddingTop="10dp"
+                android:text="@string/gen_ques28"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:paddingEnd="10dp"
+                android:paddingStart="45dp">
+
+                <EditText
+                    android:id="@+id/gen_edit28"
+                    android:layout_width="190dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="start"
+                    android:inputType="number"
+                    android:singleLine="true" />
+
+                <ImageView
+                    android:id="@+id/gen_img281"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_toStartOf="@+id/gen_img282"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/edit" />
+
+                <ImageView
+                    android:id="@+id/gen_img282"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_alignParentEnd="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ok_grey" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimaryTransparent"></View>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:labelFor="@+id/gen_edit29"
+                android:paddingStart="20dp"
+                android:paddingTop="10dp"
+                android:text="@string/gen_ques29"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:paddingEnd="10dp"
+                android:paddingStart="45dp">
+
+                <EditText
+                    android:id="@+id/gen_edit29"
+                    android:layout_width="190dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="start"
+                    android:inputType="number"
+                    android:singleLine="true" />
+
+                <ImageView
+                    android:id="@+id/gen_img291"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_toStartOf="@+id/gen_img292"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/edit" />
+
+                <ImageView
+                    android:id="@+id/gen_img292"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_alignParentEnd="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ok_grey" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimaryTransparent"></View>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:labelFor="@+id/gen_edit30"
+                android:paddingStart="20dp"
+                android:paddingTop="10dp"
+                android:text="@string/gen_ques30"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:paddingEnd="10dp"
+                android:paddingStart="45dp">
+
+                <EditText
+                    android:id="@+id/gen_edit30"
+                    android:layout_width="190dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="start"
+                    android:inputType="number"
+                    android:singleLine="true" />
+
+                <ImageView
+                    android:id="@+id/gen_img301"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_toStartOf="@+id/gen_img302"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/edit" />
+
+                <ImageView
+                    android:id="@+id/gen_img302"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_alignParentEnd="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ok_grey" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimaryTransparent"></View>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:labelFor="@+id/gen_radioGroup31"
+                android:paddingStart="20dp"
+                android:paddingTop="10dp"
+                android:text="@string/gen_ques31"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:paddingEnd="10dp"
+                android:paddingStart="45dp">
+
+                <RadioGroup
+                    android:id="@+id/gen_radioGroup31"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+
+                    <RadioButton
+                        android:id="@+id/gen_radioButton311"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="false"
+                        android:text="@string/radioYes"
+                        android:textSize="16sp" />
+
+                    <RadioButton
+                        android:id="@+id/gen_radioButton312"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="false"
+                        android:text="@string/radioNo"
+                        android:textSize="16sp" />
+                </RadioGroup>
+
+
+                <ImageView
+                    android:id="@+id/gen_img311"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="20dp"
+                    android:layout_toStartOf="@+id/gen_img312"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/edit" />
+
+                <ImageView
+                    android:id="@+id/gen_img312"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ok_grey" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimaryTransparent"></View>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/gen_submit"
+                    style="@style/HeadingFontStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#FF5722"
+                    android:text="Submit" />
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+</ScrollView>

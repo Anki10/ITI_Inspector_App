@@ -204,7 +204,7 @@ public class UtilityService {
                 for (int i = 0; i < dataList.size(); i++) {
                     JSONObject jsonObj = new JSONObject();
                     jsonObj.put("Job_Id", dataList.get(i).getJob_Id());
-                    jsonObj.put("Equipment_Id", dataList.get(i).getEquipment_Name());//TODO Change to equipment Id
+                    jsonObj.put("Equipment_Id", dataList.get(i).getEquipment_Id());
                     jsonObj.put("Quantity", dataList.get(i).getInsTotalNo());
                     jsonObj.put("Remarks", dataList.get(i).getInsRemarks());
                     jsonObj.put("YearWiseCollegeId", dataList.get(i).getYearWiseCollegeId());

@@ -146,5 +146,152 @@
 	<string name="label_no">No</string>
 
 	<string name="label_remarks">Remarks</string>
-	
+
+	<!-- Office Questions -->
+	<string name="off_section">Office Details</string>
+	<string name="off_ques1">Q1. Office Area Type</string>
+	<string name="off_ques2">Q2. Carpet Area (in Square Feet)</string>
+	<string name="off_ques3">Q3. Availability of Internet in the Room</string>
+	<string name="off_ques4">Q4. Air-Conditioning</string>
+	<string name="off_ques5">Q5. Power-Backup</string>
+	<string name="off_ques6">Q6. Area CCTV Coverage</string>
+	<string name="off_ques7">Q7. Remarks</string>
+
+	<!-- Office Area Type -->
+	<array name="officeType">
+		<item>Select</item>
+		<item>Counselling Area</item>
+		<item>Reception Area</item>
+		<item>Library</item>
+		<item>Office Space (For Trainers and Staff)</item>
+		<item>Placement And Entrepreneurship Cell</item>
+	</array>
+
+	<!-- Equipment Questions -->
+	<string name="equip_section">Equipment Details</string>
+	<string name="equip_ques1">Q1. Job Name</string>
+	<string name="equip_ques2">Q2. Equipment Name</string>
+	<string name="equip_ques3">Q3. Quantity</string>
+	<string name="equip_ques4">Q4. Unit Type</string>
+	<string name="equip_ques5">Q5. Remarks in case Mandatory equipment is not available</string>
+
+	<!-- General Questions -->
+					<!-- Section 1 Questions -->
+	<string name="gen_section1">Training Centre Detail\'s</string>
+	<string name="gen_ques1">Q1. Name of Training Provider</string>
+	<string name="gen_ques2">Q2. Training Centre Name</string>
+	<string name="gen_ques3">Q3. Type of Training Centre</string>
+	<string name="gen_ques4">Q4. Is it a Fixed or Mobile Training Centre?</string>
+	<string name="gen_ques5">Q5. Type of Funding</string>
+	<string name="gen_ques6">Q6. Website (if any)</string>
+	<string name="gen_ques7">Q7. Social Media Link (if any)</string>
+	<string name="gen_ques8">Q8. Are all Job-Roles Being Applied for from the Same Training Center?</string>
+	<string name="gen_ques9">Q9. Availability of Biometric Machine at the Centre</string>
+	<string name="gen_ques10">Q10. Proximity to Public Transport System</string>
+	<string name="gen_ques11">Q11. Name of Nearest Bus/Metro/Railway Station</string>
+	<string name="gen_ques12">Q12. Type of Building</string>
+	<string name="gen_ques13">Q13. Categories of Other Programs Offered by TC</string>
+	<string name="gen_ques14">Q14. Are the above Programmes NSQF aligned?</string>
+	<string name="gen_ques15">Q15. Quality of Building is as per Standards?</string>
+
+	<!-- Section 2 Questions -->
+	<string name="gen_section2">Single Point of Contact (SPOC) Details</string>
+	<string name="gen_ques16">Q16. SPOC Name</string>
+	<string name="gen_ques17">Q17. SPOC Mobile</string>
+	<string name="gen_ques18">Q18. SPOC Alternate Number</string>
+	<string name="gen_ques19">Q19. SPOC Email ID</string>
+
+	<!-- Section 3 Questions -->
+	<string name="gen_section3">Training Centre Address</string>
+	<string name="gen_ques20">Q20. Entire Centre situated at the ground floor only?</string>
+	<string name="gen_ques21">Q21. Address Line 1</string>
+	<string name="gen_ques22">Q22. Address Line 2</string>
+	<string name="gen_ques23">Q23. Street Name</string>
+	<string name="gen_ques24">Q24. Nearest Landmark</string>
+	<string name="gen_ques25">Q25. State</string>
+	<string name="gen_ques26">Q26. District</string>
+	<string name="gen_ques27">Q27. Parliamentary Constituency</string>
+	<string name="gen_ques28">Q28. Sub District: ( Taluka / Tehsil / Block)</string>
+	<string name="gen_ques29">Q29. City</string>
+	<string name="gen_ques30">Q30. Pin Code</string>
+	<string name="gen_ques31">Q31. Which Area The Centre is Situated</string>
+    <!-- General Questions ENDS-->
+
+    <!-- Training Centre Type -->
+    <array name="trainingCentreType">
+        <item>Select</item>
+        <item>Tp Owned</item>
+        <item>Proprietorship</item>
+        <item>Outsourced</item>
+        <item>Franchised</item>
+    </array>
+
+    <array name="trainingCentreLoc">
+        <item>Select</item>
+        <item>Fixed</item>
+        <item>Mobile</item>
+    </array>
+
+    <array name="typeOfFunding">
+        <item>Select</item>
+        <item>SSC Funded</item>
+        <item>NSDC Funded</item>
+        <item>Self Funded</item>
+    </array>
+
+    <array name="jobRolesApplies">
+        <item>Select</item>
+        <item>Yes</item>
+        <item>No</item>
+        <item>Some</item>
+    </array>
+
+    <array name="boimetricAvail">
+        <item>Select</item>
+        <item>Aadhar Enabled</item>
+        <item>Non Aadhar Enabled</item>
+        <item>Not Available</item>
+    </array>
+
+    <array name="proximity">
+        <item>Select</item>
+        <item>0-  3 KM</item>
+        <item>3.1 - 5 KM</item>
+        <item>5.1 - 10 KM</item>
+        <item>More than 10 KM</item>
+    </array>
+
+    <array name="buildingType">
+        <item>Select</item>
+        <item>Stand Alone Building</item>
+        <item>Industrial/Commercial Building</item>
+        <item>Educational Institute/Residential Building</item>
+    </array>
+
+    <array name="otherProgramCategories">
+        <item>Degree</item>
+        <item>Diploma</item>
+        <item>Vocational</item>
+        <item>Private</item>
+        <item>Others</item>
+        <item>N/A</item>
+    </array>
+
+	<array name="categories">
+		<item>General</item>
+		<item>Job Roles</item>
+		<item>Classrooms Details</item>
+		<item>Laboratories Details</item>
+		<item>Office Areas</item>
+		<item>Residential Facilities</item>
+		<item>Facilities</item>
+		<item>Trainer\'s Detail</item>
+		<item>Support Staff</item>
+		<item>Equipments</item>
+		<item>Upload Images</item>
+	</array>
+
+    <string name="categorymenu">Categories</string>
+    <string name="institutesmenu">Institutes</string>
+    <string name="exitmenu">Exit</string>
 </resources>

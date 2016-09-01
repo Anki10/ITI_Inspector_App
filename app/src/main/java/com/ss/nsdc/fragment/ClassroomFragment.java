@@ -35,6 +35,7 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.ss.nsdc.R;
+import com.ss.nsdc.constant.AppConstants;
 import com.ss.nsdc.dao.NSDCDBController;
 import com.ss.nsdc.dao.SubCategoryClass;
 import com.ss.nsdc.main.CategoryActivity;
@@ -399,7 +400,7 @@ public class ClassroomFragment extends Fragment {
                                         datatoSycClass = utility.getClassDataSync(classResults);
                                         new ExecuteSyncOperation().execute(new String[]
                                                 {"http://nsdc.qci.org.in/api/CAAF/Classroom_Details.php", datatoSycClass.toString(),
-                                                        "bnNkYzd0ZWNoaWVzYXBp"});
+                                                        AppConstants.API_TOKEN_VALUE});
                                     } else {
                                         NSDCDBController controller = new NSDCDBController(context);
                                         boolean updation_status = controller.saveClassData(getSelectedClassData, "draft");

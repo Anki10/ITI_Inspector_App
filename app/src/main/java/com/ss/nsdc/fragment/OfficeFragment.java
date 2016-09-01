@@ -35,6 +35,7 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.ss.nsdc.R;
+import com.ss.nsdc.constant.AppConstants;
 import com.ss.nsdc.dao.NSDCDBController;
 import com.ss.nsdc.dao.SubCategoryClass;
 import com.ss.nsdc.dao.User;
@@ -287,8 +288,8 @@ public class OfficeFragment extends Fragment {
                                         results.add(getSelectedOfficeData);
                                         JSONObject datatoSycClass = utility.getOfficeSycData(results);
                                         new ExecuteSyncOperation().
-                                                execute(new String[]{"http://nsdc.qci.org.in/api/CAAF/Offiec_Area.php",
-                                                        datatoSycClass.toString(), "bnNkYzd0ZWNoaWVzYXBp"});
+                                                execute(new String[]{AppConstants.URL_OFFICE_SYNC,
+                                                        datatoSycClass.toString(), AppConstants.API_TOKEN_VALUE});
                                     } else {
                                         NSDCDBController controller = new NSDCDBController(context);
                                         boolean updation_status = controller.saveOfficeData(getSelectedOfficeData, "draft");
@@ -404,6 +405,7 @@ public class OfficeFragment extends Fragment {
                         NSDCDBController controller = new NSDCDBController(context);
                         controller.saveOfficeData(getSelectedOfficeData, "complete");
                         controller.close();
+                        navigate();
                     } else {
                         ringProgressDialog.cancel();
                         Toast.makeText(context, "Data Sync failed..." + result.getString("responsecode"), Toast.LENGTH_LONG).show();

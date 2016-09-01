@@ -148,7 +148,7 @@ public class SupportStaffFragment extends Fragment implements AdapterView.OnItem
         imageRemarksSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ControlsUtility.okImageViewAction(imageRemarksSave, editRemarks, view);
+                ControlsUtility.okImageViewAction(imageRemarksSave, editRemarks, view,1);
                 staffData.setInsRemarks(editRemarks.getText().toString());
             }
         });
@@ -163,7 +163,7 @@ public class SupportStaffFragment extends Fragment implements AdapterView.OnItem
         imageWorkSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ControlsUtility.okImageViewAction(imageWorkSave, editWork, view);
+                ControlsUtility.okImageViewAction(imageWorkSave, editWork, view,1);
                 staffData.setInsWork(editWork.getText().toString());
             }
         });

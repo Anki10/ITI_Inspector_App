@@ -4,6 +4,7 @@ import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AlertDialog;
@@ -22,12 +23,14 @@ import com.ss.nsdc.dao.SubCategoryResidentialFacDAO;
 import com.ss.nsdc.dao.SubCategorySupportStaffDAO;
 import com.ss.nsdc.entity.SubCategoryResidentialFac;
 import com.ss.nsdc.entity.SubCategorySupportStaff;
+import com.ss.nsdc.entity.SubListEquipment;
 import com.ss.nsdc.entity.SubListOffice;
 import com.ss.nsdc.fragment.ClassroomFragment;
+import com.ss.nsdc.fragment.EquipmentFragment;
 import com.ss.nsdc.fragment.JobsFragment;
 import com.ss.nsdc.fragment.LabFragment;
 import com.ss.nsdc.fragment.OfficeFragment;
-import com.ss.nsdc.fragment.ResidentialFacilityFragment;
+//import com.ss.nsdc.fragment.ResidentialFacilityFragment;
 import com.ss.nsdc.fragment.SupportStaffFragment;
 
 public class FormActivity extends AppCompatActivity {
@@ -41,6 +44,7 @@ public class FormActivity extends AppCompatActivity {
     SubCategoryClass getSelectedClassData;
     SubCategoryLab getSelectedLabData;
     SubListOffice getSelectedOfficeData;
+    SubListEquipment getSelectedEquipmentData;
     JobRolesModel jobRolesModel;
     SubCategorySupportStaff getSelectedSupportStaff;
     SubCategoryResidentialFac getSelectedResFacility;
@@ -104,9 +108,13 @@ public class FormActivity extends AppCompatActivity {
             SubCategoryResidentialFacDAO resFacDAO = new SubCategoryResidentialFacDAO(context);
             getSelectedResFacility = resFacDAO.getResFacDataByStaffId(YearWiseCollegeId, classId);
 
-            ResidentialFacilityFragment residentialFacilityFragment = new ResidentialFacilityFragment(getSelectedResFacility);
-            fragmentTransaction.add(R.id.container, residentialFacilityFragment);
+           // ResidentialFacilityFragment residentialFacilityFragment = new ResidentialFacilityFragment(getSelectedResFacility);
+            //fragmentTransaction.add(R.id.container, residentialFacilityFragment);
             resFacDAO.close();
+        }else if (category.equalsIgnoreCase("equipment")) {
+            getSelectedEquipmentData = controller.getEquipmentDataByLabId(YearWiseCollegeId, classId);
+            EquipmentFragment officeFragment = new EquipmentFragment(getSelectedEquipmentData);
+            fragmentTransaction.add(R.id.container, officeFragment);
         }
 
         fragmentTransaction.addToBackStack(null);
@@ -117,20 +125,62 @@ public class FormActivity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        //getMenuInflater().inflate(R.menu.form, menu);
+        getMenuInflater().inflate(R.menu.sub_category, menu);
         return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
-        /*if (id == R.id.action_settings) {
-            return true;
-        }*/
+        switch (id) {
+            case R.id.category_list:
+                new AlertDialog.Builder(context)
+                        .setTitle("Confirmation")
+                        .setMessage("You will lose all the pending changes")
+                        .setIcon(android.R.drawable.ic_dialog_alert)
+                        .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int whichButton) {
+                                Intent intent = new Intent(context, CategoryActivity.class);
+                                intent.putExtra("YearWiseCollegeId",YearWiseCollegeId);
+                                intent.putExtra("applicationNo", applicationNo);
+                                //intent.putExtra("instituteName", context.getExtras().getString("ApplicationId"));
+                                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                                context.startActivity(intent);
+                            }
+                        }).setNegativeButton(android.R.string.cancel, null).show();
+
+                return true;
+
+            case R.id.institute_list:
+                new AlertDialog.Builder(context)
+                        .setTitle("Confirmation")
+                        .setMessage("You will lose all the pending changes")
+                        .setIcon(android.R.drawable.ic_dialog_alert)
+                        .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int whichButton) {
+                                Intent intent1 = new Intent(context, InstituteActivity.class);
+                                intent1.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                                startActivity(intent1);
+                            }
+                        }).setNegativeButton(android.R.string.cancel, null).show();
+
+                return true;
+
+            case R.id.menuExit:
+                new AlertDialog.Builder(context)
+                        .setTitle("Confirmation")
+                        .setMessage("You will lose all the pending changes")
+                        .setIcon(android.R.drawable.ic_dialog_alert)
+                        .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int whichButton) {
+                                Intent intent2 = new Intent(Intent.ACTION_MAIN);
+                                intent2.addCategory(Intent.CATEGORY_HOME);
+                                intent2.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                                startActivity(intent2);
+                            }
+                        }).setNegativeButton(android.R.string.cancel, null).show();
+                return true;
+        }
         return super.onOptionsItemSelected(item);
     }
 

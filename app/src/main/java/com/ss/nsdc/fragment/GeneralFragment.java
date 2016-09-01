@@ -1,6 +1,4 @@
-/**
- *
- */
+/*
 package com.ss.nsdc.fragment;
 
 import android.app.Fragment;
@@ -22,9 +20,8 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.ss.nsdc.R;
-import com.ss.nsdc.constant.AppConstants;
 import com.ss.nsdc.dao.NSDCDBController;
-import com.ss.nsdc.entity.SubListEquipment;
+import com.ss.nsdc.entity.GeneralInfo;
 import com.ss.nsdc.main.CategoryActivity;
 import com.ss.nsdc.utility.ControlsUtility;
 import com.ss.nsdc.utility.UtilityService;
@@ -39,10 +36,12 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
+*/
 /**
  * @author Prashant
- */
-public class EquipmentFragment extends Fragment {
+ *//*
+
+public class GeneralFragment extends Fragment {
 
     View view;
     ProgressDialog ringProgressDialog;
@@ -63,47 +62,49 @@ public class EquipmentFragment extends Fragment {
 
     Context context;
     UtilityService utility = UtilityService.getInstance();
-    private SubListEquipment getSelectedEquipmentData;
+    private GeneralInfo getGeneralInfoData;
 
-    public EquipmentFragment() {
+    public GeneralFragment() {
         super();
     }
 
-    public EquipmentFragment(SubListEquipment getSelectedEquipmentData) {
+    public GeneralFragment(GeneralInfo getGeneralInfoData) {
         super();
-        this.getSelectedEquipmentData = getSelectedEquipmentData;
+        this.getGeneralInfoData = getGeneralInfoData;
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, final ViewGroup container,
                              Bundle savedInstanceState) {
 
-        view = inflater.inflate(R.layout.fragment_equipment, container, false);
+        view = inflater.inflate(R.layout.fragment_office, container, false);
         context = container.getContext();
         initializeControls();
 
-        /** Setting Default Values */
+        */
+/** Setting Default Values *//*
 
-        if (getSelectedEquipmentData != null) {
+
+        if (getGeneralInfoData != null) {
             //ANS 1
-            ControlsUtility.setDefaultEditText(ans1,getSelectedEquipmentData.getJob_Name());
+            ControlsUtility.setDefaultEditText(ans1,getGeneralInfoData.getJob_Name());
 
             //ANS 2
-            ControlsUtility.setDefaultEditText(ans2,getSelectedEquipmentData.getEquipment_Name());
+            ControlsUtility.setDefaultEditText(ans2,getGeneralInfoData.getEquipment_Name());
             //ANS 3
-            ControlsUtility.setDefaultEditText(ans3,(getSelectedEquipmentData.getInsTotalNo() != null)
-                            ? getSelectedEquipmentData.getInsTotalNo() : getSelectedEquipmentData.getTotalNo());
+            ControlsUtility.setDefaultEditText(ans3,(getGeneralInfoData.getInsTotalNo() != null)
+                            ? getGeneralInfoData.getInsTotalNo() : getGeneralInfoData.getTotalNo());
 
             //ANS 4
-            ControlsUtility.setDefaultEditText(ans4,getSelectedEquipmentData.getEquipment_Name());
+            ControlsUtility.setDefaultEditText(ans4,getGeneralInfoData.getEquipment_Name());
             //ANS 5
-            ControlsUtility.setDefaultEditText(ans5,(getSelectedEquipmentData.getInsRemarks() != null)
-                    ? getSelectedEquipmentData.getInsRemarks() : getSelectedEquipmentData.getRemarks());
+            ControlsUtility.setDefaultEditText(ans3,(getGeneralInfoData.getInsRemarks() != null)
+                    ? getGeneralInfoData.getInsRemarks() : getGeneralInfoData.getRemarks());
 
         }
 
 
-        imageView31.setOnClickListener(new View.OnClickListener() {
+        imageView31.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
                 ControlsUtility.editImageViewAction(imageView32, ans3, view);
@@ -111,17 +112,17 @@ public class EquipmentFragment extends Fragment {
             }
         });
 
-        imageView32.setOnClickListener(new View.OnClickListener() {
+        imageView32.setOnClickListener(new OnClickListener() {
 
             @Override
             public void onClick(View v) {
                 ControlsUtility.okImageViewAction(imageView32, ans3, view, ans3edit);
-                getSelectedEquipmentData.setInsTotalNo(ans3.getText().toString());
+                getGeneralInfoData.setInsTotalNo(ans3.getText().toString());
                 ans3edit = 2;
             }
         });
 
-        imageView51.setOnClickListener(new View.OnClickListener() {
+        imageView51.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
                 ControlsUtility.editImageViewAction(imageView52, ans5, view);
@@ -129,11 +130,11 @@ public class EquipmentFragment extends Fragment {
             }
         });
 
-        imageView52.setOnClickListener(new View.OnClickListener() {
+        imageView52.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                ControlsUtility.okImageViewAction(imageView52, ans5, view, ans5edit);
-                getSelectedEquipmentData.setInsRemarks(ans3.getText().toString());
+                ControlsUtility.okImageViewAction(imageView52, ans5, view, ans3edit);
+                getGeneralInfoData.setInsRemarks(ans3.getText().toString());
                 ans5edit = 2;
             }
         });
@@ -150,15 +151,15 @@ public class EquipmentFragment extends Fragment {
                             public void onClick(DialogInterface dialog, int whichButton) {
                                 if (checkAllAtempted()) {
                                     if (utility.getConnectivityStatus(context)) {
-                                        List<SubListEquipment> results = new ArrayList<SubListEquipment>();
-                                        results.add(getSelectedEquipmentData);
+                                        List<GeneralInfo> results = new ArrayList<GeneralInfo>();
+                                        results.add(getGeneralInfoData);
                                         JSONObject datatoSycClass = utility.getEquipmentSycData(results);
                                         new ExecuteSyncOperation().
-                                                execute(new String[]{AppConstants.URL_EQUIPMENT_SYNC,
-                                                        datatoSycClass.toString(), AppConstants.API_TOKEN_VALUE});
+                                                execute(new String[]{"http://nsdc.qci.org.in/api/CAAF/Offiec_Area.php",
+                                                        datatoSycClass.toString(), "bnNkYzd0ZWNoaWVzYXBp"});
                                     } else {
                                         NSDCDBController controller = new NSDCDBController(context);
-                                        boolean updation_status = controller.saveEquipmentData(getSelectedEquipmentData, "draft");
+                                        boolean updation_status = controller.saveEquipmentData(getGeneralInfoData, "draft");
                                         controller.close();
                                         if (updation_status) {
                                             Toast.makeText(context, "Data Saved.", Toast.LENGTH_LONG).show();
@@ -190,8 +191,6 @@ public class EquipmentFragment extends Fragment {
         imageView32 = (ImageView) view.findViewById(R.id.equip_img32);
         imageView51 = (ImageView) view.findViewById(R.id.equip_img51);
         imageView52 = (ImageView) view.findViewById(R.id.equip_img52);
-
-        subButton = (Button) view.findViewById(R.id.equip_submit);
     }
 
     class ExecuteSyncOperation extends AsyncTask<String, Integer, JSONObject> {
@@ -253,7 +252,7 @@ public class EquipmentFragment extends Fragment {
                         ringProgressDialog.cancel();
                         Toast.makeText(context, "Data Sync Successful", Toast.LENGTH_LONG).show();
                         NSDCDBController controller = new NSDCDBController(context);
-                        controller.saveEquipmentData(getSelectedEquipmentData, "complete");
+                        controller.saveEquipmentData(getGeneralInfoData, "complete");
                         controller.close();
                     } else {
                         ringProgressDialog.cancel();
@@ -273,8 +272,8 @@ public class EquipmentFragment extends Fragment {
     public void navigate() {
         Intent intent = new Intent(context, CategoryActivity.class);
         intent.putExtra("YearWiseCollegeId", getActivity().getIntent().getExtras().getString("yearWiseCollageId"));
-        intent.putExtra("applicationNo", getActivity().getIntent().getExtras().getString("ApplicationId"));
-        //intent.putExtra("instituteName", getActivity().getIntent().getExtras().getString("ApplicationId"));
+        intent.putExtra("applicationNo", getActivity().getIntent().getExtras().getString("yearWiseCollageId"));
+        intent.putExtra("instituteName", getActivity().getIntent().getExtras().getString("ApplicationId"));
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         context.startActivity(intent);
     }
@@ -287,3 +286,4 @@ public class EquipmentFragment extends Fragment {
         }
     }
 }
+*/

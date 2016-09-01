@@ -7,6 +7,7 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.json.JSONException;
 import org.json.JSONObject;
 
 import android.app.ProgressDialog;
@@ -31,13 +32,16 @@ import com.ss.nsdc.dao.SubCategoryClass;
 import com.ss.nsdc.dao.SubCategoryLab;
 import com.ss.nsdc.dao.SubCategoryResidentialFacDAO;
 import com.ss.nsdc.dao.SubCategorySupportStaffDAO;
+import com.ss.nsdc.entity.GeneralInfo;
 import com.ss.nsdc.entity.Proc_Track;
 import com.ss.nsdc.entity.SubCategoryResidentialFac;
 import com.ss.nsdc.entity.SubCategorySupportStaff;
 import com.ss.nsdc.entity.SubListEquipment;
 import com.ss.nsdc.entity.SubListOffice;
+import com.ss.nsdc.main.FormActivity;
 import com.ss.nsdc.main.SubCategoryClassActivity;
 import com.ss.nsdc.main.SubCategoryFilterActivity;
+import com.ss.nsdc.utility.UtilityService;
 
 public class CategoryAdapter extends
         RecyclerView.Adapter<CategoryAdapter.ViewHolder> {
@@ -47,6 +51,8 @@ public class CategoryAdapter extends
     String instituteId, applicationId;
     ProgressDialog ringProgressDialog;
     int imageposition;
+    ImageView tmpImageView_sync = null;
+    UtilityService utility = UtilityService.getInstance();
 
     // Provide a reference to the views for each data item
     // Complex data items may need more than one view per item, and
@@ -185,7 +191,23 @@ public class CategoryAdapter extends
         holder.imageView1.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (position == 1)/** ClassRoom **/ {
+                if (position == 0)/** General **/ {
+                    NSDCDBController controller = new NSDCDBController(context);
+                    GeneralInfo generalObj = controller.getGeneralInfo(instituteId);
+                    controller.close();
+                    if (generalObj != null) {
+                        Intent intent = new Intent(context, FormActivity.class);
+                        intent.putExtra("category", "general");
+                        intent.putExtra("subcategoryId", "");
+                        intent.putExtra("yearWiseCollageId", generalObj.getYearWiseCollegeId());
+                        context.startActivity(intent);
+                    } else {
+                        imageposition = position;
+                        new UpdateData().execute(new String[]{AppConstants.URL_GEN_INFO, "general", instituteId});
+
+                    }
+                }
+                else if (position == 1)/** Job Roles **/ {
                     NSDCDBController controller = new NSDCDBController(context);
                     List<JobRolesModel> listClass = controller.getJobRolesList(instituteId);
                     controller.close();
@@ -220,9 +242,7 @@ public class CategoryAdapter extends
                     } else {
                         imageposition = position;
                         new UpdateData()
-                                .execute(new String[]{
-                                        "http://nsdc.qci.org.in/api/CAAF/DisplayClassroomDetails.php",
-                                        "class", instituteId});
+                                .execute(new String[]{AppConstants.URL_CLASS_DETAILS,"class", instituteId});
 
                     }
                 } else if (position == 3)/** Laboratory **/ {
@@ -240,9 +260,7 @@ public class CategoryAdapter extends
                         // holder.imageView1.setImageDrawable(context.getResources().getDrawable(R.drawable.progress));
                         context.startActivity(intent);
                     } else {
-                        new UpdateData().execute(new String[]{
-                                "http://nsdc.qci.org.in/api/CAAF/DisplayLabDetails.php",
-                                "lab", instituteId});
+                        new UpdateData().execute(new String[]{AppConstants.URL_LAB_DETAILS,"lab", instituteId});
                     }
                 } else if (position == 4) {
                     /** Office Area **/
@@ -260,9 +278,7 @@ public class CategoryAdapter extends
                         // listLab.get(position).getLabId());
                         context.startActivity(intent);
                     } else {
-                        new UpdateData().execute(new String[]{
-                                "http://nsdc.qci.org.in/api/CAAF/DisplayOfficeAreaDetails.php",
-                                "office", instituteId});
+                        new UpdateData().execute(new String[]{AppConstants.URL_OFFICE_DETAILS,"office", instituteId});
                     }
 
                 } else if (position == 5) {/** Residential Facility **/
@@ -310,9 +326,7 @@ public class CategoryAdapter extends
                         intent.putExtra("applicationId", applicationId);
                         context.startActivity(intent);
                     } else {
-                        new UpdateData().execute(new String[]{
-                                "http://nsdc.qci.org.in/api/CAAF/DisplayUserEquipmentsDetails.php",
-                                "equipment", instituteId});
+                        new UpdateData().execute(new String[]{AppConstants.URL_EQUIPMENTS,"equipment", instituteId});
                     }
                 }
             }
@@ -321,7 +335,29 @@ public class CategoryAdapter extends
         holder.imageView_sync.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View arg0) {
-                Toast.makeText(context, "Sync functionality is still in development", Toast.LENGTH_SHORT).show();
+                tmpImageView_sync = holder.imageView_sync;
+                if (position == 2)/** Class **/ {
+                    NSDCDBController controller = new NSDCDBController(context);
+                    List<SubCategoryClass> classResults = controller.getClassDatatoSync(instituteId);
+                    JSONObject datatoSycClass = utility.getClassDataSync(classResults);
+                    new ExecuteSyncOperation().execute(new String[]{AppConstants.URL_CLASS_SYNC,datatoSycClass.toString(),"class"});
+                }else if (position == 3)/** Lab **/ {
+                    NSDCDBController controller = new NSDCDBController(context);
+                    List<SubCategoryLab> results = controller.getLabDatatoSync(instituteId);
+                    JSONObject datatoSycClass = utility.getLabSycData(results);
+                    new ExecuteSyncOperation().execute(new String[]{AppConstants.URL_LAB_SYNC, datatoSycClass.toString(),"lab"});
+                }else if (position == 4)/** Office **/ {
+                    NSDCDBController controller = new NSDCDBController(context);
+                    List<SubListOffice> results = controller.getOfficeDatatoSync(instituteId);
+                    JSONObject datatoSycClass = utility.getOfficeSycData(results);
+                    new ExecuteSyncOperation().execute(new String[]{AppConstants.URL_OFFICE_SYNC, datatoSycClass.toString(),"office"});
+                }else if (position == 9)/** Equipment **/ {
+                    NSDCDBController controller = new NSDCDBController(context);
+                    List<SubListEquipment> results = controller.getEquipmentDatatoSync(instituteId);
+                    JSONObject datatoSycClass = utility.getEquipmentSycData(results);
+                    new ExecuteSyncOperation().execute(new String[]{AppConstants.URL_EQUIPMENT_SYNC, datatoSycClass.toString(),"equipment"});
+                }
+                //Toast.makeText(context, "Sync functionality is still in development", Toast.LENGTH_SHORT).show();
             }
         });
     }
@@ -340,8 +376,7 @@ public class CategoryAdapter extends
         protected void onPreExecute() {
             super.onPreExecute();
             ringProgressDialog = ProgressDialog.show(new ContextThemeWrapper(
-                            context, android.R.style.Theme_Holo), null,
-                    "Downloading data....", true);
+                            context, android.R.style.Theme_Holo), null,"Downloading data....", true);
             ringProgressDialog.setCancelable(false);
             ringProgressDialog.setCanceledOnTouchOutside(false);
         }
@@ -360,13 +395,10 @@ public class CategoryAdapter extends
         protected void onPostExecute(JSONObject result) {
 
             if (type.equalsIgnoreCase("class")) {
-
                 NSDCDBController sqllite = new NSDCDBController(context);
                 sqllite.addClassData(result, yearWiseCollegeId, applicationId);
                 sqllite.close();
-
             } else if (type.equalsIgnoreCase("lab")) {
-
                 NSDCDBController sqllite = new NSDCDBController(context);
                 sqllite.addLabData(result, yearWiseCollegeId, applicationId);
                 sqllite.close();
@@ -396,6 +428,10 @@ public class CategoryAdapter extends
                 SubCategoryResidentialFacDAO resFacDAO = new SubCategoryResidentialFacDAO(context);
                 resFacDAO.addResidentialFacilityData(result, yearWiseCollegeId, applicationId);
                 resFacDAO.close();
+            }else if (type.equalsIgnoreCase("general")) {
+                NSDCDBController sqllite = new NSDCDBController(context);
+                sqllite.addGeneralInfoData(result, yearWiseCollegeId, applicationId);
+                sqllite.close();
             }
             ringProgressDialog.dismiss();
             notifyDataSetChanged();
@@ -413,18 +449,15 @@ public class CategoryAdapter extends
             conn.setRequestMethod("POST");
             conn.setDoInput(true);
             conn.setDoOutput(true);
-            conn.setRequestProperty("Content-Type",
-                    "application/x-www-form-urlencoded");
-            String str = "YearWiseCollegeId=" + urldetail[2]
-                    + "&Token=bnNkYzd0ZWNoaWVzYXBp";
+            conn.setRequestProperty("Content-Type","application/x-www-form-urlencoded");
+            String str = "YearWiseCollegeId=" + urldetail[2]+ "&Token="+AppConstants.API_TOKEN_VALUE;
             byte[] outputInBytes = str.getBytes("UTF-8");
             conn.getOutputStream().write(outputInBytes);
             conn.connect();
             int responsecode = conn.getResponseCode();
             if (responsecode == HttpURLConnection.HTTP_OK) {
                 String line;
-                BufferedReader br = new BufferedReader(new InputStreamReader(
-                        conn.getInputStream()));
+                BufferedReader br = new BufferedReader(new InputStreamReader(conn.getInputStream()));
                 while ((line = br.readLine()) != null) {
                     response += line;
                 }
@@ -436,5 +469,88 @@ public class CategoryAdapter extends
         }
         return response_json;
     }
+
+    //################################Code to SYNC PENDING DATA#############################################
+    class ExecuteSyncOperation extends AsyncTask<String, Integer, JSONObject> {
+        String type;
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+            ringProgressDialog = ProgressDialog.show(new ContextThemeWrapper(context, android.R.style.Theme_Holo), null,
+                    " Data Synchronizing ...", true);
+            ringProgressDialog.setCancelable(false);
+            ringProgressDialog.setCanceledOnTouchOutside(false);
+        }
+
+        @Override
+        protected JSONObject doInBackground(String... data) {
+            String response = "";
+            type = data[2];
+            JSONObject response_json = null;
+            try {
+                URL url = new URL(data[0]);
+                HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+                conn.setReadTimeout(10000);
+                conn.setConnectTimeout(15000);
+                conn.setRequestMethod("POST");
+                conn.setDoInput(true);
+                conn.setDoOutput(true);
+                conn.setRequestProperty("Content-Type","application/x-www-form-urlencoded");
+                String str = "result=" + data[1] + "&Token=" + AppConstants.API_TOKEN_VALUE;
+                byte[] outputInBytes = str.getBytes("UTF-8");
+                conn.getOutputStream().write(outputInBytes);
+                conn.connect();
+                int responsecode = conn.getResponseCode();
+                if (responsecode == HttpURLConnection.HTTP_OK) {
+                    String line;
+                    BufferedReader br = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+                    while ((line = br.readLine()) != null) {
+                        response += line;
+                    }
+                } else if (responsecode == HttpURLConnection.HTTP_CLIENT_TIMEOUT) {
+                    response_json = new JSONObject();
+                    response_json.put("error", "Connection to server lost..");
+                }
+                response_json = new JSONObject(response);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            return response_json;
+
+        }
+
+        @Override
+        protected void onPostExecute(JSONObject result) {
+            super.onPostExecute(result);
+            if (result != null && result.has("responsecode")) {
+                try {
+                    if (Integer.valueOf(result.get("responsecode").toString()) == 2) {
+                        ringProgressDialog.cancel();
+                        Toast.makeText(context, "Data Sync Successful",Toast.LENGTH_LONG).show();
+                        NSDCDBController controller = new NSDCDBController(context);
+                        String inserted_data = result.get("inserted_data").toString();
+                        boolean updation_status = controller.updateSyncDataStatus(inserted_data, type,instituteId);
+                        controller.close();
+                        if (updation_status) {
+                            if(tmpImageView_sync!=null)
+                            tmpImageView_sync.setVisibility(View.GONE);
+                        } else {
+                            Toast.makeText(context, "Error in syncing data..", Toast.LENGTH_LONG).show();
+                        }
+                    } else {
+                        ringProgressDialog.cancel();
+                        Toast.makeText(context, "Data Sync failed...",Toast.LENGTH_LONG).show();
+                    }
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            } else {
+                ringProgressDialog.dismiss();
+                Toast.makeText(context, "Data Sync failed...",Toast.LENGTH_LONG).show();
+            }
+        }
+    }
+    //#################################################################################################################
+
 
 }

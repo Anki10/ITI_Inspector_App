@@ -28,8 +28,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <!-- created by AORM plugin at 2016-08-15 22:40:54 -->
-        <activity android:name=".main.Institute" />
+
         <activity
             android:name=".main.InstituteActivity"
             android:label="@string/title_activity_institute"
@@ -51,14 +50,14 @@
             android:label="@string/title_activity_form"
             android:screenOrientation="portrait" 
             android:windowSoftInputMode="stateHidden"/>
+        <activity
+            android:name="com.ss.nsdc.main.SubCategoryFilterActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"/>
          <activity
             android:name=".main.SubCategoryClassActivity"
             android:label="@string/title_activity_sub_category"
             android:screenOrientation="portrait" />
-        <!-- created by AORM plugin at 2016-08-24 23:26:26 -->
-        <activity android:name=".fragment.ClassroomFragment" />
-        <!-- created by AORM plugin at 2016-08-24 23:41:50 -->
-        <activity android:name=".fragment.LabFragment" />
     </application>
 
 </manifest>

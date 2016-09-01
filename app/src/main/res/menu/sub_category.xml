@@ -1,11 +1,21 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.ss.nsdc.SubCategoryActivity" >
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" >
 
     <item
-        android:id="@+id/action_settings"
+        android:id="@+id/category_list"
         android:orderInCategory="100"
-        android:showAsAction="never"
-        android:title="@string/action_settings"/>
+        app:showAsAction="never"
+        android:title="@string/categorymenu"/>
+    <item
+        android:id="@+id/institute_list"
+        android:orderInCategory="100"
+        app:showAsAction="never"
+        android:title="@string/institutesmenu"/>
+    <item
+        android:id="@+id/menuExit"
+        android:orderInCategory="100"
+        app:showAsAction="never"
+        android:title="@string/exitmenu"/>
 
 </menu>

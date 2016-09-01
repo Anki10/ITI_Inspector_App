@@ -11,6 +11,7 @@ import org.json.JSONObject;
 
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
@@ -19,6 +20,8 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.ContextThemeWrapper;
+import android.view.Menu;
+import android.view.MenuItem;
 
 import com.ss.nsdc.R;
 import com.ss.nsdc.adapter.SubCategoryClassAdapter;
@@ -83,7 +86,7 @@ public class SubCategoryClassActivity extends AppCompatActivity {
 		}else if(category.equalsIgnoreCase("office")) {
 			getOfficeList=dbcontroller.getOfficeListbyYearWiseCollageId(yearWiseCollegeId);
 
-		}else if(category.equalsIgnoreCase("eqipment")) {
+		}else if(category.equalsIgnoreCase("equipment")) {
 			getEquipmentList=dbcontroller.getEquipmentListbyYearWiseCollageId(yearWiseCollegeId,filter);
 
 		} else if(category.equalsIgnoreCase("jobRoles")) {
@@ -220,5 +223,40 @@ public class SubCategoryClassActivity extends AppCompatActivity {
 	    	}
 	    	return response_json;
 	    }
+
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		getMenuInflater().inflate(R.menu.sub_category, menu);
+		return true;
+	}
+
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		int id = item.getItemId();
+		switch (id) {
+			case R.id.category_list:
+				Intent intent = new Intent(context, CategoryActivity.class);
+				intent.putExtra("YearWiseCollegeId",yearWiseCollegeId);
+				intent.putExtra("applicationNo", applicationId);
+				//intent.putExtra("instituteName", context.getExtras().getString("ApplicationId"));
+				intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+				context.startActivity(intent);
+				return true;
+
+			case R.id.institute_list:
+				Intent intent1 = new Intent(context, InstituteActivity.class);
+				intent1.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+				startActivity(intent1);
+				return true;
+
+			case R.id.menuExit:
+				Intent intent2 = new Intent(Intent.ACTION_MAIN);
+				intent2.addCategory(Intent.CATEGORY_HOME);
+				intent2.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+				startActivity(intent2);
+				return true;
+		}
+		return super.onOptionsItemSelected(item);
+	}
 }
 
