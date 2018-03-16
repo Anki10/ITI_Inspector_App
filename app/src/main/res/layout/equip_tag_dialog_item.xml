@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="65dp"
+    android:layout_marginLeft="@dimen/margin_medium"
+    android:layout_marginRight="@dimen/margin_medium"
+    android:orientation="horizontal" >
+
+    <CheckBox
+        android:id="@+id/cbTag"
+        android:layout_width="0dp"
+        android:layout_height="65dp"
+        android:layout_marginLeft="@dimen/margin_medium"
+        android:layout_weight="0.2"/>
+
+    <TextView
+        android:id="@+id/textTagName"
+        android:layout_width="0dp"
+        android:layout_height="65dp"
+        android:layout_weight="0.8"
+        android:textSize="@dimen/font_large"
+        android:text=""/>
+
+
+</LinearLayout>

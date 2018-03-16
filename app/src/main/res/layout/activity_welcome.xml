@@ -1,0 +1,77 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginBottom="15dp"
+        android:layout_gravity="center_vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/welcomeMsg1"
+            android:id="@+id/welcomeMsg1"
+            android:layout_gravity="center_horizontal"
+            android:padding="5sp"
+            android:gravity="center"/>
+
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:textAppearance="?android:attr/textAppearanceLarge"-->
+            <!--android:text="@string/welcomeMsg3"-->
+            <!--android:id="@+id/welcomeMsg3"-->
+            <!--android:layout_gravity="center_horizontal"-->
+            <!--android:padding="2sp"-->
+            <!--android:gravity="center"/>-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/welcomeMsg2"
+            android:id="@+id/welcomeMsg2"
+            android:layout_gravity="center_horizontal"
+            android:padding="2sp"
+            android:gravity="center"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+            <!--<Button-->
+                <!--android:id="@+id/btn_no"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_weight="1"-->
+                <!--android:layout_height="60dp"-->
+                <!--android:layout_marginTop="10dp"-->
+                <!--android:background="@color/login_background"-->
+                <!--android:text="No"-->
+                <!--android:textColor="@android:color/white"-->
+                <!--style="@style/HeadingFontStyle" />-->
+
+            <Button
+                android:id="@+id/btn_yes"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="60dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/login_background"
+                android:text="Continue"
+                android:textColor="@android:color/white"
+                style="@style/HeadingFontStyle" />
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+</LinearLayout>

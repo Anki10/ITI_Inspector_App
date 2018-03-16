@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:weightSum="4"
+    android:padding="5dp"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/editTradeName"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="5dp"
+        android:textColor="@drawable/edit_text_selector"/>
+    <TextView
+        android:text="95959"
+        android:id="@+id/editTradeShift1"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:focusable="false"
+        android:gravity="center"
+        android:inputType="text"
+        android:layout_centerVertical="true"
+        android:editable="false"
+        android:singleLine="true"
+        android:textColor="@drawable/edit_text_selector"/>
+    <TextView
+        android:id="@+id/editTradeShift2"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:focusable="false"
+        android:layout_centerVertical="true"
+        android:inputType="text"
+        android:gravity="center"
+        android:singleLine="true"
+        android:textColor="@drawable/edit_text_selector"/>
+    <TextView
+        android:id="@+id/editTradeShift3"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:focusable="false"
+        android:gravity="center"
+        android:layout_centerVertical="true"
+        android:inputType="text"
+        android:singleLine="true"
+        android:textColor="@drawable/edit_text_selector"/>
+</LinearLayout>
