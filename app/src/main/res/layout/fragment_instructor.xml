@@ -1,0 +1,1089 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollViewGeneral"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fillViewport="true"
+    android:orientation="vertical"
+    android:overScrollMode="never"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <!-- SECTION Training Centre Detail's -->
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/gen_card_view1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            card_view:cardCornerRadius="8dp"
+            card_view:cardElevation="5dp"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingRight="@dimen/margin_large">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:labelFor="@+id/gen_edit1"
+                    android:paddingStart="20dp"
+                    android:paddingTop="40dp"
+                    android:text="@string/insQues1"
+                    android:textColor="@color/textHeadColor"
+                    android:textSize="@dimen/font_large"
+                    android:textStyle="bold"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/editTradeName"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_large"
+                        android:layout_marginRight="@dimen/margin_large"
+                        android:layout_weight="1"
+                       android:focusable="false"
+                        android:inputType="text"
+                        android:singleLine="true"
+                        android:textColor="@drawable/edit_text_selector"/>
+
+                    <ImageView
+                        android:id="@+id/imgInsInfo1"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_toStartOf="@+id/gen_img12"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/edit"
+                        android:visibility="gone"/>
+
+                    <ImageView
+                        android:id="@+id/imgInsInfo2"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_alignParentEnd="true"
+                        android:scaleType="fitXY"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/ok_grey"
+                        android:visibility="gone"/>
+
+                    <ImageView
+                        android:id="@+id/imgTradeNameRemarks"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="@dimen/margin_small"
+                        android:scaleType="fitXY"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/remarks"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorPrimaryTransparent"></View>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:labelFor="@+id/gen_edit1"
+                    android:paddingStart="20dp"
+                    android:paddingTop="10dp"
+                    android:text="@string/insQues2"
+                    android:textColor="@color/textHeadColor"
+                    android:textSize="@dimen/font_large"
+                    android:textStyle="bold"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/editInstructor"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_large"
+                        android:layout_marginRight="@dimen/margin_large"
+                        android:layout_weight="1"
+                        android:focusable="false"
+                        android:inputType="text"
+                        android:singleLine="true"
+                        android:textColor="@drawable/edit_text_selector"/>
+
+                    <ImageView
+                        android:id="@+id/imgInstructorEdit"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_toStartOf="@+id/gen_img12"
+                        android:scaleType="fitXY"
+                        android:visibility="gone"
+                        android:src="@drawable/edit" />
+
+                    <ImageView
+                        android:id="@+id/imgInstructorSave"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:visibility="gone"
+                        android:layout_alignParentEnd="true"
+                        android:scaleType="fitXY"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/ok_grey" />
+
+                    <ImageView
+                        android:id="@+id/imgInstructorRemarks"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="@dimen/margin_small"
+                        android:scaleType="fitXY"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/remarks"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorPrimaryTransparent"></View>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:labelFor="@+id/gen_edit1"
+                    android:paddingStart="20dp"
+                    android:paddingTop="10dp"
+                    android:text="@string/insQues3"
+                    android:textColor="@color/textHeadColor"
+                    android:textSize="@dimen/font_large"
+                    android:textStyle="bold"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/editName"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_large"
+                        android:layout_marginRight="@dimen/margin_large"
+                        android:layout_weight="1"
+
+                        android:inputType="text"
+                        android:singleLine="true"
+                        android:textColor="@drawable/edit_text_selector"/>
+
+                    <ImageView
+                        android:id="@+id/imgNameEdit"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_toStartOf="@+id/gen_img12"
+                        android:scaleType="fitXY"
+                        android:layout_gravity="center"
+                        android:src="@drawable/edit" />
+
+                    <ImageView
+                        android:id="@+id/imgNameSave"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_gravity="center"
+                        android:layout_alignParentEnd="true"
+                        android:scaleType="fitXY"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/ok_grey" />
+
+                    <ImageView
+                        android:id="@+id/imgNameRemarks"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="@dimen/margin_small"
+                        android:layout_gravity="center"
+                        android:scaleType="fitXY"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/remarks"/>
+
+                    <ToggleButton
+                        android:id="@+id/imgTechNC"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="@dimen/margin_small"
+                        android:scaleType="fitXY"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:textColor="@android:color/transparent"
+                        android:background="@drawable/check"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorPrimaryTransparent"></View>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:labelFor="@+id/gen_edit1"
+                    android:paddingStart="20dp"
+                    android:paddingTop="10dp"
+                    android:text="@string/insQues4"
+                    android:textColor="@color/textHeadColor"
+                    android:textSize="@dimen/font_large"
+                    android:textStyle="bold"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/editFatherName"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_large"
+                        android:layout_marginRight="@dimen/margin_large"
+                        android:layout_weight="1"
+
+                        android:inputType="text"
+                        android:singleLine="true"
+                        android:textColor="@drawable/edit_text_selector"/>
+
+                    <ImageView
+                        android:id="@+id/imgFatherNameEdit"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_toStartOf="@+id/gen_img12"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/edit" />
+
+                    <ImageView
+                        android:id="@+id/imgFatherNameSave"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_alignParentEnd="true"
+                        android:scaleType="fitXY"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/ok_grey" />
+
+                    <ImageView
+                        android:id="@+id/imgFatherNameRemarks"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="@dimen/margin_small"
+                        android:scaleType="fitXY"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/remarks"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorPrimaryTransparent"></View>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:labelFor="@+id/gen_edit1"
+                    android:paddingStart="20dp"
+                    android:paddingTop="10dp"
+                    android:text="@string/insQues5"
+                    android:textColor="@color/textHeadColor"
+                    android:textSize="@dimen/font_large"
+                    android:textStyle="bold"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/editDOB"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_large"
+                        android:layout_marginRight="@dimen/margin_large"
+                        android:layout_weight="1"
+
+                        android:inputType="date"
+                        android:singleLine="true"
+                        android:textColor="@drawable/edit_text_selector"/>
+
+                    <ImageView
+                        android:id="@+id/imgDOBEdit"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_toStartOf="@+id/gen_img12"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/edit" />
+
+                    <ImageView
+                        android:id="@+id/imgDOBSave"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_alignParentEnd="true"
+                        android:scaleType="fitXY"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/ok_grey" />
+
+                    <ImageView
+                        android:id="@+id/imgDOBRemarks"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="@dimen/margin_small"
+                        android:scaleType="fitXY"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/remarks"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorPrimaryTransparent"></View>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:labelFor="@+id/gen_edit1"
+                    android:paddingStart="20dp"
+                    android:paddingTop="10dp"
+                    android:text="@string/insQues6"
+                    android:textColor="@color/textHeadColor"
+                    android:textSize="@dimen/font_large"
+                    android:textStyle="bold"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/editJoiningDate"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_large"
+                        android:layout_marginRight="@dimen/margin_large"
+                        android:layout_weight="1"
+
+                        android:inputType="date"
+                        android:singleLine="true"
+                        android:textColor="@drawable/edit_text_selector"/>
+
+                    <ImageView
+                        android:id="@+id/imgJoiningDateEdit"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_toStartOf="@+id/gen_img12"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/edit" />
+
+                    <ImageView
+                        android:id="@+id/imgJoiningDateSave"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_alignParentEnd="true"
+                        android:scaleType="fitXY"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/ok_grey" />
+
+                    <ImageView
+                        android:id="@+id/imgJoiningDateRemarks"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="@dimen/margin_small"
+                        android:scaleType="fitXY"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/remarks"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorPrimaryTransparent"></View>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:labelFor="@+id/gen_edit1"
+                    android:paddingStart="20dp"
+                    android:paddingTop="10dp"
+                    android:text="@string/insQues7"
+                    android:textColor="@color/textHeadColor"
+                    android:textSize="@dimen/font_large"
+                    android:textStyle="bold"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/spinQualification"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="@dimen/margin_large"
+                        android:layout_marginRight="@dimen/margin_large"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1"
+                        android:entries="@array/qualification"
+                        android:singleLine="true"/>
+
+                    <ImageView
+                        android:id="@+id/imgQualificationEdit"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_toStartOf="@+id/gen_img12"
+                        android:scaleType="fitXY"
+                        android:layout_gravity="center"
+                        android:src="@drawable/edit" />
+
+                    <ImageView
+                        android:id="@+id/imgQualificationSave"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_alignParentEnd="true"
+                        android:scaleType="fitXY"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/ok_grey" />
+
+                    <ImageView
+                        android:id="@+id/imgQualificationRemarks"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="@dimen/margin_small"
+                        android:scaleType="fitXY"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/remarks"/>
+
+                    <ToggleButton
+                        android:id="@+id/imgQualificationNC"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="@dimen/margin_small"
+                        android:scaleType="fitXY"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:textColor="@android:color/transparent"
+                        android:background="@drawable/check"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorPrimaryTransparent"></View>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:labelFor="@+id/gen_edit1"
+                    android:paddingStart="20dp"
+                    android:paddingTop="10dp"
+                    android:text="@string/insQues8"
+                    android:textColor="@color/textHeadColor"
+                    android:textSize="@dimen/font_large"
+                    android:textStyle="bold"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/editPassingYear"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_large"
+                        android:layout_marginRight="@dimen/margin_large"
+                        android:layout_weight="1"
+                        android:maxLength="4"
+                        android:inputType="number"
+                        android:singleLine="true"
+                        android:textColor="@drawable/edit_text_selector"/>
+
+                    <ImageView
+                        android:id="@+id/imgPassingYearEdit"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_toStartOf="@+id/gen_img12"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/edit" />
+
+                    <ImageView
+                        android:id="@+id/imgPassingYearSave"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_alignParentEnd="true"
+                        android:scaleType="fitXY"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/ok_grey" />
+
+                    <ImageView
+                        android:id="@+id/imgPassingYearRemarks"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="@dimen/margin_small"
+                        android:scaleType="fitXY"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/remarks"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorPrimaryTransparent"></View>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:labelFor="@+id/gen_edit1"
+                    android:paddingStart="20dp"
+                    android:paddingTop="10dp"
+                    android:text="@string/insQues9"
+                    android:textColor="@color/textHeadColor"
+                    android:textSize="@dimen/font_large"
+                    android:textStyle="bold"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/editStream"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_large"
+                        android:layout_marginRight="@dimen/margin_large"
+                        android:layout_weight="1"
+
+                        android:inputType="text"
+                        android:singleLine="true"
+                        android:textColor="@drawable/edit_text_selector"/>
+
+                    <ImageView
+                        android:id="@+id/imgStreamEdit"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_toStartOf="@+id/gen_img12"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/edit" />
+
+                    <ImageView
+                        android:id="@+id/imgStreamSave"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_alignParentEnd="true"
+                        android:scaleType="fitXY"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/ok_grey" />
+
+                    <ImageView
+                        android:id="@+id/imgStreamRemarks"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="@dimen/margin_small"
+                        android:scaleType="fitXY"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/remarks"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorPrimaryTransparent"></View>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:labelFor="@+id/gen_edit1"
+                    android:paddingStart="20dp"
+                    android:paddingTop="10dp"
+                    android:text="@string/insQues10"
+                    android:textColor="@color/textHeadColor"
+                    android:textSize="@dimen/font_large"
+                    android:textStyle="bold"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/editExperience"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_large"
+                        android:layout_marginRight="@dimen/margin_large"
+                        android:layout_weight="1"
+                        android:inputType="numberDecimal"
+                        android:singleLine="true"
+                        android:textColor="@drawable/edit_text_selector"/>
+
+                    <ImageView
+                        android:id="@+id/imgExperienceEdit"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_gravity="center"
+                        android:layout_toStartOf="@+id/gen_img12"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/edit" />
+
+                    <ImageView
+                        android:id="@+id/imgExperienceSave"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_gravity="center"
+                        android:layout_alignParentEnd="true"
+                        android:scaleType="fitXY"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/ok_grey" />
+
+                    <ImageView
+                        android:id="@+id/imgExperienceRemarks"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="@dimen/margin_small"
+                        android:layout_gravity="center"
+                        android:scaleType="fitXY"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/remarks"/>
+
+                    <ToggleButton
+                        android:id="@+id/imgExperienceNC"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="@dimen/margin_small"
+                        android:scaleType="fitXY"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:textColor="@android:color/transparent"
+                        android:background="@drawable/check"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorPrimaryTransparent"></View>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:labelFor="@+id/gen_edit1"
+                    android:paddingStart="20dp"
+                    android:paddingTop="10dp"
+                    android:text="@string/insQues11"
+                    android:textColor="@color/textHeadColor"
+                    android:textSize="@dimen/font_large"
+                    android:textStyle="bold"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/editBankName"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_large"
+                        android:layout_marginRight="@dimen/margin_large"
+                        android:layout_weight="1"
+
+                        android:inputType="text"
+                        android:singleLine="true"
+                        android:textColor="@drawable/edit_text_selector"/>
+
+                    <ImageView
+                        android:id="@+id/imgBankNameEdit"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_toStartOf="@+id/gen_img12"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/edit" />
+
+                    <ImageView
+                        android:id="@+id/imgBankNameSave"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_alignParentEnd="true"
+                        android:scaleType="fitXY"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/ok_grey" />
+
+                    <ImageView
+                        android:id="@+id/imgBankNameRemarks"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="@dimen/margin_small"
+                        android:scaleType="fitXY"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/remarks"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorPrimaryTransparent"></View>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:labelFor="@+id/gen_edit1"
+                    android:paddingStart="20dp"
+                    android:paddingTop="10dp"
+                    android:text="@string/insQues12"
+                    android:textColor="@color/textHeadColor"
+                    android:textSize="@dimen/font_large"
+                    android:textStyle="bold"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/editBranchName"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_large"
+                        android:layout_marginRight="@dimen/margin_large"
+                        android:layout_weight="1"
+
+                        android:inputType="text"
+                        android:singleLine="true"
+                        android:textColor="@drawable/edit_text_selector"/>
+
+                    <ImageView
+                        android:id="@+id/imgBranchNameEdit"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_toStartOf="@+id/gen_img12"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/edit" />
+
+                    <ImageView
+                        android:id="@+id/imgBranchNameSave"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_alignParentEnd="true"
+                        android:scaleType="fitXY"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/ok_grey" />
+
+                    <ImageView
+                        android:id="@+id/imgBranchNameRemarks"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="@dimen/margin_small"
+                        android:scaleType="fitXY"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/remarks"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorPrimaryTransparent"></View>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:labelFor="@+id/gen_edit1"
+                    android:paddingStart="20dp"
+                    android:paddingTop="10dp"
+                    android:text="@string/insQues13"
+                    android:textColor="@color/textHeadColor"
+                    android:textSize="@dimen/font_large"
+                    android:textStyle="bold"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/editAccountNo"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_large"
+                        android:layout_marginRight="@dimen/margin_large"
+                        android:layout_weight="1"
+
+                        android:inputType="number"
+                        android:singleLine="true"
+                        android:textColor="@drawable/edit_text_selector"/>
+
+                    <ImageView
+                        android:id="@+id/imgAccountNoEdit"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_toStartOf="@+id/gen_img12"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/edit" />
+
+                    <ImageView
+                        android:id="@+id/imgAccountNoSave"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_alignParentEnd="true"
+                        android:scaleType="fitXY"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/ok_grey" />
+
+                    <ImageView
+                        android:id="@+id/imgAccountNoRemarks"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="@dimen/margin_small"
+                        android:scaleType="fitXY"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/remarks"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorPrimaryTransparent"></View>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:labelFor="@+id/gen_edit1"
+                    android:paddingStart="20dp"
+                    android:paddingTop="10dp"
+                    android:text="@string/insQues14"
+                    android:textColor="@color/textHeadColor"
+                    android:textSize="@dimen/font_large"
+                    android:textStyle="bold"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/editAadharNo"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_large"
+                        android:layout_marginRight="@dimen/margin_large"
+                        android:layout_weight="1"
+                        android:inputType="number"
+                        android:maxLength="12"
+                        android:singleLine="true"
+                        android:textColor="@drawable/edit_text_selector"/>
+
+                    <ImageView
+                        android:id="@+id/imgAadharNoEdit"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_toStartOf="@+id/gen_img12"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/edit" />
+
+                    <ImageView
+                        android:id="@+id/imgAadharNoSave"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_alignParentEnd="true"
+                        android:scaleType="fitXY"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/ok_grey" />
+
+                    <ImageView
+                        android:id="@+id/imgAadharNoRemarks"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="@dimen/margin_small"
+                        android:scaleType="fitXY"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/remarks"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorPrimaryTransparent"></View>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:labelFor="@+id/gen_edit1"
+                    android:paddingStart="20dp"
+                    android:paddingTop="10dp"
+                    android:text="@string/insQues15"
+                    android:textColor="@color/textHeadColor"
+                    android:textSize="@dimen/font_large"
+                    android:textStyle="bold"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/editInsSalary"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_large"
+                        android:layout_marginRight="@dimen/margin_large"
+                        android:layout_weight="1"
+                        android:maxLength="8"
+                        android:inputType="number"
+                        android:singleLine="true"
+                        android:textColor="@drawable/edit_text_selector"/>
+
+                    <ImageView
+                        android:id="@+id/imgInsSalaryEdit"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_toStartOf="@+id/gen_img12"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/edit" />
+
+                    <ImageView
+                        android:id="@+id/imgInsSalarySave"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_alignParentEnd="true"
+                        android:scaleType="fitXY"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/ok_grey" />
+
+                    <ImageView
+                        android:id="@+id/imgInsSalaryRemarks"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="@dimen/margin_small"
+                        android:scaleType="fitXY"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/remarks"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorPrimaryTransparent"></View>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:labelFor="@+id/gen_edit1"
+                    android:paddingStart="20dp"
+                    android:paddingTop="10dp"
+                    android:text="Remarks ( if any)"
+                    android:textColor="@color/textHeadColor"
+                    android:textSize="@dimen/font_large"
+                    android:textStyle="bold"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/editTechRemarks"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_large"
+                        android:layout_marginRight="@dimen/margin_large"
+                        android:layout_weight="1"
+                        android:inputType="text"
+                        android:singleLine="true"
+                        android:textColor="@drawable/edit_text_selector"/>
+
+                    <ImageView
+                        android:id="@+id/imgTechRemarksEdit"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_toStartOf="@+id/gen_img12"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/edit" />
+
+                    <ImageView
+                        android:id="@+id/imgTechRemarksSave"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_alignParentEnd="true"
+                        android:scaleType="fitXY"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/ok_grey" />
+
+                    <ImageView
+                        android:id="@+id/imgTechRemarksRemarks"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="@dimen/margin_small"
+                        android:scaleType="fitXY"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/remarks"
+                        android:visibility="gone"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorPrimaryTransparent"></View>
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_large"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingStart="20dp">
+
+                    <Button
+                        android:id="@+id/btnSubmit"
+                        style="@style/HeadingFontStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@color/login_background"
+                        android:text="Submit"/>
+                </LinearLayout>
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
+</ScrollView>

@@ -1,14 +1,14 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:orientation="vertical" 
-    android:background="@color/windowBackground">
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:background="@drawable/background"
+              android:orientation="vertical">
 
     <LinearLayout
         android:id="@+id/ll1"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1" 
+        android:layout_weight="1"
         android:gravity="center_horizontal"
         android:paddingTop="@dimen/activity_login_padding_top_bottom_medium">
 
@@ -17,7 +17,8 @@
             android:layout_width="@dimen/logo_width"
             android:layout_height="@dimen/logo_height"
             android:contentDescription="@string/logo"
-            android:src="@drawable/logo" />
+            android:src="@drawable/logo"
+            android:visibility="invisible"/>
     </LinearLayout>
 
     <LinearLayout
@@ -25,58 +26,62 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:orientation="vertical" 
-        android:gravity="bottom">
+        android:gravity="bottom"
+        android:orientation="vertical">
 
         <android.support.design.widget.TextInputLayout
+            style="@style/EditTextHint"
             android:id="@+id/input_layout_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingLeft="@dimen/activity_login_padding_left_right"
-            android:paddingRight="@dimen/activity_login_padding_left_right" >
+            android:paddingRight="@dimen/activity_login_padding_left_right">
 
             <EditText
                 android:id="@+id/input_name"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:hint="@string/edit_username"
-                android:singleLine="true" />
+                android:singleLine="true"/>
         </android.support.design.widget.TextInputLayout>
 
         <android.support.design.widget.TextInputLayout
+            style="@style/EditTextHint"
             android:id="@+id/input_layout_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingLeft="@dimen/activity_login_padding_left_right"
-            android:paddingRight="@dimen/activity_login_padding_left_right" >
+            android:paddingRight="@dimen/activity_login_padding_left_right">
 
             <EditText
                 android:id="@+id/input_password"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:hint="@string/edit_password"
-                android:inputType="textPassword" />
+                android:textColorHint="@color/hint_color"
+                android:inputType="textPassword"/>
         </android.support.design.widget.TextInputLayout>
 
         <Button
             android:id="@+id/btn_signup"
+            style="@style/HeadingFontStyle"
             android:layout_width="fill_parent"
             android:layout_height="60dp"
             android:layout_marginTop="40dp"
-            android:background="?attr/colorPrimaryDark"
+            android:background="@color/login_background"
             android:text="@string/btn_sign_up"
-            android:textColor="@android:color/white"
-            style="@style/HeadingFontStyle" />
-        
+            android:textColor="@android:color/white"/>
+
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/ll3"
-        android:layout_width="fill_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1.0001" 
-        android:background="@drawable/login"        
-        android:orientation="vertical" >
+            android:id="@+id/ll3"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.0001"
+            android:background="@drawable/login"
+            android:orientation="vertical"
+            android:visibility="invisible">
 
     </LinearLayout>
 

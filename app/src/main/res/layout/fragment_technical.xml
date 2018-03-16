@@ -1,0 +1,1062 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollViewGeneral"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fillViewport="true"
+    android:orientation="vertical"
+    android:overScrollMode="never"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <!-- SECTION Training Centre Detail's -->
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/gen_card_view1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            card_view:cardCornerRadius="8dp"
+            card_view:cardElevation="5dp"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingRight="@dimen/margin_large">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="20dp"
+                    android:paddingTop="40dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:labelFor="@+id/gen_edit1"
+                        android:text="NC"
+                        android:textColor="@color/textHeadColor"
+                        android:textSize="@dimen/font_large"
+                        android:textStyle="bold"/>
+
+                    <ToggleButton
+                        android:id="@+id/imgTechNC"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="@dimen/margin_small"
+                        android:scaleType="fitXY"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:textColor="@android:color/transparent"
+                        android:background="@drawable/check"/>
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:labelFor="@+id/gen_edit1"
+                    android:paddingStart="20dp"
+                    android:paddingTop="10dp"
+                    android:text="@string/techQues1"
+                    android:textColor="@color/textHeadColor"
+                    android:textSize="@dimen/font_large"
+                    android:textStyle="bold"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/editTechDesignation"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_large"
+                        android:layout_marginRight="@dimen/margin_large"
+                        android:layout_weight="1"
+                        android:focusable="false"
+                        android:inputType="text"
+                        android:singleLine="true"
+                        android:textColor="@drawable/edit_text_selector"/>
+
+                    <ImageView
+                        android:id="@+id/imgTechDesignationEdit"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_toStartOf="@+id/gen_img12"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/edit"
+                        android:visibility="gone"/>
+
+                    <ImageView
+                        android:id="@+id/imgTechDesignationSave"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_alignParentEnd="true"
+                        android:scaleType="fitXY"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/ok_grey"
+                        android:visibility="gone"/>
+
+                    <ImageView
+                        android:id="@+id/imgTechDesignationRemarks"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="@dimen/margin_small"
+                        android:scaleType="fitXY"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/remarks"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorPrimaryTransparent"></View>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:labelFor="@+id/gen_edit1"
+                    android:paddingStart="20dp"
+                    android:paddingTop="10dp"
+                    android:text="@string/techQues2"
+                    android:textColor="@color/textHeadColor"
+                    android:textSize="@dimen/font_large"
+                    android:textStyle="bold"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/editTechName"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_large"
+                        android:layout_marginRight="@dimen/margin_large"
+                        android:layout_weight="1"
+                        android:inputType="text"
+                        android:singleLine="true"
+                        android:textColor="@drawable/edit_text_selector"/>
+
+                    <ImageView
+                        android:id="@+id/imgTechNameEdit"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_toStartOf="@+id/gen_img12"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/edit" />
+
+                    <ImageView
+                        android:id="@+id/imgTechNameSave"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_alignParentEnd="true"
+                        android:scaleType="fitXY"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/ok_grey" />
+
+                    <ImageView
+                        android:id="@+id/imgTechNameRemarks"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="@dimen/margin_small"
+                        android:scaleType="fitXY"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/remarks"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorPrimaryTransparent"></View>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:labelFor="@+id/gen_edit1"
+                    android:paddingStart="20dp"
+                    android:paddingTop="10dp"
+                    android:text="@string/techQues3"
+                    android:textColor="@color/textHeadColor"
+                    android:textSize="@dimen/font_large"
+                    android:textStyle="bold"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/editTechFatherName"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_large"
+                        android:layout_marginRight="@dimen/margin_large"
+                        android:layout_weight="1"
+                        android:inputType="text"
+                        android:singleLine="true"
+                        android:textColor="@drawable/edit_text_selector"/>
+
+                    <ImageView
+                        android:id="@+id/imgTechFatherNameEdit"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_toStartOf="@+id/gen_img12"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/edit" />
+
+                    <ImageView
+                        android:id="@+id/imgTechFatherNameSave"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_alignParentEnd="true"
+                        android:scaleType="fitXY"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/ok_grey" />
+
+                    <ImageView
+                        android:id="@+id/imgTechFatherNameRemarks"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="@dimen/margin_small"
+                        android:scaleType="fitXY"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/remarks"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorPrimaryTransparent"></View>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:labelFor="@+id/gen_edit1"
+                    android:paddingStart="20dp"
+                    android:paddingTop="10dp"
+                    android:text="@string/techQues4"
+                    android:textColor="@color/textHeadColor"
+                    android:textSize="@dimen/font_large"
+                    android:textStyle="bold"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/editTechDOB"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_large"
+                        android:layout_marginRight="@dimen/margin_large"
+                        android:layout_weight="1"
+                        android:inputType="date"
+                        android:singleLine="true"
+                        android:textColor="@drawable/edit_text_selector"/>
+
+                    <ImageView
+                        android:id="@+id/imgTechDOBEdit"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_toStartOf="@+id/gen_img12"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/edit" />
+
+                    <ImageView
+                        android:id="@+id/imgTechDOBSave"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_alignParentEnd="true"
+                        android:scaleType="fitXY"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/ok_grey" />
+
+                    <ImageView
+                        android:id="@+id/imgTechDOBRemarks"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="@dimen/margin_small"
+                        android:scaleType="fitXY"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/remarks"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorPrimaryTransparent"></View>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:labelFor="@+id/gen_edit1"
+                    android:paddingStart="20dp"
+                    android:paddingTop="10dp"
+                    android:text="@string/techQues5"
+                    android:textColor="@color/textHeadColor"
+                    android:textSize="@dimen/font_large"
+                    android:textStyle="bold"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/editTechJoiningDate"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_large"
+                        android:layout_marginRight="@dimen/margin_large"
+                        android:layout_weight="1"
+                        android:inputType="date"
+                        android:singleLine="true"
+                        android:textColor="@drawable/edit_text_selector"/>
+
+                    <ImageView
+                        android:id="@+id/imgTechJoiningDateEdit"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_toStartOf="@+id/gen_img12"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/edit" />
+
+                    <ImageView
+                        android:id="@+id/imgTechJoiningDateSave"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_alignParentEnd="true"
+                        android:scaleType="fitXY"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/ok_grey" />
+
+                    <ImageView
+                        android:id="@+id/imgTechJoiningDateRemarks"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="@dimen/margin_small"
+                        android:scaleType="fitXY"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/remarks"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorPrimaryTransparent"></View>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:labelFor="@+id/gen_edit1"
+                    android:paddingStart="20dp"
+                    android:paddingTop="10dp"
+                    android:text="@string/techQues6"
+                    android:textColor="@color/textHeadColor"
+                    android:textSize="@dimen/font_large"
+                    android:textStyle="bold"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/spinTechQualification"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="@dimen/margin_large"
+                        android:layout_marginRight="@dimen/margin_large"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1"
+                        android:entries="@array/qualification"
+                        android:singleLine="true"/>
+
+                    <ImageView
+                        android:id="@+id/imgTechQualificationEdit"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_toStartOf="@+id/gen_img12"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/edit" />
+
+                    <ImageView
+                        android:id="@+id/imgTechQualificationSave"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_alignParentEnd="true"
+                        android:scaleType="fitXY"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/ok_grey" />
+
+                    <ImageView
+                        android:id="@+id/imgTechQualificationRemarks"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="@dimen/margin_small"
+                        android:scaleType="fitXY"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/remarks"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorPrimaryTransparent"></View>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:labelFor="@+id/gen_edit1"
+                    android:paddingStart="20dp"
+                    android:paddingTop="10dp"
+                    android:text="@string/techQues7"
+                    android:textColor="@color/textHeadColor"
+                    android:textSize="@dimen/font_large"
+                    android:textStyle="bold"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/editTechStream"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_large"
+                        android:layout_marginRight="@dimen/margin_large"
+                        android:layout_weight="1"
+                        android:inputType="text"
+                        android:singleLine="true"
+                        android:textColor="@drawable/edit_text_selector"/>
+
+                    <ImageView
+                        android:id="@+id/imgTechStreamEdit"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_toStartOf="@+id/gen_img12"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/edit" />
+
+                    <ImageView
+                        android:id="@+id/imgTechStreamSave"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_alignParentEnd="true"
+                        android:scaleType="fitXY"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/ok_grey" />
+
+                    <ImageView
+                        android:id="@+id/imgTechStreamRemarks"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="@dimen/margin_small"
+                        android:scaleType="fitXY"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/remarks"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorPrimaryTransparent"></View>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:labelFor="@+id/gen_edit1"
+                    android:paddingStart="20dp"
+                    android:paddingTop="10dp"
+                    android:text="@string/techQues8"
+                    android:textColor="@color/textHeadColor"
+                    android:textSize="@dimen/font_large"
+                    android:textStyle="bold"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/editTechPassingYear"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_large"
+                        android:layout_marginRight="@dimen/margin_large"
+                        android:layout_weight="1"
+                        android:inputType="number"
+                        android:maxLength="4"
+                        android:singleLine="true"
+                        android:textColor="@drawable/edit_text_selector"/>
+
+                    <ImageView
+                        android:id="@+id/imgTechPassingYearEdit"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_toStartOf="@+id/gen_img12"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/edit" />
+
+                    <ImageView
+                        android:id="@+id/imgTechPassingYearSave"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_alignParentEnd="true"
+                        android:scaleType="fitXY"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/ok_grey" />
+
+                    <ImageView
+                        android:id="@+id/imgTechPassingYearRemarks"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="@dimen/margin_small"
+                        android:scaleType="fitXY"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/remarks"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorPrimaryTransparent"></View>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:labelFor="@+id/gen_edit1"
+                    android:paddingStart="20dp"
+                    android:paddingTop="10dp"
+                    android:text="@string/techQues9"
+                    android:textColor="@color/textHeadColor"
+                    android:textSize="@dimen/font_large"
+                    android:textStyle="bold"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/editTechExperience"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_large"
+                        android:layout_marginRight="@dimen/margin_large"
+                        android:layout_weight="1"
+                        android:inputType="numberDecimal"
+                        android:singleLine="true"
+                        android:textColor="@drawable/edit_text_selector"/>
+
+                    <ImageView
+                        android:id="@+id/imgTechExperienceEdit"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_toStartOf="@+id/gen_img12"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/edit" />
+
+                    <ImageView
+                        android:id="@+id/imgTechExperienceSave"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_alignParentEnd="true"
+                        android:scaleType="fitXY"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/ok_grey" />
+
+                    <ImageView
+                        android:id="@+id/imgTechExperienceRemarks"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="@dimen/margin_small"
+                        android:scaleType="fitXY"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/remarks"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorPrimaryTransparent"></View>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:labelFor="@+id/gen_edit1"
+                    android:paddingStart="20dp"
+                    android:paddingTop="10dp"
+                    android:text="@string/techQues10"
+                    android:textColor="@color/textHeadColor"
+                    android:textSize="@dimen/font_large"
+                    android:textStyle="bold"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/editTechAccountNo"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_large"
+                        android:layout_marginRight="@dimen/margin_large"
+                        android:layout_weight="1"
+                        android:inputType="number"
+                        android:singleLine="true"
+                        android:textColor="@drawable/edit_text_selector"/>
+
+                    <ImageView
+                        android:id="@+id/imgTechAccountNoEdit"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_toStartOf="@+id/gen_img12"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/edit" />
+
+                    <ImageView
+                        android:id="@+id/imgTechAccountNoSave"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_alignParentEnd="true"
+                        android:scaleType="fitXY"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/ok_grey" />
+
+                    <ImageView
+                        android:id="@+id/imgTechAccountNoRemarks"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="@dimen/margin_small"
+                        android:scaleType="fitXY"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/remarks"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorPrimaryTransparent"></View>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:labelFor="@+id/gen_edit1"
+                    android:paddingStart="20dp"
+                    android:paddingTop="10dp"
+                    android:text="@string/techQues11"
+                    android:textColor="@color/textHeadColor"
+                    android:textSize="@dimen/font_large"
+                    android:textStyle="bold"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/editTechBankName"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_large"
+                        android:layout_marginRight="@dimen/margin_large"
+                        android:layout_weight="1"
+                        android:inputType="text"
+                        android:singleLine="true"
+                        android:textColor="@drawable/edit_text_selector"/>
+
+                    <ImageView
+                        android:id="@+id/imgTechBankNameEdit"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_toStartOf="@+id/gen_img12"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/edit" />
+
+                    <ImageView
+                        android:id="@+id/imgTechBankNameSave"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_alignParentEnd="true"
+                        android:scaleType="fitXY"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/ok_grey" />
+
+                    <ImageView
+                        android:id="@+id/imgTechBankNameRemarks"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="@dimen/margin_small"
+                        android:scaleType="fitXY"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/remarks"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorPrimaryTransparent"></View>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:labelFor="@+id/gen_edit1"
+                    android:paddingStart="20dp"
+                    android:paddingTop="10dp"
+                    android:text="@string/techQues12"
+                    android:textColor="@color/textHeadColor"
+                    android:textSize="@dimen/font_large"
+                    android:textStyle="bold"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/editTechBranchName"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_large"
+                        android:layout_marginRight="@dimen/margin_large"
+                        android:layout_weight="1"
+                        android:inputType="text"
+                        android:singleLine="true"
+                        android:textColor="@drawable/edit_text_selector"/>
+
+                    <ImageView
+                        android:id="@+id/imgTechBranchNameEdit"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_toStartOf="@+id/gen_img12"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/edit" />
+
+                    <ImageView
+                        android:id="@+id/imgTechBranchNameSave"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_alignParentEnd="true"
+                        android:scaleType="fitXY"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/ok_grey" />
+
+                    <ImageView
+                        android:id="@+id/imgTechBranchNameRemarks"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="@dimen/margin_small"
+                        android:scaleType="fitXY"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/remarks"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorPrimaryTransparent"></View>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:labelFor="@+id/gen_edit1"
+                    android:paddingStart="20dp"
+                    android:paddingTop="10dp"
+                    android:text="Salary (P.A.)"
+                    android:textColor="@color/textHeadColor"
+                    android:textSize="@dimen/font_large"
+                    android:textStyle="bold"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/editTechSalary"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_large"
+                        android:layout_marginRight="@dimen/margin_large"
+                        android:layout_weight="1"
+                        android:maxLength="8"
+                        android:inputType="number"
+                        android:singleLine="true"
+                        android:textColor="@drawable/edit_text_selector"/>
+
+                    <ImageView
+                        android:id="@+id/imgTechSalaryEdit"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_toStartOf="@+id/gen_img12"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/edit" />
+
+                    <ImageView
+                        android:id="@+id/imgTechSalarySave"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_alignParentEnd="true"
+                        android:scaleType="fitXY"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/ok_grey" />
+
+                    <ImageView
+                        android:id="@+id/imgTechSalaryRemarks"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="@dimen/margin_small"
+                        android:scaleType="fitXY"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/remarks"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorPrimaryTransparent"></View>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:labelFor="@+id/gen_edit1"
+                    android:paddingStart="20dp"
+                    android:paddingTop="10dp"
+                    android:text="@string/techQues13"
+                    android:textColor="@color/textHeadColor"
+                    android:textSize="@dimen/font_large"
+                    android:textStyle="bold"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/editTechAadharNo"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_large"
+                        android:layout_marginRight="@dimen/margin_large"
+                        android:layout_weight="1"
+                        android:inputType="number"
+                        android:maxLength="12"
+                        android:singleLine="true"
+                        android:textColor="@drawable/edit_text_selector"/>
+
+                    <ImageView
+                        android:id="@+id/imgTechAadharNoEdit"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_toStartOf="@+id/gen_img12"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/edit" />
+
+                    <ImageView
+                        android:id="@+id/imgTechAadharNoSave"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_alignParentEnd="true"
+                        android:scaleType="fitXY"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/ok_grey" />
+
+                    <ImageView
+                        android:id="@+id/imgTechAadharNoRemarks"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="@dimen/margin_small"
+                        android:scaleType="fitXY"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/remarks"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorPrimaryTransparent"></View>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:labelFor="@+id/gen_edit1"
+                    android:paddingStart="20dp"
+                    android:paddingTop="10dp"
+                    android:text="Pan Card No. "
+                    android:textColor="@color/textHeadColor"
+                    android:textSize="@dimen/font_large"
+                    android:textStyle="bold"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/editTechPan"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_large"
+                        android:layout_marginRight="@dimen/margin_large"
+                        android:layout_weight="1"
+                        android:inputType="text"
+                        android:maxLength="10"
+                        android:singleLine="true"
+                        android:textColor="@drawable/edit_text_selector"/>
+
+                    <ImageView
+                        android:id="@+id/imgTechPanEdit"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_toStartOf="@+id/gen_img12"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/edit" />
+
+                    <ImageView
+                        android:id="@+id/imgTechPanSave"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_alignParentEnd="true"
+                        android:scaleType="fitXY"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/ok_grey" />
+
+                    <ImageView
+                        android:id="@+id/imgTechPanRemarks"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="@dimen/margin_small"
+                        android:scaleType="fitXY"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/remarks"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorPrimaryTransparent"></View>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:labelFor="@+id/gen_edit1"
+                    android:paddingStart="20dp"
+                    android:paddingTop="10dp"
+                    android:text="Remarks ( if any)"
+                    android:textColor="@color/textHeadColor"
+                    android:textSize="@dimen/font_large"
+                    android:textStyle="bold"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/editTechRemarks"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_large"
+                        android:layout_marginRight="@dimen/margin_large"
+                        android:layout_weight="1"
+                        android:inputType="text"
+                        android:singleLine="true"
+                        android:textColor="@drawable/edit_text_selector"/>
+
+                    <ImageView
+                        android:id="@+id/imgTechRemarksEdit"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_toStartOf="@+id/gen_img12"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/edit" />
+
+                    <ImageView
+                        android:id="@+id/imgTechRemarksSave"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_alignParentEnd="true"
+                        android:scaleType="fitXY"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/ok_grey" />
+
+                    <ImageView
+                        android:id="@+id/imgTechRemarksRemarks"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="@dimen/margin_small"
+                        android:scaleType="fitXY"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/remarks"
+                        android:visibility="gone"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorPrimaryTransparent"></View>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_large"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingStart="20dp">
+
+                    <Button
+                        android:id="@+id/btnSubmit"
+                        style="@style/HeadingFontStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@color/login_background"
+                        android:text="Submit"/>
+                </LinearLayout>
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+    </ScrollView>

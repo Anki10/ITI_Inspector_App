@@ -1,22 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.ss.nsdc"
+    package="com.anova.itiinspectorapp"
     android:versionCode="1"
     android:versionName="1.0" >
 
     <uses-sdk
         android:minSdkVersion="18"
-        android:targetSdkVersion="24" />
+        android:targetSdkVersion="26" />
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-feature android:name="android.hardware.camera2.full" />
 
     <application
         android:allowBackup="true"
+        android:debuggable="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
+        android:supportsRtl="true"
         android:theme="@style/AppTheme" >
         <activity
             android:name="com.ss.nsdc.main.Login"
@@ -28,37 +45,158 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <!-- created by AORM plugin at 2016-08-15 22:40:54 -->
-        <activity android:name="com.ss.nsdc.main.Institute" />
-        <activity
-            android:name="com.ss.nsdc.main.InstituteActivity"
-            android:label="@string/title_activity_institute"
-            android:screenOrientation="portrait" />
         <activity
             android:name="com.ss.nsdc.main.CategoryActivity"
             android:label="@string/title_activity_category"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.ss.nsdc.main.SubCategoryActivity"
-            android:label="@string/title_activity_sub_category"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name="com.ss.nsdc.main.NavigationDrawerActivity"
-            android:label="@string/title_activity_sub_category"
-            android:screenOrientation="portrait" />
-        <activity
             android:name="com.ss.nsdc.main.FormActivity"
-            android:label="@string/title_activity_form"
-            android:screenOrientation="portrait"
-            android:windowSoftInputMode="stateHidden" />
-        <activity
-            android:name="com.ss.nsdc.main.SubCategoryClassActivity"
-            android:label="@string/title_activity_sub_category"
+            android:label="FormActivity"
             android:screenOrientation="portrait" />
-        <!-- created by AORM plugin at 2016-08-24 23:26:26 -->
-        <activity android:name="com.ss.nsdc.fragment.ClassroomFragment" />
-        <!-- created by AORM plugin at 2016-08-24 23:41:50 -->
-        <activity android:name="com.ss.nsdc.fragment.LabFragment" />
+        <activity
+            android:name="com.ss.nsdc.main.SubCategoryActivity"
+            android:label="SubCategoryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ss.nsdc.main.SubCategoryAccommodationActivity"
+            android:label="SubCategoryTradeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ss.nsdc.main.SubCategoryITLabActivity"
+            android:label="SubCategoryITLabActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ss.nsdc.main.SubCategoryTradeWiseActivity"
+            android:label="SubCategoryITLabActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ss.nsdc.main.PhotoCategoriesActivity"
+            android:label="PhotoCategoriesActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ss.nsdc.main.FullScreenImageViewActivity"
+            android:label="FullScreenImageViewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ss.nsdc.main.InstituteActivity"
+            android:label="InstituteActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ss.nsdc.main.GeneralDetailImageActivity"
+            android:label="GeneralDetailImageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ss.nsdc.main.OrganisationImageActivity"
+            android:label="OrganisationImageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ss.nsdc.main.LandBuildingDetails"
+            android:label="LandBuildingDetails"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ss.nsdc.main.TechnicalImageActivity"
+            android:label="TechnicalImageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ss.nsdc.main.InstructorImageActivity"
+            android:label="InstructorImageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ss.nsdc.main.LabImageActivity"
+            android:label="LabImageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ss.nsdc.main.PowerSupplyImageActivity"
+            android:label="PowerSupplyImageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ss.nsdc.main.VideoSectionActivity"
+            android:label="VideoSectionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ss.nsdc.main.VideoListActivity"
+            android:label="VideoSectionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ss.nsdc.main.ClassroomImageActivity"
+            android:label="ClassroomImageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ss.nsdc.main.ToolsBelowActivity"
+            android:label="ToolsBelowActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ss.nsdc.main.ToolAboveImageActivity"
+            android:label="ToolAboveImageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ss.nsdc.main.WorkshopImageActivity"
+            android:label="WorkshopImageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ss.nsdc.main.VideoCaptureActivity"
+            android:label="WorkshopImageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ss.nsdc.main.VideoCaptureNewActivity"
+            android:label="WorkshopImageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ss.nsdc.main.VideoCaptureFragmentActivity"
+            android:label="WorkshopImageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ss.nsdc.main.SubCategoryToolsAbove"
+            android:label="SubCategoryToolsAbove"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ss.nsdc.main.Camera2VideoFragment"
+            android:label="WorkshopImageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ss.nsdc.activity.GeneralCategoryActivity"
+            android:label="General Category"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ss.nsdc.activity.AccommodationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ss.nsdc.activity.DocumentationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.ss.nsdc.activity.EquipmentActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.ss.nsdc.main.WelcomeActivity" />
+        <!--
+ ATTENTION: This was auto-generated to add Google Play services to your project for
+     App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information.
+        -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <!--
+            <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="9f20d867f8cf0f760e37e339a2a267962dd29ad8" />
+        -->
+        <meta-data
+            android:name="android.support.VERSION"
+            android:value="26.1.0" />
+
+        <activity
+            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+            android:exported="false"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <provider
+            android:name="com.google.firebase.provider.FirebaseInitProvider"
+            android:authorities="com.anova.itiinspectorapp.firebaseinitprovider"
+            android:exported="false"
+            android:initOrder="100" />
+
+        <meta-data
+            android:name="android.arch.lifecycle.VERSION"
+            android:value="27.0.0-SNAPSHOT" />
     </application>
 
 </manifest>

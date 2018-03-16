@@ -4,27 +4,28 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_Home"
-            android:title="@string/draw_home" />
+            android:title="@string/draw_home"/>
         <item
             android:id="@+id/nav_Logout"
             android:icon="@drawable/logout"
-            android:title="@string/draw_logout" />
+            android:title="@string/draw_logout"
+            android:visible="false"/>
         <item
             android:id="@+id/nav_bckp"
             android:icon="@drawable/logout"
-            android:title="Backup" />
+            android:title="Backup"/>
 
-       <!--  <item
-            android:id="@+id/navigation_subheader"
-            android:title="Sub Header">
-            <menu>
-                <item
-                    android:id="@+id/navigation_sub_item_1"
-                    android:title="sub_item_1" />
-                <item
-                    android:id="@+id/navigation_sub_item_2"
-                    android:title="sub_item_2" />
-            </menu>
-        </item> -->
+        <!--  <item
+             android:id="@+id/navigation_subheader"
+             android:title="Sub Header">
+             <menu>
+                 <item
+                     android:id="@+id/navigation_sub_item_1"
+                     android:title="sub_item_1" />
+                 <item
+                     android:id="@+id/navigation_sub_item_2"
+                     android:title="sub_item_2" />
+             </menu>
+         </item> -->
     </group>
 </menu>

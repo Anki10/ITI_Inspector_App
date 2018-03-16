@@ -1,0 +1,51 @@
+{
+  "status":"0",
+  "payload":{
+    "section":[
+      {
+        "name":"General Information",
+        "sectionId":"1",
+        "video":[
+          {
+            "videoName":"Approach road towards ITI",
+            "visibleComponents":"Video consisting of assessor entering the ITI. The board of the ITI should be clearly visible in the video.",
+            "videoId":"2"
+          }
+        ]
+      },
+      {
+        "name":"Workshop",
+        "sectionId":"3",
+        "video":[
+          {
+            "videoName":"Entrance of workshop and 360 degree view",
+            "visibleComponents":"Video Consisting of assessor entering each workshop and showing a 360 degree view of the workshop",
+            "videoId":"4"
+          }
+        ]
+      },
+      {
+        "name":"Workshop Wise Tools & Equipments (Tools above 10000 value)",
+        "sectionId":"5",
+        "video":[
+          {
+            "videoName":"Working condition of each equipment of value above 10000",
+            "visibleComponents":"Video consisting of all the machines in working condition",
+            "videoId":"6"
+          }
+        ]
+      },
+      {
+        "name":"IT Lab",
+        "sectionId":"7",
+        "video":[
+          {
+            "videoName":"Working condition of each computer",
+            "visibleComponents":"Video consisting of all the computers in working condition and 360 degree view",
+            "videoId":"8"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,7 +1,49 @@
-/**
- *
- */
 package com.ss.nsdc.fragment;
+
+
+import android.app.Dialog;
+import android.app.Fragment;
+import android.app.ProgressDialog;
+import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.media.Image;
+import android.os.AsyncTask;
+import android.os.Bundle;
+import android.support.annotation.Nullable;
+import android.support.v7.app.AlertDialog;
+import android.util.Log;
+import android.view.ContextThemeWrapper;
+import android.view.Gravity;
+import android.view.LayoutInflater;
+import android.view.MotionEvent;
+import android.view.View;
+import android.view.ViewGroup;
+import android.view.Window;
+import android.view.WindowManager;
+import android.view.inputmethod.InputMethodManager;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.ScrollView;
+import android.widget.Spinner;
+import android.widget.TextView;
+import android.widget.Toast;
+import android.widget.ToggleButton;
+
+import com.ss.nsdc.R;
+import com.ss.nsdc.constant.AppConstants;
+import com.ss.nsdc.dao.ITIDBController;
+import com.ss.nsdc.entity.Classroom;
+import com.ss.nsdc.entity.LandandBuilding;
+import com.ss.nsdc.main.CategoryActivity;
+import com.ss.nsdc.main.FormActivity;
+import com.ss.nsdc.main.SubCategoryActivity;
+import com.ss.nsdc.utility.ControlsUtility;
+import com.ss.nsdc.utility.DimensionUtils;
+import com.ss.nsdc.utility.UtilityService;
+
+import org.json.JSONObject;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -10,381 +52,236 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import android.app.Fragment;
-import android.app.ProgressDialog;
-import android.content.Context;
-import android.content.DialogInterface;
-import android.content.Intent;
-import android.os.AsyncTask;
-import android.os.Bundle;
-import android.support.v7.app.AlertDialog;
-import android.view.ContextThemeWrapper;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.View.OnClickListener;
-import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.ImageView;
-import android.widget.RadioButton;
-import android.widget.RadioGroup;
-import android.widget.Spinner;
-import android.widget.Toast;
-
-import com.ss.nsdc.R;
-import com.ss.nsdc.constant.AppConstants;
-import com.ss.nsdc.dao.NSDCDBController;
-import com.ss.nsdc.dao.SubCategoryClass;
-import com.ss.nsdc.main.CategoryActivity;
-import com.ss.nsdc.main.NavigationDrawerActivity.MainActivity;
-import com.ss.nsdc.utility.ControlsUtility;
-import com.ss.nsdc.utility.UtilityService;
-
 /**
- * @author Vishal
+ * Created by Mayank on 03/10/2016.
  */
 public class ClassroomFragment extends Fragment {
 
     View view;
-    ProgressDialog ringProgressDialog;
-    private EditText ans1;
-    private EditText ans2;
-    private RadioButton ans31;
-    private RadioButton ans32;
-    private RadioButton ans41;
-    private RadioButton ans42;
-    private RadioButton ans51;
-    private RadioButton ans52;
-    private RadioButton ans61;
-    private RadioButton ans62;
-    private RadioGroup ans3;
-    private RadioGroup ans4;
-    private RadioGroup ans5;
-    private RadioGroup ans6;
-    private Spinner ans7;
-    private EditText ans8;
-    private EditText ans9;
-    private EditText ans10;
-    private Button subButton;
-    //private Button draftButton;
-    private ImageView imageView21;
-    private ImageView imageView22;
-    private ImageView imageView31;
-    private ImageView imageView32;
-    private ImageView imageView41;
-    private ImageView imageView42;
-    private ImageView imageView51;
-    private ImageView imageView52;
-    private ImageView imageView61;
-    private ImageView imageView62;
-    private ImageView imageView71;
-    private ImageView imageView72;
-    private ImageView imageView81;
-    private ImageView imageView82;
-    private ImageView imageView91;
-    private ImageView imageView92;
-    private ImageView imageView101;
-    private ImageView imageView102;
-    //0 - not attempted, 1- edited 2- submitted
-    private int ans2edit, ans3edit, ans4edit, ans5edit, ans6edit, ans7edit, ans8edit, ans9edit, ans10edit;
-    private boolean isAllAttempted = false;
+
     Context context;
+    private ProgressDialog ringProgressDialog;
+
     UtilityService utility = UtilityService.getInstance();
-    private SubCategoryClass getSelectedClassData;
+    Classroom classroomInfo;
 
-    //private NSDCDBController controller ;
-    public ClassroomFragment() {
-        super();
+    EditText editRemark;
+    Button buttonRemark;
+    Button buttonCancel;
+
+    Dialog customDialog;
+
+    View customDialogView;
+
+    TextView textRemarkType;
+
+    private int ans1edit,ans2edit,ans3edit,ans4edit,ans5edit,ans6edit,ans7edit,ans8edit,ans9edit,ans10edit,ans11edit,ans12edit;
+    Button btn_submit;
+
+    EditText editClassName;
+    EditText editNCVTNorms;
+    EditText editClassroomArea;
+    EditText editShortageArea;
+    Spinner spinWire,spinFloor,spinRoof,spinHeight,spinTin;;
+
+    ImageView imgClassNameRemarks;
+    ImageView imgNCVTNormsRemarks;
+    ImageView imgClassroomAreaEdit;
+    ImageView imgClassroomAreaSave;
+    ImageView imgClassroomAreaRemarks;
+    ImageView imgShortageAreaEdit;
+    ImageView imgShortageAreaSave;
+    ImageView imgShortageAreaRemarks;
+    ImageView imgwidthEdit;
+    ImageView imgwidthSave;
+    ImageView imgwidthRemarks;
+    ImageView imgWireEdit;
+    ImageView imgWireSave;
+    ImageView imgWireRemarks;
+    private ImageView imgRoofEdit,imgRoofSave,imgRoofRemarks,imgHeightEdit,imgHeightSave,
+            imgHeightRemarks,imgTinEdit,imgTinSave,imgTinRemarks;
+    private  ToggleButton imgWireNC;
+    private  ToggleButton imgTinNC;
+    ToggleButton imgRoofNC;
+
+    private EditText editwidth;
+
+
+    public ClassroomFragment(Classroom classroomInfo) {
+        this.classroomInfo = classroomInfo;
     }
 
-    public ClassroomFragment(SubCategoryClass getSelectedClassData) {
-        super();
-        this.getSelectedClassData = getSelectedClassData;
+
+    @Nullable
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        view = inflater.inflate(R.layout.fragment_class, container, false);
+        context = container.getContext();
+        return view;
     }
+
 
     @Override
-    public View onCreateView(LayoutInflater inflater,
-                             final ViewGroup container, Bundle savedInstanceState) {
+    public void onActivityCreated(Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+        ((FormActivity) getActivity()).getSupportActionBar().setTitle("Classroom Details");
+        initViews();
+        initValues();
+        initListeners();
+    }
 
-        view = inflater.inflate(R.layout.classroom_form, container, false);
-        context = container.getContext();
-        initializeControls();
-        if (getSelectedClassData.getProc_tracker() == 3) {
-            subButton.setEnabled(false);
-            //draftButton.setEnabled(false);
+    private void initValues() {
+        ScrollView scrollViewGeneral = (ScrollView) view.findViewById(R.id.scrollViewGeneral);
+        scrollViewGeneral.setDescendantFocusability(ViewGroup.FOCUS_BEFORE_DESCENDANTS);
+        scrollViewGeneral.setFocusable(true);
+        scrollViewGeneral.setFocusableInTouchMode(true);
+        scrollViewGeneral.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                v.requestFocusFromTouch();
+                return false;
+            }
+        });
+
+        ControlsUtility.setDefaultEditText(editClassName, classroomInfo.getClassroomName());
+
+        ControlsUtility.setDefaultEditText(editNCVTNorms, classroomInfo.getAsperNCVTNorms());
+
+        ControlsUtility.setDefaultEditText(editClassroomArea, classroomInfo.getClassroomArea());
+
+        ControlsUtility.setDefaultEditText(editShortageArea, classroomInfo.getShortageArea());
+
+        ControlsUtility.setDefaultEditText(editwidth,classroomInfo.getWidth());
+
+        ControlsUtility.setDefaultSpinnerText(spinRoof,classroomInfo.getRoof(),getResources().getStringArray(R.array.roof));
+
+        ControlsUtility.setDefaultSpinnerText(spinTin,classroomInfo.getTin(),getResources().getStringArray(R.array.yes_no));
+
+        ControlsUtility.setDefaultSpinnerText(spinHeight,classroomInfo.getHeight(),getResources().getStringArray(R.array.yes_no));
+
+    }
+
+    private void initViews() {
+
+        customDialogView = LayoutInflater.from(getActivity()).inflate(R.layout.dialog_remark, null, false);
+
+
+        editRemark = (EditText) customDialogView.findViewById(R.id.editRemark);
+        buttonRemark = (Button) customDialogView.findViewById(R.id.buttonRemark);
+        buttonCancel = (Button) customDialogView.findViewById(R.id.buttonCancel);
+        textRemarkType = (TextView) customDialogView.findViewById(R.id.textRemarkType);
+
+        editClassName = (EditText)view.findViewById(R.id.editClassName);
+        editNCVTNorms = (EditText)view.findViewById(R.id.editNCVTNorms);
+        editClassroomArea = (EditText)view.findViewById(R.id.editClassroomArea);
+        editShortageArea = (EditText)view.findViewById(R.id.editShortageArea);
+        editwidth = (EditText)view.findViewById(R.id.editwidth);
+        spinWire = (Spinner)view.findViewById(R.id.spinWire);
+        spinRoof = (Spinner)view.findViewById(R.id.spinRoof);
+        imgRoofEdit = (ImageView)view.findViewById(R.id.imgRoofEdit);
+        imgRoofSave = (ImageView)view.findViewById(R.id.imgRoofSave);
+        imgRoofRemarks = (ImageView)view.findViewById(R.id.imgRoofRemarks);
+        spinHeight = (Spinner)view.findViewById(R.id.spinHeight);
+        imgHeightEdit = (ImageView)view.findViewById(R.id.imgHeightEdit);
+        imgHeightSave = (ImageView)view.findViewById(R.id.imgHeightSave);
+        imgHeightRemarks = (ImageView)view.findViewById(R.id.imgHeightRemarks);
+        spinTin = (Spinner)view.findViewById(R.id.spinTin);
+        imgTinEdit = (ImageView)view.findViewById(R.id.imgTinEdit);
+        imgTinSave = (ImageView)view.findViewById(R.id.imgTinSave);
+        imgTinRemarks = (ImageView)view.findViewById(R.id.imgTinRemarks);
+
+        imgClassNameRemarks= (ImageView)view.findViewById(R.id.imgClassNameRemarks);
+        imgNCVTNormsRemarks= (ImageView)view.findViewById(R.id.imgNCVTNormsRemarks);
+        imgClassroomAreaEdit= (ImageView)view.findViewById(R.id.imgClassroomAreaEdit);
+        imgClassroomAreaSave= (ImageView)view.findViewById(R.id.imgClassroomAreaSave);
+        imgClassroomAreaRemarks= (ImageView)view.findViewById(R.id.imgClassroomAreaRemarks);
+        imgShortageAreaEdit= (ImageView)view.findViewById(R.id.imgShortageAreaEdit);
+        imgShortageAreaSave= (ImageView)view.findViewById(R.id.imgShortageAreaSave);
+        imgShortageAreaRemarks = (ImageView)view.findViewById(R.id.imgShortageAreaRemarks);
+        imgwidthEdit = (ImageView)view.findViewById(R.id.imgwidthEdit);
+        imgwidthSave = (ImageView)view.findViewById(R.id.imgwidthSave);
+        imgwidthRemarks = (ImageView)view.findViewById(R.id.imgwidthRemarks);
+        imgWireEdit = (ImageView)view.findViewById(R.id.imgWireEdit);
+        imgWireSave = (ImageView)view.findViewById(R.id.imgWireSave);
+        imgWireRemarks = (ImageView)view.findViewById(R.id.imgWireRemarks);
+
+        imgWireNC = (ToggleButton)view.findViewById(R.id.imgWireNC);
+        imgTinNC = (ToggleButton)view.findViewById(R.id.imgTinNC);
+        imgRoofNC = (ToggleButton)view.findViewById(R.id.imgRoofNC);
+
+        btn_submit = (Button)view.findViewById(R.id.btnSubmit);
+    }
+
+
+    private void initListeners() {
+
+        if(classroomInfo.getRoofNC() == 0){
+            imgRoofNC.setChecked(false);
+        }else {
+            imgRoofNC.setChecked(true);
         }
-        ControlsUtility.setSpinnerData(ans7,
-                getResources().getStringArray(R.array.internetAvailability),
-                view);
 
-        ControlsUtility.setDefaultSpinnerText(ans7, getSelectedClassData
-                        .getAvail_Internet(),
-                getResources().getStringArray(R.array.internetAvailability));
-
-        /** Setting Default Values */
-
-        if (getSelectedClassData != null) {
-            ControlsUtility.setDefaultEditText(ans1,
-                    getSelectedClassData.getClassroom_Name());
-            ControlsUtility
-                    .setDefaultEditText(
-                            ans2,
-                            (getSelectedClassData.getInsCarpet_Area() != null) ? getSelectedClassData
-                                    .getInsCarpet_Area() : getSelectedClassData
-                                    .getCarpet_Area());
-
-            ControlsUtility
-                    .setDefaultRadioText(
-                            ans3,
-                            ans31,
-                            ans32,
-                            (getSelectedClassData
-                                    .getInsAvailability_Of_Power_BackUp() != null) ? getSelectedClassData
-                                    .getInsAvailability_Of_Power_BackUp()
-                                    : getSelectedClassData
-                                    .getAvailability_Of_Power_BackUp(),
-                            R.id.cls_radioButton31, R.id.cls_radioButton32);
-            ControlsUtility
-                    .setDefaultRadioText(
-                            ans4,
-                            ans41,
-                            ans42,
-                            (getSelectedClassData
-                                    .getInsAvailability_of_Overhead_Projector() != null) ? getSelectedClassData
-                                    .getInsAvailability_of_Overhead_Projector()
-                                    : getSelectedClassData
-                                    .getAvailability_of_Overhead_Projector(),
-                            R.id.cls_radioButton41, R.id.cls_radioButton42);
-            ControlsUtility
-                    .setDefaultRadioText(
-                            ans5,
-                            ans51,
-                            ans52,
-                            (getSelectedClassData.getInsAvailability_Of_AC() != null) ? getSelectedClassData
-                                    .getInsAvailability_Of_AC()
-                                    : getSelectedClassData
-                                    .getAvailability_Of_AC(),
-                            R.id.cls_radioButton51, R.id.cls_radioButton52);
-            ControlsUtility
-                    .setDefaultRadioText(
-                            ans6,
-                            ans61,
-                            ans62,
-                            (getSelectedClassData
-                                    .getInsArea_under_CCTV_Coverage() != null) ? getSelectedClassData
-                                    .getInsArea_under_CCTV_Coverage()
-                                    : getSelectedClassData
-                                    .getArea_under_CCTV_Coverage(),
-                            R.id.cls_radioButton61, R.id.cls_radioButton62);
-
-            ControlsUtility
-                    .setDefaultSpinnerText(
-                            ans7,
-                            (getSelectedClassData.getInsavail_Internet() != null) ? getSelectedClassData
-                                    .getInsavail_Internet()
-                                    : getSelectedClassData.getAvail_Internet(),
-                            getResources().getStringArray(
-                                    R.array.internetAvailability));
-
-            ControlsUtility
-                    .setDefaultEditText(
-                            ans8,
-                            (getSelectedClassData.getInsSeating_Capacity() != null) ? getSelectedClassData
-                                    .getInsSeating_Capacity()
-                                    : getSelectedClassData
-                                    .getSeating_Capacity());
-            ControlsUtility
-                    .setDefaultEditText(
-                            ans9,
-                            (getSelectedClassData.getInsAvg_Batches() != null) ? getSelectedClassData
-                                    .getInsAvg_Batches() : getSelectedClassData
-                                    .getAvg_Batches());
-
-            ControlsUtility
-                    .setDefaultEditText(
-                            ans10,
-                            (getSelectedClassData.getInsRemarks() != null) ? getSelectedClassData
-                                    .getInsRemarks() : getSelectedClassData
-                                    .getRemarks());
+        if(classroomInfo.getTinNC() == 0){
+            imgTinNC.setChecked(false);
+        }else {
+            imgTinNC.setChecked(true);
         }
-        imageView21.setOnClickListener(new View.OnClickListener() {
+
+        imgWireNC.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                ControlsUtility.editImageViewAction(imageView22, ans2, view);
-                ans2edit = 1;
+            public void onClick(View view) {
+                if(imgWireNC.isChecked()){
+                    classroomInfo.setWireNC(0);
+                }else {
+                    classroomInfo.setWireNC(1);
+                }
             }
         });
 
-        imageView22.setOnClickListener(new View.OnClickListener() {
-
+        imgTinNC.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                ControlsUtility.okImageViewAction(imageView22, ans2, view, ans2edit);
-                getSelectedClassData.setInsCarpet_Area(ans2.getText().toString());
-                ans2edit = 2;
+            public void onClick(View view) {
+                if(imgTinNC.isChecked()){
+                    classroomInfo.setTinNC(1);
+                }else {
+                    classroomInfo.setTinNC(0);
+                }
             }
         });
 
-        imageView31.setOnClickListener(new View.OnClickListener() {
 
+        imgRoofNC.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                ControlsUtility.editImageViewAction(imageView32, ans31, ans32,
-                        R.id.cls_radioButton31, R.id.cls_radioButton32, view);
-                ans3edit = 1;
+            public void onClick(View view) {
+                if(imgRoofNC.isChecked()){
+                    Log.e("text","text1");
+                    classroomInfo.setRoofNC(1);
+                }else {
+                    Log.e("text","text2");
+                    classroomInfo.setRoofNC(0);
+                }
             }
         });
 
-        imageView32.setOnClickListener(new View.OnClickListener() {
+
+
+
+        buttonRemark.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                ControlsUtility.okImageViewAction(imageView32, ans31, ans32,
-                        R.id.cls_radioButton31, R.id.cls_radioButton32, view, ans3edit);
-                getSelectedClassData
-                        .setInsAvailability_Of_Power_BackUp(ControlsUtility
-                                .getSelectedRadioText(ans3));
-                ans3edit = 2;
+            public void onClick(View view) {
+                hideDialogKeyboard();
+                if (isRemark()) {
+                    addRemark(textRemarkType.getText().toString());
+
+                }
+
             }
         });
 
-        imageView41.setOnClickListener(new View.OnClickListener() {
+        btn_submit.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                ControlsUtility.editImageViewAction(imageView42, ans41, ans42,
-                        R.id.cls_radioButton41, R.id.cls_radioButton42, view);
-                ans4edit = 1;
-            }
-        });
-
-        imageView42.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                ControlsUtility.okImageViewAction(imageView42, ans41, ans42,
-                        R.id.cls_radioButton41, R.id.cls_radioButton42, view, ans4edit);
-                getSelectedClassData
-                        .setInsAvailability_of_Overhead_Projector(ControlsUtility
-                                .getSelectedRadioText(ans4));
-                ans4edit = 2;
-            }
-        });
-
-        imageView51.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                ControlsUtility.editImageViewAction(imageView52, ans51, ans52,
-                        R.id.cls_radioButton51, R.id.cls_radioButton52, view);
-                ans5edit = 1;
-            }
-        });
-
-        imageView52.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-                ControlsUtility.okImageViewAction(imageView52, ans51, ans52,
-                        R.id.cls_radioButton51, R.id.cls_radioButton52, view, ans5edit);
-                getSelectedClassData.setInsAvailability_Of_AC(ControlsUtility.getSelectedRadioText(ans5));
-                ans5edit = 2;
-            }
-        });
-        imageView61.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                ControlsUtility.editImageViewAction(imageView62, ans61, ans62,
-                        R.id.cls_radioButton61, R.id.cls_radioButton62, view);
-                ans6edit = 1;
-            }
-        });
-
-        imageView62.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                ControlsUtility.okImageViewAction(imageView62, ans61, ans62,
-                        R.id.cls_radioButton61, R.id.cls_radioButton62, view, ans6edit);
-                getSelectedClassData
-                        .setInsArea_under_CCTV_Coverage(ControlsUtility
-                                .getSelectedRadioText(ans5));
-                ans6edit = 2;
-            }
-        });
-
-        imageView71.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                ControlsUtility.editImageViewAction(imageView72, ans7, view);
-                ans7edit = 1;
-            }
-        });
-
-        imageView72.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                ControlsUtility.okImageViewAction(imageView72, ans7, view, ans7edit);
-                getSelectedClassData.setInsavail_Internet(ans7
-                        .getSelectedItem().toString());
-                ans7edit = 2;
-            }
-        });
-
-        imageView81.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                ControlsUtility.editImageViewAction(imageView82, ans8, view);
-                ans8edit = 1;
-            }
-        });
-
-        imageView82.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                ControlsUtility.okImageViewAction(imageView82, ans8, view, ans8edit);
-                getSelectedClassData.setInsAvg_Batches(ans8.getText()
-                        .toString());
-                ans8edit = 2;
-            }
-        });
-
-        imageView91.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                ControlsUtility.editImageViewAction(imageView92, ans9, view);
-                ans9edit = 1;
-            }
-        });
-
-        imageView92.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                ControlsUtility.okImageViewAction(imageView92, ans9, view, ans9edit);
-                getSelectedClassData.setInsSeating_Capacity(ans9.getText()
-                        .toString());
-                ans9edit = 2;
-            }
-        });
-
-        imageView101.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                ControlsUtility.editImageViewAction(imageView102, ans10, view);
-                ans10edit = 1;
-            }
-        });
-
-        imageView102.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                ControlsUtility.okImageViewAction(imageView102, ans10, view, ans10edit);
-                getSelectedClassData.setInsRemarks(ans10.getText().toString());
-                ans10edit = 2;
-            }
-        });
-
-        subButton.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View v) {
+            public void onClick(View view) {
+                toHideKeyboard();
                 new AlertDialog.Builder(context)
                         .setTitle("Confirmation")
                         .setMessage("This record will not be editable after submit")
@@ -392,21 +289,30 @@ public class ClassroomFragment extends Fragment {
                         .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int whichButton) {
 
-                                JSONObject datatoSycClass = new JSONObject();
                                 if (checkAllAtempted()) {
+                                    classroomInfo.setClassroomNameNC(0);
+                                    classroomInfo.setAsperNCVTNormsNC(0);
+                                    classroomInfo.setShortageAreaNC(0);
+                                    classroomInfo.setClassroomAreaNC(0);
+                                    classroomInfo.setWidthNC(0);
+                                    classroomInfo.setHeightNC(0);
+
+
                                     if (utility.getConnectivityStatus(context)) {
-                                        List<SubCategoryClass> classResults = new ArrayList<SubCategoryClass>();
-                                        classResults.add(getSelectedClassData);
-                                        datatoSycClass = utility.getClassDataSync(classResults);
-                                        new ExecuteSyncOperation().execute(new String[]
-                                                {"http://nsdc.qci.org.in/api/CAAF/Classroom_Details.php", datatoSycClass.toString(),
-                                                        AppConstants.API_TOKEN_VALUE});
+                                        List<Classroom> classroom = new ArrayList<Classroom>();
+                                        classroom.add(classroomInfo);
+                                        JSONObject dataToSyncClass = utility.getClasroomInfoSyncData(classroom);
+                                        Log.e("general data ", dataToSyncClass.toString());
+                                        new ExecuteSyncOperation().execute(new String[]{AppConstants.URL_ClASSROOM_SET,
+                                                dataToSyncClass.toString().replace("&", "and")});
+
                                     } else {
-                                        NSDCDBController controller = new NSDCDBController(context);
-                                        boolean updation_status = controller.saveClassData(getSelectedClassData, "draft");
+                                        ITIDBController controller = new ITIDBController(context);
+                                        boolean updateStatus = controller.saveClassroomInfo(classroomInfo, "draft");
                                         controller.close();
-                                        if (updation_status) {
-                                            Toast.makeText(context, "Data Saved.", Toast.LENGTH_LONG).show();
+
+                                        if (updateStatus) {
+                                            Toast.makeText(context, "Data saved in local storage. Syncup when Internet Connectivity is Available.", Toast.LENGTH_LONG).show();
                                             navigate();
                                         } else {
                                             Toast.makeText(context, "Error in saving..", Toast.LENGTH_LONG).show();
@@ -421,114 +327,379 @@ public class ClassroomFragment extends Fragment {
             }
         });
 
-/*		draftButton.setOnClickListener(new OnClickListener() {
+        imgClassNameRemarks.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                creatingDialog(false,false,customDialogView,220,300,false);
+                editRemark.setText(classroomInfo.getClassroomNameRemarks());
+                textRemarkType.setText(AppConstants.KEY_CLASSROOM_NAME_REMARKS);
+            }
+        });
 
-			@Override
-			public void onClick(View v) {
-				boolean updation_status=false;
-				try {
-					NSDCDBController controller = new NSDCDBController(context);
-					updation_status=controller.saveClassData(getSelectedClassData, "draft");
-					controller.close();
-					if(updation_status){
-						navigate();
-					}
-					else
-					{
-						Toast.makeText(context, "Error in saving draft..", Toast.LENGTH_LONG).show();
-					}
-				} catch (Exception e) {
-					Log.e("Classroom Fragment", e.getMessage());
-				}
-			}
-		});*/
-        return view;
+        imgNCVTNormsRemarks.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                creatingDialog(false,false,customDialogView,220,300,false);
+                editRemark.setText(classroomInfo.getAsperNCVTNormsRemarks());
+                textRemarkType.setText(AppConstants.KEY_NCVT_REMARKS);
+            }
+        });
+        imgClassroomAreaEdit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ControlsUtility.editImageViewAction(imgClassroomAreaSave,editClassroomArea,view);
+                ans1edit =1;
+
+            }
+        });
+
+        imgClassroomAreaSave.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                toHideKeyboard();
+                classroomInfo.setClassroomArea(editClassroomArea.getText().toString());
+                ControlsUtility.okImageViewAction(imgClassroomAreaSave,editClassroomArea,view,ans1edit);
+                ans1edit = 2;
+            }
+        });
+
+        imgClassroomAreaRemarks.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                creatingDialog(false,false,customDialogView,220,300,false);
+                editRemark.setText(classroomInfo.getClassroomAreaRemarks());
+                textRemarkType.setText(AppConstants.KEY_CLASS_AREA_REMARKS);
+            }
+        });
+        imgShortageAreaEdit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ControlsUtility.editImageViewAction(imgShortageAreaSave,editShortageArea,view);
+                ans2edit =1;
+
+            }
+        });
+
+        imgShortageAreaSave.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                toHideKeyboard();
+                classroomInfo.setShortageArea(editShortageArea.getText().toString());
+                ControlsUtility.okImageViewAction(imgShortageAreaSave,editShortageArea,view,ans2edit);
+                ans2edit = 2;
+            }
+        });
+
+        imgShortageAreaRemarks.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                creatingDialog(false,false,customDialogView,220,300,false);
+                editRemark.setText(classroomInfo.getShortageAreaRemarks());
+                textRemarkType.setText(AppConstants.KEY_SHORTAGE_AREA_REMARKS);
+            }
+        });
+
+        imgwidthEdit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ControlsUtility.editImageViewAction(imgwidthSave,editwidth,view);
+                ans3edit =1;
+
+            }
+        });
+
+        imgwidthSave.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                toHideKeyboard();
+                classroomInfo.setWidth(editwidth.getText().toString());
+                ControlsUtility.okImageViewAction(imgwidthSave,editwidth,view,ans3edit);
+                ans3edit = 2;
+            }
+        });
+
+        imgwidthRemarks.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                creatingDialog(false,false,customDialogView,220,300,false);
+                editRemark.setText(classroomInfo.getWidthRemarks());
+                textRemarkType.setText(AppConstants.KEY_WIDTH_REMARKS);
+            }
+        });
+
+        imgWireEdit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ControlsUtility.editImageViewAction(imgWireSave,spinWire,view);
+                ans4edit =1;
+
+            }
+        });
+
+        imgWireSave.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                toHideKeyboard();
+                classroomInfo.setWire(spinWire.getSelectedItem().toString());
+                ControlsUtility.okImageViewAction(imgWireSave,spinWire,view,ans4edit);
+                ans4edit = 2;
+            }
+        });
+
+        imgWireRemarks.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                creatingDialog(false,false,customDialogView,220,300,false);
+                editRemark.setText(classroomInfo.getWireRemarks());
+                textRemarkType.setText(AppConstants.KEY_WIRE_REMARKS);
+            }
+        });
+
+        imgRoofEdit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ControlsUtility.editImageViewAction(imgRoofSave,spinRoof,view);
+                ans5edit = 1;
+            }
+        });
+
+        imgRoofSave.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                toHideKeyboard();
+                classroomInfo.setRoof(spinRoof.getSelectedItem().toString());
+                ControlsUtility.okImageViewAction(imgRoofSave,spinRoof,view,ans5edit);
+                ans5edit = 2;
+
+            }
+        });
+
+        imgRoofRemarks.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                creatingDialog(false,false,customDialogView,220,300,false);
+                editRemark.setText(classroomInfo.getRoofRemarks());
+                textRemarkType.setText(AppConstants.KEY_ROOF_REMARK);
+            }
+        });
+
+
+        imgHeightEdit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ControlsUtility.editImageViewAction(imgHeightSave,spinHeight,view);
+                ans6edit = 1;
+            }
+        });
+
+        imgHeightSave.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                toHideKeyboard();
+                classroomInfo.setHeight(spinHeight.getSelectedItem().toString());
+                ControlsUtility.okImageViewAction(imgHeightSave,spinHeight,view,ans6edit);
+                ans6edit = 2;
+
+            }
+        });
+
+        imgHeightRemarks.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                creatingDialog(false,false,customDialogView,220,300,false);
+                editRemark.setText(classroomInfo.getHeightRemarks());
+                textRemarkType.setText(AppConstants.KEY_HEIGHT_REMARK);
+            }
+        });
+
+
+        imgTinEdit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ControlsUtility.editImageViewAction(imgTinSave,spinTin,view);
+                ans7edit = 1;
+            }
+        });
+
+        imgTinSave.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                toHideKeyboard();
+                classroomInfo.setTin(spinTin.getSelectedItem().toString());
+                ControlsUtility.okImageViewAction(imgTinSave,spinTin,view,ans7edit);
+                ans7edit = 2;
+
+            }
+        });
+
+        imgTinRemarks.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                creatingDialog(false,false,customDialogView,220,300,false);
+                editRemark.setText(classroomInfo.getTinRemarks());
+                textRemarkType.setText(AppConstants.KEY_TIN_REMARK);
+            }
+        });
+        buttonCancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                hideDialogKeyboard();
+                cancelCustomDialog();
+            }
+        });
+
     }
 
-    private void initializeControls() {
+    private boolean checkAllAtempted() {
 
-        ans1 = (EditText) view.findViewById(R.id.cls_edit1);
-        ans2 = (EditText) view.findViewById(R.id.cls_edit2);
-        ans3 = (RadioGroup) view.findViewById(R.id.cls_radioGroup3);
-        ans31 = (RadioButton) view.findViewById(R.id.cls_radioButton31);
-        ans32 = (RadioButton) view.findViewById(R.id.cls_radioButton32);
-        ans41 = (RadioButton) view.findViewById(R.id.cls_radioButton41);
-        ans42 = (RadioButton) view.findViewById(R.id.cls_radioButton42);
-        ans51 = (RadioButton) view.findViewById(R.id.cls_radioButton51);
-        ans52 = (RadioButton) view.findViewById(R.id.cls_radioButton52);
-        ans61 = (RadioButton) view.findViewById(R.id.cls_radioButton61);
-        ans62 = (RadioButton) view.findViewById(R.id.cls_radioButton62);
-        ans4 = (RadioGroup) view.findViewById(R.id.cls_radioGroup4);
-        ans5 = (RadioGroup) view.findViewById(R.id.cls_radioGroup5);
-        ans6 = (RadioGroup) view.findViewById(R.id.cls_radioGroup6);
-        ans7 = (Spinner) view.findViewById(R.id.cls_spin7);
-        ans8 = (EditText) view.findViewById(R.id.cls_edit8);
-        ans9 = (EditText) view.findViewById(R.id.cls_edit9);
-        ans10 = (EditText) view.findViewById(R.id.cls_edit10);
-        subButton = (Button) view.findViewById(R.id.cls_submit);
-        //draftButton = (Button) view.findViewById(R.id.cls_draft);
+        if(ans1edit == 2 &&  ans3edit == 2  && ans5edit == 2 && ans6edit == 2 && ans7edit == 2){
+            return true;
+        }else {
+            return false;
+        }
 
-        imageView21 = (ImageView) view.findViewById(R.id.cls_img21);
-        imageView22 = (ImageView) view.findViewById(R.id.cls_img22);
-        imageView31 = (ImageView) view.findViewById(R.id.cls_img31);
-        imageView32 = (ImageView) view.findViewById(R.id.cls_img32);
-        imageView41 = (ImageView) view.findViewById(R.id.cls_img41);
-        imageView42 = (ImageView) view.findViewById(R.id.cls_img42);
-        imageView51 = (ImageView) view.findViewById(R.id.cls_img51);
-        imageView52 = (ImageView) view.findViewById(R.id.cls_img52);
-        imageView61 = (ImageView) view.findViewById(R.id.cls_img61);
-        imageView62 = (ImageView) view.findViewById(R.id.cls_img62);
-        imageView71 = (ImageView) view.findViewById(R.id.cls_img71);
-        imageView72 = (ImageView) view.findViewById(R.id.cls_img72);
-        imageView81 = (ImageView) view.findViewById(R.id.cls_img81);
-        imageView82 = (ImageView) view.findViewById(R.id.cls_img82);
-        imageView91 = (ImageView) view.findViewById(R.id.cls_img91);
-        imageView92 = (ImageView) view.findViewById(R.id.cls_img92);
-        imageView101 = (ImageView) view.findViewById(R.id.cls_img101);
-        imageView102 = (ImageView) view.findViewById(R.id.cls_img102);
+    }
+
+    public void hideDialogKeyboard() {
+
+        InputMethodManager imm = (InputMethodManager) getActivity().getSystemService(Context.INPUT_METHOD_SERVICE);
+        imm.hideSoftInputFromWindow(editRemark.getWindowToken(), 0);
+
+        // customDialog.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
+    }
+
+    private boolean isRemark() {
+        editRemark.setError(null);
+        if (editRemark.getText().toString().isEmpty()) {
+            editRemark.setError(getResources().getString(R.string.labelEmptyRemark));
+            return false;
+        }
+
+        return true;
+    }
+
+    private void addRemark(String type) {
+
+        switch (type){
+            case AppConstants.KEY_CLASSROOM_NAME_REMARKS:
+                classroomInfo.setClassroomNameRemarks(editRemark.getText().toString());
+                cancelCustomDialog();
+                break;
+            case AppConstants.KEY_NCVT_REMARKS:
+                classroomInfo.setAsperNCVTNormsRemarks(editRemark.getText().toString());
+                cancelCustomDialog();
+                break;
+            case AppConstants.KEY_CLASS_AREA_REMARKS:
+                classroomInfo.setClassroomAreaRemarks(editRemark.getText().toString());
+                cancelCustomDialog();
+                break;
+            case AppConstants.KEY_SHORTAGE_AREA_REMARKS:
+                classroomInfo.setShortageAreaRemarks(editRemark.getText().toString());
+                cancelCustomDialog();
+                break;
+            case AppConstants.KEY_WIDTH_REMARKS:
+                classroomInfo.setWidthRemarks(editRemark.getText().toString());
+                cancelCustomDialog();
+                break;
+            case AppConstants.KEY_WIRE_REMARKS:
+                classroomInfo.setWireRemarks(editRemark.getText().toString());
+                cancelCustomDialog();
+                break;
+
+            case AppConstants.KEY_ROOF_REMARK:
+                classroomInfo.setRoofRemarks(editRemark.getText().toString());
+                cancelCustomDialog();
+                break;
+            case AppConstants.KEY_HEIGHT_REMARK:
+                classroomInfo.setHeightRemarks(editRemark.getText().toString());
+                cancelCustomDialog();
+                break;
+            case AppConstants.KEY_TIN_REMARK:
+                classroomInfo.setTinRemarks(editRemark.getText().toString());
+                cancelCustomDialog();
+                break;
+        }
+    }
+
+    protected void toHideKeyboard() {
+        View view = getActivity().getCurrentFocus();
+        if (view != null) {
+            InputMethodManager imm = (InputMethodManager) getActivity().getSystemService(Context.INPUT_METHOD_SERVICE);
+            imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
+        }
+    }
+    public Dialog creatingDialog(boolean isCancelableBack, boolean isCancelableoutside, View view, int height, int width, boolean heightMatchParent) {
+        height = 260;
+
+        if (editRemark != null) {
+            editRemark.setError(null);
+        }
+        customDialog = new Dialog(context, R.style.dialogTheme);
+        //  dialog.setCancelable(isCancelableBack);
+        if (view.getParent() != null) {
+            ViewGroup viewGroup = (ViewGroup) view.getParent();
+            viewGroup.removeView(view);
+        }
+        customDialog.setCanceledOnTouchOutside(isCancelableoutside);
+        customDialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+
+        Window window = customDialog.getWindow();
+        window.setGravity(Gravity.CENTER);
+      /*  WindowManager.LayoutParams layoutParams = new WindowManager.LayoutParams();
+        layoutParams.width = Helper.toPixels(context, 200);
+        layoutParams.height = Helper.toPixels(context, 200);
+        dialog.getWindow().setAttributes(layoutParams);*/
+        customDialog.getWindow().getAttributes().windowAnimations = R.style.PauseDialogAnimation;
+        customDialog.setContentView(view);
+        customDialog.show();
+        if (heightMatchParent) {
+            customDialog.getWindow().setLayout(DimensionUtils.toPixels(context, width), WindowManager.LayoutParams.MATCH_PARENT);
+        } else {
+            customDialog.getWindow().setLayout(DimensionUtils.toPixels(context, width), DimensionUtils.toPixels(context, height));
+
+        }
+
+        return customDialog;
+
     }
 
     class ExecuteSyncOperation extends AsyncTask<String, Integer, JSONObject> {
         @Override
         protected void onPreExecute() {
-
             super.onPreExecute();
-            ringProgressDialog = ProgressDialog.show(new ContextThemeWrapper(
-                            context, android.R.style.Theme_Holo), null,
-                    " Data Synchronizing ...", true);
+            ringProgressDialog = ProgressDialog.show(new ContextThemeWrapper(context, android.R.style.Theme_Holo), null, " Data Synchronizing ...", true);
             ringProgressDialog.setCancelable(false);
             ringProgressDialog.setCanceledOnTouchOutside(false);
         }
 
         @Override
         protected JSONObject doInBackground(String... data) {
-
+            Log.e("job submit json", data[1]);
             String response = "";
             JSONObject response_json = null;
             try {
                 URL url = new URL(data[0]);
-                HttpURLConnection conn = (HttpURLConnection) url
-                        .openConnection();
+                HttpURLConnection conn = (HttpURLConnection) url.openConnection();
                 conn.setReadTimeout(10000);
                 conn.setConnectTimeout(15000);
                 conn.setRequestMethod("POST");
                 conn.setDoInput(true);
                 conn.setDoOutput(true);
-                conn.setRequestProperty("Content-Type",
-                        "application/x-www-form-urlencoded");
-                String str = "result=" + data[1] + "&Token=" + data[2];
+                conn.setRequestProperty("Content-Type", "application/json");
+
+                String str = data[1];
                 byte[] outputInBytes = str.getBytes("UTF-8");
                 conn.getOutputStream().write(outputInBytes);
                 conn.connect();
-                int responsecode = conn.getResponseCode();
-                if (responsecode == HttpURLConnection.HTTP_OK) {
+
+                int responseCode = conn.getResponseCode();
+                if (responseCode == HttpURLConnection.HTTP_OK) {
                     String line;
-                    BufferedReader br = new BufferedReader(
-                            new InputStreamReader(conn.getInputStream()));
+                    BufferedReader br = new BufferedReader(new InputStreamReader(conn.getInputStream()));
                     while ((line = br.readLine()) != null) {
                         response += line;
                     }
-                } else if (responsecode == HttpURLConnection.HTTP_CLIENT_TIMEOUT) {
+                } else if (responseCode == HttpURLConnection.HTTP_CLIENT_TIMEOUT) {
                     response_json = new JSONObject();
                     response_json.put("error", "Connection to server lost..");
                 }
@@ -537,65 +708,59 @@ public class ClassroomFragment extends Fragment {
             } catch (Exception e) {
                 e.printStackTrace();
             }
-            return response_json;
 
+            return response_json;
         }
+
 
         @Override
         protected void onPostExecute(JSONObject result) {
-
             super.onPostExecute(result);
+            ringProgressDialog.cancel();
 
-            if (result != null && result.has("responsecode")) {
-                try {
-                    if (Integer.valueOf(result.get("responsecode").toString()) == 2) {
-
-                        ringProgressDialog.cancel();
-                        Toast.makeText(context, "Data Sync Successful",
-                                Toast.LENGTH_LONG).show();
-                        NSDCDBController controller = new NSDCDBController(context);
-                        boolean updation_status = controller.saveClassData(getSelectedClassData, "complete");
-                        controller.close();
-                        if (updation_status) {
-                            subButton.setEnabled(false);
-                            //draftButton.setEnabled(false);
-                            navigate();
-                        } else {
-                            Toast.makeText(context, "Error in updation of data..", Toast.LENGTH_LONG).show();
-                        }
+            try{
+                int status = result.optInt("status");
+                if (status == 0) {
+                    Toast.makeText(context, "Data Sync Successful", Toast.LENGTH_LONG).show();
+                    ITIDBController controller = new ITIDBController(context);
+                    boolean updation_status = controller.saveClassroomInfo(classroomInfo, "complete");
+                    controller.close();
+                    if (updation_status) {
+                        btn_submit.setEnabled(false);
+                        //draftButton.setEnabled(false);
+                        navigate();
                     } else {
-                        ringProgressDialog.cancel();
-                        Toast.makeText(context, "Data Syc failed...",
-                                Toast.LENGTH_LONG).show();
+                        Toast.makeText(context, "Error in updation of data..", Toast.LENGTH_LONG).show();
                     }
-                } catch (NumberFormatException e) {
-                    e.printStackTrace();
-                } catch (JSONException e) {
-                    e.printStackTrace();
+                    Log.e("Result", result.toString());
+
+                } else {
+                    ringProgressDialog.cancel();
+                    Toast.makeText(context, "Data Syc failed...", Toast.LENGTH_LONG).show();
                 }
-            } else {
-                ringProgressDialog.dismiss();
-                Toast.makeText(context, "Data Sync failed...",
-                        Toast.LENGTH_LONG).show();
+
+            }catch (Exception e){
+                e.printStackTrace();
             }
+
+
         }
     }
 
     public void navigate() {
-        Intent intent = new Intent(context, CategoryActivity.class);
-        intent.putExtra("YearWiseCollegeId", getActivity().getIntent().getExtras().getString("yearWiseCollageId"));
-        intent.putExtra("applicationNo", getActivity().getIntent().getExtras().getString("yearWiseCollageId"));
-        intent.putExtra("instituteName", getActivity().getIntent().getExtras().getString("ApplicationId"));
+        Intent intent = new Intent(context, SubCategoryActivity.class);
+        intent.putExtra("YearWiseCollegeId", classroomInfo.getYearwisecollegeid());
+        intent.putExtra("Category","class");
+        //intent.putExtra("refId",classroomInfo.getRefId());
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         context.startActivity(intent);
+
+    }
+    public void cancelCustomDialog() {
+        if (customDialog != null) {
+            customDialog.cancel();
+        }
+        toHideKeyboard();
     }
 
-    public boolean checkAllAtempted() {
-        if (ans2edit == 2 && ans3edit == 2 && ans4edit == 2 && ans5edit == 2 && ans6edit == 2 && ans7edit == 2 &&
-                ans8edit == 2 && ans9edit == 2 && ans10edit == 2) {
-            return true;
-        } else {
-            return false;
-        }
-    }
 }

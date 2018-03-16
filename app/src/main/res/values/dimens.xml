@@ -3,30 +3,30 @@
     <!-- Default screen margins, per the Android Design guidelines. -->
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
-    
+
     <dimen name="activity_login_padding_top_bottom_small">20dp</dimen>
     <dimen name="activity_login_padding_top_bottom_medium">60dp</dimen>
     <dimen name="activity_login_padding_top_bottom_large">80dp</dimen>
     <dimen name="activity_login_padding_left_right">60dp</dimen>
-    
+
     <dimen name="activity_login_text">30sp</dimen>
     <dimen name="fab_margin">16dp</dimen>
-     
+
     <!-- Default screen margins, per the Android Design guidelines. -->
     <dimen name="navdrawer_image_height">192dp</dimen>
     <dimen name="navdrawer_user_picture_size">40dp</dimen>
 
     <dimen name="margin_user_layout">25dp</dimen>
     <dimen name="margin_user_name">3dp</dimen>
-	<dimen name="margin_user_email">20dp</dimen>
-	
-	<!-- Logo Dimension -->
-	<dimen name="logo_width">100dp</dimen>
-	<dimen name="logo_height">100dp</dimen>
-	
-	<!-- List Icon -->
-	<dimen name="list_icon_width">30dp</dimen>
-	<dimen name="list_icon_height">30dp</dimen>
+    <dimen name="margin_user_email">20dp</dimen>
+
+    <!-- Logo Dimension -->
+    <dimen name="logo_width">100dp</dimen>
+    <dimen name="logo_height">100dp</dimen>
+
+    <!-- List Icon -->
+    <dimen name="list_icon_width">30dp</dimen>
+    <dimen name="list_icon_height">30dp</dimen>
 
 
     <dimen name="font_Xsmall">12sp</dimen>

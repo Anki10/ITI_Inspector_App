@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="10sp"
+    android:layout_marginRight="@dimen/margin_medium"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:weightSum="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:ellipsize="end"
+            android:id="@+id/textTechName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.4"
+            android:layout_gravity="center_vertical"
+            android:textSize="@dimen/font_large" />
+
+        <ImageView
+            android:id="@+id/imgTechImage"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="0.2"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_video"/>
+
+
+        <ImageView
+            android:id="@+id/imageTechRemark"
+            android:layout_width="0dp"
+            android:layout_weight="0.2"
+            android:layout_height="45dp"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/remarks" />
+
+
+
+        <ImageView
+            android:id="@+id/imageTechSubmitted"
+            android:layout_width="0dp"
+            android:layout_weight="0.2"
+            android:layout_height="45dp"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+
+            android:layout_gravity="center_vertical"
+            />
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:background="@color/colorGreyLines"/>
+
+</LinearLayout>

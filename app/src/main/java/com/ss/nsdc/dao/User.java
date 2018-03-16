@@ -9,8 +9,8 @@ public class User {
 	private String Password;
 	private Integer status;
 	private Date logindate;
-	
-	
+
+
 	public int getLoginId() {
 		return loginId;
 	}
@@ -29,7 +29,7 @@ public class User {
 	public void setUsername(String username) {
 		Username = username;
 	}
-	
+
 	public Date getLogindate() {
 		return logindate;
 	}
@@ -48,7 +48,7 @@ public class User {
 	public void setStatus(Integer status) {
 		this.status = status;
 	}
-	
-	
-	
+
+
+
 }

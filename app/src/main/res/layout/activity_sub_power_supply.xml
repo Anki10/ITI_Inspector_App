@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <FrameLayout
+        android:id="@+id/content_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/sub_cat_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                app:layout_scrollFlags="scroll|enterAlways"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light" >
+            </android.support.v7.widget.Toolbar>
+
+
+            <TextView
+                android:layout_below="@+id/sub_cat_toolbar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/gen_edit2"
+                android:paddingStart="20dp"
+                android:paddingTop="10dp"
+                android:text="Is the Connection on the name of ITI?"
+                android:textColor="@color/textHeadColor"
+                android:textSize="@dimen/font_large"
+                android:textStyle="bold"
+                />
+
+            <LinearLayout
+                android:id="@+id/ll_2"
+                android:layout_below="@+id/gen_edit2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Spinner
+                    android:id="@+id/spinConnectionPower"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="@dimen/margin_large"
+                    android:layout_marginRight="@dimen/margin_large"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:entries="@array/yes_no"
+                    android:singleLine="true"/>
+                <ImageView
+                    android:id="@+id/imgConnectionPowerEdit"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_toStartOf="@+id/gen_img12"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/edit" />
+
+                <ImageView
+                    android:id="@+id/imgConnectionPowerSave"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_alignParentEnd="true"
+                    android:scaleType="fitXY"
+                    android:layout_marginEnd="10dp"
+                    android:src="@drawable/ok_grey" />
+
+                <ImageView
+                    android:id="@+id/imgConnectionPowerRemarks"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="@dimen/margin_small"
+                    android:scaleType="fitXY"
+                    android:layout_marginEnd="10dp"
+                    android:src="@drawable/remarks" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_below="@+id/ll_2"
+                android:id="@+id/view2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimaryTransparent"></View>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/gen_edit3"
+                android:paddingStart="20dp"
+                android:paddingTop="10dp"
+                android:text="Electrical Connection Issued in The Name of"
+                android:textColor="@color/textHeadColor"
+                android:textSize="@dimen/font_large"
+                android:textStyle="bold"
+                android:layout_below="@+id/view2" />
+
+            <LinearLayout
+                android:id="@+id/ll_3"
+                android:layout_below="@+id/gen_edit3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/editConnectionIssuedName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_large"
+                    android:layout_marginRight="@dimen/margin_large"
+                    android:layout_weight="1"
+                    android:focusable="false"
+                    android:inputType="text"
+                    android:singleLine="true"
+                    android:textColor="@drawable/edit_text_selector"/>
+
+                <ImageView
+                    android:id="@+id/imgConnectionIssuedNameEdit"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_toStartOf="@+id/gen_img12"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/edit" />
+
+                <ImageView
+                    android:id="@+id/imgConnectionIssuedNameSave"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_alignParentEnd="true"
+                    android:scaleType="fitXY"
+                    android:layout_marginEnd="10dp"
+                    android:src="@drawable/ok_grey" />
+
+                <ImageView
+                    android:id="@+id/imgConnectionIssuedNameRemarks"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="@dimen/margin_small"
+                    android:scaleType="fitXY"
+                    android:layout_marginEnd="10dp"
+                    android:src="@drawable/remarks"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_below="@+id/ll_3"
+                android:id="@+id/view4"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimaryTransparent"></View>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/gen_edit4"
+                android:paddingStart="20dp"
+                android:paddingTop="10dp"
+                android:text="Date of Connection"
+                android:textColor="@color/textHeadColor"
+                android:textSize="@dimen/font_large"
+                android:textStyle="bold"
+                android:layout_below="@+id/view4" />
+
+            <LinearLayout
+                android:id="@+id/ll_4"
+                android:layout_below="@+id/gen_edit4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/editDateConnection"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_large"
+                    android:layout_marginRight="@dimen/margin_large"
+                    android:layout_weight="1"
+                    android:focusable="false"
+                    android:inputType="text"
+                    android:singleLine="true"
+                    android:textColor="@drawable/edit_text_selector"/>
+
+                <ImageView
+                    android:id="@+id/imgDateConnectionEdit"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_toStartOf="@+id/gen_img12"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/edit"
+                    android:visibility="gone"/>
+
+                <ImageView
+                    android:id="@+id/imgDateConnectionSave"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_alignParentEnd="true"
+                    android:scaleType="fitXY"
+                    android:layout_marginEnd="10dp"
+                    android:src="@drawable/ok_grey"
+                    android:visibility="gone"/>
+
+                <ImageView
+                    android:id="@+id/imgDateConnectionRemarks"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="@dimen/margin_small"
+                    android:scaleType="fitXY"
+                    android:layout_marginEnd="10dp"
+                    android:src="@drawable/remarks"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_below="@+id/ll_4"
+                android:id="@+id/view5"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimaryTransparent"></View>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/gen_edit5"
+                android:paddingStart="20dp"
+                android:paddingTop="10dp"
+                android:text="Power Supply Needed As Per Norms"
+                android:textColor="@color/textHeadColor"
+                android:textSize="@dimen/font_large"
+                android:textStyle="bold"
+                android:layout_below="@+id/view5" />
+
+            <LinearLayout
+                android:id="@+id/ll_5"
+                android:layout_below="@+id/gen_edit5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/editPowerSupplyNorm"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_large"
+                    android:layout_marginRight="@dimen/margin_large"
+                    android:layout_weight="1"
+                    android:focusable="false"
+                    android:inputType="text"
+                    android:singleLine="true"
+                    android:textColor="@drawable/edit_text_selector"/>
+
+                <ImageView
+                    android:id="@+id/imgPowerSupplyNormEdit"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_toStartOf="@+id/gen_img12"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/edit"
+                    android:visibility="gone"/>
+
+                <ImageView
+                    android:id="@+id/imgPowerSupplyNormSave"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_alignParentEnd="true"
+                    android:scaleType="fitXY"
+                    android:layout_marginEnd="10dp"
+                    android:src="@drawable/ok_grey"
+                    android:visibility="gone"/>
+
+                <ImageView
+                    android:id="@+id/imgPowerSupplyNormRemarks"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="@dimen/margin_small"
+                    android:scaleType="fitXY"
+                    android:layout_marginEnd="10dp"
+                    android:src="@drawable/remarks"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_below="@+id/ll_5"
+                android:id="@+id/view6"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimaryTransparent"></View>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/gen_edit6"
+                android:paddingStart="20dp"
+                android:paddingTop="10dp"
+                android:text="Power Supply Available in The Institute in KW"
+                android:textColor="@color/textHeadColor"
+                android:textSize="@dimen/font_large"
+                android:textStyle="bold"
+                android:layout_below="@+id/view6" />
+
+            <LinearLayout
+                android:id="@+id/ll_6"
+                android:layout_below="@+id/gen_edit6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/editPowerSupplyAvailable"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_large"
+                    android:layout_marginRight="@dimen/margin_large"
+                    android:layout_weight="1"
+                    android:focusable="false"
+                    android:inputType="text"
+                    android:singleLine="true"
+                    android:textColor="@drawable/edit_text_selector"/>
+
+                <ImageView
+                    android:id="@+id/imgPowerSupplyAvailableEdit"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_toStartOf="@+id/gen_img12"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/edit" />
+
+                <ImageView
+                    android:id="@+id/imgPowerSupplyAvailableSave"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_alignParentEnd="true"
+                    android:scaleType="fitXY"
+                    android:layout_marginEnd="10dp"
+                    android:src="@drawable/ok_grey" />
+
+                <ImageView
+                    android:id="@+id/imgPowerSupplyAvailableRemarks"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="@dimen/margin_small"
+                    android:scaleType="fitXY"
+                    android:layout_marginEnd="10dp"
+                    android:src="@drawable/remarks"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_below="@+id/ll_6"
+                android:id="@+id/view7"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimaryTransparent"></View>
+
+
+            <LinearLayout
+                android:id="@+id/heading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="3"
+                android:orientation="horizontal"
+                android:layout_below="@+id/view7"
+                android:layout_marginTop="5dp">
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:layout_height="wrap_content"
+                    android:text="Equipment"
+                    android:textSize="18sp"
+                    android:textColor="#000"
+                    android:textStyle="bold"/>
+                <TextView
+                    android:id="@+id/category"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Category"
+                    android:gravity="center"
+                    android:textSize="18sp"
+                    android:textColor="#000"
+                    android:textStyle="bold"/>
+                <TextView
+                    android:id="@+id/quantity"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Quantity"
+                    android:gravity="center"
+                    android:textSize="18sp"
+                    android:textColor="#000"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/sub_cat_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/heading"
+                android:layout_above="@+id/btn_submit"
+                android:scrollbars="vertical"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+           <View
+               android:layout_width="match_parent"
+               android:layout_height="200dp"
+               android:layout_below="@+id/sub_cat_recycler_view"/>
+            <Button
+                android:id="@+id/btn_submit"
+                style="@style/HeadingFontStyle"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="40dp"
+                android:background="@color/login_background"
+                android:text="Submit"
+                android:layout_alignParentBottom="true"
+                android:textColor="@android:color/white"/>
+        </RelativeLayout>
+    </FrameLayout>
+    <!-- The navigation drawer -->
+    <ListView
+        android:id="@+id/left_drawer"
+        android:layout_width="240dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="#111"
+        android:choiceMode="singleChoice"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="0dp" />
+
+
+</android.support.v4.widget.DrawerLayout>

@@ -1,14 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">NSDC</string>
+
+    <string name="text_submit">Submit</string>
+    <string name="tag">Tag</string>
+    <string name="trainer_ssc_certificate_document">SSC Certified Document</string>
+    <string name="trainer_min_qualification">Minimum Qualification</string>
+
+
+    <string-array name="upload_image_actions">
+        <item>Take Photo</item>
+        <!--<item>Choose from Library</item>-->
+        <item>Cancel</item>
+    </string-array>
+    <string name="alert">Alert</string>
+    <string name="messageNetwork">Network not available</string>
+    <!--<string name="no_image_upload">Please upload/update images for all sections and then submit</string>-->
+    <string name="no_image_upload">There are no new updations in this section for submission.</string>
+    <string name="ok">ok</string>
+    <string name="no">No</string>
+    <string name="cancel">Cancel</string>
+    <string name="alert_network_error">Network error. Please try again</string>
+    <string name="complete">You have successfully completed inspection of allocated institute. please click on given link to capture your feedback on inspection experience. </string>
+
+    <string name="alert_center_details_saved_successfully">General details saved successfully</string>
+    <string name="alert_trainer_details_saved_successfully">Trainer details saved successfully</string>
+    <string name="alert_equip_details_saved_successfully">Equipment details saved successfully</string>
+    <string name="alert_classroom_details_saved_successfully">Classroom details saved successfully</string>
+    <string name="alert_office_area_details_saved_successfully">Centre Area details saved successfully</string>
+    <string name="alert_lab_details_saved_successfully">Lab details saved successfully</string>
+    <string name="title_activity_full_screen_image_view">FullScreenImageViewActivity</string>
+    <string name="title_activity_center_details">General Details</string>
+    <string name="title_activity_trainers_curriculum">Trainer Details</string>
+    <string name="title_activity_classrooms">Classrooms</string>
+    <string name="title_activity_labs">Labs</string>
+    <string name="title_activity_office_areas">Centre Areas</string>
+    <string name="title_activity_equipments">Equipments</string>
+    <string name="title_activity_photo_categories">Photograph Upload</string>
+
+
+    <string name="text_classroom_help_text">Please upload pictures of each classroom as per defined sections. In Classroom view, take 2 pictures of each classroom. Picture should depict entire area.</string>
+    <string name="text_centre_details_help_text">Please upload pictures of following Sections</string>
+    <string name="text_labs_help_text">Please upload pictures of each lab as per defined sections. In Lab view, take 2 pictures of each lab. Picture should depict entire area.</string>
+    <string name="text_office_areas_help_text">Please click pictures of different office areas from the diagonal corner of the room.</string>
+    <string name="text_equipments_help_text">Please click the pictures of all the Tools Above 10000 </string>
+    <string name="text_trainers_help_text">Please upload the pictures of the following sections</string>
+    <string name="text_facilities_help_text">Please click pictures of different facilities of Institute as per defined sections. In Safe drinking water, click picture of Water Vending Unit (RO, Water Purifier, Water dispenser etc.)</string>
+    <string name="text_res_facility_help_text">Please click pictures of residential facility as per defined sections. Please click pictures of any two rooms of hostel facility.</string>
+    <string name="alert_unable_to_get_location">App is unable to get accurate location. Please enable your GPS setting and restart the application</string>
+    <string name="alert_facilities_saved_successfully">General Details saved successfully</string>
+    <string name="alert_res_facility_details_saved_successfully">Residential Facility details saved successfully</string>
+    <string name="alert_data_not_submitted">Data could not be submitted. Please try again</string>
+    <string name="title_activity_residential_facility">Residential Facility</string>
+    <string name="title_activity_facilities">Facilities</string>
+
+    <string name="alert_pending_changes">Are you sure  you want to return to main menu?</string>
+    <string name="alert_submit_data">Are you sure want to submit this section?</string>
+    <string name="app_name">ITI Inspector app</string>
     <string name="action_settings">Settings</string>
-	<string name="logo">Logo</string>
-    
+    <string name="logo">Logo</string>
+
+    <string name="logoutmenu">Logout</string>
+    <string name="refreshmenu">Refresh</string>
+
     <!-- Login Activity -->
     <string name="edit_username">Username</string>
     <string name="edit_password">Password</string>
     <string name="btn_sign_up">Login</string>
+    <string name="btnStartInspection">Start</string>
+    <string name="btnCompleteInspection">Complete</string>
 
     <!-- Institute Activity -->
     <string name="title_activity_institute">InstituteActivity</string>
@@ -20,6 +80,8 @@
     <!-- Sub Category Activity -->
     <string name="title_activity_sub_category">SubCategoryActivity</string>
 
+    <string name="title_activity_sub_category_equipment">SubCategoryEquipmentActivity</string>
+
     <!-- Form Activity -->
     <string name="title_activity_form">FormActivity</string>
 
@@ -27,271 +89,344 @@
     <string name="drawer_header">Drawer Header</string>
     <string name="draw_home">Home</string>
     <string name="draw_logout">Logout</string>
-      
+
     <!-- Submti Button -->
     <string name="submit">Submit</string>
-    
-    <!-- Radio Options -->
-    <string name="radioYes">Yes</string>
-    <string name="radioNo">No</string>
+    <string name="label_enter_remarks">Enter Remark</string>
+    <string name="label_enter_NC">Enter NC</string>
+    <string name="label_remarks">Remarks</string>
+    <string name="label_nc">Reason for NC</string>
+    <string name="label_done">Done</string>
+    <string name="label_cancel">Cancel</string>
 
-	<!-- Support Staff Questions -->
-	<string name="ss_ques_staff_type">Type of Support Staff</string>
-	<string name="ss_ques_staff_name">Name</string>
-	<string name="ss_ques_staff_work">Work</string>
-	<string name="ss_ques_remarks">Remarks</string>
+    <!-- General Questions -->
+    <!-- Section 1 Questions -->
+    <string name="genInfo_ques1">Type of the Collection Centre / source of sample</string>
+    <string name="genInfo_ques2">Size of premises</string>
+    <string name="genInfo_ques3">Average Number of patients per day</string>
+    <string name="genInfo_ques4">Does it meet the requirement of the workload </string>
+    <string name="genInfo_ques5">Reception and waiting area separate from collection area</string>
+    <string name="genInfo_ques6">Hand washing facility </string>
+    <string name="genInfo_ques7">Clean toilet facility on site</string>
+    <string name="genInfo_ques8">Provision of privacy during collections</string>
+    <string name="genInfo_ques9">Hours of operation have been displayed</string>
+    <!--<string name="genInfo_ques10">Mobile No</string>
+    <string name="genInfo_ques11">Special Location *</string>
+    <string name="genInfo_ques12">Email Address</string>
+    <string name="genInfo_ques13">Principal\'s Name</string>
+    <string name="genInfo_ques14">Is The Institute Running Center of Excellence Scheme</string>
+    <string name="genInfo_ques15">Postal Address</string>
+    <string name="genInfo_ques16">Landmark</string>
+    <string name="genInfo_ques17">State</string>
+    <string name="genInfo_ques18">District</string>
+    <string name="genInfo_ques19">Tehsil / Mandal</string>
+    <string name="genInfo_ques20">Pincode</string>
+    <string name="genInfo_ques21">Block</string>
+    <string name="genInfo_ques22">Website</string>
+    <string name="genInfo_ques23">Establishment Date</string>!-->
 
-    <!-- ClassRoom Questions -->
-	<string name="cls_section">Classroom Details</string>
-	<string name="cls_ques1">Q1. Classroom name/ serial number</string>
-	<string name="cls_ques2">Q2. Carpet Area(In Sq Fts)</string>
-	<string name="cls_ques3">Q3. Adequate Power Backup (UPS/ GenSet/Inverter)</string>
-	<string name="cls_ques4">Q4. Overhead Projector/LCD/TV</string>
-	<string name="cls_ques5">Q5. Availability Of Air Conditioner</string>
-	<string name="cls_ques6">Q6. CCTV With Recording Facility</string>
-	<string name="cls_ques7">Q7. Internet Facility In this Room?</string>
-	<string name="cls_ques8">Q8. Proposed Batch Size (for this Class Room)</string>
-	<string name="cls_ques9">Q9. Proposed Number of Batches in Classroom in Day</string>
-	<string name="cls_ques10">Q10.Remark (if any)</string>
-	
-	
-	 <!-- Lab Questions -->
-	<string name="lab_section"> Laboratory Detail</string>
-	<string name="lab_ques1">Q1. Lab Type</string>
-	<string name="lab_ques2">Q2. Is the Lab Same as the Classroom?</string>
-	<string name="lab_ques3">Q3. Lab Name/ Serial Number</string>
-	<string name="lab_ques4">Q4. Availability of Internet</string>
-	<string name="lab_ques5">Q5. Availability Of Air Conditioner</string>
-	<string name="lab_ques6">Q6. Carpet Area of Lab (in Square Feet)</string>
-	<string name="lab_ques7">Q7. Batch Size</string>
-	<string name="lab_ques8">Q8. Proposed Number of Batches in this Lab Per Day</string>
-	<string name="lab_ques9">Q9. Availability of Power Backup in Lab in the Form of UPS/ GenSet/ Inveter</string>
-	<string name="lab_ques10">Q10.Job Roles Taught in Lab</string>
-	<string name="lab_ques11">Q11. Availability of CCTV Camera with Recording Facility</string>
-	<string name="lab_ques12">Q12.Remark (if any)</string>
-	
-	<array name="labType">
-	    <item>Other</item>
-	    <item>IT/Computer Lab</item>
-	</array>
-	
-	<array name="yesNo">
-	    <item>Yes</item>
-	    <item>No</item>
-	</array>
-	
-	<!-- Internet Array -->
-	<array name="internetAvailability">
-	    <item>Select</item>
-	    <item>With Speed of 512KBPS And Above</item>
-	    <item>With Speed Below 512KBPS And Above 256KBPS</item>
-	    <item>With Speed of Below 256KBPS</item>
-	    <item>None</item>
-	</array>
+    <!-- Trust Details Questions -->
 
-	<string name="labelStar">*</string>
+    <string name="trust_ques1">Institute Owned By</string>
+    <string name="trust_ques2">Is Trust/Society/Company Registered</string>
+    <string name="trust_ques3">Registration No</string>
+    <string name="trust_ques4">Enter Name of Trust/Society/Company</string>
+    <string name="trust_ques5">Date Up To Which Registration\n of Trust/Society/Company Is Valid(DD/MM/YYYY) </string>
+    <string name="trust_ques6">PAN Number (If Individual)*</string>
 
-	<string name="label_skill_sector">Skill Sector</string>
-	<string name="label_type">Type</string>
-	<string name="label_job_role">JobRole</string>
-	<string name="label_prposed_trainer_student">Proposed Trainer Student Ratio?</string>
-	<string name="label_parallel_batches">Total Number of Parallel Batches Running for the Job Role</string>
-	<string name="label_model_content">Is the Model Content (Student Participant Handbook) Approved by NSDC Available for This Job Role?</string>
-
-	<array name="arrayStaffType">
-		<item>Reception</item>
-		<item>Placement Coordinator</item>
-		<item>Counsellors</item>
-		<item>Other</item>
-	</array>
-
-	<array name="arraySkillSector">
-		<item>Electronics &amp; Hardware</item>
-		<item>Food Processing</item>
-		<item>Furniture &amp; Fittings</item>
-		<item>Gems And Jewellery</item>
-		<item>Green Jobs</item>
-		<item>Iron And Steel</item>
-		<item>It/Ites</item>
-		<item>Leather</item>
-		<item>Apparel, Madeups &amp; Home Furnishing</item>
-		<item>Logistics</item>
-		<item>Mining</item>
-		<item>People With Disability</item>
-		<item>Retail</item>
-		<item>Automotive</item>
-		<item>Security</item>
-		<item>Sports</item>
-		<item>Telecom</item>
-		<item>Tourism And Hospitality</item>
-		<item>Beauty And Wellness</item>
-		<item>Bfsi</item>
-		<item>Construction</item>
-		<item>Domestic Workers</item>
-	</array>
-
-	<array name="arrayType">
-		<item>Manufacturing</item>
-		<item>Service</item>
-	</array>
-
-	<array name="arrayProposedTrainerRatio">
-		<item>1:20</item>
-		<item>1:30</item>
-		<item>1:40</item>
-	</array>
-
-
-	<string name="label_yes">Yes</string>
-	<string name="label_no">No</string>
-
-	<string name="label_remarks">Remarks</string>
-
-	<!-- Office Questions -->
-	<string name="off_section">Office Details</string>
-	<string name="off_ques1">Q1. Office Area Type</string>
-	<string name="off_ques2">Q2. Carpet Area (in Square Feet)</string>
-	<string name="off_ques3">Q3. Availability of Internet in the Room</string>
-	<string name="off_ques4">Q4. Air-Conditioning</string>
-	<string name="off_ques5">Q5. Power-Backup</string>
-	<string name="off_ques6">Q6. Area CCTV Coverage</string>
-	<string name="off_ques7">Q7. Remarks</string>
-
-	<!-- Office Area Type -->
-	<array name="officeType">
-		<item>Select</item>
-		<item>Counselling Area</item>
-		<item>Reception Area</item>
-		<item>Library</item>
-		<item>Office Space (For Trainers and Staff)</item>
-		<item>Placement And Entrepreneurship Cell</item>
-	</array>
-
-	<!-- Equipment Questions -->
-	<string name="equip_section">Equipment Details</string>
-	<string name="equip_ques1">Q1. Job Name</string>
-	<string name="equip_ques2">Q2. Equipment Name</string>
-	<string name="equip_ques3">Q3. Quantity</string>
-	<string name="equip_ques4">Q4. Unit Type</string>
-	<string name="equip_ques5">Q5. Remarks in case Mandatory equipment is not available</string>
-
-	<!-- General Questions -->
-					<!-- Section 1 Questions -->
-	<string name="gen_section1">Training Centre Detail\'s</string>
-	<string name="gen_ques1">Q1. Name of Training Provider</string>
-	<string name="gen_ques2">Q2. Training Centre Name</string>
-	<string name="gen_ques3">Q3. Type of Training Centre</string>
-	<string name="gen_ques4">Q4. Is it a Fixed or Mobile Training Centre?</string>
-	<string name="gen_ques5">Q5. Type of Funding</string>
-	<string name="gen_ques6">Q6. Website (if any)</string>
-	<string name="gen_ques7">Q7. Social Media Link (if any)</string>
-	<string name="gen_ques8">Q8. Are all Job-Roles Being Applied for from the Same Training Center?</string>
-	<string name="gen_ques9">Q9. Availability of Biometric Machine at the Centre</string>
-	<string name="gen_ques10">Q10. Proximity to Public Transport System</string>
-	<string name="gen_ques11">Q11. Name of Nearest Bus/Metro/Railway Station</string>
-	<string name="gen_ques12">Q12. Type of Building</string>
-	<string name="gen_ques13">Q13. Categories of Other Programs Offered by TC</string>
-	<string name="gen_ques14">Q14. Are the above Programmes NSQF aligned?</string>
-	<string name="gen_ques15">Q15. Quality of Building is as per Standards?</string>
-
-	<!-- Section 2 Questions -->
-	<string name="gen_section2">Single Point of Contact (SPOC) Details</string>
-	<string name="gen_ques16">Q16. SPOC Name</string>
-	<string name="gen_ques17">Q17. SPOC Mobile</string>
-	<string name="gen_ques18">Q18. SPOC Alternate Number</string>
-	<string name="gen_ques19">Q19. SPOC Email ID</string>
-
-	<!-- Section 3 Questions -->
-	<string name="gen_section3">Training Centre Address</string>
-	<string name="gen_ques20">Q20. Entire Centre situated at the ground floor only?</string>
-	<string name="gen_ques21">Q21. Address Line 1</string>
-	<string name="gen_ques22">Q22. Address Line 2</string>
-	<string name="gen_ques23">Q23. Street Name</string>
-	<string name="gen_ques24">Q24. Nearest Landmark</string>
-	<string name="gen_ques25">Q25. State</string>
-	<string name="gen_ques26">Q26. District</string>
-	<string name="gen_ques27">Q27. Parliamentary Constituency</string>
-	<string name="gen_ques28">Q28. Sub District: ( Taluka / Tehsil / Block)</string>
-	<string name="gen_ques29">Q29. City</string>
-	<string name="gen_ques30">Q30. Pin Code</string>
-	<string name="gen_ques31">Q31. Which Area The Centre is Situated</string>
-    <!-- General Questions ENDS-->
-
-    <!-- Training Centre Type -->
-    <array name="trainingCentreType">
-        <item>Select</item>
-        <item>Tp Owned</item>
-        <item>Proprietorship</item>
-        <item>Outsourced</item>
-        <item>Franchised</item>
-    </array>
-
-    <array name="trainingCentreLoc">
-        <item>Select</item>
-        <item>Fixed</item>
-        <item>Mobile</item>
-    </array>
-
-    <array name="typeOfFunding">
-        <item>Select</item>
-        <item>SSC Funded</item>
-        <item>NSDC Funded</item>
-        <item>Self Funded</item>
-    </array>
-
-    <array name="jobRolesApplies">
-        <item>Select</item>
-        <item>Yes</item>
-        <item>No</item>
-        <item>Some</item>
-    </array>
-
-    <array name="boimetricAvail">
-        <item>Select</item>
-        <item>Aadhar Enabled</item>
-        <item>Non Aadhar Enabled</item>
-        <item>Not Available</item>
-    </array>
-
-    <array name="proximity">
-        <item>Select</item>
-        <item>0-  3 KM</item>
-        <item>3.1 - 5 KM</item>
-        <item>5.1 - 10 KM</item>
-        <item>More than 10 KM</item>
-    </array>
-
-    <array name="buildingType">
-        <item>Select</item>
-        <item>Stand Alone Building</item>
-        <item>Industrial/Commercial Building</item>
-        <item>Educational Institute/Residential Building</item>
-    </array>
-
-    <array name="otherProgramCategories">
-        <item>Degree</item>
-        <item>Diploma</item>
-        <item>Vocational</item>
-        <item>Private</item>
-        <item>Others</item>
-        <item>N/A</item>
-    </array>
-
-	<array name="categories">
-		<item>General</item>
-		<item>Job Roles</item>
-		<item>Classrooms Details</item>
-		<item>Laboratories Details</item>
-		<item>Office Areas</item>
-		<item>Residential Facilities</item>
-		<item>Facilities</item>
-		<item>Trainer\'s Detail</item>
-		<item>Support Staff</item>
-		<item>Equipments</item>
-		<item>Upload Images</item>
-	</array>
+    <string name="Training_Reason">Reason for Discontinuing Inspection Work</string>
+    <string name="ques1">Select Training Centre</string>
+    <string name="ques2">Reason:</string>
 
     <string name="categorymenu">Categories</string>
-    <string name="institutesmenu">Institutes</string>
+    <string name="institutesmenu">Training Centre Dashboard</string>
     <string name="exitmenu">Exit</string>
+
+    <array name="arrayInstituteOwned">
+        <item>Society</item>
+        <item>Trust</item>
+        <item>Company</item>
+        <item>Individual</item>
+    </array>
+
+    <!--- Organisation Question -->
+
+    <string name="org_ques1">Name of Organization *</string>
+    <string name="org_ques2">Authorized Person *</string>
+    <string name="org_ques3">Authorized Person\'s UID</string>
+    <string name="org_ques4">Authorized Person\'s Role</string>
+    <string name="org_ques5">Mobile No *</string>
+    <string name="org_ques6">Email Address *</string>
+    <string name="org_ques7">Tel. No.(with STD)</string>
+    <string name="org_ques8">Fax No.(with STD)</string>
+    <string name="org_ques9">Postal Address *</string>
+    <string name="org_ques10">Landmark *</string>
+    <string name="org_ques11">State *</string>
+    <string name="org_ques12">District *</string>
+    <string name="org_ques13">Tehsil/Mandal</string>
+    <string name="org_ques14">Pincode *</string>
+    <string name="org_ques15">Website</string>
+
+
+    <string name="labelEmptyRemark">Please enter remark</string>
+    <string name="labelEmptyNC">Please enter reason for NC</string>
+
+
+    <string name="formHelpTxt">Click on check icon if a record is compliant or else click on Edit icon to update the correct value</string>
+<string name="help_text_institute"> Select the Institute allocated for Inspection today.
+Note : GPS and Internet on your smart phone should be turned on before using this app.</string>
+
+
+    <string name="help_text_category">Select relevant category for Inspection. Data filled by Institute will be downloaded from server on click of download icon. Once Inspection of a section is completed and submitted, it will not be editable.</string>
+
+    <array name="arraySpecialStatus">
+        <item>Women</item>
+        <item>Polytechnics</item>
+        <item>Engineering College</item>
+        <item>Minority</item>
+        <item>SCVT to NCVT</item>
+        <item>LWE</item>
+        <item>Un-Served Block</item>
+        <item>Not Applicable</item>
+    </array>
+
+    <array name="arrayInstituteLocation">
+        <item>Metro</item>
+        <item>Urban</item>
+        <item>Semi -Urban</item>
+        <item>Rural</item>
+    </array>
+
+    <array name="arraySpecialLocation">
+        <item>Jammu &amp; Kashmir</item>
+        <item>North East</item>
+        <item>Not Applicable</item>
+    </array>
+
+
+    <array name="arrauInstituteExcellence">
+        <item>Yes</item>
+        <item>No</item>
+    </array>
+    <array name="arrayEasilyAccessible">
+        <item>Yes</item>
+        <item>No</item>
+    </array>
+
+    <array name="type">
+        <item>School</item>
+        <item>College</item>
+        <item>Polytechnic</item>
+        <item>ITI</item>
+        <item>Other</item>
+    </array>
+
+
+
+    <string name="welcomeMsg1">Welcome to ITI Inspector App.</string>
+    <string name="welcomeMsg2">Please click on Continue to proceed for the Inspection</string>
+    <string name="welcomeMsg4"> Please click NEXT to proceed for Inspection of Allocated Training Centres.</string>
+    <string name="welcomeMsg3">Do you want to conduct inspection?</string>
+
+    <array name="officeInternetAvailability">
+        <item>Speed of 1 MBPS And Above</item>
+        <item>Speed of Less Than 1 MBPS &amp; Greater Than 512 KBPS</item>
+        <item>Speed of Less Than 512 KBPS</item>
+        <item>Internet Not Available</item>
+    </array>
+
+    <array name="wall">
+        <item>well plastered</item>
+        <item>coloured</item>
+        <item>distempered</item>
+        <item>white washed</item>
+        <item>None</item>
+    </array>
+
+    <string name="labelStartInspection">Are you sure you want to start Inspection of selected ITI ?</string>
+    <string name="labelCompleteInspection">Are you sure you want to mark completion of Inspection of selected ITI ?</string>
+
+
+    <!-- TECHNICAL STAFF INFORMATION -->
+    <string-array name="qualification">
+        <item>ITI</item>
+        <item>Diploma</item>
+        <item>NAC(National Apprenticeship Certificate)</item>
+        <item>NIC(National Trade Certificate)</item>
+        <item>Degree</item>
+        <item>PG Degree</item>
+    </string-array>
+
+
+
+    <string name="techQues1">Designation*</string>
+    <string name="techQues2">Name*</string>
+    <string name="techQues3">Father Name*</string>
+    <string name="techQues4">Date of Birth*(DD/MM/YYYY)</string>
+    <string name="techQues5">Joining Date*(DD/MM/YYYY)</string>
+    <string name="techQues6">Qualification*</string>
+    <string name="techQues7">Stream*</string>
+    <string name="techQues8">Graduating Year*</string>
+    <string name="techQues9">Total Year of Exp.*</string>
+    <string name="techQues10">Bank Account No.</string>
+    <string name="techQues11">Bank Name</string>
+    <string name="techQues12">Branch Name</string>
+    <string name="techQues13">Aadhar No.*</string>
+
+    //---------------------------------------<!-- INSTRUCTOR STAFF INFORMATION -->-------------------------------------------------------
+
+
+
+    <string name="insQues1">Trade Name*</string>
+    <string name="insQues2">Instructor *</string>
+    <string name="insQues3">Name*</string>
+    <string name="insQues4">Father Name*</string>
+    <string name="insQues5">Date of Birth*(DD/MM/YYYY) </string>
+    <string name="insQues6">Joining Date*(DD/MM/YYYY) </string>
+    <string name="insQues7">Qualification*</string>
+    <string name="insQues8">Graduating Year*</string>
+    <string name="insQues9">Stream*</string>
+    <string name="insQues10">Total Year of Exp.*</string>
+    <string name="insQues11">Bank Name</string>
+    <string name="insQues12">Branch Name</string>
+    <string name="insQues13">Account No.</string>
+    <string name="insQues14">Aadhar No.*</string>
+    <string name="insQues15">Salary (P.A.)</string>
+
+    //-------------------------------------------------<!-- TRADE STAFF INFORMATION -->----------------------------------------------
+
+
+    <string name="tradeQues1">Name of the Trade*</string>
+    <string name="tradeQues2">Shift1*</string>
+    <string name="tradeQues3">Shift2*</string>
+    <string name="tradeQues4">Shift3*</string>
+    <string name="tradeQues5">Total*</string>
+
+    //--------------------------------------------------<!-- LAND & BUILDING STAFF INFORMATION-->-------------------------------------
+
+    <array name="building">
+        <item>Own Building</item>
+        <item>Rented Building</item>
+    </array>
+
+    <array name="competent">
+        <item>Municipal Council</item>
+        <item>Municipal Corporation</item>
+        <item>Collector</item>
+            <item>BDO</item>
+            <item>Tehsildar</item>
+        <item>PWD Engineer</item>
+        <item>Sub-Divisional Magistrate</item>
+        <item>Other</item>
+
+    </array>
+
+
+    <array name="yes_no">
+        <item>Yes</item>
+        <item>No</item>
+    </array>
+
+    <array name="roof">
+        <item>Flat RCC Roof</item>
+        <item>Tin Shaded</item>
+    </array>
+
+    <array name="class_roof">
+        <item>Tin</item>
+        <item>False Ceiling</item>
+        <item>RCC</item>
+    </array>
+
+    <string name="landsection1">Area Details</string>
+    <string name="landsection2">Building Details</string>
+    <string name="landsection3">Site Plan Details</string>
+    <string name="landsection4">Other Details</string>
+    <string name="landsection5">Washroom Details</string>
+
+
+    <string name="landques1">Total Open Area(Sq. Mtr.) </string>
+    <string name="landques2">Total Build Up Area(Sq. Mtr.)</string>
+    <string name="landques3">Total Land(Sq. Mtr.) </string>
+    <string name="landques4">Building Type </string>
+    <string name="landques5">Date Of Occupancy (DD/MM/YYYY) </string>
+    <string name="landques6">Expiry of Agreement(DD/MM/YYYY)</string>
+    <string name="landques7">Duration of Lease (in Years)</string>
+    <string name="landques8">Is the Sitemap signed by Registered Architech and attested by Principal?</string>
+    <string name="landques9">Architech Name</string>
+    <string name="landques10">Architech Regn. No.</string>
+    <string name="landques11">Number of Floors in The Institute (Nos.)</string>
+    <string name="landques12">If Number of Floors More Than 3, Has The Institute Installed the Lift In The Institute</string>
+    <string name="landques13">Name of The Organisation Who Has Installed The Lift</string>
+    <string name="landques14">Capacity of Lift (Number of Person Can Be Accommodated in Lift)</string>
+    <string name="landques15">Safety Certificate of Lift</string>
+    <string name="landques16">Workshop Roof</string>
+    <string name="landques17">Do the dimensions and area mentioned on map match the actual area as verfied by the Assessor?</string>
+    <string name="landques18">Are all the dimensions on the Map/Blue Print/Drawing in MKS System?</string>
+
+
+    //----------------------------------------------PREMISES SHIFTING-------------------------------------------------------------
+
+     <string name="haeding1">From Location Address</string>
+     <string name="heading2">To Location Address</string>
+
+    <string name="premisesQuestion1">Is There a Change of Premises?</string>
+    <string name="premisesQuestion2">Postal Address</string>
+    <string name="premisesQuestion3">Landmark</string>
+    <string name="premisesQuestion4">State</string>
+    <string name="premisesQuestion5">District</string>
+    <string name="premisesQuestion6">Tehsil / Mandal</string>
+    <string name="premisesQuestion7">Pincode</string>
+    <string name="premisesQuestion8">Tel. No.(With STD)</string>
+    <string name="premisesQuestion9">Fax No.(With STD)</string>
+    <string name="submit_later">Yes</string>
+
+    <string-array name="photo_categories">
+        <item>General Details</item>
+        <item>Trust &amp; Organisation Details</item>
+        <item>Land And Building Details</item>
+        <item>Technical Staff</item>
+        <item>Instructor Staff</item>
+        <item>Classroom</item>
+        <item>IT LAB</item>
+        <item>Workshop</item>
+        <item>Tools below 10000 value</item>
+        <item>Tools Above 10000 value</item>
+        <item>Power Supply</item>
+    </string-array>
+
+    <string name="text_general_details">General Details</string>
+    <string name="text_Organisation">Trust &amp; Organisation Details</string>
+    <string name="text_Land">Land And Building Details</string>
+    <string name="text_Trades">Trades</string>
+    <string name="text_TechnicalStaffDocuments">Technical Staff</string>
+    <string name="text_InstructorStaffDocuments">Instructor Staff</string>
+    <string name="text_Classroom">Classroom</string>
+    <string name="text_ITLAB">IT LAB</string>
+    <string name="text_Workshop">Workshop</string>
+    <string name="toolabove100000">Tools Above 10000 value</string>
+    <string name="toolbelow100000">Tools below 10000 value</string>
+    <string name="power">Power Supply</string>
+
+
+    <string name="alert_general_saved_successfully">General Details saved successfully</string>
+    <string name="alert_org_saved_successfully">Organisation Details saved successfully</string>
+    <string name="alert_land_saved_successfully">Land And Building Of Institute Details saved successfully</string>
+    <string name="alert_tech_saved_successfully">Technical Staff Documents saved successfully</string>
+    <string name="alert_ins_saved_successfully">Instructor Staff Documents saved successfully</string>
+    <string name="alert_lab_saved_successfully">IT LAB saved successfully</string>
+    <string name="alert_power_saved_successfully">Power Supply saved successfully</string>
+    <string name="alert_toolsabove_saved_successfully">Tools Above 10000 saved successfully</string>
+    <string name="alert_toolsbelow_saved_successfully">Tools Below 10000 saved successfully</string>
+    <string name="alert_Workshop_saved_successfully">Workshop saved successfully</string>
+
+
+
+        <string name="take_picture">Take picture</string>
+
+    <string name="record">Record</string>
+    <string name="stop">Stop</string>
+    <string name="description_info">Info</string>
+    <string name="permission_request">This sample needs permission for camera and audio recording.</string>
+    <string name="camera_error">This device doesn\'t support Camera2 API.</string>
 </resources>

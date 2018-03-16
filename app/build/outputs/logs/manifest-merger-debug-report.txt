@@ -1,151 +1,548 @@
 -- Merging decision tree log ---
 manifest
-ADDED from D:\Development\GITHUB\Assessor-Android2\app\src\main\AndroidManifest.xml:2:1-64:12
+ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:2:1-179:12
+INJECTED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:2:1-179:12
+INJECTED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:2:1-179:12
+INJECTED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:2:1-179:12
+MERGED from [com.android.support:design:23.0.1] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\design-23.0.1.aar\7b06bea0f64bcffbad5faf2ee6ef8400\AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\164cfd28520fce6f5eeb2d879e611bda\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:multidex:1.0.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\multidex-1.0.0.aar\d8fc478caff3ed024e6e1b4f9db83529\AndroidManifest.xml:16:1-19:12
+MERGED from [com.android.support:recyclerview-v7:26.1.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\recyclerview-v7-26.1.0.aar\153fc91d8c0046065db64d952b20d3c4\AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:cardview-v7:26.1.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\cardview-v7-26.1.0.aar\936865389ff6ff2d821f4a2ee27323b0\AndroidManifest.xml:17:1-28:12
+MERGED from [id.zelory:compressor:1.0.2] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\compressor-1.0.2.aar\1c5399d465490c6f97bf4575829afb3d\AndroidManifest.xml:2:1-17:12
+MERGED from [com.google.firebase:firebase-appindexing:11.8.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\firebase-appindexing-11.8.0.aar\ba0873fd50b9721a436780d01454e76c\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-base:11.8.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\play-services-base-11.8.0.aar\910b6445dcecb5b3dc184b4115480e37\AndroidManifest.xml:17:1-29:12
+MERGED from [com.google.firebase:firebase-common:11.8.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\firebase-common-11.8.0.aar\8e234a5dfd88e183e28bcdf98105bcff\AndroidManifest.xml:2:1-15:12
+MERGED from [com.google.android.gms:play-services-tasks:11.8.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\play-services-tasks-11.8.0.aar\4f0e7df357251318ac092d7ada30630c\AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-basement:11.8.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\play-services-basement-11.8.0.aar\0a4044f69bdf8a46b30e8d2c21971264\AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-v4:26.1.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\5aefc23e54c12cbda48487c07e9d1c33\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\support-fragment-26.1.0.aar\dfa66f8e46073f2ca766ca1bb46ffd81\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.1.0.aar\047d520567ba98af6f02ab4fd53620de\AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\6141006d4068390607e33d15607d11b1\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\support-media-compat-26.1.0.aar\b68a98955b10d424ddf32076c9d778e5\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\0c6ec77686e592b2a62a2f8cd01f0e0f\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.1.0.aar\f96d38077e3ae704b272aab37b913161\AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-compat:26.1.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\ee7e7fcecf7ac72ad2e677400ed83eb6\AndroidManifest.xml:17:1-31:12
+MERGED from [com.google.firebase:firebase-appindexing-license:11.8.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\firebase-appindexing-license-11.8.0.aar\f2f718ee3627a4b6f97f547b843431db\AndroidManifest.xml:2:1-6:12
+MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\6e6e383e1961d9997f16d9c3a83d8804\AndroidManifest.xml:17:1-30:12
+MERGED from [com.google.android.gms:play-services-base-license:11.8.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\play-services-base-license-11.8.0.aar\fa261720492cbbd460012b00d8797823\AndroidManifest.xml:2:1-6:12
+MERGED from [com.google.android.gms:play-services-basement-license:11.8.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\play-services-basement-license-11.8.0.aar\349032545bda5588205ba9057319d0f3\AndroidManifest.xml:2:1-6:12
+MERGED from [com.google.firebase:firebase-common-license:11.8.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\firebase-common-license-11.8.0.aar\4e3b58b625c29e970c2ebf55e0461a70\AndroidManifest.xml:2:1-6:12
+MERGED from [com.google.android.gms:play-services-tasks-license:11.8.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\play-services-tasks-license-11.8.0.aar\21ae991ac6695ac6db3f982145fe4921\AndroidManifest.xml:2:1-6:12
+INJECTED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:2:1-179:12
+INJECTED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:2:1-179:12
+INJECTED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:2:1-179:12
 	package
-		ADDED from D:\Development\GITHUB\Assessor-Android2\app\src\main\AndroidManifest.xml:3:5-26
-		INJECTED from D:\Development\GITHUB\Assessor-Android2\app\src\main\AndroidManifest.xml
-		INJECTED from D:\Development\GITHUB\Assessor-Android2\app\src\main\AndroidManifest.xml
+		ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:3:5-26
+		INJECTED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml
+		INJECTED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml
 	android:versionName
-		ADDED from D:\Development\GITHUB\Assessor-Android2\app\src\main\AndroidManifest.xml:5:5-30
-		INJECTED from D:\Development\GITHUB\Assessor-Android2\app\src\main\AndroidManifest.xml
-		INJECTED from D:\Development\GITHUB\Assessor-Android2\app\src\main\AndroidManifest.xml
-	android:versionCode
-		ADDED from D:\Development\GITHUB\Assessor-Android2\app\src\main\AndroidManifest.xml:4:5-28
-		INJECTED from D:\Development\GITHUB\Assessor-Android2\app\src\main\AndroidManifest.xml
-		INJECTED from D:\Development\GITHUB\Assessor-Android2\app\src\main\AndroidManifest.xml
+		ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:5:5-30
+		INJECTED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml
+		INJECTED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from D:\Development\GITHUB\Assessor-Android2\app\src\main\AndroidManifest.xml:2:11-69
+		ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:2:11-69
+	android:versionCode
+		ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:4:5-28
+		INJECTED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml
+		INJECTED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml
 uses-sdk
-ADDED from D:\Development\GITHUB\Assessor-Android2\app\src\main\AndroidManifest.xml:7:5-9:41
-MERGED from [com.android.support:appcompat-v7:23.0.1] D:\Development\GITHUB\Assessor-Android2\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.0.1\AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:support-v4:23.0.1] D:\Development\GITHUB\Assessor-Android2\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:design:23.0.1] D:\Development\GITHUB\Assessor-Android2\app\build\intermediates\exploded-aar\com.android.support\design\23.0.1\AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:support-v4:23.0.1] D:\Development\GITHUB\Assessor-Android2\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:appcompat-v7:23.0.1] D:\Development\GITHUB\Assessor-Android2\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.0.1\AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:support-v4:23.0.1] D:\Development\GITHUB\Assessor-Android2\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:multidex:1.0.0] D:\Development\GITHUB\Assessor-Android2\app\build\intermediates\exploded-aar\com.android.support\multidex\1.0.0\AndroidManifest.xml:18:5-42
-MERGED from [com.android.support:recyclerview-v7:23.0.1] D:\Development\GITHUB\Assessor-Android2\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.0.1\AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:support-v4:23.0.1] D:\Development\GITHUB\Assessor-Android2\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:cardview-v7:23.0.1] D:\Development\GITHUB\Assessor-Android2\app\build\intermediates\exploded-aar\com.android.support\cardview-v7\23.0.1\AndroidManifest.xml:20:5-43
+ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:7:5-9:41
+INJECTED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:7:5-9:41
+INJECTED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:design:23.0.1] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\design-23.0.1.aar\7b06bea0f64bcffbad5faf2ee6ef8400\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:design:23.0.1] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\design-23.0.1.aar\7b06bea0f64bcffbad5faf2ee6ef8400\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\164cfd28520fce6f5eeb2d879e611bda\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\164cfd28520fce6f5eeb2d879e611bda\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:multidex:1.0.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\multidex-1.0.0.aar\d8fc478caff3ed024e6e1b4f9db83529\AndroidManifest.xml:18:5-42
+MERGED from [com.android.support:multidex:1.0.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\multidex-1.0.0.aar\d8fc478caff3ed024e6e1b4f9db83529\AndroidManifest.xml:18:5-42
+MERGED from [com.android.support:recyclerview-v7:26.1.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\recyclerview-v7-26.1.0.aar\153fc91d8c0046065db64d952b20d3c4\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:26.1.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\recyclerview-v7-26.1.0.aar\153fc91d8c0046065db64d952b20d3c4\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:26.1.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\cardview-v7-26.1.0.aar\936865389ff6ff2d821f4a2ee27323b0\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:26.1.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\cardview-v7-26.1.0.aar\936865389ff6ff2d821f4a2ee27323b0\AndroidManifest.xml:20:5-44
+MERGED from [id.zelory:compressor:1.0.2] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\compressor-1.0.2.aar\1c5399d465490c6f97bf4575829afb3d\AndroidManifest.xml:7:5-9:41
+MERGED from [id.zelory:compressor:1.0.2] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\compressor-1.0.2.aar\1c5399d465490c6f97bf4575829afb3d\AndroidManifest.xml:7:5-9:41
+MERGED from [com.google.firebase:firebase-appindexing:11.8.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\firebase-appindexing-11.8.0.aar\ba0873fd50b9721a436780d01454e76c\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-appindexing:11.8.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\firebase-appindexing-11.8.0.aar\ba0873fd50b9721a436780d01454e76c\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-base:11.8.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\play-services-base-11.8.0.aar\910b6445dcecb5b3dc184b4115480e37\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-base:11.8.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\play-services-base-11.8.0.aar\910b6445dcecb5b3dc184b4115480e37\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-common:11.8.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\firebase-common-11.8.0.aar\8e234a5dfd88e183e28bcdf98105bcff\AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-common:11.8.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\firebase-common-11.8.0.aar\8e234a5dfd88e183e28bcdf98105bcff\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-tasks:11.8.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\play-services-tasks-11.8.0.aar\4f0e7df357251318ac092d7ada30630c\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-tasks:11.8.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\play-services-tasks-11.8.0.aar\4f0e7df357251318ac092d7ada30630c\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-basement:11.8.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\play-services-basement-11.8.0.aar\0a4044f69bdf8a46b30e8d2c21971264\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-basement:11.8.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\play-services-basement-11.8.0.aar\0a4044f69bdf8a46b30e8d2c21971264\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:26.1.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\5aefc23e54c12cbda48487c07e9d1c33\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-v4:26.1.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\5aefc23e54c12cbda48487c07e9d1c33\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\support-fragment-26.1.0.aar\dfa66f8e46073f2ca766ca1bb46ffd81\AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\support-fragment-26.1.0.aar\dfa66f8e46073f2ca766ca1bb46ffd81\AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.1.0.aar\047d520567ba98af6f02ab4fd53620de\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.1.0.aar\047d520567ba98af6f02ab4fd53620de\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\6141006d4068390607e33d15607d11b1\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\6141006d4068390607e33d15607d11b1\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\support-media-compat-26.1.0.aar\b68a98955b10d424ddf32076c9d778e5\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\support-media-compat-26.1.0.aar\b68a98955b10d424ddf32076c9d778e5\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\0c6ec77686e592b2a62a2f8cd01f0e0f\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\0c6ec77686e592b2a62a2f8cd01f0e0f\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.1.0.aar\f96d38077e3ae704b272aab37b913161\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.1.0.aar\f96d38077e3ae704b272aab37b913161\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:26.1.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\ee7e7fcecf7ac72ad2e677400ed83eb6\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:26.1.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\ee7e7fcecf7ac72ad2e677400ed83eb6\AndroidManifest.xml:21:5-23:58
+MERGED from [com.google.firebase:firebase-appindexing-license:11.8.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\firebase-appindexing-license-11.8.0.aar\f2f718ee3627a4b6f97f547b843431db\AndroidManifest.xml:4:5-43
+MERGED from [com.google.firebase:firebase-appindexing-license:11.8.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\firebase-appindexing-license-11.8.0.aar\f2f718ee3627a4b6f97f547b843431db\AndroidManifest.xml:4:5-43
+MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\6e6e383e1961d9997f16d9c3a83d8804\AndroidManifest.xml:20:5-22:41
+MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\6e6e383e1961d9997f16d9c3a83d8804\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.gms:play-services-base-license:11.8.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\play-services-base-license-11.8.0.aar\fa261720492cbbd460012b00d8797823\AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-base-license:11.8.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\play-services-base-license-11.8.0.aar\fa261720492cbbd460012b00d8797823\AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-basement-license:11.8.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\play-services-basement-license-11.8.0.aar\349032545bda5588205ba9057319d0f3\AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-basement-license:11.8.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\play-services-basement-license-11.8.0.aar\349032545bda5588205ba9057319d0f3\AndroidManifest.xml:4:5-43
+MERGED from [com.google.firebase:firebase-common-license:11.8.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\firebase-common-license-11.8.0.aar\4e3b58b625c29e970c2ebf55e0461a70\AndroidManifest.xml:4:5-43
+MERGED from [com.google.firebase:firebase-common-license:11.8.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\firebase-common-license-11.8.0.aar\4e3b58b625c29e970c2ebf55e0461a70\AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-tasks-license:11.8.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\play-services-tasks-license-11.8.0.aar\21ae991ac6695ac6db3f982145fe4921\AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-tasks-license:11.8.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\play-services-tasks-license-11.8.0.aar\21ae991ac6695ac6db3f982145fe4921\AndroidManifest.xml:4:5-43
+INJECTED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:7:5-9:41
+INJECTED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:7:5-9:41
+	tools:overrideLibrary
+		ADDED from [com.android.support:appcompat-v7:26.1.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\164cfd28520fce6f5eeb2d879e611bda\AndroidManifest.xml:23:9-75
 	android:targetSdkVersion
-		ADDED from D:\Development\GITHUB\Assessor-Android2\app\src\main\AndroidManifest.xml:9:9-38
-		INJECTED from D:\Development\GITHUB\Assessor-Android2\app\src\main\AndroidManifest.xml
-		INJECTED from D:\Development\GITHUB\Assessor-Android2\app\src\main\AndroidManifest.xml
+		ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:9:9-38
+		INJECTED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml
+		INJECTED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		ADDED from D:\Development\GITHUB\Assessor-Android2\app\src\main\AndroidManifest.xml:8:9-35
-		INJECTED from D:\Development\GITHUB\Assessor-Android2\app\src\main\AndroidManifest.xml
-		INJECTED from D:\Development\GITHUB\Assessor-Android2\app\src\main\AndroidManifest.xml
+		ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:8:9-35
+		INJECTED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml
+		INJECTED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml
 uses-permission#android.permission.INTERNET
-ADDED from D:\Development\GITHUB\Assessor-Android2\app\src\main\AndroidManifest.xml:11:5-67
+ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:11:5-67
 	android:name
-		ADDED from D:\Development\GITHUB\Assessor-Android2\app\src\main\AndroidManifest.xml:11:22-64
+		ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:11:22-64
 uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from D:\Development\GITHUB\Assessor-Android2\app\src\main\AndroidManifest.xml:12:5-79
+ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:12:5-79
 	android:name
-		ADDED from D:\Development\GITHUB\Assessor-Android2\app\src\main\AndroidManifest.xml:12:22-76
+		ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:12:22-76
 uses-permission#android.permission.ACCESS_WIFI_STATE
-ADDED from D:\Development\GITHUB\Assessor-Android2\app\src\main\AndroidManifest.xml:13:5-76
+ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:13:5-76
 	android:name
-		ADDED from D:\Development\GITHUB\Assessor-Android2\app\src\main\AndroidManifest.xml:13:22-73
+		ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:13:22-73
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-ADDED from D:\Development\GITHUB\Assessor-Android2\app\src\main\AndroidManifest.xml:14:5-81
+ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:14:5-81
 	android:name
-		ADDED from D:\Development\GITHUB\Assessor-Android2\app\src\main\AndroidManifest.xml:14:22-78
+		ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:14:22-78
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:15:5-79
+	android:name
+		ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:15:22-76
+uses-permission#android.permission.ACCESS_COARSE_LOCATION
+ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:16:5-81
+	android:name
+		ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:16:22-78
+uses-permission#android.permission.READ_PHONE_STATE
+ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:21:5-75
+	android:name
+		ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:21:22-72
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:22:5-80
+	android:name
+		ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:22:22-77
+uses-permission#android.permission.CAMERA
+ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:25:5-64
+	android:name
+		ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:25:22-62
+uses-permission#android.permission.RECORD_AUDIO
+ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:27:5-71
+	android:name
+		ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:27:22-68
+uses-feature#android.hardware.camera
+ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:28:5-60
+	android:name
+		ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:28:19-57
+uses-feature#android.hardware.camera.autofocus
+ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:29:5-70
+	android:name
+		ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:29:19-67
+uses-feature#android.hardware.camera2.full
+ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:30:5-66
+	android:name
+		ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:30:19-63
 application
-ADDED from D:\Development\GITHUB\Assessor-Android2\app\src\main\AndroidManifest.xml:16:5-62:19
-MERGED from [com.android.support:appcompat-v7:23.0.1] D:\Development\GITHUB\Assessor-Android2\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.0.1\AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-v4:23.0.1] D:\Development\GITHUB\Assessor-Android2\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:design:23.0.1] D:\Development\GITHUB\Assessor-Android2\app\build\intermediates\exploded-aar\com.android.support\design\23.0.1\AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-v4:23.0.1] D:\Development\GITHUB\Assessor-Android2\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:appcompat-v7:23.0.1] D:\Development\GITHUB\Assessor-Android2\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.0.1\AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-v4:23.0.1] D:\Development\GITHUB\Assessor-Android2\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-v4:23.0.1] D:\Development\GITHUB\Assessor-Android2\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:cardview-v7:23.0.1] D:\Development\GITHUB\Assessor-Android2\app\build\intermediates\exploded-aar\com.android.support\cardview-v7\23.0.1\AndroidManifest.xml:22:5-20
+ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:31:5-177:19
+MERGED from [com.android.support:design:23.0.1] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\design-23.0.1.aar\7b06bea0f64bcffbad5faf2ee6ef8400\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:design:23.0.1] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\design-23.0.1.aar\7b06bea0f64bcffbad5faf2ee6ef8400\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\164cfd28520fce6f5eeb2d879e611bda\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\164cfd28520fce6f5eeb2d879e611bda\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:recyclerview-v7:26.1.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\recyclerview-v7-26.1.0.aar\153fc91d8c0046065db64d952b20d3c4\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:recyclerview-v7:26.1.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\recyclerview-v7-26.1.0.aar\153fc91d8c0046065db64d952b20d3c4\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:cardview-v7:26.1.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\cardview-v7-26.1.0.aar\936865389ff6ff2d821f4a2ee27323b0\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:cardview-v7:26.1.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\cardview-v7-26.1.0.aar\936865389ff6ff2d821f4a2ee27323b0\AndroidManifest.xml:22:5-26:19
+MERGED from [id.zelory:compressor:1.0.2] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\compressor-1.0.2.aar\1c5399d465490c6f97bf4575829afb3d\AndroidManifest.xml:11:5-15:19
+MERGED from [id.zelory:compressor:1.0.2] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\compressor-1.0.2.aar\1c5399d465490c6f97bf4575829afb3d\AndroidManifest.xml:11:5-15:19
+MERGED from [com.google.firebase:firebase-appindexing:11.8.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\firebase-appindexing-11.8.0.aar\ba0873fd50b9721a436780d01454e76c\AndroidManifest.xml:22:5-20
+MERGED from [com.google.firebase:firebase-appindexing:11.8.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\firebase-appindexing-11.8.0.aar\ba0873fd50b9721a436780d01454e76c\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-base:11.8.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\play-services-base-11.8.0.aar\910b6445dcecb5b3dc184b4115480e37\AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-base:11.8.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\play-services-base-11.8.0.aar\910b6445dcecb5b3dc184b4115480e37\AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.firebase:firebase-common:11.8.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\firebase-common-11.8.0.aar\8e234a5dfd88e183e28bcdf98105bcff\AndroidManifest.xml:7:5-13:19
+MERGED from [com.google.firebase:firebase-common:11.8.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\firebase-common-11.8.0.aar\8e234a5dfd88e183e28bcdf98105bcff\AndroidManifest.xml:7:5-13:19
+MERGED from [com.google.android.gms:play-services-tasks:11.8.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\play-services-tasks-11.8.0.aar\4f0e7df357251318ac092d7ada30630c\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-tasks:11.8.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\play-services-tasks-11.8.0.aar\4f0e7df357251318ac092d7ada30630c\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-basement:11.8.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\play-services-basement-11.8.0.aar\0a4044f69bdf8a46b30e8d2c21971264\AndroidManifest.xml:22:5-26:19
+MERGED from [com.google.android.gms:play-services-basement:11.8.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\play-services-basement-11.8.0.aar\0a4044f69bdf8a46b30e8d2c21971264\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-v4:26.1.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\5aefc23e54c12cbda48487c07e9d1c33\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-v4:26.1.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\5aefc23e54c12cbda48487c07e9d1c33\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\support-fragment-26.1.0.aar\dfa66f8e46073f2ca766ca1bb46ffd81\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\support-fragment-26.1.0.aar\dfa66f8e46073f2ca766ca1bb46ffd81\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.1.0.aar\047d520567ba98af6f02ab4fd53620de\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.1.0.aar\047d520567ba98af6f02ab4fd53620de\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\6141006d4068390607e33d15607d11b1\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\6141006d4068390607e33d15607d11b1\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\support-media-compat-26.1.0.aar\b68a98955b10d424ddf32076c9d778e5\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\support-media-compat-26.1.0.aar\b68a98955b10d424ddf32076c9d778e5\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\0c6ec77686e592b2a62a2f8cd01f0e0f\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\0c6ec77686e592b2a62a2f8cd01f0e0f\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.1.0.aar\f96d38077e3ae704b272aab37b913161\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.1.0.aar\f96d38077e3ae704b272aab37b913161\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-compat:26.1.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\ee7e7fcecf7ac72ad2e677400ed83eb6\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-compat:26.1.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\ee7e7fcecf7ac72ad2e677400ed83eb6\AndroidManifest.xml:25:5-29:19
+MERGED from [com.google.firebase:firebase-appindexing-license:11.8.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\firebase-appindexing-license-11.8.0.aar\f2f718ee3627a4b6f97f547b843431db\AndroidManifest.xml:5:5-20
+MERGED from [com.google.firebase:firebase-appindexing-license:11.8.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\firebase-appindexing-license-11.8.0.aar\f2f718ee3627a4b6f97f547b843431db\AndroidManifest.xml:5:5-20
+MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\6e6e383e1961d9997f16d9c3a83d8804\AndroidManifest.xml:24:5-28:19
+MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\6e6e383e1961d9997f16d9c3a83d8804\AndroidManifest.xml:24:5-28:19
+MERGED from [com.google.android.gms:play-services-base-license:11.8.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\play-services-base-license-11.8.0.aar\fa261720492cbbd460012b00d8797823\AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-base-license:11.8.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\play-services-base-license-11.8.0.aar\fa261720492cbbd460012b00d8797823\AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-basement-license:11.8.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\play-services-basement-license-11.8.0.aar\349032545bda5588205ba9057319d0f3\AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-basement-license:11.8.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\play-services-basement-license-11.8.0.aar\349032545bda5588205ba9057319d0f3\AndroidManifest.xml:5:5-20
+MERGED from [com.google.firebase:firebase-common-license:11.8.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\firebase-common-license-11.8.0.aar\4e3b58b625c29e970c2ebf55e0461a70\AndroidManifest.xml:5:5-20
+MERGED from [com.google.firebase:firebase-common-license:11.8.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\firebase-common-license-11.8.0.aar\4e3b58b625c29e970c2ebf55e0461a70\AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-tasks-license:11.8.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\play-services-tasks-license-11.8.0.aar\21ae991ac6695ac6db3f982145fe4921\AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-tasks-license:11.8.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\play-services-tasks-license-11.8.0.aar\21ae991ac6695ac6db3f982145fe4921\AndroidManifest.xml:5:5-20
+	android:supportsRtl
+		ADDED from [id.zelory:compressor:1.0.2] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\compressor-1.0.2.aar\1c5399d465490c6f97bf4575829afb3d\AndroidManifest.xml:14:9-35
 	android:label
-		ADDED from D:\Development\GITHUB\Assessor-Android2\app\src\main\AndroidManifest.xml:19:9-41
-	android:allowBackup
-		ADDED from D:\Development\GITHUB\Assessor-Android2\app\src\main\AndroidManifest.xml:17:9-35
+		ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:34:9-41
 	android:icon
-		ADDED from D:\Development\GITHUB\Assessor-Android2\app\src\main\AndroidManifest.xml:18:9-45
+		ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:33:9-45
+	android:allowBackup
+		ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:32:9-35
 	android:theme
-		ADDED from D:\Development\GITHUB\Assessor-Android2\app\src\main\AndroidManifest.xml:20:9-40
+		ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:35:9-40
 activity#com.ss.nsdc.main.Login
-ADDED from D:\Development\GITHUB\Assessor-Android2\app\src\main\AndroidManifest.xml:21:9-30:20
+ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:36:9-45:20
 	android:screenOrientation
-		ADDED from D:\Development\GITHUB\Assessor-Android2\app\src\main\AndroidManifest.xml:24:13-49
+		ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:39:13-49
 	android:label
-		ADDED from D:\Development\GITHUB\Assessor-Android2\app\src\main\AndroidManifest.xml:23:13-45
+		ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:38:13-45
 	android:name
-		ADDED from D:\Development\GITHUB\Assessor-Android2\app\src\main\AndroidManifest.xml:22:13-39
+		ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:37:13-39
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from D:\Development\GITHUB\Assessor-Android2\app\src\main\AndroidManifest.xml:25:13-29:29
+ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:40:13-44:29
 action#android.intent.action.MAIN
-ADDED from D:\Development\GITHUB\Assessor-Android2\app\src\main\AndroidManifest.xml:26:17-69
+ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:41:17-69
 	android:name
-		ADDED from D:\Development\GITHUB\Assessor-Android2\app\src\main\AndroidManifest.xml:26:25-66
+		ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:41:25-66
 category#android.intent.category.LAUNCHER
-ADDED from D:\Development\GITHUB\Assessor-Android2\app\src\main\AndroidManifest.xml:28:17-77
+ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:43:17-77
 	android:name
-		ADDED from D:\Development\GITHUB\Assessor-Android2\app\src\main\AndroidManifest.xml:28:27-74
-activity#com.ss.nsdc.main.Institute
-ADDED from D:\Development\GITHUB\Assessor-Android2\app\src\main\AndroidManifest.xml:32:9-52
-	android:name
-		ADDED from D:\Development\GITHUB\Assessor-Android2\app\src\main\AndroidManifest.xml:32:19-49
-activity#com.ss.nsdc.main.InstituteActivity
-ADDED from D:\Development\GITHUB\Assessor-Android2\app\src\main\AndroidManifest.xml:33:9-36:52
-	android:screenOrientation
-		ADDED from D:\Development\GITHUB\Assessor-Android2\app\src\main\AndroidManifest.xml:36:13-49
-	android:label
-		ADDED from D:\Development\GITHUB\Assessor-Android2\app\src\main\AndroidManifest.xml:35:13-61
-	android:name
-		ADDED from D:\Development\GITHUB\Assessor-Android2\app\src\main\AndroidManifest.xml:34:13-51
+		ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:43:27-74
 activity#com.ss.nsdc.main.CategoryActivity
-ADDED from D:\Development\GITHUB\Assessor-Android2\app\src\main\AndroidManifest.xml:37:9-40:52
+ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:46:9-49:52
 	android:screenOrientation
-		ADDED from D:\Development\GITHUB\Assessor-Android2\app\src\main\AndroidManifest.xml:40:13-49
+		ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:49:13-49
 	android:label
-		ADDED from D:\Development\GITHUB\Assessor-Android2\app\src\main\AndroidManifest.xml:39:13-60
+		ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:48:13-60
 	android:name
-		ADDED from D:\Development\GITHUB\Assessor-Android2\app\src\main\AndroidManifest.xml:38:13-50
-activity#com.ss.nsdc.main.SubCategoryActivity
-ADDED from D:\Development\GITHUB\Assessor-Android2\app\src\main\AndroidManifest.xml:41:9-44:52
-	android:screenOrientation
-		ADDED from D:\Development\GITHUB\Assessor-Android2\app\src\main\AndroidManifest.xml:44:13-49
-	android:label
-		ADDED from D:\Development\GITHUB\Assessor-Android2\app\src\main\AndroidManifest.xml:43:13-64
-	android:name
-		ADDED from D:\Development\GITHUB\Assessor-Android2\app\src\main\AndroidManifest.xml:42:13-53
-activity#com.ss.nsdc.main.NavigationDrawerActivity
-ADDED from D:\Development\GITHUB\Assessor-Android2\app\src\main\AndroidManifest.xml:45:9-48:52
-	android:screenOrientation
-		ADDED from D:\Development\GITHUB\Assessor-Android2\app\src\main\AndroidManifest.xml:48:13-49
-	android:label
-		ADDED from D:\Development\GITHUB\Assessor-Android2\app\src\main\AndroidManifest.xml:47:13-64
-	android:name
-		ADDED from D:\Development\GITHUB\Assessor-Android2\app\src\main\AndroidManifest.xml:46:13-58
+		ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:47:13-50
 activity#com.ss.nsdc.main.FormActivity
-ADDED from D:\Development\GITHUB\Assessor-Android2\app\src\main\AndroidManifest.xml:49:9-53:56
+ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:51:9-53:51
 	android:screenOrientation
-		ADDED from D:\Development\GITHUB\Assessor-Android2\app\src\main\AndroidManifest.xml:52:13-49
+		ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:53:13-49
 	android:label
-		ADDED from D:\Development\GITHUB\Assessor-Android2\app\src\main\AndroidManifest.xml:51:13-56
-	android:windowSoftInputMode
-		ADDED from D:\Development\GITHUB\Assessor-Android2\app\src\main\AndroidManifest.xml:53:13-54
+		ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:52:13-41
 	android:name
-		ADDED from D:\Development\GITHUB\Assessor-Android2\app\src\main\AndroidManifest.xml:50:13-57
-activity#com.ss.nsdc.main.SubCategoryClassActivity
-ADDED from D:\Development\GITHUB\Assessor-Android2\app\src\main\AndroidManifest.xml:54:10-57:52
+		ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:51:19-52
+activity#com.ss.nsdc.main.SubCategoryActivity
+ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:54:9-56:51
 	android:screenOrientation
-		ADDED from D:\Development\GITHUB\Assessor-Android2\app\src\main\AndroidManifest.xml:57:13-49
+		ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:56:13-49
 	android:label
-		ADDED from D:\Development\GITHUB\Assessor-Android2\app\src\main\AndroidManifest.xml:56:13-64
+		ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:55:13-48
 	android:name
-		ADDED from D:\Development\GITHUB\Assessor-Android2\app\src\main\AndroidManifest.xml:55:13-58
-activity#com.ss.nsdc.fragment.ClassroomFragment
-ADDED from D:\Development\GITHUB\Assessor-Android2\app\src\main\AndroidManifest.xml:59:9-64
+		ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:54:19-59
+activity#com.ss.nsdc.main.SubCategoryAccommodationActivity
+ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:57:9-59:51
+	android:screenOrientation
+		ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:59:13-49
+	android:label
+		ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:58:13-53
 	android:name
-		ADDED from D:\Development\GITHUB\Assessor-Android2\app\src\main\AndroidManifest.xml:59:19-61
-activity#com.ss.nsdc.fragment.LabFragment
-ADDED from D:\Development\GITHUB\Assessor-Android2\app\src\main\AndroidManifest.xml:61:9-58
+		ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:57:19-72
+activity#com.ss.nsdc.main.SubCategoryITLabActivity
+ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:61:9-63:51
+	android:screenOrientation
+		ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:63:13-49
+	android:label
+		ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:62:13-53
 	android:name
-		ADDED from D:\Development\GITHUB\Assessor-Android2\app\src\main\AndroidManifest.xml:61:19-55
+		ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:61:19-64
+activity#com.ss.nsdc.main.SubCategoryTradeWiseActivity
+ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:65:9-67:51
+	android:screenOrientation
+		ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:67:13-49
+	android:label
+		ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:66:13-53
+	android:name
+		ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:65:19-68
+activity#com.ss.nsdc.main.PhotoCategoriesActivity
+ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:69:9-71:51
+	android:screenOrientation
+		ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:71:13-49
+	android:label
+		ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:70:13-52
+	android:name
+		ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:69:19-63
+activity#com.ss.nsdc.main.FullScreenImageViewActivity
+ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:74:9-76:51
+	android:screenOrientation
+		ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:76:13-49
+	android:label
+		ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:75:13-56
+	android:name
+		ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:74:19-67
+activity#com.ss.nsdc.main.InstituteActivity
+ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:78:9-80:51
+	android:screenOrientation
+		ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:80:13-49
+	android:label
+		ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:79:13-46
+	android:name
+		ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:78:19-57
+activity#com.ss.nsdc.main.GeneralDetailImageActivity
+ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:82:9-84:51
+	android:screenOrientation
+		ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:84:13-49
+	android:label
+		ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:83:13-55
+	android:name
+		ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:82:19-66
+activity#com.ss.nsdc.main.OrganisationImageActivity
+ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:86:9-88:51
+	android:screenOrientation
+		ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:88:13-49
+	android:label
+		ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:87:13-54
+	android:name
+		ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:86:19-65
+activity#com.ss.nsdc.main.LandBuildingDetails
+ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:90:9-92:51
+	android:screenOrientation
+		ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:92:13-49
+	android:label
+		ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:91:13-48
+	android:name
+		ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:90:19-59
+activity#com.ss.nsdc.main.TechnicalImageActivity
+ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:94:9-96:51
+	android:screenOrientation
+		ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:96:13-49
+	android:label
+		ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:95:13-51
+	android:name
+		ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:94:19-62
+activity#com.ss.nsdc.main.InstructorImageActivity
+ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:98:9-100:51
+	android:screenOrientation
+		ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:100:13-49
+	android:label
+		ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:99:13-52
+	android:name
+		ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:98:19-63
+activity#com.ss.nsdc.main.LabImageActivity
+ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:102:9-104:51
+	android:screenOrientation
+		ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:104:13-49
+	android:label
+		ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:103:13-45
+	android:name
+		ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:102:19-56
+activity#com.ss.nsdc.main.PowerSupplyImageActivity
+ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:105:9-107:51
+	android:screenOrientation
+		ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:107:13-49
+	android:label
+		ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:106:13-53
+	android:name
+		ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:105:19-64
+activity#com.ss.nsdc.main.VideoSectionActivity
+ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:109:9-111:51
+	android:screenOrientation
+		ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:111:13-49
+	android:label
+		ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:110:13-49
+	android:name
+		ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:109:19-60
+activity#com.ss.nsdc.main.VideoListActivity
+ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:113:9-115:51
+	android:screenOrientation
+		ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:115:13-49
+	android:label
+		ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:114:13-49
+	android:name
+		ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:113:19-57
+activity#com.ss.nsdc.main.ClassroomImageActivity
+ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:117:9-119:51
+	android:screenOrientation
+		ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:119:13-49
+	android:label
+		ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:118:13-51
+	android:name
+		ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:117:19-62
+activity#com.ss.nsdc.main.ToolsBelowActivity
+ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:121:9-123:51
+	android:screenOrientation
+		ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:123:13-49
+	android:label
+		ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:122:13-47
+	android:name
+		ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:121:19-58
+activity#com.ss.nsdc.main.ToolAboveImageActivity
+ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:125:9-127:51
+	android:screenOrientation
+		ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:127:13-49
+	android:label
+		ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:126:13-51
+	android:name
+		ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:125:19-62
+activity#com.ss.nsdc.main.WorkshopImageActivity
+ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:129:9-131:51
+	android:screenOrientation
+		ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:131:13-49
+	android:label
+		ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:130:13-50
+	android:name
+		ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:129:19-61
+activity#com.ss.nsdc.main.VideoCaptureActivity
+ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:133:9-135:51
+	android:screenOrientation
+		ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:135:13-49
+	android:label
+		ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:134:13-50
+	android:name
+		ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:133:19-60
+activity#com.ss.nsdc.main.VideoCaptureNewActivity
+ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:137:9-139:51
+	android:screenOrientation
+		ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:139:13-49
+	android:label
+		ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:138:13-50
+	android:name
+		ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:137:19-63
+activity#com.ss.nsdc.main.VideoCaptureFragmentActivity
+ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:141:9-143:51
+	android:screenOrientation
+		ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:143:13-49
+	android:label
+		ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:142:13-50
+	android:name
+		ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:141:19-68
+activity#com.ss.nsdc.main.SubCategoryToolsAbove
+ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:145:9-147:51
+	android:screenOrientation
+		ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:147:13-49
+	android:label
+		ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:146:13-50
+	android:name
+		ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:145:19-61
+activity#com.ss.nsdc.main.Camera2VideoFragment
+ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:149:3-151:51
+	android:screenOrientation
+		ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:151:13-49
+	android:label
+		ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:150:13-50
+	android:name
+		ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:149:13-54
+activity#com.ss.nsdc.activity.GeneralCategoryActivity
+ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:153:9-155:52
+	android:screenOrientation
+		ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:155:13-49
+	android:label
+		ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:154:13-45
+	android:name
+		ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:153:19-67
+activity#com.ss.nsdc.activity.AccommodationActivity
+ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:157:9-158:52
+	android:screenOrientation
+		ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:158:13-49
+	android:name
+		ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:157:19-65
+activity#com.ss.nsdc.activity.DocumentationActivity
+ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:160:9-161:52
+	android:screenOrientation
+		ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:161:13-49
+	android:name
+		ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:160:19-65
+activity#com.ss.nsdc.activity.EquipmentActivity
+ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:163:9-164:52
+	android:screenOrientation
+		ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:164:13-49
+	android:name
+		ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:163:19-61
+activity#com.ss.nsdc.main.WelcomeActivity
+ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:167:9-58
+	android:name
+		ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:167:19-55
+meta-data#com.google.android.gms.version
+ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:169:9-171:69
+MERGED from [com.google.android.gms:play-services-basement:11.8.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\play-services-basement-11.8.0.aar\0a4044f69bdf8a46b30e8d2c21971264\AndroidManifest.xml:23:9-25:69
+MERGED from [com.google.android.gms:play-services-basement:11.8.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\play-services-basement-11.8.0.aar\0a4044f69bdf8a46b30e8d2c21971264\AndroidManifest.xml:23:9-25:69
+	android:value
+		ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:171:13-66
+	android:name
+		ADDED from D:\Ankit_project\ITI InspectorApp\ITI Inspector App\app\src\main\AndroidManifest.xml:170:13-58
+meta-data#android.support.VERSION
+ADDED from [com.android.support:appcompat-v7:26.1.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\164cfd28520fce6f5eeb2d879e611bda\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:recyclerview-v7:26.1.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\recyclerview-v7-26.1.0.aar\153fc91d8c0046065db64d952b20d3c4\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:recyclerview-v7:26.1.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\recyclerview-v7-26.1.0.aar\153fc91d8c0046065db64d952b20d3c4\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:cardview-v7:26.1.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\cardview-v7-26.1.0.aar\936865389ff6ff2d821f4a2ee27323b0\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:cardview-v7:26.1.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\cardview-v7-26.1.0.aar\936865389ff6ff2d821f4a2ee27323b0\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-v4:26.1.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\5aefc23e54c12cbda48487c07e9d1c33\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-v4:26.1.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\5aefc23e54c12cbda48487c07e9d1c33\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\support-fragment-26.1.0.aar\dfa66f8e46073f2ca766ca1bb46ffd81\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\support-fragment-26.1.0.aar\dfa66f8e46073f2ca766ca1bb46ffd81\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.1.0.aar\047d520567ba98af6f02ab4fd53620de\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.1.0.aar\047d520567ba98af6f02ab4fd53620de\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\6141006d4068390607e33d15607d11b1\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\6141006d4068390607e33d15607d11b1\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\support-media-compat-26.1.0.aar\b68a98955b10d424ddf32076c9d778e5\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\support-media-compat-26.1.0.aar\b68a98955b10d424ddf32076c9d778e5\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\0c6ec77686e592b2a62a2f8cd01f0e0f\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\0c6ec77686e592b2a62a2f8cd01f0e0f\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.1.0.aar\f96d38077e3ae704b272aab37b913161\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.1.0.aar\f96d38077e3ae704b272aab37b913161\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-compat:26.1.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\ee7e7fcecf7ac72ad2e677400ed83eb6\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-compat:26.1.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\ee7e7fcecf7ac72ad2e677400ed83eb6\AndroidManifest.xml:26:9-28:38
+	android:value
+		ADDED from [com.android.support:appcompat-v7:26.1.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\164cfd28520fce6f5eeb2d879e611bda\AndroidManifest.xml:28:13-35
+	android:name
+		ADDED from [com.android.support:appcompat-v7:26.1.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\164cfd28520fce6f5eeb2d879e611bda\AndroidManifest.xml:27:13-51
+activity#com.google.android.gms.common.api.GoogleApiActivity
+ADDED from [com.google.android.gms:play-services-base:11.8.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\play-services-base-11.8.0.aar\910b6445dcecb5b3dc184b4115480e37\AndroidManifest.xml:23:9-26:75
+	android:exported
+		ADDED from [com.google.android.gms:play-services-base:11.8.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\play-services-base-11.8.0.aar\910b6445dcecb5b3dc184b4115480e37\AndroidManifest.xml:25:13-37
+	android:theme
+		ADDED from [com.google.android.gms:play-services-base:11.8.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\play-services-base-11.8.0.aar\910b6445dcecb5b3dc184b4115480e37\AndroidManifest.xml:26:13-72
+	android:name
+		ADDED from [com.google.android.gms:play-services-base:11.8.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\play-services-base-11.8.0.aar\910b6445dcecb5b3dc184b4115480e37\AndroidManifest.xml:24:13-79
+provider#com.google.firebase.provider.FirebaseInitProvider
+ADDED from [com.google.firebase:firebase-common:11.8.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\firebase-common-11.8.0.aar\8e234a5dfd88e183e28bcdf98105bcff\AndroidManifest.xml:8:9-12:39
+	android:authorities
+		ADDED from [com.google.firebase:firebase-common:11.8.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\firebase-common-11.8.0.aar\8e234a5dfd88e183e28bcdf98105bcff\AndroidManifest.xml:10:13-72
+	android:exported
+		ADDED from [com.google.firebase:firebase-common:11.8.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\firebase-common-11.8.0.aar\8e234a5dfd88e183e28bcdf98105bcff\AndroidManifest.xml:11:13-37
+	android:initOrder
+		ADDED from [com.google.firebase:firebase-common:11.8.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\firebase-common-11.8.0.aar\8e234a5dfd88e183e28bcdf98105bcff\AndroidManifest.xml:12:13-36
+	android:name
+		ADDED from [com.google.firebase:firebase-common:11.8.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\firebase-common-11.8.0.aar\8e234a5dfd88e183e28bcdf98105bcff\AndroidManifest.xml:9:13-77
+meta-data#android.arch.lifecycle.VERSION
+ADDED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\6e6e383e1961d9997f16d9c3a83d8804\AndroidManifest.xml:25:9-27:47
+	android:value
+		ADDED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\6e6e383e1961d9997f16d9c3a83d8804\AndroidManifest.xml:27:13-44
+	android:name
+		ADDED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\raj\.AndroidStudio3.0\system\gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\6e6e383e1961d9997f16d9c3a83d8804\AndroidManifest.xml:26:13-58

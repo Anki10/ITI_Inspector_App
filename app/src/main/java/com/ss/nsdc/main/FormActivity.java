@@ -1,6 +1,5 @@
 package com.ss.nsdc.main;
 
-import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -10,115 +9,169 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
 import com.ss.nsdc.R;
-import com.ss.nsdc.constant.AppConstants;
-import com.ss.nsdc.dao.JobRolesModel;
-import com.ss.nsdc.dao.NSDCDBController;
-import com.ss.nsdc.dao.SubCategoryClass;
-import com.ss.nsdc.dao.SubCategoryLab;
-import com.ss.nsdc.dao.SubCategoryResidentialFacDAO;
-import com.ss.nsdc.dao.SubCategorySupportStaffDAO;
-import com.ss.nsdc.entity.SubCategoryResidentialFac;
-import com.ss.nsdc.entity.SubCategorySupportStaff;
-import com.ss.nsdc.entity.SubListEquipment;
-import com.ss.nsdc.entity.SubListOffice;
+import com.ss.nsdc.dao.ITIDBController;
+import com.ss.nsdc.entity.Classroom;
+import com.ss.nsdc.entity.GenralInfo;
+import com.ss.nsdc.entity.InstructorInfo;
+import com.ss.nsdc.entity.LandandBuilding;
+import com.ss.nsdc.entity.MaterialInfo;
+import com.ss.nsdc.entity.PowerSupplyITIModel;
+import com.ss.nsdc.entity.Staffing;
+import com.ss.nsdc.entity.TechincalInfo;
+import com.ss.nsdc.entity.Accommodation;
+import com.ss.nsdc.entity.EquipmentInfo;
+import com.ss.nsdc.entity.WorkshopAreaModel;
 import com.ss.nsdc.fragment.ClassroomFragment;
-import com.ss.nsdc.fragment.EquipmentFragment;
-import com.ss.nsdc.fragment.JobsFragment;
-import com.ss.nsdc.fragment.LabFragment;
-import com.ss.nsdc.fragment.OfficeFragment;
-//import com.ss.nsdc.fragment.ResidentialFacilityFragment;
-import com.ss.nsdc.fragment.SupportStaffFragment;
+import com.ss.nsdc.fragment.InstructorFragment;
+import com.ss.nsdc.fragment.LandandBulidingFragment;
+import com.ss.nsdc.fragment.OrganisationFragment;
+import com.ss.nsdc.fragment.PowerSupplyITIFragment;
+import com.ss.nsdc.fragment.StaffingFragment;
+import com.ss.nsdc.fragment.TechnicalFragment;
+import com.ss.nsdc.fragment.AccommodationFragment;
+import com.ss.nsdc.fragment.TrustFragment;
+import com.ss.nsdc.fragment.WorkshopAreaFragment;
+
+/**
+ * Created by Radhika on 5/12/2017.
+ */
 
 public class FormActivity extends AppCompatActivity {
 
-    public static String category, classId, applicationNo, YearWiseCollegeId;
-    public static String toolbarTitle;
-    private ClassroomFragment classroomFragment;
-    private FragmentManager fragmentManager = getFragmentManager();
+    public static String category, YearWiseCollegeId,refId,tradeId;
+
+    private android.app.FragmentManager fragmentManager = getFragmentManager();
     private FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
     Context context = this;
-    SubCategoryClass getSelectedClassData;
-    SubCategoryLab getSelectedLabData;
-    SubListOffice getSelectedOfficeData;
-    SubListEquipment getSelectedEquipmentData;
-    JobRolesModel jobRolesModel;
-    SubCategorySupportStaff getSelectedSupportStaff;
-    SubCategoryResidentialFac getSelectedResFacility;
+    GenralInfo generalInfoModel;
+    EquipmentInfo trustGeneralInfo;
+    MaterialInfo materialInfo;
+    TechincalInfo techincalInfo;
+    InstructorInfo instructorInfo;
+    Accommodation accommodationInfo;
+    LandandBuilding landandBuildingInfo;
+    Staffing staffingInfo;
+    Classroom classroomInfo;
+    PowerSupplyITIModel powerSupplyITIModel;
+    WorkshopAreaModel workshopAreaObj;
+
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_form);
 
         if (getIntent().getExtras() != null) {
-            category = getIntent().getExtras().getString("category");
-            YearWiseCollegeId = getIntent().getExtras().getString("yearWiseCollageId");
-            applicationNo = getIntent().getExtras().getString("ApplicationId");
-            classId = getIntent().getExtras().getString("subcategoryId");
+            category = getIntent().getExtras().getString("Category");
+            YearWiseCollegeId = getIntent().getExtras().getString("YearWiseCollegeId");
+            refId = String.valueOf(getIntent().getExtras().getInt("refId"));
+            tradeId = String.valueOf(getIntent().getExtras().getInt("tradeId"));
         }
 
         if (savedInstanceState == null) {
             callFragment();
         }
-        /*NSDCDBController controller=new NSDCDBController(context);
-        if(category.equalsIgnoreCase("class"))
-		{
-			getSelectedClassData=controller.getClassDataByClassId(YearWiseCollegeId, classId);
-		}*/
-        // Handle Toolbar
+
         setupToolbar();
 
     }
 
-    private void callFragment() {
-        NSDCDBController controller = new NSDCDBController(context);
-        if (category.equalsIgnoreCase("class")) {
-            getSelectedClassData = controller.getClassDataByClassId(YearWiseCollegeId, classId);
-            ClassroomFragment classroomFragment = new ClassroomFragment(getSelectedClassData);
-            fragmentTransaction.add(R.id.container, classroomFragment);
+    private void setupToolbar() {
 
-        } else if (category.equalsIgnoreCase("lab")) {
-            getSelectedLabData = controller.getLabDataByLabId(YearWiseCollegeId, classId);
-            LabFragment labFragment = new LabFragment(getSelectedLabData);
-            fragmentTransaction.add(R.id.container, labFragment);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.form_toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
 
-        } else if (category.equalsIgnoreCase("office")) {
-            getSelectedOfficeData = controller.getOfficeDataByOfficeId(YearWiseCollegeId, classId);
-            OfficeFragment officeFragment = new OfficeFragment(getSelectedOfficeData);
-            fragmentTransaction.add(R.id.container, officeFragment);
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setTitle(toolbarTitle());
+    }
 
-        } else if (category.equalsIgnoreCase("jobRoles")) {
-            jobRolesModel = controller.getJobDataByJobId(YearWiseCollegeId, classId);
-            JobsFragment jobsFragment = new JobsFragment(jobRolesModel);
-            fragmentTransaction.add(R.id.container, jobsFragment);
+    public static String toolbarTitle() {
 
-        } else if (category.equalsIgnoreCase(AppConstants.TEXT_SUPPORT_STAFF)) {
-            SubCategorySupportStaffDAO staffDAO = new SubCategorySupportStaffDAO(context);
-            getSelectedSupportStaff = staffDAO.getStaffDataByStaffId(YearWiseCollegeId, classId);
-
-            SupportStaffFragment supportStaffFragment = new SupportStaffFragment(getSelectedSupportStaff);
-            fragmentTransaction.add(R.id.container, supportStaffFragment);
-            staffDAO.close();
-
-        } else if (category.equalsIgnoreCase(AppConstants.TEXT_RESIDENTIAL_FACILITY)) {
-            SubCategoryResidentialFacDAO resFacDAO = new SubCategoryResidentialFacDAO(context);
-            getSelectedResFacility = resFacDAO.getResFacDataByStaffId(YearWiseCollegeId, classId);
-
-           // ResidentialFacilityFragment residentialFacilityFragment = new ResidentialFacilityFragment(getSelectedResFacility);
-            //fragmentTransaction.add(R.id.container, residentialFacilityFragment);
-            resFacDAO.close();
-        }else if (category.equalsIgnoreCase("equipment")) {
-            getSelectedEquipmentData = controller.getEquipmentDataByLabId(YearWiseCollegeId, classId);
-            EquipmentFragment officeFragment = new EquipmentFragment(getSelectedEquipmentData);
-            fragmentTransaction.add(R.id.container, officeFragment);
+        if(category.equalsIgnoreCase("genInfo")){
+            return "ITI General Information Details";
+        }else if(category.equalsIgnoreCase("trust")){
+            return "Trust/Society/Company Details";
+        }else if(category.equalsIgnoreCase("organisation")){
+            return "Organisation Details";
+        }else if(category.equalsIgnoreCase("technical")) {
+            return "Technical Staff Details";
+        }else if(category.equalsIgnoreCase("instructor")) {
+            return "Instructor Staff Details";
+        }else if(category.equalsIgnoreCase("trades")) {
+            return "Accommodation Details";
+        }else if(category.equalsIgnoreCase("land")) {
+            return "Land and Building Details";
+        }else if(category.equalsIgnoreCase("premises")){
+            return "Staffing Shifting";
+        }else if(category.equalsIgnoreCase("class")){
+            return "Classroom";
+        }else if(category.equalsIgnoreCase("powerSupplyITI")){
+            return "Power Supply";
+        }else if(category.equalsIgnoreCase("workshopArea")){ //Added by PN 28 May '17 - WorkshopArea
+            return "Workshop Area";
         }
 
-        fragmentTransaction.addToBackStack(null);
+        return null;
+    }
 
+    private void callFragment() {
+        ITIDBController controller = new ITIDBController(context);
+        if(category.equalsIgnoreCase("genInfo")){
+            generalInfoModel = controller.getGeneralInfobyYearwiseCollegeId(YearWiseCollegeId);
+           /* GeneralInfoFragment generalInfoFragment = new GeneralInfoFragment(generalInfoModel);
+            fragmentTransaction.add(R.id.container,generalInfoFragment);*/
+        }else if(category.equalsIgnoreCase("trust")){
+            trustGeneralInfo = controller.getTrustInfobyYearwiseCollegeId(YearWiseCollegeId);
+            TrustFragment trustInfoFragment = new TrustFragment(trustGeneralInfo);
+            fragmentTransaction.add(R.id.container,trustInfoFragment);
+        }else if(category.equalsIgnoreCase("organisation")){
+            materialInfo = controller.getOrganisationInfobyYearwiseCollegeId(YearWiseCollegeId);
+            OrganisationFragment organisationInfoFragment = new OrganisationFragment(materialInfo);
+            fragmentTransaction.add(R.id.container,organisationInfoFragment);
+        }else if(category.equalsIgnoreCase("technical")) {
+            techincalInfo = controller.getTechnicalInfobyYearwiseCollegeId(YearWiseCollegeId,refId);
+            TechnicalFragment fragment = new TechnicalFragment(techincalInfo);
+            fragmentTransaction.add(R.id.container,fragment);
+        }else if(category.equalsIgnoreCase("instructor")) {
+            instructorInfo = controller.getInstructorInfobyYearwiseCollegeId(YearWiseCollegeId,refId);
+            InstructorFragment fragment = new InstructorFragment(instructorInfo);
+            fragmentTransaction.add(R.id.container,fragment);
+        }else if(category.equalsIgnoreCase("trades")) {
+            accommodationInfo = controller.getTradesInfobyYearwiseCollegeId(YearWiseCollegeId, tradeId);
+            AccommodationFragment fragment = new AccommodationFragment(accommodationInfo);
+            fragmentTransaction.add(R.id.container,fragment);
+        }else if(category.equalsIgnoreCase("land")) {
+            landandBuildingInfo = controller.getLandInfobyYearwiseCollegeId(YearWiseCollegeId);
+            LandandBulidingFragment fragment = new LandandBulidingFragment(landandBuildingInfo);
+            fragmentTransaction.add(R.id.container,fragment);
+        }else if(category.equalsIgnoreCase("premises")) {
+            staffingInfo = controller.getPremisesInfobyYearwiseCollegeId(YearWiseCollegeId);
+            StaffingFragment fragment = new StaffingFragment(staffingInfo);
+            fragmentTransaction.add(R.id.container,fragment);
+        }else if(category.equalsIgnoreCase("class")) {
+            classroomInfo = controller.getClassroomInfobyYearwiseCollegeId(YearWiseCollegeId,refId);
+            Log.e("string",classroomInfo.getClassroomName());
+            ClassroomFragment fragment = new ClassroomFragment(classroomInfo);
+            fragmentTransaction.add(R.id.container,fragment);
+        }else if(category.equalsIgnoreCase("powerSupplyITI")){
+            powerSupplyITIModel = controller.getPowerSupplyITIbyYearwiseCollegeId(YearWiseCollegeId);
+            PowerSupplyITIFragment powerSupplyITIFragment = new PowerSupplyITIFragment(powerSupplyITIModel);
+            fragmentTransaction.add(R.id.container,powerSupplyITIFragment);
+        }else if(category.equalsIgnoreCase("workshopArea")){
+            workshopAreaObj = controller.getWorkshopAreabyId(YearWiseCollegeId,refId);
+            WorkshopAreaFragment workshopAreaFragment = new WorkshopAreaFragment(workshopAreaObj);
+            fragmentTransaction.add(R.id.container,workshopAreaFragment);
+        }
+
+
+
+        fragmentTransaction.addToBackStack(null);
         controller.close();
         fragmentTransaction.commit();
     }
@@ -141,8 +194,7 @@ public class FormActivity extends AppCompatActivity {
                         .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int whichButton) {
                                 Intent intent = new Intent(context, CategoryActivity.class);
-                                intent.putExtra("YearWiseCollegeId",YearWiseCollegeId);
-                                intent.putExtra("applicationNo", applicationNo);
+                                intent.putExtra("YearWiseCollegeId", YearWiseCollegeId);
                                 //intent.putExtra("instituteName", context.getExtras().getString("ApplicationId"));
                                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                                 context.startActivity(intent);
@@ -181,50 +233,7 @@ public class FormActivity extends AppCompatActivity {
                         }).setNegativeButton(android.R.string.cancel, null).show();
                 return true;
         }
+
         return super.onOptionsItemSelected(item);
-    }
-
-    private void setupToolbar() {
-        Toolbar toolbar = (Toolbar) findViewById(R.id.form_toolbar);
-        setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayShowHomeEnabled(true);
-
-        ActionBar actionBar = getSupportActionBar();
-        actionBar.setTitle(toolbarTitle());
-    }
-
-    public static String toolbarTitle() {
-
-        if (category.equalsIgnoreCase("class")) {
-            return toolbarTitle = "Classrom Details";
-        } else if (category.equalsIgnoreCase("lab")) {
-            return toolbarTitle = "Laboratories Details";
-        } else if (category.equalsIgnoreCase("office")) {
-            return toolbarTitle = "Office Area Details";
-        } else if (category.equalsIgnoreCase("equipment")) {
-            return toolbarTitle = "Equipment Details";
-
-        } else if (category.equalsIgnoreCase(AppConstants.TEXT_SUPPORT_STAFF)) {
-            return toolbarTitle = AppConstants.TEXT_SUPPORT_SPACE_STAFF;
-
-        } else if (category.equalsIgnoreCase(AppConstants.TEXT_RESIDENTIAL_FACILITY)) {
-            return toolbarTitle = AppConstants.TEXT_RESIDENTIAL_SPACE_FACILITY;
-        } else {
-            return null;
-        }
-    }
-
-    @Override
-    public void onBackPressed() {
-        new AlertDialog.Builder(context)
-                .setTitle("Confirmation")
-                .setMessage("You will lose all the pending changes")
-                .setIcon(android.R.drawable.ic_dialog_alert)
-                .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int whichButton) {
-                        FormActivity.this.finish();
-                    }
-                })
-                .setNegativeButton(android.R.string.cancel, null).show();
     }
 }

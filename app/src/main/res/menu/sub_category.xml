@@ -12,6 +12,8 @@
         android:orderInCategory="100"
         app:showAsAction="never"
         android:title="@string/institutesmenu"/>
+
+
     <item
         android:id="@+id/menuExit"
         android:orderInCategory="100"

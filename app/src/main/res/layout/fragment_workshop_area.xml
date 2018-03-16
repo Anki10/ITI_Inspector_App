@@ -1,0 +1,1718 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/scrollViewGeneral"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:fillViewport="true"
+            android:orientation="vertical"
+            android:overScrollMode="never"
+            android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <!-- SECTION Training Centre Detail's -->
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/gen_card_view1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            card_view:cardCornerRadius="8dp"
+            card_view:cardElevation="5dp"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingRight="@dimen/margin_large">
+
+                <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="20dp"
+                android:paddingTop="40dp"
+                android:text="Trade Name"
+                android:textColor="@color/textHeadColor"
+                android:textSize="@dimen/font_large"
+                android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/editTxt_ans1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_large"
+                        android:layout_marginRight="@dimen/margin_large"
+                        android:layout_weight="1"
+                        android:inputType="none"
+                        android:maxLines="1"
+                        android:textColor="@drawable/edit_text_selector" />
+                    <ImageView
+                    android:id="@+id/remarksTxt_ans1"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginLeft="@dimen/margin_small"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/remarks" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorPrimaryTransparent"></View>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:labelFor="@+id/gen_edit1"
+                    android:paddingStart="20dp"
+                    android:paddingTop="10dp"
+                    android:text="Workshop Name"
+                    android:visibility="gone"
+                    android:textColor="@color/textHeadColor"
+                    android:textSize="@dimen/font_large"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <EditText
+                        android:id="@+id/editTxt_ans14"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_large"
+                        android:layout_marginRight="@dimen/margin_large"
+                        android:layout_weight="1"
+                        android:inputType="none"
+                        android:maxLines="1"
+                        android:textColor="@drawable/edit_text_selector" />
+
+
+                    <ImageView
+                        android:id="@+id/remarksTxt_ans14"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginLeft="@dimen/margin_small"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/remarks" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorPrimaryTransparent"></View>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:labelFor="@+id/gen_edit1"
+                    android:paddingStart="20dp"
+                    android:paddingTop="10dp"
+                    android:text="Maximum No. of Units in a Shift "
+                    android:textColor="@color/textHeadColor"
+                    android:textSize="@dimen/font_large"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/editTxt_ans2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_large"
+                        android:layout_marginRight="@dimen/margin_large"
+                        android:layout_weight="1"
+                        android:inputType="none"
+                        android:maxLines="1"
+                        android:textColor="@drawable/edit_text_selector" />
+                    <ImageView
+                        android:id="@+id/remarks_ans2"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginLeft="@dimen/margin_small"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/remarks" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorPrimaryTransparent"></View>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="20dp"
+                    android:paddingTop="10dp"
+                    android:text="Actual Area"
+                    android:textColor="@color/textHeadColor"
+                    android:textSize="@dimen/font_large"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                    <EditText
+                        android:id="@+id/editTxt_ans3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_large"
+                        android:layout_marginRight="@dimen/margin_large"
+                        android:layout_weight="1"
+                        android:inputType="numberDecimal"
+                        android:maxLength="7"
+                        android:maxLines="1"
+                        android:textColor="@drawable/edit_text_selector" />
+
+                    <ImageView
+                        android:id="@+id/edit_ans3"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_toStartOf="@+id/gen_img12"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/edit" />
+
+                    <ImageView
+                        android:id="@+id/save_ans3"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="10dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ok_grey" />
+
+                    <ImageView
+                        android:id="@+id/remarks_ans3"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginLeft="@dimen/margin_small"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/remarks" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorPrimaryTransparent"></View>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:labelFor="@+id/gen_edit1"
+                    android:paddingStart="20dp"
+                    android:paddingTop="10dp"
+                    android:text="Is the workshop L-Shaped? "
+                    android:textColor="@color/textHeadColor"
+                    android:textSize="@dimen/font_large"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/spin_ans4"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="@dimen/margin_large"
+                        android:layout_marginRight="@dimen/margin_large"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1"
+                        android:entries="@array/arrauInstituteExcellence"
+                        />
+
+                    <ImageView
+                        android:id="@+id/edit_ans4"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_toStartOf="@+id/gen_img12"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/edit"
+                        android:layout_gravity="center"/>
+
+                    <ImageView
+                        android:id="@+id/save_ans4"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_gravity="center"
+                        android:layout_alignParentEnd="true"
+                        android:scaleType="fitXY"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/ok_grey" />
+
+                    <ImageView
+                        android:id="@+id/remarks_ans4"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="@dimen/margin_small"
+                        android:layout_gravity="center"
+                        android:scaleType="fitXY"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/remarks"/>
+
+                    <ToggleButton
+                        android:id="@+id/nc_ans4"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="@dimen/margin_small"
+                        android:scaleType="fitXY"
+                        android:layout_marginEnd="10dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginBottom="0dp"
+                        android:textColor="@android:color/transparent"
+                        android:background="@drawable/check"/>
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorPrimaryTransparent"></View>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:labelFor="@+id/gen_edit1"
+                    android:paddingStart="20dp"
+                    android:paddingTop="10dp"
+                    android:text="What is the width of the workshop"
+                    android:textColor="@color/textHeadColor"
+                    android:textSize="@dimen/font_large"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/editTxt_ans5"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_large"
+                        android:layout_marginRight="@dimen/margin_large"
+                        android:layout_weight="1"
+                        android:inputType="number"
+                        android:maxLines="1"
+                        android:textColor="@drawable/edit_text_selector" />
+
+                    <ImageView
+                        android:id="@+id/edit_ans5"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_toStartOf="@+id/gen_img12"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/edit" />
+
+                    <ImageView
+                        android:id="@+id/save_ans5"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_alignParentEnd="true"
+                        android:scaleType="fitXY"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/ok_grey" />
+
+                    <ImageView
+                        android:id="@+id/remarks_ans5"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="@dimen/margin_small"
+                        android:scaleType="fitXY"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/remarks"/>
+
+                </LinearLayout>
+
+                <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimaryTransparent"></View>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:labelFor="@+id/gen_edit1"
+                    android:paddingStart="20dp"
+                    android:paddingTop="10dp"
+                    android:text="Are the workshop walls made of tin?"
+                    android:textColor="@color/textHeadColor"
+                    android:textSize="@dimen/font_large"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/spin_ans6"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="@dimen/margin_large"
+                        android:layout_marginRight="@dimen/margin_large"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1"
+                        android:entries="@array/arrauInstituteExcellence"
+                        />
+
+                    <ImageView
+                        android:id="@+id/edit_ans6"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_toStartOf="@+id/gen_img12"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/edit" />
+
+                    <ImageView
+                        android:id="@+id/save_ans6"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_alignParentEnd="true"
+                        android:scaleType="fitXY"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/ok_grey" />
+
+                    <ImageView
+                        android:id="@+id/remarks_ans6"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="@dimen/margin_small"
+                        android:scaleType="fitXY"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/remarks"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorPrimaryTransparent"></View>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:id="@+id/roof">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="20dp"
+                    android:paddingTop="10dp"
+                    android:text="Workshop Roof"
+                    android:textColor="@color/textHeadColor"
+                    android:textSize="@dimen/font_large"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/spin_ans7"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="@dimen/margin_large"
+                        android:layout_marginRight="@dimen/margin_large"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1"
+                        android:entries="@array/roof"
+                        />
+
+                    <ImageView
+                        android:id="@+id/edit_ans7"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_toStartOf="@+id/gen_img12"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/edit" />
+
+                    <ImageView
+                        android:id="@+id/save_ans7"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_alignParentEnd="true"
+                        android:scaleType="fitXY"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/ok_grey" />
+
+                    <ImageView
+                        android:id="@+id/remarks_ans7"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="@dimen/margin_small"
+                        android:scaleType="fitXY"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/remarks"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorPrimaryTransparent"></View>
+                    </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/ten">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:labelFor="@+id/gen_edit1"
+                    android:paddingStart="20dp"
+                    android:paddingTop="10dp"
+                    android:text=" Is the ceiling height less than 10 feet?"
+                    android:textColor="@color/textHeadColor"
+                    android:textSize="@dimen/font_large"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/spin_ans8"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="@dimen/margin_large"
+                        android:layout_marginRight="@dimen/margin_large"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1"
+                        android:entries="@array/arrauInstituteExcellence"
+                        />
+
+                    <ImageView
+                        android:id="@+id/edit_ans8"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_toStartOf="@+id/gen_img12"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/edit" />
+
+                    <ImageView
+                        android:id="@+id/save_ans8"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_alignParentEnd="true"
+                        android:scaleType="fitXY"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/ok_grey" />
+
+                    <ImageView
+                        android:id="@+id/remarks_ans8"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="@dimen/margin_small"
+                        android:scaleType="fitXY"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/remarks"/>
+
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorPrimaryTransparent"></View>
+
+                </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/twelve">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:paddingStart="20dp"
+                    android:paddingTop="10dp"
+                    android:text="Is the ceiling height from lower end less than 12 feet?"
+                    android:textColor="@color/textHeadColor"
+                    android:textSize="@dimen/font_large"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/spin_ans9"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="@dimen/margin_large"
+                        android:layout_marginRight="@dimen/margin_large"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1"
+                        android:entries="@array/arrauInstituteExcellence"
+                        />
+
+                    <ImageView
+                        android:id="@+id/edit_ans9"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_toStartOf="@+id/gen_img12"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/edit" />
+
+                    <ImageView
+                        android:id="@+id/save_ans9"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_alignParentEnd="true"
+                        android:scaleType="fitXY"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/ok_grey" />
+
+                    <ImageView
+                        android:id="@+id/remarks_ans9"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="@dimen/margin_small"
+                        android:scaleType="fitXY"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/remarks"/>
+
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorPrimaryTransparent"></View>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:labelFor="@+id/gen_edit1"
+                    android:paddingStart="20dp"
+                    android:paddingTop="10dp"
+                    android:text="Is heavy machinary located in any other floor except for basement/ground floor?"
+                    android:textColor="@color/textHeadColor"
+                    android:textSize="@dimen/font_large"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/spin_ans10"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="@dimen/margin_large"
+                        android:layout_marginRight="@dimen/margin_large"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1"
+                        android:entries="@array/arrauInstituteExcellence"
+                        />
+
+                    <ImageView
+                        android:id="@+id/edit_ans10"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_toStartOf="@+id/gen_img12"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/edit" />
+
+                    <ImageView
+                        android:id="@+id/save_ans10"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_alignParentEnd="true"
+                        android:scaleType="fitXY"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/ok_grey" />
+
+                    <ImageView
+                        android:id="@+id/remarks_ans10"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="@dimen/margin_small"
+                        android:scaleType="fitXY"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/remarks"/>
+
+                    <ToggleButton
+                        android:id="@+id/nc_ans10"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="@dimen/margin_small"
+                        android:scaleType="fitXY"
+                        android:layout_marginEnd="10dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginBottom="0dp"
+                        android:visibility="gone"
+                        android:textColor="@android:color/transparent"
+                        android:background="@drawable/check"/>
+
+                </LinearLayout>
+
+
+                <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimaryTransparent"></View>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:labelFor="@+id/gen_edit1"
+                    android:paddingStart="20dp"
+                    android:paddingTop="10dp"
+                    android:text="Does ITI have a combined workshop"
+                    android:textColor="@color/textHeadColor"
+                    android:visibility="gone"
+                    android:textSize="@dimen/font_large"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <Spinner
+                        android:id="@+id/spin_ans11"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="@dimen/margin_large"
+                        android:layout_marginRight="@dimen/margin_large"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1"
+                        android:entries="@array/arrauInstituteExcellence"
+                        />
+
+                    <ImageView
+                        android:id="@+id/edit_ans11"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_toStartOf="@+id/gen_img12"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/edit" />
+
+                    <ImageView
+                        android:id="@+id/save_ans11"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_alignParentEnd="true"
+                        android:scaleType="fitXY"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/ok_grey" />
+
+                    <ImageView
+                        android:id="@+id/remarks_ans11"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="@dimen/margin_small"
+                        android:scaleType="fitXY"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/remarks"/>
+
+                </LinearLayout>                <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimaryTransparent"></View>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:labelFor="@+id/gen_edit1"
+                    android:paddingStart="20dp"
+                    android:paddingTop="10dp"
+                    android:text="Is it demarcated by a yellow line (Y/N)"
+                    android:textColor="@color/textHeadColor"
+                    android:textSize="@dimen/font_large"
+                    android:textStyle="bold"
+                    android:visibility="gone"/>
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/spin_ans12"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="@dimen/margin_large"
+                        android:layout_marginRight="@dimen/margin_large"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1"
+                        android:entries="@array/arrauInstituteExcellence"
+                        />
+
+                    <ImageView
+                        android:id="@+id/edit_ans12"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_toStartOf="@+id/gen_img12"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/edit" />
+
+                    <ImageView
+                        android:id="@+id/save_ans12"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_alignParentEnd="true"
+                        android:scaleType="fitXY"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/ok_grey" />
+
+                    <ImageView
+                        android:id="@+id/remarks_ans12"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="@dimen/margin_small"
+                        android:scaleType="fitXY"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/remarks"/>
+
+                </LinearLayout>
+
+                <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimaryTransparent"></View>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:labelFor="@+id/gen_edit1"
+                    android:paddingStart="20dp"
+                    android:paddingTop="10dp"
+                    android:text="Are all the machinery/tools &amp; equipment new for new trades/units?"
+                    android:textColor="@color/textHeadColor"
+                    android:textSize="@dimen/font_large"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/spin_ans18"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="@dimen/margin_large"
+                        android:layout_marginRight="@dimen/margin_large"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1"
+                        android:entries="@array/arrauInstituteExcellence"
+                        />
+
+                    <ImageView
+                        android:id="@+id/edit_ans18"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_toStartOf="@+id/gen_img12"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/edit" />
+
+                    <ImageView
+                        android:id="@+id/save_ans18"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_alignParentEnd="true"
+                        android:scaleType="fitXY"
+                        android:layout_marginEnd="10dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/ok_grey" />
+
+                    <ImageView
+                        android:id="@+id/remarks_ans18"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="@dimen/margin_small"
+                        android:scaleType="fitXY"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/remarks"/>
+
+                    <ToggleButton
+                        android:id="@+id/nc_ans18"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="@dimen/margin_small"
+                        android:scaleType="fitXY"
+                        android:layout_marginEnd="10dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginBottom="0dp"
+                        android:textColor="@android:color/transparent"
+                        android:background="@drawable/check"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorPrimaryTransparent"></View>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:labelFor="@+id/gen_edit1"
+                    android:paddingStart="20dp"
+                    android:paddingTop="10dp"
+                    android:text=" Are all the Machines complying with electrical safety norms i.e earthed are functional and at a workable height?"
+                    android:textColor="@color/textHeadColor"
+                    android:textSize="@dimen/font_large"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/spin_ans19"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="@dimen/margin_large"
+                        android:layout_marginRight="@dimen/margin_large"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1"
+                        android:entries="@array/arrauInstituteExcellence"
+                        />
+
+                    <ImageView
+                        android:id="@+id/edit_ans19"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_toStartOf="@+id/gen_img12"
+                        android:scaleType="fitXY"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/edit" />
+
+                    <ImageView
+                        android:id="@+id/save_ans19"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_alignParentEnd="true"
+                        android:scaleType="fitXY"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/ok_grey" />
+
+                    <ImageView
+                        android:id="@+id/remarks_ans19"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="@dimen/margin_small"
+                        android:scaleType="fitXY"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/remarks"/>
+
+                    <ToggleButton
+                        android:id="@+id/nc_ans19"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="@dimen/margin_small"
+                        android:scaleType="fitXY"
+                        android:layout_marginEnd="10dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginBottom="0dp"
+                        android:textColor="@android:color/transparent"
+                        android:background="@drawable/check"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorPrimaryTransparent"></View>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:labelFor="@+id/gen_edit1"
+                    android:paddingStart="20dp"
+                    android:paddingTop="10dp"
+                    android:text="Are Emergency Contact Numbers displayed in the workshop?(Y/N)"
+                    android:textColor="@color/textHeadColor"
+                    android:textSize="@dimen/font_large"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/spin_ans13"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="@dimen/margin_large"
+                        android:layout_marginRight="@dimen/margin_large"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1"
+                        android:entries="@array/arrauInstituteExcellence"
+                        />
+
+                    <ImageView
+                        android:id="@+id/edit_ans13"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_toStartOf="@+id/gen_img12"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/edit" />
+
+                    <ImageView
+                        android:id="@+id/save_ans13"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_alignParentEnd="true"
+                        android:scaleType="fitXY"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/ok_grey" />
+
+                    <ImageView
+                        android:id="@+id/remarks_ans13"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="@dimen/margin_small"
+                        android:scaleType="fitXY"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/remarks"/>
+
+                    <ToggleButton
+                        android:id="@+id/nc_ans13"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="@dimen/margin_small"
+                        android:scaleType="fitXY"
+                        android:layout_marginEnd="10dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginBottom="0dp"
+                        android:textColor="@android:color/transparent"
+                        android:background="@drawable/check"/>
+
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorPrimaryTransparent"></View>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="20dp"
+                    android:paddingTop="10dp"
+                    android:text="Are all the wires and switch boards properly Covered, Secured and Earthed (concealed conduit or on batten)?"
+                    android:textColor="@color/textHeadColor"
+                    android:textSize="@dimen/font_large"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/spin_ans15"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="@dimen/margin_large"
+                        android:layout_marginRight="@dimen/margin_large"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1"
+                        android:entries="@array/arrauInstituteExcellence"
+                        />
+
+                    <ImageView
+                        android:id="@+id/edit_ans15"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_toStartOf="@+id/gen_img12"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/edit" />
+
+                    <ImageView
+                        android:id="@+id/save_ans15"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_alignParentEnd="true"
+                        android:scaleType="fitXY"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/ok_grey" />
+
+                    <ImageView
+                        android:id="@+id/remarks_ans15"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="@dimen/margin_small"
+                        android:scaleType="fitXY"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/remarks"/>
+                    <ToggleButton
+                        android:id="@+id/nc_ans15"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="@dimen/margin_small"
+                        android:scaleType="fitXY"
+                        android:layout_marginEnd="10dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginBottom="0dp"
+                        android:textColor="@android:color/transparent"
+                        android:background="@drawable/check"/>
+
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorPrimaryTransparent"></View>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="20dp"
+                    android:paddingTop="10dp"
+                    android:text="Availability of Fire extinguisher (Yes / No)"
+                    android:textColor="@color/textHeadColor"
+                    android:textSize="@dimen/font_large"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/spin_ans16"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="@dimen/margin_large"
+                        android:layout_marginRight="@dimen/margin_large"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1"
+                        android:entries="@array/arrauInstituteExcellence"
+                        />
+
+                    <ImageView
+                        android:id="@+id/edit_ans16"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_toStartOf="@+id/gen_img12"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/edit" />
+
+                    <ImageView
+                        android:id="@+id/save_ans16"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_alignParentEnd="true"
+                        android:scaleType="fitXY"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/ok_grey" />
+
+                    <ImageView
+                        android:id="@+id/remarks_ans16"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="@dimen/margin_small"
+                        android:scaleType="fitXY"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/remarks"/>
+                    <ToggleButton
+                        android:id="@+id/nc_ans16"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="@dimen/margin_small"
+                        android:scaleType="fitXY"
+                        android:layout_marginEnd="10dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginBottom="0dp"
+                        android:textColor="@android:color/transparent"
+                        android:background="@drawable/check"/>
+
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorPrimaryTransparent"></View>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="20dp"
+                    android:paddingTop="10dp"
+                    android:text="Availability of Emergency Exit? (Y/N)"
+                    android:textColor="@color/textHeadColor"
+                    android:textSize="@dimen/font_large"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/spin_ans17"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="@dimen/margin_large"
+                        android:layout_marginRight="@dimen/margin_large"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1"
+                        android:entries="@array/arrauInstituteExcellence"
+                        />
+
+                    <ImageView
+                        android:id="@+id/edit_ans17"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_toStartOf="@+id/gen_img12"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/edit" />
+
+                    <ImageView
+                        android:id="@+id/save_ans17"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_alignParentEnd="true"
+                        android:scaleType="fitXY"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/ok_grey" />
+
+                    <ImageView
+                        android:id="@+id/remarks_ans17"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="@dimen/margin_small"
+                        android:scaleType="fitXY"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/remarks"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="20dp"
+                    android:paddingTop="10dp"
+                    android:text="Are Rubber Mats Available?"
+                    android:textColor="@color/textHeadColor"
+                    android:textSize="@dimen/font_large"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/spin_ans20"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="@dimen/margin_large"
+                        android:layout_marginRight="@dimen/margin_large"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1"
+                        android:entries="@array/arrauInstituteExcellence"
+                        />
+
+                    <ImageView
+                        android:id="@+id/edit_ans20"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_toStartOf="@+id/gen_img12"
+                        android:scaleType="fitXY"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/edit" />
+
+                    <ImageView
+                        android:id="@+id/save_ans20"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_alignParentEnd="true"
+                        android:scaleType="fitXY"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/ok_grey" />
+
+                    <ImageView
+                        android:id="@+id/remarks_ans20"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="@dimen/margin_small"
+                        android:scaleType="fitXY"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/remarks"/>
+
+                    <ToggleButton
+                        android:id="@+id/nc_ans20"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="@dimen/margin_small"
+                        android:scaleType="fitXY"
+                        android:layout_marginEnd="10dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginBottom="0dp"
+                        android:textColor="@android:color/transparent"
+                        android:background="@drawable/check"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="20dp"
+                    android:paddingTop="10dp"
+                    android:text="Is the DG Set required? "
+                    android:textColor="@color/textHeadColor"
+                    android:textSize="@dimen/font_large"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/spin_ans21"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="@dimen/margin_large"
+                        android:layout_marginRight="@dimen/margin_large"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1"
+                        android:entries="@array/arrauInstituteExcellence"
+                        />
+
+                    <ImageView
+                        android:id="@+id/edit_ans21"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_toStartOf="@+id/gen_img12"
+                        android:scaleType="fitXY"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/edit" />
+
+                    <ImageView
+                        android:id="@+id/save_ans21"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_alignParentEnd="true"
+                        android:scaleType="fitXY"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/ok_grey" />
+
+                    <ImageView
+                        android:id="@+id/remarks_ans21"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="@dimen/margin_small"
+                        android:scaleType="fitXY"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/remarks"/>
+
+                    <ToggleButton
+                        android:id="@+id/nc_ans21"
+                        android:visibility="gone"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="@dimen/margin_small"
+                        android:scaleType="fitXY"
+                        android:layout_marginEnd="10dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginBottom="0dp"
+                        android:textColor="@android:color/transparent"
+                        android:background="@drawable/check"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:id="@+id/dg">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="20dp"
+                    android:paddingTop="10dp"
+                    android:text=" Is the DG Set installed as per Norms ?"
+                    android:textColor="@color/textHeadColor"
+                    android:textSize="@dimen/font_large"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/spin_ans22"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="@dimen/margin_large"
+                        android:layout_marginRight="@dimen/margin_large"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1"
+                        android:entries="@array/arrauInstituteExcellence"
+                        />
+
+                    <ImageView
+                        android:id="@+id/edit_ans22"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_toStartOf="@+id/gen_img12"
+                        android:scaleType="fitXY"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/edit" />
+
+                    <ImageView
+                        android:id="@+id/save_ans22"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_alignParentEnd="true"
+                        android:scaleType="fitXY"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/ok_grey" />
+
+                    <ImageView
+                        android:id="@+id/remarks_ans22"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="@dimen/margin_small"
+                        android:scaleType="fitXY"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/remarks"/>
+
+                    <ToggleButton
+                        android:id="@+id/nc_ans22"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="@dimen/margin_small"
+                        android:scaleType="fitXY"
+                        android:layout_marginEnd="10dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginBottom="0dp"
+                        android:textColor="@android:color/transparent"
+                        android:background="@drawable/check"/>
+
+                </LinearLayout>
+                 </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="20dp"
+                    android:paddingTop="10dp"
+                    android:text="Is the Lathe Machine required? "
+                    android:textColor="@color/textHeadColor"
+                    android:textSize="@dimen/font_large"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/spin_ans23"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="@dimen/margin_large"
+                        android:layout_marginRight="@dimen/margin_large"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1"
+                        android:entries="@array/arrauInstituteExcellence"
+                        />
+
+                    <ImageView
+                        android:id="@+id/edit_ans23"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_toStartOf="@+id/gen_img12"
+                        android:scaleType="fitXY"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/edit" />
+
+                    <ImageView
+                        android:id="@+id/save_ans23"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_alignParentEnd="true"
+                        android:scaleType="fitXY"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/ok_grey" />
+
+                    <ImageView
+                        android:id="@+id/remarks_ans23"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="@dimen/margin_small"
+                        android:scaleType="fitXY"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/remarks"/>
+
+                    <ToggleButton
+                        android:id="@+id/nc_ans23"
+                        android:visibility="gone"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="@dimen/margin_small"
+                        android:scaleType="fitXY"
+                        android:layout_marginEnd="10dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginBottom="0dp"
+                        android:textColor="@android:color/transparent"
+                        android:background="@drawable/check"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:id="@+id/lathe">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="20dp"
+                    android:paddingTop="10dp"
+                    android:text="  Is the Lathe Machine installed as per Norms ?"
+                    android:textColor="@color/textHeadColor"
+                    android:textSize="@dimen/font_large"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/spin_ans24"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="@dimen/margin_large"
+                        android:layout_marginRight="@dimen/margin_large"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1"
+                        android:entries="@array/arrauInstituteExcellence"
+                        />
+
+                    <ImageView
+                        android:id="@+id/edit_ans24"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_toStartOf="@+id/gen_img12"
+                        android:scaleType="fitXY"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/edit" />
+
+                    <ImageView
+                        android:id="@+id/save_ans24"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_alignParentEnd="true"
+                        android:scaleType="fitXY"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/ok_grey" />
+
+                    <ImageView
+                        android:id="@+id/remarks_ans24"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="@dimen/margin_small"
+                        android:scaleType="fitXY"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/remarks"/>
+
+                    <ToggleButton
+                        android:id="@+id/nc_ans24"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="@dimen/margin_small"
+                        android:scaleType="fitXY"
+                        android:layout_marginEnd="10dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginBottom="0dp"
+                        android:textColor="@android:color/transparent"
+                        android:background="@drawable/check"/>
+
+                </LinearLayout>
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="20dp"
+                        android:paddingTop="10dp"
+                        android:text="All the major machines and equipment for accredited trades are in working / running conditions "
+                        android:textColor="@color/textHeadColor"
+                        android:textSize="@dimen/font_large"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <Spinner
+                            android:id="@+id/spin_ans25"
+                            android:layout_width="0dp"
+                            android:layout_height="40dp"
+                            android:layout_marginLeft="@dimen/margin_large"
+                            android:layout_marginRight="@dimen/margin_large"
+                            android:layout_marginTop="10dp"
+                            android:layout_weight="1"
+                            android:entries="@array/arrauInstituteExcellence"
+                            />
+
+                        <ImageView
+                            android:id="@+id/edit_ans25"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_toStartOf="@+id/gen_img12"
+                            android:scaleType="fitXY"
+                            android:layout_gravity="center_vertical"
+                            android:src="@drawable/edit" />
+
+                        <ImageView
+                            android:id="@+id/save_ans25"
+                            android:layout_width="28dp"
+                            android:layout_height="28dp"
+                            android:layout_alignParentEnd="true"
+                            android:scaleType="fitXY"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginEnd="10dp"
+                            android:src="@drawable/ok_grey" />
+
+                        <ImageView
+                            android:id="@+id/remarks_ans25"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_marginLeft="@dimen/margin_small"
+                            android:scaleType="fitXY"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginEnd="10dp"
+                            android:src="@drawable/remarks"/>
+
+                        <ToggleButton
+                            android:id="@+id/nc_ans25"
+                            android:visibility="gone"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_marginLeft="@dimen/margin_small"
+                            android:scaleType="fitXY"
+                            android:layout_marginEnd="10dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginBottom="0dp"
+                            android:textColor="@android:color/transparent"
+                            android:background="@drawable/check"/>
+
+                    </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_large"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingStart="20dp">
+
+                    <Button
+                        android:id="@+id/btnSubmit"
+                        style="@style/HeadingFontStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@color/login_background"
+                        android:text="Submit"/>
+                </LinearLayout>
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
+</ScrollView>

@@ -2,162 +2,56 @@ package com.ss.nsdc.dao;
 
 
 public class Institute {
-	private int  instituteId ;
-	private String YearWiseCollegeId;
-	private String ApplicationNo;
-	private String Name_ParentOrg; 
-	private String Name_Training_Center; 
-	private String DistrictName;  
-	private String StateName; 
-	private String Stage;
-	private String CreationDate;
-	private String SubmissionDate;
-	private String inspectionFromDate;
-	private String inspectionToDate;
-	private String contactno;
-	private String emailId;
+
 	private Integer proc_tracker;
-	
-	public int getInstituteId() {
-		return instituteId;
-	}
-
-
-	public void setInstituteId(int instituteId) {
-		this.instituteId = instituteId;
-	}
-
+	private String yearWiseCollegeId;
+	private String organisationName;
+	private String headOrganisation;
+	private String contactDetails;
+	private String startedYear;
 
 	public String getYearWiseCollegeId() {
-		return YearWiseCollegeId;
+		return yearWiseCollegeId;
 	}
-
 
 	public void setYearWiseCollegeId(String yearWiseCollegeId) {
-		YearWiseCollegeId = yearWiseCollegeId;
+		this.yearWiseCollegeId = yearWiseCollegeId;
 	}
 
-
-	public String getApplicationNo() {
-		return ApplicationNo;
+	public String getOrganisationName() {
+		return organisationName;
 	}
 
-
-	public void setApplicationNo(String applicationNo) {
-		ApplicationNo = applicationNo;
+	public void setOrganisationName(String organisationName) {
+		this.organisationName = organisationName;
 	}
 
-
-	public String getName_ParentOrg() {
-		return Name_ParentOrg;
+	public String getHeadOrganisation() {
+		return headOrganisation;
 	}
 
-
-	public void setName_ParentOrg(String name_ParentOrg) {
-		Name_ParentOrg = name_ParentOrg;
+	public void setHeadOrganisation(String headOrganisation) {
+		this.headOrganisation = headOrganisation;
 	}
 
-
-	public String getName_Training_Center() {
-		return Name_Training_Center;
+	public String getContactDetails() {
+		return contactDetails;
 	}
 
-
-	public void setName_Training_Center(String name_Training_Center) {
-		Name_Training_Center = name_Training_Center;
+	public void setContactDetails(String contactDetails) {
+		this.contactDetails = contactDetails;
 	}
 
-
-	public String getDistrictName() {
-		return DistrictName;
+	public String getStartedYear() {
+		return startedYear;
 	}
 
-
-	public void setDistrictName(String districtName) {
-		DistrictName = districtName;
-
-	}
-
-
-	public String getStateName() {
-		return StateName;
-	}
-
-
-	public void setStateName(String stateName) {
-		StateName = stateName;
-	}
-
-
-	public String getStage() {
-		return Stage;
-	}
-
-
-	public void setStage(String stage) {
-		Stage = stage;
-	}
-
-
-	public String getCreationDate() {
-		return CreationDate;
-	}
-
-
-	public void setCreationDate(String creationDate) {
-		CreationDate = creationDate;
-	}
-
-
-	public String getSubmissionDate() {
-		return SubmissionDate;
-	}
-
-
-	public void setSubmissionDate(String submissionDate) {
-		SubmissionDate = submissionDate;
+	public void setStartedYear(String startedYear) {
+		this.startedYear = startedYear;
 	}
 
 
 
-	public String getInspectionToDate() {
-		return inspectionToDate;
-	}
-
-
-	public void setInspectionToDate(String inspectionToDate) {
-		this.inspectionToDate = inspectionToDate;
-	}
-
-
-	public String getInspectionFromDate() {
-		return inspectionFromDate;
-	}
-
-
-	public void setInspectionFromDate(String inspectionFromDate) {
-		this.inspectionFromDate = inspectionFromDate;
-	}
-
-
-	public String getContactno() {
-		return contactno;
-	}
-
-
-	public void setContactno(String contactno) {
-		this.contactno = contactno;
-	}
-
-
-	public String getEmailId() {
-		return emailId;
-	}
-
-
-	public void setEmailId(String emailId) {
-		this.emailId = emailId;
-	}
 
 
 	public Integer getProc_tracker() {
