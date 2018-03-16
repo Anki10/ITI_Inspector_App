@@ -2,88 +2,184 @@
 <items version="2" >
 
     <item
-        jar="C:\Users\Prashant\.gradle\caches\modules-2\files-2.1\com.squareup.picasso\picasso\2.4.0\f36d2d4e3a36b3259aaf9d004d29b4cdc6c1bfb2\picasso-2.4.0.jar"
+        is-multidex="true"
+        jar="F:\ITI InspectorApp\ITI Inspector App\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\jars\classes.jar"
         jumboMode="true"
-        revision="23.0.2"
-        sha1="f36d2d4e3a36b3259aaf9d004d29b4cdc6c1bfb2">
-        <dex dex="D:\Development\GITHUB\Assessor-Android2\app\build\intermediates\transforms\dex\debug\folders\1000\10\picasso-2.4.0_6406cebc5534dc34501041a273701454147c4c72\classes.dex" />
-    </item>
-    <item
-        jar="D:\Development\GITHUB\Assessor-Android2\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.0.1\jars\classes.jar"
-        jumboMode="true"
-        revision="23.0.2"
-        sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
-        <dex dex="D:\Development\GITHUB\Assessor-Android2\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-23.0.1_5b58b0bb23b53c7061535305422b05b2268ee19e\classes.dex" />
-    </item>
-    <item
-        jar="D:\Development\android-sdk-windows\extras\android\m2repository\com\android\support\support-annotations\23.0.1\support-annotations-23.0.1.jar"
-        jumboMode="true"
-        revision="23.0.2"
-        sha1="1fce89a6428c51467090d7f424e4c9c3dbd55f7e">
-        <dex dex="D:\Development\GITHUB\Assessor-Android2\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-23.0.1_24fee934d4ae0c703aecf61f8c477dcf0810503f\classes.dex" />
-    </item>
-    <item
-        jar="D:\Development\GITHUB\Assessor-Android2\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
-        jumboMode="true"
-        revision="23.0.2"
-        sha1="6af1d9a628fe863199a77469ab48fa96a0925aea">
-        <dex dex="D:\Development\GITHUB\Assessor-Android2\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_36b5b5d27cd2d30e1a40ed047c8160d20850368c\classes.dex" />
-    </item>
-    <item
-        jar="C:\Users\Prashant\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.3\5fc52c41ef0239d1093a1eb7c3697036183677ce\gson-2.3.jar"
-        jumboMode="true"
-        revision="23.0.2"
-        sha1="5fc52c41ef0239d1093a1eb7c3697036183677ce">
-        <dex dex="D:\Development\GITHUB\Assessor-Android2\app\build\intermediates\transforms\dex\debug\folders\1000\10\gson-2.3_03f0fe57950c1049d9e6ea603b7cff43a9f1dad6\classes.dex" />
-    </item>
-    <item
-        jar="D:\Development\GITHUB\Assessor-Android2\app\build\intermediates\exploded-aar\com.android.support\design\23.0.1\jars\classes.jar"
-        jumboMode="true"
-        revision="23.0.2"
-        sha1="e5c61a3169221a89654ffcaaed47bba51cf071ad">
-        <dex dex="D:\Development\GITHUB\Assessor-Android2\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-design-23.0.1_4882e81ac736472c3d227fe8b1912e067be91f74\classes.dex" />
-    </item>
-    <item
-        jar="D:\Development\GITHUB\Assessor-Android2\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\jars\classes.jar"
-        jumboMode="true"
-        revision="23.0.2"
+        optimize="true"
+        revision="25.0.3"
         sha1="c31e21b53ff2f74664e498248d01453a32e32d48">
-        <dex dex="D:\Development\GITHUB\Assessor-Android2\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-23.0.1_632989bbda588bf36cfdb9779c447f7461572f7d\classes.dex" />
+        <dex dex="F:\ITI InspectorApp\ITI Inspector App\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-23.0.1_0d954917baafeb3e080eeda46e90adbcccad33b8\classes.dex" />
     </item>
     <item
-        jar="D:\Development\GITHUB\Assessor-Android2\app\build\intermediates\exploded-aar\com.android.support\cardview-v7\23.0.1\jars\classes.jar"
+        is-multidex="true"
+        jar="F:\ITI InspectorApp\ITI Inspector App\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.0.1\jars\classes.jar"
         jumboMode="true"
-        revision="23.0.2"
-        sha1="39ae02ce40c3ac828abbf780ce0ff5d7a28b7d6a">
-        <dex dex="D:\Development\GITHUB\Assessor-Android2\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-cardview-v7-23.0.1_b180b8f8d70489ccfe2e897e20403d073ce724cd\classes.dex" />
-    </item>
-    <item
-        jar="D:\Development\GITHUB\Assessor-Android2\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.0.1\jars\classes.jar"
-        jumboMode="true"
-        revision="23.0.2"
+        optimize="true"
+        revision="25.0.3"
         sha1="4356e230a981d1bbf047d848b91bc0d9b7c5bacc">
-        <dex dex="D:\Development\GITHUB\Assessor-Android2\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-recyclerview-v7-23.0.1_9e8f13d9a3eb31061294026a6564315072ca32f7\classes.dex" />
+        <dex dex="F:\ITI InspectorApp\ITI Inspector App\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-recyclerview-v7-23.0.1_652574cec0c2d541f32c08d4a6f20d3363276ad9\classes.dex" />
     </item>
     <item
-        jar="D:\Development\GITHUB\Assessor-Android2\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        is-multidex="true"
+        jar="F:\ITI InspectorApp\ITI Inspector App\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appindexing\8.4.0\jars\classes.jar"
         jumboMode="true"
-        revision="23.0.2"
-        sha1="570dc6c296cf17cb8962aa80a65922199574969c">
-        <dex dex="D:\Development\GITHUB\Assessor-Android2\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_146621c7097a4a28627784313968888e8999124c\classes.dex" />
+        optimize="true"
+        revision="25.0.3"
+        sha1="65d086ee9daaf87b5af62ad24471edafa433354c">
+        <dex dex="F:\ITI InspectorApp\ITI Inspector App\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-appindexing-8.4.0_44857964acac1e555a06397054b5234ad9b4d759\classes.dex" />
     </item>
     <item
-        jar="D:\Development\GITHUB\Assessor-Android2\app\build\intermediates\exploded-aar\com.android.support\multidex\1.0.0\jars\classes.jar"
+        is-multidex="true"
+        jar="C:\Users\Radhika\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.3\5fc52c41ef0239d1093a1eb7c3697036183677ce\gson-2.3.jar"
         jumboMode="true"
-        revision="23.0.2"
-        sha1="6666dd525c3da197e7d07f4f23ef5fc7881a697b">
-        <dex dex="D:\Development\GITHUB\Assessor-Android2\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-multidex-1.0.0_f5f5bb705c34766108b926551d1eb0d8ea554fdf\classes.dex" />
+        optimize="true"
+        revision="25.0.3"
+        sha1="5fc52c41ef0239d1093a1eb7c3697036183677ce">
+        <dex dex="F:\ITI InspectorApp\ITI Inspector App\app\build\intermediates\transforms\dex\debug\folders\1000\10\gson-2.3_ba7428ba8ff4fd1d67f9e738ab2ea10a9de3bf92\classes.dex" />
     </item>
     <item
-        jar="D:\Development\GITHUB\Assessor-Android2\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\jars\libs\internal_impl-23.0.1.jar"
+        is-multidex="true"
+        jar="F:\ITI InspectorApp\ITI Inspector App\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\jars\classes.jar"
         jumboMode="true"
-        revision="23.0.2"
+        optimize="true"
+        revision="25.0.3"
+        sha1="8e673cdfadd8f2d98fdb2fda2285c30f6e449782">
+        <dex dex="F:\ITI InspectorApp\ITI Inspector App\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-basement-8.4.0_6a65e4811aa6b212a51360a7d256a52c17fa036c\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="F:\ITI InspectorApp\ITI Inspector App\app\build\intermediates\exploded-aar\com.android.support\design\23.0.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="e5c61a3169221a89654ffcaaed47bba51cf071ad">
+        <dex dex="F:\ITI InspectorApp\ITI Inspector App\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-design-23.0.1_465c8e4554e8db3195807d150a1c7ab46d57d37f\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Radhika\.gradle\caches\modules-2\files-2.1\io.reactivex\rxjava\1.1.6\2586312cd2b8a511e4c6236736f5a039fc0f2273\rxjava-1.1.6.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="2586312cd2b8a511e4c6236736f5a039fc0f2273">
+        <dex dex="F:\ITI InspectorApp\ITI Inspector App\app\build\intermediates\transforms\dex\debug\folders\1000\10\rxjava-1.1.6_c478dead6d3629910b32d9a6e5650d6199977c84\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="F:\ITI InspectorApp\ITI Inspector App\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\8.4.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="fef2b3e4b6b1b0e5fe7b69fa137a5fa55a3182ab">
+        <dex dex="F:\ITI InspectorApp\ITI Inspector App\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-base-8.4.0_22d7e62338ebcd9052fa0169b1b72ab3a336b529\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="F:\ITI InspectorApp\ITI Inspector App\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.0.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
+        <dex dex="F:\ITI InspectorApp\ITI Inspector App\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-23.0.1_c288357629c32910075dfe5d76fd743a722b780a\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="F:\ITI InspectorApp\ITI Inspector App\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\jars\libs\internal_impl-23.0.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
         sha1="aa92916125166649d8ad4ba3940c3dd7515596d3">
-        <dex dex="D:\Development\GITHUB\Assessor-Android2\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-23.0.1_4a62b2c677af90cbd0ee45d59e91e0690344da83\classes.dex" />
+        <dex dex="F:\ITI InspectorApp\ITI Inspector App\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-23.0.1_7e67ca66fe0485188cdc82e8269a8c6fe1fdef9b\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="F:\ITI InspectorApp\ITI Inspector App\app\build\intermediates\exploded-aar\com.android.support\cardview-v7\23.0.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="39ae02ce40c3ac828abbf780ce0ff5d7a28b7d6a">
+        <dex dex="F:\ITI InspectorApp\ITI Inspector App\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-cardview-v7-23.0.1_c0c9e4709e28454da1badbc848934bf7656b62cf\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Radhika\.gradle\caches\modules-2\files-2.1\com.google.code.findbugs\jsr305\2.0.1\516c03b21d50a644d538de0f0369c620989cd8f0\jsr305-2.0.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="516c03b21d50a644d538de0f0369c620989cd8f0">
+        <dex dex="F:\ITI InspectorApp\ITI Inspector App\app\build\intermediates\transforms\dex\debug\folders\1000\10\jsr305-2.0.1_80b74bb9fbeeee7845e04126c2d6bb2ee732f877\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="F:\ITI InspectorApp\ITI Inspector App\app\build\intermediates\exploded-aar\id.zelory\compressor\1.0.2\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="7144f1b76647836c1c3da2c9e51a7052631c72b2">
+        <dex dex="F:\ITI InspectorApp\ITI Inspector App\app\build\intermediates\transforms\dex\debug\folders\1000\10\id.zelory-compressor-1.0.2_fd4b8171962954e192e647e6b21c54fd135ac090\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="F:\ITI InspectorApp\ITI Inspector App\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="37d3f692a4f2885e358c32ef9e7310709c80c923">
+        <dex dex="F:\ITI InspectorApp\ITI Inspector App\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_cb50e96f1a22a924baaff3a886660fcc6cdf7687\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Radhika\.gradle\caches\modules-2\files-2.1\com.squareup.picasso\picasso\2.4.0\f36d2d4e3a36b3259aaf9d004d29b4cdc6c1bfb2\picasso-2.4.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="f36d2d4e3a36b3259aaf9d004d29b4cdc6c1bfb2">
+        <dex dex="F:\ITI InspectorApp\ITI Inspector App\app\build\intermediates\transforms\dex\debug\folders\1000\10\picasso-2.4.0_70d7f8bed27df4a6215001117546bc8ebd9c0306\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Radhika\.gradle\caches\modules-2\files-2.1\commons-cli\commons-cli\1.2\2bf96b7aa8b611c177d329452af1dc933e14501c\commons-cli-1.2.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="2bf96b7aa8b611c177d329452af1dc933e14501c">
+        <dex dex="F:\ITI InspectorApp\ITI Inspector App\app\build\intermediates\transforms\dex\debug\folders\1000\10\commons-cli-1.2_073032c093e86c41770129f13d84b25df2fc9ed0\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="F:\ITI InspectorApp\ITI Inspector App\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="7056a6daf500b95372f73674dd6d7082a91a670f">
+        <dex dex="F:\ITI InspectorApp\ITI Inspector App\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_31bb2c8fa3e4568d42fd115d624cfa3545356ad7\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="F:\ITI InspectorApp\ITI Inspector App\app\build\intermediates\exploded-aar\com.android.support\multidex\1.0.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="6666dd525c3da197e7d07f4f23ef5fc7881a697b">
+        <dex dex="F:\ITI InspectorApp\ITI Inspector App\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-multidex-1.0.0_cfe4faaa0268a85af084b0393ff9a6f259a6e73f\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Radhika\.gradle\caches\modules-2\files-2.1\com.facebook.stetho\stetho\1.3.1\2c4076b466a0eb4d6ddf5721edd35cd1adc1f317\stetho-1.3.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="2c4076b466a0eb4d6ddf5721edd35cd1adc1f317">
+        <dex dex="F:\ITI InspectorApp\ITI Inspector App\app\build\intermediates\transforms\dex\debug\folders\1000\10\stetho-1.3.1_094b716cd8a63197989dfe9bf133e94582f7dff5\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Radhika\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.0.1\support-annotations-23.0.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="1fce89a6428c51467090d7f424e4c9c3dbd55f7e">
+        <dex dex="F:\ITI InspectorApp\ITI Inspector App\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-23.0.1_4c5591eaf0930e45fd35fa62e47663125987fbc8\classes.dex" />
     </item>
 
 </items>
